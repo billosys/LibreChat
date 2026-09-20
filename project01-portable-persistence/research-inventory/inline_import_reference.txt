@@ -1,0 +1,188 @@
+api/server/routes/prompts.js:536:mongoose:* @param {import('mongoose').ObjectId} req.params.promptId - The prompt ID
+api/server/services/PluginService.js:119:mongoose:* @returns {Promise<import('mongoose').DeleteResult>}
+api/typedefs.js:861:mongoose:* @typedef {import('mongoose').Schema} MongooseSchema
+api/typedefs.js:903:mongoose:* @typedef {import('mongoose').Types.ObjectId} ObjectId
+packages/api/src/acl/accessControlService.ts:39:mongoose:private _mongoose: typeof import('mongoose');
+packages/api/src/acl/accessControlService.ts:42:mongoose:constructor(mongoose: typeof import('mongoose'), dbMethods?: AllMethods) {
+packages/api/src/agents/initialize.ts:727:mongoose:accessibleSkillIds?: import('mongoose').Types.ObjectId[];
+packages/api/src/agents/initialize.ts:874:mongoose:accessibleSkillIds?: import('mongoose').Types.ObjectId[];
+packages/api/src/agents/initialize.ts:1008:mongoose:accessibleIds: import('mongoose').Types.ObjectId[];
+packages/api/src/agents/initialize.ts:1013:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/api/src/agents/initialize.ts:1016:mongoose:author: import('mongoose').Types.ObjectId;
+packages/api/src/apiKeys/service.ts:77:mongoose:mongoose: typeof import('mongoose'),
+packages/api/src/code/environments.ts:176:mongoose:mongoose: typeof import('mongoose'),
+packages/api/src/code/lifecycle.ts:30:mongoose:mongoose: typeof import('mongoose');
+packages/api/src/code/lifecycle.ts:409:mongoose:mongoose: typeof import('mongoose');
+packages/api/src/mcp/registry/MCPServersRegistry.ts:262:mongoose:mongoose: typeof import('mongoose'),
+packages/api/src/mcp/registry/MCPServersRegistry.ts:292:mongoose:mongoose: typeof import('mongoose'),
+packages/api/src/mcp/registry/db/ServerConfigsDB.ts:256:mongoose:constructor(mongoose: typeof import('mongoose')) {
+packages/api/src/shared-links/access.ts:34:mongoose:mongoose: typeof import('mongoose');
+packages/data-schemas/src/methods/accessRole.ts:7:mongoose:export function createAccessRoleMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/aclEntry.ts:79:mongoose:export function createAclEntryMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/aclEntry.ts:152:mongodb:) => Promise<import('mongodb').BulkWriteResult>;
+packages/data-schemas/src/methods/aclEntry.ts:554:mongodb:): Promise<import('mongodb').BulkWriteResult> {
+packages/data-schemas/src/methods/action.ts:19:mongoose:export function createActionMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/agent.ts:551:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/agentApiKey.ts:14:mongoose:export function createAgentApiKeyMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/agentCategory.ts:5:mongoose:export function createAgentCategoryMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/agentCategory.ts:17:mongoose:) => Promise<import('mongoose').mongo.BulkWriteResult>;
+packages/data-schemas/src/methods/agentCategory.ts:83:mongoose:): Promise<import('mongoose').mongo.BulkWriteResult> {
+packages/data-schemas/src/methods/assistant.ts:17:mongoose:export function createAssistantMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/auditLog.ts:304:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/banner.ts:5:mongoose:export function createBannerMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/categories.ts:17:mongoose:export function createCategoriesMethods(_mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/chatProject.ts:153:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/chatProject.ts:216:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/chatProject.ts:270:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/chatProject.ts:326:mongoose:export function createChatProjectMethods(mongoose: typeof import('mongoose')): ChatProjectMethods {
+packages/data-schemas/src/methods/codeEnvironment.ts:34:mongoose:function tombstones(mongoose: typeof import('mongoose')) {
+packages/data-schemas/src/methods/codeEnvironment.ts:71:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/codeEnvironment.ts:106:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/codeEnvironment.ts:121:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/codeEnvironment.ts:146:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/codeEnvironment.ts:195:mongoose:export function createCodeEnvironmentMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/config.ts:21:mongoose:export function createConfigMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/conversation.ts:218:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/conversation.ts:526:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/conversationTag.ts:32:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/conversationTag.ts:81:mongoose:export function createConversationTagMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/conversationTag.ts:83:mongoose:(import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:92:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:106:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:115:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:126:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:135:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:145:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:154:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:172:mongoose:(import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:181:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:207:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:216:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:301:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:310:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/conversationTag.ts:364:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/conversationTag.ts:373:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/favorite.ts:22:mongoose:export function createToolFavoriteMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/file.ts:126:mongoose:export function createFileMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/import.ts:44:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/index.ts:292:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/insights.ts:287:mongoose:export function createInsightsMethods(mongoose: typeof import('mongoose')): InsightsMethods {
+packages/data-schemas/src/methods/key.ts:7:mongoose:export function createKeyMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/mcpAuthority.ts:1039:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/mcpAuthorizationFenceRetry.ts:44:mongoose:export function createMCPAuthorizationFenceRetryStorage(mongoose: typeof import('mongoose')) {
+packages/data-schemas/src/methods/mcpServer.ts:48:mongoose:export function createMCPServerMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/memory.ts:17:mongoose:export function createMemoryMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/message.ts:844:mongoose:export function createMessageMethods(mongoose: typeof import('mongoose')): MessageMethods {
+packages/data-schemas/src/methods/openidRefreshFlight.ts:33:mongoose:export function createOpenIDRefreshFlightMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/pluginAuth.ts:11:mongoose:export function createPluginAuthMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/preset.ts:14:mongoose:export function createPresetMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/preset.ts:19:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/preset.ts:35:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/preset.ts:48:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/preset.ts:64:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/preset.ts:94:mongodb:) => Promise<import('mongodb').DeleteResult>;
+packages/data-schemas/src/methods/preset.ts:103:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/preset.ts:119:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/preset.ts:144:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/preset.ts:160:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/preset.ts:262:mongodb:): Promise<import('mongodb').DeleteResult> {
+packages/data-schemas/src/methods/prompt.ts:167:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/queuedTurn.ts:696:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/refreshTokenBridge.ts:23:mongoose:export function createRefreshTokenBridgeMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/role.ts:39:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/schedule.ts:334:mongoose:export function createScheduleMethods(mongoose: typeof import('mongoose')): ScheduleMethods {
+packages/data-schemas/src/methods/session.ts:20:mongoose:export function createSessionMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/share.ts:232:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/share.ts:251:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/share.ts:438:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/share.ts:891:mongoose:export function createShareMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/share.ts:1397:mongoose:_id?: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/skill.ts:983:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/skill.ts:1027:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/skillSync.ts:123:mongoose:export function createSkillSyncMethods(mongoose: typeof import('mongoose')): SkillSyncMethods {
+packages/data-schemas/src/methods/spendTokens.ts:6:mongoose:user: string | import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/spendTokens.ts:17:mongoose:_mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/systemGrant.ts:54:mongoose:export function createSystemGrantMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/token.ts:6:mongoose:export function createTokenMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/toolCall.ts:10:mongoose:export function createToolCallMethods(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/methods/toolCall.ts:16:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:22:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:31:mongodb:) => Promise<import('mongodb').DeleteResult>;
+packages/data-schemas/src/methods/toolCall.ts:33:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:39:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:49:mongoose:(import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:55:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:64:mongoose:(import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:70:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:92:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:98:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:119:mongoose:(import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:125:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:145:mongoose:(import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:151:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:171:mongoose:| (import('mongoose').FlattenMaps<{
+packages/data-schemas/src/methods/toolCall.ts:177:mongoose:_id: import('mongoose').Types.ObjectId;
+packages/data-schemas/src/methods/toolCall.ts:197:mongodb:): Promise<import('mongodb').DeleteResult> {
+packages/data-schemas/src/methods/transaction.ts:84:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/transaction.ts:112:mongodb:) => Promise<import('mongodb').DeleteResult>;
+packages/data-schemas/src/methods/transaction.ts:113:mongodb:deleteBalances: (filter: FilterQuery<IBalance>) => Promise<import('mongodb').DeleteResult>;
+packages/data-schemas/src/methods/transaction.ts:724:mongodb:): Promise<import('mongodb').DeleteResult> {
+packages/data-schemas/src/methods/transaction.ts:732:mongodb:): Promise<import('mongodb').DeleteResult> {
+packages/data-schemas/src/methods/triggerDelivery.ts:529:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/tx.ts:476:mongoose:_mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/user.ts:30:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/userGroup.ts:169:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/methods/userGroup.ts:229:mongoose:) => Promise<import('mongoose').UpdateWriteOpResult>;
+packages/data-schemas/src/methods/userGroup.ts:1290:mongoose:): Promise<import('mongoose').UpdateWriteOpResult> {
+packages/data-schemas/src/models/accessRole.ts:6:mongoose:export function createAccessRoleModel(mongoose: typeof import('mongoose')): Model<t.IAccessRole> {
+packages/data-schemas/src/models/aclEntry.ts:6:mongoose:export function createAclEntryModel(mongoose: typeof import('mongoose')): Model<t.IAclEntry> {
+packages/data-schemas/src/models/action.ts:6:mongoose:export function createActionModel(mongoose: typeof import('mongoose')): Model<IAction> {
+packages/data-schemas/src/models/agent.ts:6:mongoose:export function createAgentModel(mongoose: typeof import('mongoose')): Model<IAgent> {
+packages/data-schemas/src/models/agentApiKey.ts:5:mongoose:export function createAgentApiKeyModel(mongoose: typeof import('mongoose')): Model<IAgentApiKey> {
+packages/data-schemas/src/models/agentCategory.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/assistant.ts:6:mongoose:export function createAssistantModel(mongoose: typeof import('mongoose')): Model<IAssistant> {
+packages/data-schemas/src/models/auditLog.ts:13:mongoose:export function createAuditLogModel(mongoose: typeof import('mongoose')): Model<t.IAuditLog> {
+packages/data-schemas/src/models/balance.ts:6:mongoose:export function createBalanceModel(mongoose: typeof import('mongoose')): Model<t.IBalance> {
+packages/data-schemas/src/models/banner.ts:6:mongoose:export function createBannerModel(mongoose: typeof import('mongoose')): Model<IBanner> {
+packages/data-schemas/src/models/chatProject.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/codeEnvironment.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/config.ts:6:mongoose:export function createConfigModel(mongoose: typeof import('mongoose')): Model<t.IConfig> {
+packages/data-schemas/src/models/conversationTag.ts:6:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/convo.ts:8:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/favorite.ts:6:mongoose:export function createToolFavoriteModel(mongoose: typeof import('mongoose')): Model<IToolFavorite> {
+packages/data-schemas/src/models/file.ts:6:mongoose:export function createFileModel(mongoose: typeof import('mongoose')): Model<IMongoFile> {
+packages/data-schemas/src/models/group.ts:6:mongoose:export function createGroupModel(mongoose: typeof import('mongoose')): Model<t.IGroup> {
+packages/data-schemas/src/models/index.ts:51:mongoose:export function createModels(mongoose: typeof import('mongoose')): {
+packages/data-schemas/src/models/key.ts:5:mongoose:export function createKeyModel(mongoose: typeof import('mongoose')): Model<IKey> {
+packages/data-schemas/src/models/mcpServer.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/memory.ts:6:mongoose:export function createMemoryModel(mongoose: typeof import('mongoose')): Model<IMemoryEntry> {
+packages/data-schemas/src/models/message.ts:7:mongoose:export function createMessageModel(mongoose: typeof import('mongoose')): Model<t.IMessage> {
+packages/data-schemas/src/models/openidRefreshFlight.ts:10:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/pluginAuth.ts:6:mongoose:export function createPluginAuthModel(mongoose: typeof import('mongoose')): Model<IPluginAuth> {
+packages/data-schemas/src/models/plugins/mongoMeili.ts:23:mongoose:mongoose: typeof import('mongoose');
+packages/data-schemas/src/models/preset.ts:5:mongoose:export function createPresetModel(mongoose: typeof import('mongoose')): Model<IPreset> {
+packages/data-schemas/src/models/prompt.ts:6:mongoose:export function createPromptModel(mongoose: typeof import('mongoose')): Model<IPrompt> {
+packages/data-schemas/src/models/promptGroup.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/queuedTurn.ts:11:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/queuedTurn.ts:21:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/refreshTokenBridge.ts:11:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/role.ts:6:mongoose:export function createRoleModel(mongoose: typeof import('mongoose')): Model<IRole> {
+packages/data-schemas/src/models/schedule.ts:7:mongoose:export function createScheduleModel(mongoose: typeof import('mongoose')): Model<IScheduleDocument> {
+packages/data-schemas/src/models/schedule.ts:13:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/session.ts:6:mongoose:export function createSessionModel(mongoose: typeof import('mongoose')): Model<t.ISession> {
+packages/data-schemas/src/models/sharedLink.ts:5:mongoose:export function createSharedLinkModel(mongoose: typeof import('mongoose')): Model<ISharedLink> {
+packages/data-schemas/src/models/skill.ts:6:mongoose:export function createSkillModel(mongoose: typeof import('mongoose')): Model<ISkillDocument> {
+packages/data-schemas/src/models/skillFile.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/skillSyncCredential.ts:6:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/skillSyncStatus.ts:6:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/systemGrant.ts:11:mongoose:export function createSystemGrantModel(mongoose: typeof import('mongoose')): Model<t.ISystemGrant> {
+packages/data-schemas/src/models/token.ts:6:mongoose:export function createTokenModel(mongoose: typeof import('mongoose')): Model<t.IToken> {
+packages/data-schemas/src/models/toolCall.ts:5:mongoose:export function createToolCallModel(mongoose: typeof import('mongoose')): Model<IToolCallData> {
+packages/data-schemas/src/models/transaction.ts:5:mongoose:export function createTransactionModel(mongoose: typeof import('mongoose')): Model<ITransaction> {
+packages/data-schemas/src/models/triggerDelivery.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/triggerLaneSequence.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/triggerUserPurge.ts:7:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/models/user.ts:6:mongoose:export function createUserModel(mongoose: typeof import('mongoose')): Model<t.IUser> {
+packages/data-schemas/src/utils/transactions.ts:7:mongoose:async function probeTransaction(mongoose: typeof import('mongoose')): Promise<boolean> {
+packages/data-schemas/src/utils/transactions.ts:61:mongoose:mongoose: typeof import('mongoose'),
+packages/data-schemas/src/utils/transactions.ts:93:mongoose:mongoose: typeof import('mongoose'),
