@@ -1,5 +1,7 @@
 # LibreChat fork — planning and development
 
+Read [BILLO.md](BILLO.md) for current fork branch and commit policy. Historical planning commit IDs are mapped in [the footer migration record](commit-message-migration.md).
+
 The immediate integration goal is a portable application persistence boundary: first backed by existing MongoDB behavior, then exercised by one genuinely different backend. A separate [Project02 features sketch](project02-features/project-plan.md) tracks UI memory import and project import.
 
 See [repository workflow](repository-workflow.md) for the worktree map: pristine upstream `main`, canonical `planning`, `billo-guildhall` for persistence/Guildhall integration, and `features` for standalone feature work. The two implementation worktrees are siblings of planning under `.worktrees/`.

@@ -26,6 +26,7 @@ The Operator reports projects missing after the Claude conversation import. Trea
 
 - Both imports are usable from the UI, persist the supported source information and explain rejected or unsupported items.
 - Define repeat-import and relationship/identity behavior during each arc's design; protect existing user data and preserve source provenance.
+- Branch new feature work from `billo-guildhall` and merge completed, validated work back into it; `features` follows this same rule. Follow [BILLO.md](../BILLO.md), including both required commit trailers. This supersedes treating features as an independent integration line.
 - Keep changes focused, use existing extension points and validate against the applicable upstream baseline. Coordinate persistence contracts with Project01 without making the entire Guildhall conversion a prerequisite.
 
 This is a one-contributor planning sketch at the Operator's request. Future implementation/review assignments follow the selected collaboration workflow when each arc is opened. The [ledger](ledger.md) records the initial open completion criteria. No feature implementation is assigned by this sketch.
@@ -34,4 +35,5 @@ This is a one-contributor planning sketch at the Operator's request. Future impl
 
 | Version | Date | Change |
 |---|---|---|
+| v1.1 | 2026-09-20 | Recorded Operator-required Guildhall branch base/merge destination and commit trailers; feature scope and unopened arcs unchanged. |
 | v1.0 | 2026-09-20 | Added the Operator's memory-import and project-import feature roadmap, with development isolated on the features worktree. |

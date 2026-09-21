@@ -17,3 +17,7 @@ Upstream dev was fetched and both branches start at `fe79265b2f47937051625719f3b
 Slice01 and the first Slice02 packet remain historical evidence at `ba44443fd`. Resume source work from the Guildhall worktree, refreshing relevant instructions, dependency/plugin changes and test prerequisites before implementation. The original baseline's saved artifacts and checksums are preserved.
 
 Project02 owns the newly requested UI memory/project imports. Coordinate shared persistence needs, but do not silently fold those features into Project01's ordinary-turn Mongo pilot.
+
+## Fork policy and commit attribution — 2026-09-20
+
+The Operator subsequently made `billo-guildhall` the common base for all new source branches and the required merge destination for completed feature work. Main remains pristine, and the orphan planning branch remains the documentation exception. Every commit we author carries both specified co-author trailers. See [BILLO.md](../BILLO.md), [repository workflow](../repository-workflow.md) and [the message-only rewrite map](../commit-message-migration.md). This supersedes independent source integration lines; it does not broaden the persistence pilot or assign feature implementation.
