@@ -1,0 +1,6056 @@
+{
+  "sourceHead": "fe79265b2f47937051625719f3ba5080189912c1",
+  "node": "v22.22.3",
+  "compiler": {
+    "path": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+    "version": "5.9.3",
+    "sha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675"
+  },
+  "sources": [
+    {
+      "path": "packages/data-provider/src/config.ts",
+      "sha256": "a3a602a9f2f23f68e1855d5a8bde8909c51676968fd3f7a5fc4456d7617dfe2d"
+    },
+    {
+      "path": "packages/data-provider/src/schemas.ts",
+      "sha256": "46256a7a73a7d3e3b3546bde07074d5905e7ff603f864d3f4b092206d83779b6"
+    },
+    {
+      "path": "packages/data-provider/src/parsers.ts",
+      "sha256": "77964da8fbb4969b6152f370b23965b94aad60fc83972bc5319f74c2878a3008"
+    },
+    {
+      "path": "packages/api/src/conversations/save.ts",
+      "sha256": "1a144cf076c8b4fe170f01c2f291c652ab1e2863780521aed79ec55d03779889"
+    },
+    {
+      "path": "api/app/clients/BaseClient.js",
+      "sha256": "53f3c67baa12f10737dfda3723f87bdb4307419658fe60aaa49b621739a9561f"
+    }
+  ],
+  "experimentSha256": "fac7478c01ca9870121a2bee545896a9789ed1b3334469762dfc2ff01c20b50c",
+  "cases": [
+    {
+      "spec": {
+        "name": "unread/retention=false/initialized=false",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "unread/retention=false/initialized=true",
+        "cache": "unread",
+        "retention": false,
+        "initialized": true
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "unread/retention=true/initialized=false",
+        "cache": "unread",
+        "retention": true,
+        "initialized": false
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "unread/retention=true/initialized=true",
+        "cache": "unread",
+        "retention": true,
+        "initialized": true
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "null/retention=false/initialized=false",
+        "cache": "null",
+        "retention": false,
+        "initialized": false
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$date": "2026-01-01T00:00:00.000Z"
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$date": "2026-01-01T00:00:00.000Z"
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "null/retention=false/initialized=true",
+        "cache": "null",
+        "retention": false,
+        "initialized": true
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "null/retention=true/initialized=false",
+        "cache": "null",
+        "retention": true,
+        "initialized": false
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$date": "2026-01-01T00:00:00.000Z"
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$date": "2026-01-01T00:00:00.000Z"
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "null/retention=true/initialized=true",
+        "cache": "null",
+        "retention": true,
+        "initialized": true
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "present/retention=false/initialized=false",
+        "cache": "present",
+        "retention": false,
+        "initialized": false
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "present/retention=false/initialized=true",
+        "cache": "present",
+        "retention": false,
+        "initialized": true
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "present/retention=true/initialized=false",
+        "cache": "present",
+        "retention": true,
+        "initialized": false
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "present/retention=true/initialized=true",
+        "cache": "present",
+        "retention": true,
+        "initialized": true
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2030-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {
+                  "generalChatRetention": 30,
+                  "retentionMode": "all"
+                },
+                "isTemporary": true,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {
+              "generalChatRetention": 30,
+              "retentionMode": "all"
+            }
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "disposed",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "disposed"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [],
+        "result": {},
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": true,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [],
+        "result": {},
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": true,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "mismatch",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "mismatch"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [],
+        "result": {
+          "$undefined": true
+        },
+        "error": "User mismatch.",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [],
+        "result": {
+          "$undefined": true
+        },
+        "error": "User mismatch.",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "skip",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "skip"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          }
+        ],
+        "result": {
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          }
+        ],
+        "result": {
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "missing-result",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "missing-result"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "$undefined": true
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "$undefined": true
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "missing-id",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "missing-id"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "read-failure",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "read-failure"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          }
+        ],
+        "result": {
+          "$undefined": true
+        },
+        "error": "read failed",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          }
+        ],
+        "result": {
+          "$undefined": true
+        },
+        "error": "read failed",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "message-failure",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "message-failure"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          }
+        ],
+        "result": {
+          "$undefined": true
+        },
+        "error": "message failed",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          }
+        ],
+        "result": {
+          "$undefined": true
+        },
+        "error": "message failed",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "conversation-failure",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "conversation-failure"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "$undefined": true
+        },
+        "error": "conversation failed",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "$undefined": true
+        },
+        "error": "conversation failed",
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": false,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "$undefined": true
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "conversation-error-object",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "conversation-error-object"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "message": "Error saving conversation"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "message": "Error saving conversation"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "no-upsert",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "no-upsert"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": true,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": null,
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "_agentEventBindingParentConversationId": "parent",
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": true,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": null,
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "_agentEventBindingParentConversationId": "parent",
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "endpoint-override",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "endpoint-override"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c2",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c2",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c2",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c2",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c2",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c2",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "bound-retention",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "bound-retention"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2031-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2031-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "_agentEventBindingRetention": {
+            "expiredAt": {
+              "$date": "2031-01-01T00:00:00.000Z"
+            },
+            "isTemporary": false
+          },
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2031-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$date": "2031-01-01T00:00:00.000Z"
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "_agentEventBindingRetention": {
+            "expiredAt": {
+              "$date": "2031-01-01T00:00:00.000Z"
+            },
+            "isTemporary": false
+          },
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "dispose-during-write",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "dispose-during-write"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": true,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": true,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "reset-initialized",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "reset-initialized"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "populate-cache",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "populate-cache"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "change-endpoint-options",
+        "cache": "unread",
+        "retention": false,
+        "initialized": false,
+        "variant": "change-endpoint-options"
+      },
+      "passed": true,
+      "reference": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-2"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "candidate": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-2"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0,
+        "publicReference": {
+          "conversationId": "c1",
+          "kind": "message",
+          "messageId": "m1"
+        }
+      }
+    }
+  ],
+  "memoCases": [
+    {
+      "name": "same-object",
+      "lookups": 0,
+      "actual": "private-A",
+      "passed": true
+    },
+    {
+      "name": "copied-reference",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "different-binding",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "different-tenant",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "different-owner",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "mutated-reference",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "missing-row",
+      "lookups": 1,
+      "error": "Message reference unavailable",
+      "passed": true
+    },
+    {
+      "name": "plain-reference-shape",
+      "passed": true
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "always-lookup-regression",
+      "detected": true,
+      "normal": 0,
+      "mutant": 1
+    },
+    {
+      "name": "unchecked-scope-reuse",
+      "detected": true,
+      "unsafeLocator": "private-A",
+      "requiredScopedLocator": "scoped-B"
+    },
+    {
+      "name": "early-snapshot-timing",
+      "detected": true,
+      "live": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "getConvo",
+            "args": [
+              "u1",
+              "c1"
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {
+                  "temperature": 1
+                }
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      },
+      "frozen": {
+        "trace": [
+          {
+            "method": "saveMessage",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "addedConvo": true,
+                "contextMeta": null,
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "messageId": "m1",
+                "text": "fixture",
+                "unfinished": false,
+                "user": "u1"
+              },
+              {
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveMessage"
+              }
+            ]
+          },
+          {
+            "method": "saveConvo",
+            "args": [
+              {
+                "expiredAt": {
+                  "$undefined": true
+                },
+                "interfaceConfig": {},
+                "isTemporary": false,
+                "userId": "u1"
+              },
+              {
+                "agent_id": "agent_saved",
+                "conversationId": "c1",
+                "endpoint": "agents",
+                "endpointType": "agents",
+                "model": "model-1"
+              },
+              {
+                "appendMessageIds": [
+                  "mongo-private-1"
+                ],
+                "context": "api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo",
+                "createdAtOnInsert": {
+                  "$undefined": true
+                },
+                "initialAgentId": "agent_saved",
+                "noUpsert": false,
+                "unsetFields": {}
+              }
+            ]
+          }
+        ],
+        "result": {
+          "conversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "message": {
+            "addedConvo": true,
+            "contextMeta": null,
+            "conversationId": "c1",
+            "endpoint": "agents",
+            "messageId": "m1",
+            "text": "fixture",
+            "unfinished": false,
+            "user": "u1"
+          }
+        },
+        "error": {
+          "$undefined": true
+        },
+        "cache": {
+          "body": {
+            "addedConvo": false,
+            "isTemporary": false
+          },
+          "config": {
+            "interfaceConfig": {}
+          },
+          "conversationCreatedAt": "2026-01-01T00:00:00Z",
+          "resolvedConversation": {
+            "conversationId": "c1",
+            "title": "saved"
+          },
+          "user": {
+            "id": "u1"
+          }
+        },
+        "initialized": true,
+        "optionsDisposed": false,
+        "referenceLookups": 0
+      }
+    }
+  ],
+  "success": true
+}

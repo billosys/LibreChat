@@ -1,0 +1,14 @@
+{
+  "check": "passed",
+  "sourceHead": "fe79265b2f47937051625719f3ba5080189912c1",
+  "sourceClean": true,
+  "sourceFilesHashed": 5,
+  "comparisonsPassed": 28,
+  "memoCasesPassed": 8,
+  "negativeControlsDetected": 3,
+  "priorArtifactHashesPreserved": 43,
+  "linksAndAnchorsChecked": 63,
+  "ledgerRowsStillOpen": 7,
+  "packetManifestEntries": null,
+  "evidenceClass": "contributor structural and mocked-store evidence; not independent or real-database acceptance"
+}

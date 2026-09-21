@@ -117,11 +117,11 @@ Embedding rows, chunk positions, internal Mongo IDs and graph indices must not b
 
 ### Consequence for the immediate Mongo seam
 
-My first candidate to explore is a **named ordinary-turn persistence operation** with logical inputs, under which the binding can retain the saved Mongo record and reuse its `_id` for the conversation link. Returning and then re-resolving that physical identity through a public receipt should not be our default merely to reproduce today's call shape.
+The initial candidate was a named ordinary-turn persistence operation retaining the saved record internally. [Slice02 pass 2](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/decision.md) has now explored that direction and a smaller alternative: keep the two-stage application workflow, return plain logical references, and let the Mongo binding privately memoize the observed physical locator for the immediate handoff. The latter is now the preferred working candidate, subject to scope and lifetime validation; a high-level application operation need not imply one storage call.
 
 This is a choice of boundary to investigate, not a transaction guarantee. It must preserve retention pre-reads, cache distinctions, seed order, protected fields, skip-conversation behavior and the separate message/conversation writes and partial outcomes. If the needed application decisions cannot be supplied without moving excessive policy into the adapter or adding reads, reconsider the boundary before committing to it. Existing orchestration remains the behavioral reference.
 
-D02's next comparison should therefore start with the complete named-operation sequence and its lookup count, then compare a receipt or denormalized logical links only where they solve a demonstrated problem. Future SQLite and cognitive-data-plane mappings need to agree on the logical meaning, not mimic Mongo's physical link storage. No new Lance, revision, event-log or graph implementation is required to take this direction now.
+The executed comparison matched 28 source-based scenarios without added reference lookups and detected an early-snapshot timing difference. D02 should next resolve private-hint lifetime/invalidation under delete/recreate and complete the DTO contract; avoid exposing a receipt or denormalizing storage solely to retain the current link fast path. This evidence uses mocked stores and does not establish real-Mongo or concurrency conformance. Future SQLite and cognitive-data-plane mappings need to agree on the logical meaning, not mimic Mongo's physical link storage. No new Lance, revision, event-log or graph implementation is required to take this direction now.
 
 ## Transactions, retries, and events
 
@@ -181,5 +181,6 @@ The memory API can later expose search, retrieve, assert, revise, invalidate, li
 
 | Date | Change |
 |---|---|
+| 2026-09-20 | Slice02 pass 2 refined the immediate boundary using source-executed comparison: staged operations with logical references and a private locator hint are preferred for further validation; prior compound-first hypothesis retained as history. |
 | 2026-09-20 | Added lightweight Guildhall/Lance-oriented identity hypotheses after the Operator clarified that denormalization is not a recommendation; prefer investigating a named turn operation before a public physical-link receipt. |
 | 2026-09-20 | Slice02 corrected the initial injection claim using `BaseClient.js:54,1332–1388` and `save.ts:124–187`; linked the current refinement. No API or implementation scope was frozen. The earlier document remains the architectural starting proposal. |

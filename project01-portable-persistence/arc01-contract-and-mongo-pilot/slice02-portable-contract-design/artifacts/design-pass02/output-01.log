@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "comparisons": 28,
+  "comparisonFailures": [],
+  "memoCases": [
+    {
+      "name": "same-object",
+      "lookups": 0,
+      "actual": "private-A",
+      "passed": true
+    },
+    {
+      "name": "copied-reference",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "different-binding",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "different-tenant",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "different-owner",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "mutated-reference",
+      "lookups": 1,
+      "actual": "scoped-B",
+      "passed": true
+    },
+    {
+      "name": "missing-row",
+      "lookups": 1,
+      "error": "Message reference unavailable",
+      "passed": true
+    },
+    {
+      "name": "plain-reference-shape",
+      "passed": true
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "always-lookup-regression",
+      "detected": true
+    },
+    {
+      "name": "unchecked-scope-reuse",
+      "detected": true
+    },
+    {
+      "name": "early-snapshot-timing",
+      "detected": true
+    }
+  ]
+}

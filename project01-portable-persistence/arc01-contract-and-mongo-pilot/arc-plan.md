@@ -68,10 +68,13 @@ Slice02 has delivered a [first contract pass](slice02-portable-contract-design/a
 
 Current design work is relationship translation without exposing physical IDs or adding a serial lookup, field-level DTO/projection validation, conservative partial-write outcomes and the exact route/code fence. These findings deepen Slice02 without broadening the three-slice roadmap or implementation scope. D06 dev lineage is now resolved through the upstream-based Guildhall worktree; Node 24/source-build reproduction remains pending. The Operator subsequently clarified that denormalization is only an option. Slice02 should instead start from the [future-oriented logical identity model](../interface-design.md#working-identity-direction-toward-the-cognitive-data-plane) and investigate a named turn operation that keeps physical links inside the adapter. Receipts and denormalization remain alternatives; the exact boundary and schema are not frozen.
 
+Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decision.md) now supplies 28 matching source-based orchestration comparisons, eight memo/fallback checks and three detected negative controls. These support the smaller logical-reference/private-locator-hint candidate while preserving the two-stage workflow; a naive early snapshot changes cleanup timing. This supersedes the compound-first hypothesis above as the immediate design direction. Scope/lifetime correctness against real Mongo, DTO schemas and caller/result mappings remain open. There is no new implementation or roadmap scope.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.6 | 2026-09-20 | Slice02 pass 2 compared actual source orchestration and private logical-reference translation; refined D02 direction with explicit mocking, lifetime and source-build limits. |
 | v1.5 | 2026-09-20 | Refined D02 direction using the Operator's future-Lance guidance; denormalization is not a preferred solution, and named-operation/logical-identity hypotheses need concrete validation. |
 | v1.4 | 2026-09-20 | Incorporated Operator denormalization preference and verified worktree/base decision; D06 resolved, historical test evidence preserved and current-build validation still required. |
 | v1.3 | 2026-09-20 | Recorded Operator-authorized Slice02 design continuation while retaining Slice01 acceptance; bubbled confirmed cursor gap and injection correction from Slice02, with unresolved contract choices explicit and no source scope change. |
