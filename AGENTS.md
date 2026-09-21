@@ -106,3 +106,11 @@ consumer sits outside the feature you are changing, leave that atom on Recoil an
 them in is what lets a feature move to its own workspace later without a rewrite, and it keeps the
 Jotai conversion scoped to the state a feature owns. See the detailed policy in `CLAUDE.md` under
 “Client State Ownership”.
+
+## Billo Systems: LLM way-finding
+
+Before choosing a branch, editing files or creating a commit in this fork, read
+[BILLO.md](BILLO.md). It defines the Billo development/integration branches, the
+pristine-main rule, planning-worktree exception and required commit trailers.
+Its fork-specific branch policy overrides the inherited upstream branching
+instructions above; the remaining engineering guidance still applies.
