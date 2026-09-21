@@ -1,0 +1,18 @@
+{
+  "attempt": 1,
+  "command": [
+    "/Users/oubiwann/.local/bin/node",
+    "/tmp/guildhall-pass04/experiment.cjs",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+    "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+    "/tmp/guildhall-pass04/result-01.json"
+  ],
+  "startedAt": "2026-09-21T04:40:54.738042+00:00",
+  "inputHashes": {
+    "protocol.md": "5e66ba39f8e32ee8cbc8aa37e17d331ea452687156ef9bc50332d9aba535d3ca",
+    "experiment.cjs": "524bb145213a6e88c41f65261a380143c415d9d717f531c91205a25cf5056d87",
+    "handle.cjs": "b1efac13c8c2aa1d1a23c2fb8bf3d209673abcb3da798164da49bfab99bcabc4"
+  },
+  "exitCode": 0,
+  "finishedAt": "2026-09-21T04:40:55.316216+00:00"
+}

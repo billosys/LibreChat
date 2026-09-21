@@ -52,16 +52,23 @@ The [logical-reference comparison](artifacts/design-pass02/decision.md) found a 
 
 This result supersedes the earlier instruction to investigate the compound operation first. Next resolve cached-locator lifetime/invalidation under concurrent delete/recreate, then finish field-level DTO/projection and error/patch mapping. The public reference must remain meaningful without the optimization. Artifacts for this pass have their own manifest under `artifacts/design-pass02/`; the first-pass files and checksum list remain frozen historical evidence. No slice acceptance status changes.
 
-## Current design result — pass 3
+## Historical design result — pass 3
 
 The [real-Mongo lifecycle packet](artifacts/design-pass03/decision.md) rejects the pass-2 invisible hint/fallback contract. Original and copied references agree in two controls but differ after deletion, recreation, rename and conversation move. All six characterization oracles and both negative controls behaved as predeclared; this is evidence of a defect in the candidate, not six cache-correctness passes.
 
 The working replacement is a per-invocation turn-write handle retaining the observed row privately, separate from value-based logical references. Its proposed lifecycle, release, scope and failure rules are in the decision. Next compare that candidate against the prior 28 orchestration scenarios plus lifecycle/overlap cases, then complete field-level DTO and failure mapping. No source conversion or contributor prompt is issued; all seven acceptance rows remain open. The prior packets stay sealed.
 
+## Current design result — pass 4
+
+The [handle comparison](artifacts/design-pass04/decision.md) matched 28 source-based orchestration cases, passed 26 lifecycle/scope checks and detected five mutants. It uses actual tenant policy/AsyncLocalStorage with mocked stores. Per-invocation observed-write ownership is the working direction; do not reopen identity alternatives without new evidence.
+
+The [field/patch/outcome mapping](artifacts/design-pass04/contract-mapping.md) and reproducible census cover 44 message and 73 conversation schema fields. Next reconcile provider types, named read projections and actual ordinary callers; define concrete DTOs and settle strict-scope versus invalid-input validation ordering. Source build/runtime and integrated adapter checks remain required. No source change, CC prompt or acceptance claim follows; all seven rows stay open.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.5 | 2026-09-20 | Supported per-invocation handoff with 28 comparison/26 lifecycle cases and five mutants; added AST field inventory and patch/error mapping without claiming complete DTO or real-method conformance. |
 | v1.4 | 2026-09-20 | Real-Mongo lifecycle characterization superseded pass 2's private-hint preference; separated logical reference meaning from observed-write ownership and specified the next candidate's validation obligations. |
 | v1.3 | 2026-09-20 | Added source-based logical-reference prototype evidence: 28 matched scenarios, eight memo cases, three detected negative controls; preferred the staged-write/private-hint candidate over an early compound snapshot, with lifetime and real-DB validation still open. |
 | v1.2 | 2026-09-20 | Refined D02 after Operator clarification: future-oriented semantic identity guides the design; denormalization remains optional and physical schema choices remain tentative. |

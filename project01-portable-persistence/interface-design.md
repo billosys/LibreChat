@@ -125,6 +125,8 @@ The candidate must preserve retention pre-reads, cache distinctions, seed order,
 
 Future SQLite and cognitive-data-plane mappings should agree on domain meanings without copying Mongo's physical arrays or this local coordination mechanism. No new Lance schema, incarnation column, event log, graph implementation or RPC receipt registry is required now.
 
+[Pass 4](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/decision.md) now supports this handle direction with 28 orchestration comparisons, 26 lifecycle/scope checks and five detected mutants. The [field and outcome mapping](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/contract-mapping.md) records concrete patch states, partial-commit knowledge and schema/type differences. Stores remain mocked; validation ordering, named projections and complete DTOs still need reconciliation.
+
 ## Transactions, retries, and events
 
 Do not promise that saving a message and updating its conversation is already one atomic transaction. The observed path performs separate calls, and the source has explicit transaction-capability probing. Characterize the actual deployment-dependent behavior before assigning stronger guarantees.
@@ -183,6 +185,7 @@ The memory API can later expose search, retrieve, assert, revise, invalidate, li
 
 | Date | Change |
 |---|---|
+| 2026-09-20 | Slice02 pass 4 supported the observed-write handle and added a source census plus patch/partial-outcome mapping; concrete DTOs and integrated behavior remain open. |
 | 2026-09-20 | Slice02 pass 3 rejected invisible logical-reference caching using real-Mongo lifecycle counterexamples; explicit per-invocation ownership of the observed write is the next candidate. |
 | 2026-09-20 | Slice02 pass 2 refined the immediate boundary using source-executed comparison: staged operations with logical references and a private locator hint are preferred for further validation; prior compound-first hypothesis retained as history. |
 | 2026-09-20 | Added lightweight Guildhall/Lance-oriented identity hypotheses after the Operator clarified that denormalization is not a recommendation; prefer investigating a named turn operation before a public physical-link receipt. |

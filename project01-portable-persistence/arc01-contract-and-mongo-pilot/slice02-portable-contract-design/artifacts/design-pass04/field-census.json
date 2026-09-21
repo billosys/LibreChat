@@ -1,0 +1,1951 @@
+{
+  "scope": "Source AST top-level schema declarations plus expanded conversationPreset; not runtime schema, inherited Document fields, plugin fields, nested codec or consumer census",
+  "sources": [
+    {
+      "path": "packages/data-schemas/src/schema/defaults.ts",
+      "sha256": "cd71d8a34e1b9ed039536047feec88ad5cfef4f3056b8190f4e2d4a5d4642ff8"
+    },
+    {
+      "path": "packages/data-schemas/src/schema/message.ts",
+      "sha256": "7581f945999b17c59528ab22dbe3096a8ee2a680092e68b0d8fd5307aecc15b5"
+    },
+    {
+      "path": "packages/data-schemas/src/types/message.ts",
+      "sha256": "f226aa58e4c6ee5eb167a211aedc216096e960d32effbc6e2f470a5b803b801f"
+    },
+    {
+      "path": "packages/data-schemas/src/schema/convo.ts",
+      "sha256": "168d995b5100bde6287dbe371dba3380f7b355b14354a21886e5ff9ac4f8f8c0"
+    },
+    {
+      "path": "packages/data-schemas/src/types/convo.ts",
+      "sha256": "b253fd16d9c9e62bf532292222f6ee4661076916785ef86c5cf18b4acf5bcd0e"
+    }
+  ],
+  "records": [
+    {
+      "schemaName": "messageSchema",
+      "typeName": "IMessage",
+      "fields": [
+        {
+          "name": "messageId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 7,
+          "definition": "{\n      type: String,\n      required: true,\n      index: true,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String",
+            "required": "true"
+          }
+        },
+        {
+          "name": "conversationId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 13,
+          "definition": "{\n      type: String,\n      index: true,\n      required: true,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String",
+            "required": "true"
+          }
+        },
+        {
+          "name": "user",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 19,
+          "definition": "{\n      type: String,\n      index: true,\n      required: true,\n      default: null,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String",
+            "required": "true",
+            "default": "null"
+          }
+        },
+        {
+          "name": "model",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 26,
+          "definition": "{\n      type: String,\n      default: null,\n    }",
+          "flags": {
+            "type": "String",
+            "default": "null"
+          }
+        },
+        {
+          "name": "endpoint",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 30,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "conversationSignature",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 33,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "clientId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 36,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "invocationId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 39,
+          "definition": "{\n      type: Number,\n    }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "parentMessageId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 42,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "tokenCount",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 45,
+          "definition": "{\n      type: Number,\n    }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "summaryTokenCount",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 48,
+          "definition": "{\n      type: Number,\n    }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "sender",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 51,
+          "definition": "{\n      type: String,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "text",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 55,
+          "definition": "{\n      type: String,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "summary",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 59,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "isCreatedByUser",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 62,
+          "definition": "{\n      type: Boolean,\n      required: true,\n      default: false,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "required": "true",
+            "default": "false"
+          }
+        },
+        {
+          "name": "isUserSubmitted",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 67,
+          "definition": "{\n      type: Boolean,\n    }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "userSubmittedPaths",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 70,
+          "definition": "{\n      type: [String],\n      default: undefined,\n    }",
+          "flags": {
+            "type": "[String]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "userSubmittedMessageFieldPaths",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 74,
+          "definition": "{\n      type: [\n        {\n          _id: false,\n          path: { type: String, required: true },\n          field: {\n            type: String,\n            enum: ['answer', 'decision_response', 'decision_reason'],\n            required: true,\n          },\n        },\n      ],\n      default: undefined,\n    }",
+          "flags": {
+            "type": "[\n        {\n          _id: false,\n          path: { type: String, required: true },\n          field: {\n            type: String,\n            enum: ['answer', 'decision_response', 'decision_reason'],\n            required: true,\n          },\n        },\n      ]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "isTemporary",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 88,
+          "definition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "default": "false"
+          }
+        },
+        {
+          "name": "unfinished",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 92,
+          "definition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "default": "false"
+          }
+        },
+        {
+          "name": "error",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 96,
+          "definition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "default": "false"
+          }
+        },
+        {
+          "name": "finish_reason",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 100,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "feedback",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 103,
+          "definition": "{\n      type: {\n        rating: {\n          type: String,\n          enum: ['thumbsUp', 'thumbsDown'],\n          required: true,\n        },\n        tag: {\n          type: mongoose.Schema.Types.Mixed,\n          required: false,\n        },\n        text: {\n          type: String,\n          required: false,\n        },\n      },\n      default: undefined,\n      required: false,\n    }",
+          "flags": {
+            "type": "{\n        rating: {\n          type: String,\n          enum: ['thumbsUp', 'thumbsDown'],\n          required: true,\n        },\n        tag: {\n          type: mongoose.Schema.Types.Mixed,\n          required: false,\n        },\n        text: {\n          type: String,\n          required: false,\n        },\n      }",
+            "default": "undefined",
+            "required": "false"
+          }
+        },
+        {
+          "name": "langfuseSampled",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 122,
+          "definition": "{\n      type: Boolean,\n    }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "langfuseDestinationIds",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 125,
+          "definition": "{\n      type: [String],\n      default: undefined,\n    }",
+          "flags": {
+            "type": "[String]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "langfuseRunId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 129,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "_meiliIndex",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 132,
+          "definition": "{\n      type: Boolean,\n      required: false,\n      select: false,\n      default: false,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "required": "false",
+            "select": "false",
+            "default": "false"
+          }
+        },
+        {
+          "name": "files",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 138,
+          "definition": "{ type: [{ type: mongoose.Schema.Types.Mixed }], default: undefined }",
+          "flags": {
+            "type": "[{ type: mongoose.Schema.Types.Mixed }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "content",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 139,
+          "definition": "{\n      type: [{ type: mongoose.Schema.Types.Mixed }],\n      default: undefined,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "[{ type: mongoose.Schema.Types.Mixed }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "thread_id",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 144,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "iconURL",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 148,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "metadata",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 151,
+          "definition": "{ type: mongoose.Schema.Types.Mixed }",
+          "flags": {
+            "type": "mongoose.Schema.Types.Mixed"
+          }
+        },
+        {
+          "name": "subagentTranscript",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 152,
+          "definition": "{\n      type: {\n        taskId: { type: String, required: true },\n        mode: { type: String, enum: ['append', 'replace'], required: true },\n        messagesJson: { type: String, required: true },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "{\n        taskId: { type: String, required: true },\n        mode: { type: String, enum: ['append', 'replace'], required: true },\n        messagesJson: { type: String, required: true },\n      }",
+            "select": "false",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "subagentActivityProjection",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 162,
+          "definition": "{\n      type: {\n        taskId: { type: String, required: true },\n        version: { type: Number, enum: [1], required: true },\n        activityJson: { type: String, required: true },\n        truncated: { type: Boolean, required: true },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "{\n        taskId: { type: String, required: true },\n        version: { type: Number, enum: [1], required: true },\n        activityJson: { type: String, required: true },\n        truncated: { type: Boolean, required: true },\n      }",
+            "select": "false",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "subagentTriggerProjection",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 174,
+          "definition": "{\n      type: {\n        version: { type: Number, enum: [1], required: true },\n        eventType: { type: String, required: true },\n        sourceType: { type: String, required: true },\n        occurredAt: { type: Date, required: true },\n        expectedActionToolName: { type: String },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "{\n        version: { type: Number, enum: [1], required: true },\n        eventType: { type: String, required: true },\n        sourceType: { type: String, required: true },\n        occurredAt: { type: Date, required: true },\n        expectedActionToolName: { type: String },\n      }",
+            "select": "false",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "subagentTask",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 187,
+          "definition": "{\n      type: {\n        attemptKey: { type: String, required: true },\n        parentRunId: { type: String },\n        requestFingerprint: { type: String },\n        status: {\n          type: String,\n          enum: ['running', 'completed', 'error', 'cancelled'],\n          required: true,\n        },\n        resultClaim: {\n          type: {\n            kind: { type: String, enum: ['manual', 'wakeup'], required: true },\n            claimId: { type: String, required: true },\n            claimedAt: { type: Date, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        controlReceipts: {\n          type: [\n            {\n              invocationId: { type: String, required: true },\n              fingerprint: { type: String, required: true },\n              controlId: { type: String },\n              action: {\n                type: String,\n                enum: ['steer', 'queue', 'interrupt', 'cancel', 'cancel_message'],\n                required: true,\n              },\n              status: {\n                type: String,\n                enum: ['reserved', 'accepted', 'applied', 'rejected', 'failed'],\n                required: true,\n              },\n              createdAt: { type: Date, required: true },\n              updatedAt: { type: Date, required: true },\n              boundary: { type: String, enum: ['preempt', 'tool', 'turn'] },\n              reason: { type: String },\n              message: { type: String },\n              messageTruncated: { type: Boolean },\n              _id: false,\n            },\n          ],\n          default: undefined,\n        },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "{\n        attemptKey: { type: String, required: true },\n        parentRunId: { type: String },\n        requestFingerprint: { type: String },\n        status: {\n          type: String,\n          enum: ['running', 'completed', 'error', 'cancelled'],\n          required: true,\n        },\n        resultClaim: {\n          type: {\n            kind: { type: String, enum: ['manual', 'wakeup'], required: true },\n            claimId: { type: String, required: true },\n            claimedAt: { type: Date, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        controlReceipts: {\n          type: [\n            {\n              invocationId: { type: String, required: true },\n              fingerprint: { type: String, required: true },\n              controlId: { type: String },\n              action: {\n                type: String,\n                enum: ['steer', 'queue', 'interrupt', 'cancel', 'cancel_message'],\n                required: true,\n              },\n              status: {\n                type: String,\n                enum: ['reserved', 'accepted', 'applied', 'rejected', 'failed'],\n                required: true,\n              },\n              createdAt: { type: Date, required: true },\n              updatedAt: { type: Date, required: true },\n              boundary: { type: String, enum: ['preempt', 'tool', 'turn'] },\n              reason: { type: String },\n              message: { type: String },\n              messageTruncated: { type: Boolean },\n              _id: false,\n            },\n          ],\n          default: undefined,\n        },\n      }",
+            "select": "false",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "contextMeta",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 238,
+          "definition": "{\n      type: {\n        calibrationRatio: { type: Number },\n        encoding: { type: String },\n        ...agentFadingContextDefinition,\n      },\n      _id: false,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "{\n        calibrationRatio: { type: Number },\n        encoding: { type: String },\n        ...agentFadingContextDefinition,\n      }",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "attachments",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 247,
+          "definition": "{ type: [{ type: mongoose.Schema.Types.Mixed }], default: undefined }",
+          "flags": {
+            "type": "[{ type: mongoose.Schema.Types.Mixed }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "manualSkills",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 255,
+          "definition": "{ type: [String], default: undefined }",
+          "flags": {
+            "type": "[String]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "alwaysAppliedSkills",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 263,
+          "definition": "{ type: [String], default: undefined }",
+          "flags": {
+            "type": "[String]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "quotes",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 272,
+          "definition": "{ type: [String], default: undefined }",
+          "flags": {
+            "type": "[String]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "expiredAt",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 295,
+          "definition": "{\n      type: Date,\n    }",
+          "flags": {
+            "type": "Date"
+          }
+        },
+        {
+          "name": "addedConvo",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 298,
+          "definition": "{\n      type: Boolean,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "tenantId",
+          "file": "packages/data-schemas/src/schema/message.ts",
+          "line": 302,
+          "definition": "{\n      type: String,\n      index: true,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        }
+      ],
+      "overrides": [],
+      "options": "{ timestamps: true }",
+      "members": [
+        {
+          "name": "messageId",
+          "optional": false,
+          "type": "string",
+          "line": 48
+        },
+        {
+          "name": "conversationId",
+          "optional": false,
+          "type": "string",
+          "line": 49
+        },
+        {
+          "name": "user",
+          "optional": false,
+          "type": "string",
+          "line": 50
+        },
+        {
+          "name": "model",
+          "optional": true,
+          "type": "string",
+          "line": 51
+        },
+        {
+          "name": "endpoint",
+          "optional": true,
+          "type": "string",
+          "line": 52
+        },
+        {
+          "name": "conversationSignature",
+          "optional": true,
+          "type": "string",
+          "line": 53
+        },
+        {
+          "name": "clientId",
+          "optional": true,
+          "type": "string",
+          "line": 54
+        },
+        {
+          "name": "invocationId",
+          "optional": true,
+          "type": "number",
+          "line": 55
+        },
+        {
+          "name": "parentMessageId",
+          "optional": true,
+          "type": "string | null",
+          "line": 56
+        },
+        {
+          "name": "tokenCount",
+          "optional": true,
+          "type": "number",
+          "line": 57
+        },
+        {
+          "name": "summaryTokenCount",
+          "optional": true,
+          "type": "number",
+          "line": 58
+        },
+        {
+          "name": "sender",
+          "optional": true,
+          "type": "string",
+          "line": 59
+        },
+        {
+          "name": "text",
+          "optional": true,
+          "type": "string",
+          "line": 60
+        },
+        {
+          "name": "summary",
+          "optional": true,
+          "type": "string",
+          "line": 61
+        },
+        {
+          "name": "isCreatedByUser",
+          "optional": false,
+          "type": "boolean",
+          "line": 62
+        },
+        {
+          "name": "isUserSubmitted",
+          "optional": true,
+          "type": "boolean",
+          "line": 64
+        },
+        {
+          "name": "userSubmittedPaths",
+          "optional": true,
+          "type": "string[]",
+          "line": 66
+        },
+        {
+          "name": "userSubmittedMessageFieldPaths",
+          "optional": true,
+          "type": "UserSubmittedMessageFieldPath[]",
+          "line": 68
+        },
+        {
+          "name": "isTemporary",
+          "optional": true,
+          "type": "boolean",
+          "line": 69
+        },
+        {
+          "name": "unfinished",
+          "optional": true,
+          "type": "boolean",
+          "line": 70
+        },
+        {
+          "name": "error",
+          "optional": true,
+          "type": "boolean",
+          "line": 71
+        },
+        {
+          "name": "finish_reason",
+          "optional": true,
+          "type": "string",
+          "line": 72
+        },
+        {
+          "name": "feedback",
+          "optional": true,
+          "type": "{\n    rating: TFeedbackRating;\n    tag: TFeedbackTag | undefined;\n    text?: string;\n  }",
+          "line": 73
+        },
+        {
+          "name": "langfuseSampled",
+          "optional": true,
+          "type": "boolean",
+          "line": 78
+        },
+        {
+          "name": "langfuseDestinationIds",
+          "optional": true,
+          "type": "string[]",
+          "line": 79
+        },
+        {
+          "name": "langfuseRunId",
+          "optional": true,
+          "type": "string",
+          "line": 81
+        },
+        {
+          "name": "_meiliIndex",
+          "optional": true,
+          "type": "boolean",
+          "line": 82
+        },
+        {
+          "name": "files",
+          "optional": true,
+          "type": "unknown[]",
+          "line": 83
+        },
+        {
+          "name": "plugin",
+          "optional": true,
+          "type": "{\n    latest?: string;\n    inputs?: unknown[];\n    outputs?: string;\n  }",
+          "line": 84
+        },
+        {
+          "name": "plugins",
+          "optional": true,
+          "type": "unknown[]",
+          "line": 89
+        },
+        {
+          "name": "content",
+          "optional": true,
+          "type": "unknown[]",
+          "line": 90
+        },
+        {
+          "name": "thread_id",
+          "optional": true,
+          "type": "string",
+          "line": 91
+        },
+        {
+          "name": "iconURL",
+          "optional": true,
+          "type": "string",
+          "line": 92
+        },
+        {
+          "name": "addedConvo",
+          "optional": true,
+          "type": "boolean",
+          "line": 93
+        },
+        {
+          "name": "metadata",
+          "optional": true,
+          "type": "Record<string, unknown>",
+          "line": 94
+        },
+        {
+          "name": "subagentTranscript",
+          "optional": true,
+          "type": "{\n    taskId: string;\n    mode: 'append' | 'replace';\n    messagesJson: string;\n  }",
+          "line": 96
+        },
+        {
+          "name": "subagentActivityProjection",
+          "optional": true,
+          "type": "{\n    taskId: string;\n    version: 1;\n    activityJson: string;\n    truncated: boolean;\n  }",
+          "line": 102
+        },
+        {
+          "name": "subagentTask",
+          "optional": true,
+          "type": "{\n    attemptKey: string;\n    /** Parent response that initiated this exact child task. */\n    parentRunId?: string;\n    requestFingerprint?: string;\n    status: 'running' | 'completed' | 'error' | 'cancelled';\n    resultClaim?: {\n      kind: 'manual' | 'wakeup';\n      claimId: string;\n      claimedAt: Date;\n      /** Response generation that owns a manual delivery claim. */\n      generationId?: string;\n    };\n    controlReceipts?: ISubagentTaskControlReceipt[];\n  }",
+          "line": 109
+        },
+        {
+          "name": "subagentTriggerProjection",
+          "optional": true,
+          "type": "SubagentTriggerProjection",
+          "line": 124
+        },
+        {
+          "name": "contextMeta",
+          "optional": true,
+          "type": "Partial<IAgentEventActorContextMeta>",
+          "line": 125
+        },
+        {
+          "name": "attachments",
+          "optional": true,
+          "type": "unknown[]",
+          "line": 126
+        },
+        {
+          "name": "manualSkills",
+          "optional": true,
+          "type": "string[]",
+          "line": 128
+        },
+        {
+          "name": "alwaysAppliedSkills",
+          "optional": true,
+          "type": "string[]",
+          "line": 135
+        },
+        {
+          "name": "quotes",
+          "optional": true,
+          "type": "string[]",
+          "line": 137
+        },
+        {
+          "name": "expiredAt",
+          "optional": true,
+          "type": "Date | null",
+          "line": 138
+        },
+        {
+          "name": "createdAt",
+          "optional": true,
+          "type": "Date",
+          "line": 139
+        },
+        {
+          "name": "updatedAt",
+          "optional": true,
+          "type": "Date",
+          "line": 140
+        },
+        {
+          "name": "tenantId",
+          "optional": true,
+          "type": "string",
+          "line": 141
+        }
+      ],
+      "schemaOnly": [],
+      "interfaceOnly": [
+        "plugin",
+        "plugins",
+        "createdAt",
+        "updatedAt"
+      ],
+      "hidden": [
+        "_meiliIndex",
+        "subagentTranscript",
+        "subagentActivityProjection",
+        "subagentTriggerProjection",
+        "subagentTask"
+      ]
+    },
+    {
+      "schemaName": "convoSchema",
+      "typeName": "IConversation",
+      "fields": [
+        {
+          "name": "conversationId",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 22,
+          "definition": "{\n      type: String,\n      required: true,\n      index: true,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String",
+            "required": "true"
+          }
+        },
+        {
+          "name": "title",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 28,
+          "definition": "{\n      type: String,\n      default: 'New Chat',\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String",
+            "default": "'New Chat'"
+          }
+        },
+        {
+          "name": "user",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 33,
+          "definition": "{\n      type: String,\n      index: true,\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "messages",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 38,
+          "definition": "[{ type: Schema.Types.ObjectId, ref: 'Message' }]",
+          "flags": {}
+        },
+        {
+          "name": "isTemporary",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 39,
+          "definition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "flags": {
+            "type": "Boolean",
+            "default": "false"
+          }
+        },
+        {
+          "name": "endpoint",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 215,
+          "definition": "{\n    type: String,\n    default: null,\n    required: true,\n  }",
+          "flags": {
+            "type": "String",
+            "default": "null",
+            "required": "true"
+          }
+        },
+        {
+          "name": "endpointType",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 220,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "model",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 224,
+          "definition": "{\n    type: String,\n    required: false,\n  }",
+          "flags": {
+            "type": "String",
+            "required": "false"
+          }
+        },
+        {
+          "name": "region",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 229,
+          "definition": "{\n    type: String,\n    required: false,\n  }",
+          "flags": {
+            "type": "String",
+            "required": "false"
+          }
+        },
+        {
+          "name": "chatGptLabel",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 234,
+          "definition": "{\n    type: String,\n    required: false,\n  }",
+          "flags": {
+            "type": "String",
+            "required": "false"
+          }
+        },
+        {
+          "name": "examples",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 239,
+          "definition": "{ type: [{ type: Schema.Types.Mixed }], default: undefined }",
+          "flags": {
+            "type": "[{ type: Schema.Types.Mixed }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "modelLabel",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 240,
+          "definition": "{\n    type: String,\n    required: false,\n  }",
+          "flags": {
+            "type": "String",
+            "required": "false"
+          }
+        },
+        {
+          "name": "promptPrefix",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 244,
+          "definition": "{\n    type: String,\n    required: false,\n  }",
+          "flags": {
+            "type": "String",
+            "required": "false"
+          }
+        },
+        {
+          "name": "temperature",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 248,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "top_p",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 252,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "topP",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 257,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "topK",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 261,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "maxOutputTokens",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 265,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "maxTokens",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 269,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "presence_penalty",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 273,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "frequency_penalty",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 277,
+          "definition": "{\n    type: Number,\n    required: false,\n  }",
+          "flags": {
+            "type": "Number",
+            "required": "false"
+          }
+        },
+        {
+          "name": "file_ids",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 281,
+          "definition": "{ type: [{ type: String }], default: undefined }",
+          "flags": {
+            "type": "[{ type: String }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "resendImages",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 283,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "promptCache",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 287,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "promptCacheTtl",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 290,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "thinking",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 293,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "thinkingBudget",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 296,
+          "definition": "{\n    type: Number,\n  }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "thinkingLevel",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 299,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "effort",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 302,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "system",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 305,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "resendFiles",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 309,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "imageDetail",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 312,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "agent_id",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 44,
+          "definition": "{\n      type: String,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "codeApprovalMode",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 319,
+          "definition": "{\n    type: String,\n    enum: [...CODE_APPROVAL_MODES],\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "codeEnvironmentMode",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 323,
+          "definition": "{\n    type: String,\n    enum: [...CODE_ENVIRONMENT_MODES],\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "codeWorkspaces",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 327,
+          "definition": "{\n    type: [\n      {\n        environmentId: { type: String, required: true },\n        workspaceId: { type: String, required: true },\n        _id: false,\n      },\n    ],\n    default: undefined,\n  }",
+          "flags": {
+            "type": "[\n      {\n        environmentId: { type: String, required: true },\n        workspaceId: { type: String, required: true },\n        _id: false,\n      },\n    ]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "assistant_id",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 338,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "instructions",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 341,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "stop",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 344,
+          "definition": "{ type: [{ type: String }], default: undefined }",
+          "flags": {
+            "type": "[{ type: String }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "isArchived",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 345,
+          "definition": "{\n    type: Boolean,\n    default: false,\n  }",
+          "flags": {
+            "type": "Boolean",
+            "default": "false"
+          }
+        },
+        {
+          "name": "iconURL",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 350,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "greeting",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 353,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "spec",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 356,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "tags",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 358,
+          "definition": "{\n      type: [String],\n      default: [],\n      meiliIndex: true,\n    }",
+          "flags": {
+            "type": "[String]",
+            "default": "[]"
+          }
+        },
+        {
+          "name": "tools",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 363,
+          "definition": "{ type: [{ type: String }], default: undefined }",
+          "flags": {
+            "type": "[{ type: String }]",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "maxContextTokens",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 364,
+          "definition": "{\n    type: Number,\n  }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "max_tokens",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 367,
+          "definition": "{\n    type: Number,\n  }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "useResponsesApi",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 370,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "web_search",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 374,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "url_context",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 378,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "disableStreaming",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 381,
+          "definition": "{\n    type: Boolean,\n  }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "fileTokenLimit",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 384,
+          "definition": "{\n    type: Number,\n  }",
+          "flags": {
+            "type": "Number"
+          }
+        },
+        {
+          "name": "reasoning_effort",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 388,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "reasoning_summary",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 391,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "reasoning_mode",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 395,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "reasoning_context",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 398,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "verbosity",
+          "file": "packages/data-schemas/src/schema/defaults.ts",
+          "line": 402,
+          "definition": "{\n    type: String,\n  }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "initial_agent_id",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 47,
+          "definition": "{\n      type: String,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "String",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "subagentThread",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 52,
+          "definition": "{\n      type: {\n        rootConversationId: { type: String, required: true },\n        parentConversationId: { type: String, required: true },\n        parentMessageId: { type: String, required: true },\n        parentToolCallId: { type: String, required: true },\n        parentAgentId: { type: String },\n        subagentType: { type: String, required: true },\n        subagentKind: { type: String, enum: ['agent', 'graph'], required: true },\n        depth: { type: Number, min: 1, required: true },\n      },\n      _id: false,\n      default: undefined,\n    }",
+          "flags": {
+            "type": "{\n        rootConversationId: { type: String, required: true },\n        parentConversationId: { type: String, required: true },\n        parentMessageId: { type: String, required: true },\n        parentToolCallId: { type: String, required: true },\n        parentAgentId: { type: String },\n        subagentType: { type: String, required: true },\n        subagentKind: { type: String, enum: ['agent', 'graph'], required: true },\n        depth: { type: Number, min: 1, required: true },\n      }",
+            "default": "undefined"
+          }
+        },
+        {
+          "name": "subagentThreadLease",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 67,
+          "definition": "{\n      type: {\n        token: { type: String, required: true },\n        taskId: { type: String, required: true },\n        expiresAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "{\n        token: { type: String, required: true },\n        taskId: { type: String, required: true },\n        expiresAt: { type: Date, required: true },\n      }",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventBinding",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 79,
+          "definition": "{\n      type: {\n        bindingId: { type: String, required: true },\n        sourceKeyId: { type: String, required: true },\n        actorId: { type: String, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "{\n        bindingId: { type: String, required: true },\n        sourceKeyId: { type: String, required: true },\n        actorId: { type: String, required: true },\n      }",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventActor",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 91,
+          "definition": "{\n      type: {\n        generation: { type: Number, min: 1, required: true },\n        checkpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          required: true,\n        },\n        contextFingerprint: {\n          type: {\n            algorithm: { type: String, enum: ['sha256'], required: true },\n            version: { type: Number, min: 1, required: true },\n            digest: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        skillManifest: {\n          type: [\n            {\n              id: { type: String, required: true },\n              name: { type: String, required: true },\n              version: { type: Number, min: 1, required: true },\n              contentDigest: { type: String, default: undefined },\n              _id: false,\n            },\n          ],\n          default: undefined,\n          validate: {\n            validator: (skills: unknown[]) => skills.length <= MAX_AGENT_EVENT_ACTOR_SKILLS,\n            message: `Event actor Skill manifest exceeds ${MAX_AGENT_EVENT_ACTOR_SKILLS}`,\n          },\n        },\n        discoveredToolNames: {\n          type: [{ type: String, maxlength: MAX_AGENT_EVENT_ACTOR_TOOL_NAME_LENGTH }],\n          default: undefined,\n          validate: {\n            validator: (names: unknown[]) => names.length <= MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS,\n            message: `Event actor discovered-tool state exceeds ${MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS}`,\n          },\n        },\n        summary: {\n          type: {\n            text: {\n              type: String,\n              required: true,\n              maxlength: MAX_AGENT_EVENT_ACTOR_SUMMARY_LENGTH,\n            },\n            tokenCount: { type: Number, min: 0, required: true },\n            version: { type: Number, min: 1 },\n          },\n          _id: false,\n          default: undefined,\n        },\n        contextMeta: {\n          type: {\n            calibrationRatio: { type: Number, min: 0.5, max: 5, required: true },\n            encoding: {\n              type: String,\n              maxlength: MAX_AGENT_EVENT_ACTOR_ENCODING_LENGTH,\n              default: undefined,\n            },\n            ...agentFadingContextDefinition,\n          },\n          _id: false,\n          default: undefined,\n        },\n        compactionSemanticIndex: {\n          type: {\n            version: { type: Number, enum: [1], required: true },\n            entries: {\n              type: [\n                {\n                  type: {\n                    type: String,\n                    enum: ['tool_intent', 'tool_outcome', 'activity_phase', 'reasoning_label'],\n                    required: true,\n                  },\n                  sourceMessageId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    required: true,\n                  },\n                  sourceContentIndex: {\n                    type: Number,\n                    min: 0,\n                    max: MAX_COMPACTION_SEMANTIC_INDEX_SOURCE_CONTENT_INDEX,\n                    required: true,\n                  },\n                  revision: { type: Number, min: 0, required: true },\n                  status: { type: String, enum: ['committed', 'pending'], required: true },\n                  text: {\n                    type: String,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_TEXT_LENGTH,\n                  },\n                  redacted: { type: Boolean, default: undefined },\n                  toolCallId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  reasoningStepId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  _id: false,\n                },\n              ],\n              validate: {\n                validator: (entries: unknown[]) =>\n                  entries.length <= MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES,\n                message: `Compaction semantic index exceeds ${MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES} entries`,\n              },\n            },\n            providedEntryCount: { type: Number, min: 0, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n          validate: {\n            validator: isCompactionSemanticIndexProjection,\n            message: 'Compaction semantic index projection is invalid',\n          },\n        },\n        previousCheckpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        requiresColdStart: { type: Boolean, default: undefined },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "{\n        generation: { type: Number, min: 1, required: true },\n        checkpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          required: true,\n        },\n        contextFingerprint: {\n          type: {\n            algorithm: { type: String, enum: ['sha256'], required: true },\n            version: { type: Number, min: 1, required: true },\n            digest: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        skillManifest: {\n          type: [\n            {\n              id: { type: String, required: true },\n              name: { type: String, required: true },\n              version: { type: Number, min: 1, required: true },\n              contentDigest: { type: String, default: undefined },\n              _id: false,\n            },\n          ],\n          default: undefined,\n          validate: {\n            validator: (skills: unknown[]) => skills.length <= MAX_AGENT_EVENT_ACTOR_SKILLS,\n            message: `Event actor Skill manifest exceeds ${MAX_AGENT_EVENT_ACTOR_SKILLS}`,\n          },\n        },\n        discoveredToolNames: {\n          type: [{ type: String, maxlength: MAX_AGENT_EVENT_ACTOR_TOOL_NAME_LENGTH }],\n          default: undefined,\n          validate: {\n            validator: (names: unknown[]) => names.length <= MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS,\n            message: `Event actor discovered-tool state exceeds ${MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS}`,\n          },\n        },\n        summary: {\n          type: {\n            text: {\n              type: String,\n              required: true,\n              maxlength: MAX_AGENT_EVENT_ACTOR_SUMMARY_LENGTH,\n            },\n            tokenCount: { type: Number, min: 0, required: true },\n            version: { type: Number, min: 1 },\n          },\n          _id: false,\n          default: undefined,\n        },\n        contextMeta: {\n          type: {\n            calibrationRatio: { type: Number, min: 0.5, max: 5, required: true },\n            encoding: {\n              type: String,\n              maxlength: MAX_AGENT_EVENT_ACTOR_ENCODING_LENGTH,\n              default: undefined,\n            },\n            ...agentFadingContextDefinition,\n          },\n          _id: false,\n          default: undefined,\n        },\n        compactionSemanticIndex: {\n          type: {\n            version: { type: Number, enum: [1], required: true },\n            entries: {\n              type: [\n                {\n                  type: {\n                    type: String,\n                    enum: ['tool_intent', 'tool_outcome', 'activity_phase', 'reasoning_label'],\n                    required: true,\n                  },\n                  sourceMessageId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    required: true,\n                  },\n                  sourceContentIndex: {\n                    type: Number,\n                    min: 0,\n                    max: MAX_COMPACTION_SEMANTIC_INDEX_SOURCE_CONTENT_INDEX,\n                    required: true,\n                  },\n                  revision: { type: Number, min: 0, required: true },\n                  status: { type: String, enum: ['committed', 'pending'], required: true },\n                  text: {\n                    type: String,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_TEXT_LENGTH,\n                  },\n                  redacted: { type: Boolean, default: undefined },\n                  toolCallId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  reasoningStepId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  _id: false,\n                },\n              ],\n              validate: {\n                validator: (entries: unknown[]) =>\n                  entries.length <= MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES,\n                message: `Compaction semantic index exceeds ${MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES} entries`,\n              },\n            },\n            providedEntryCount: { type: Number, min: 0, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n          validate: {\n            validator: isCompactionSemanticIndexProjection,\n            message: 'Compaction semantic index projection is invalid',\n          },\n        },\n        previousCheckpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        requiresColdStart: { type: Boolean, default: undefined },\n      }",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventActorCleanup",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 240,
+          "definition": "{\n      type: [\n        {\n          threadId: { type: String, required: true },\n          checkpointId: { type: String, required: true },\n          checkpointNs: { type: String, required: true },\n          _id: false,\n        },\n      ],\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "[\n        {\n          threadId: { type: String, required: true },\n          checkpointId: { type: String, required: true },\n          checkpointNs: { type: String, required: true },\n          _id: false,\n        },\n      ]",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventActorReconciliations",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 252,
+          "definition": "{\n      type: [\n        {\n          invocationId: { type: String, required: true },\n          actionAdmitted: { type: Boolean, default: undefined },\n          status: {\n            type: String,\n            enum: [\n              'invocation_pending',\n              'persistence_pending',\n              'history_persisted',\n              'commit_conflict',\n              'commit_indeterminate',\n              'persistence_failed',\n              'settled',\n            ],\n            required: true,\n          },\n          checkpoint: {\n            type: {\n              threadId: { type: String, required: true },\n              checkpointId: { type: String, default: undefined },\n              checkpointNs: { type: String, required: true },\n            },\n            _id: false,\n            required: true,\n          },\n          action: {\n            type: {\n              toolName: { type: String, required: true },\n              toolCallId: { type: String, default: undefined },\n            },\n            _id: false,\n            required: true,\n          },\n          error: { type: String, default: undefined },\n          resolution: {\n            type: String,\n            enum: ['checkpoint_verified', 'action_compensated', 'history_repaired'],\n            default: undefined,\n          },\n          observedAt: { type: Date, required: true },\n          _id: false,\n        },\n      ],\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "[\n        {\n          invocationId: { type: String, required: true },\n          actionAdmitted: { type: Boolean, default: undefined },\n          status: {\n            type: String,\n            enum: [\n              'invocation_pending',\n              'persistence_pending',\n              'history_persisted',\n              'commit_conflict',\n              'commit_indeterminate',\n              'persistence_failed',\n              'settled',\n            ],\n            required: true,\n          },\n          checkpoint: {\n            type: {\n              threadId: { type: String, required: true },\n              checkpointId: { type: String, default: undefined },\n              checkpointNs: { type: String, required: true },\n            },\n            _id: false,\n            required: true,\n          },\n          action: {\n            type: {\n              toolName: { type: String, required: true },\n              toolCallId: { type: String, default: undefined },\n            },\n            _id: false,\n            required: true,\n          },\n          error: { type: String, default: undefined },\n          resolution: {\n            type: String,\n            enum: ['checkpoint_verified', 'action_compensated', 'history_repaired'],\n            default: undefined,\n          },\n          observedAt: { type: Date, required: true },\n          _id: false,\n        },\n      ]",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventActorEpoch",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 302,
+          "definition": "{\n      type: Number,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "Number",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventActorLegacyTurn",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 309,
+          "definition": "{\n      type: {\n        token: { type: String, required: true },\n        startedAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "{\n        token: { type: String, required: true },\n        startedAt: { type: Date, required: true },\n      }",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "agentEventActorSuspension",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 321,
+          "definition": "{\n      type: {\n        suspension: { type: Schema.Types.Mixed, required: true },\n        kind: {\n          type: String,\n          enum: ['human_decision', 'internal_completion'],\n          default: 'human_decision',\n        },\n        appliedAction: {\n          type: {\n            toolName: { type: String, required: true },\n            toolCallId: { type: String, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n        },\n        handlingGenerationCreatedAt: { type: Number, min: 0, default: undefined },\n        actionId: { type: String, required: true },\n        jobCreatedAt: { type: Number, required: true },\n        status: {\n          type: String,\n          enum: ['pending', 'claimed', 'pending_owned', 'claimed_owned', 'closed'],\n          required: true,\n        },\n        resumeAttemptId: { type: String, default: undefined },\n        outcome: {\n          type: String,\n          enum: ['committed', 'stale', 'settled', 'cancelled'],\n          default: undefined,\n        },\n        closedAt: { type: Date, default: undefined },\n        observedAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "flags": {
+            "type": "{\n        suspension: { type: Schema.Types.Mixed, required: true },\n        kind: {\n          type: String,\n          enum: ['human_decision', 'internal_completion'],\n          default: 'human_decision',\n        },\n        appliedAction: {\n          type: {\n            toolName: { type: String, required: true },\n            toolCallId: { type: String, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n        },\n        handlingGenerationCreatedAt: { type: Number, min: 0, default: undefined },\n        actionId: { type: String, required: true },\n        jobCreatedAt: { type: Number, required: true },\n        status: {\n          type: String,\n          enum: ['pending', 'claimed', 'pending_owned', 'claimed_owned', 'closed'],\n          required: true,\n        },\n        resumeAttemptId: { type: String, default: undefined },\n        outcome: {\n          type: String,\n          enum: ['committed', 'stale', 'settled', 'cancelled'],\n          default: undefined,\n        },\n        closedAt: { type: Date, default: undefined },\n        observedAt: { type: Date, required: true },\n      }",
+            "default": "undefined",
+            "select": "false"
+          }
+        },
+        {
+          "name": "chatProjectId",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 363,
+          "definition": "{\n      type: String,\n      default: null,\n      index: true,\n    }",
+          "flags": {
+            "type": "String",
+            "default": "null"
+          }
+        },
+        {
+          "name": "files",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 368,
+          "definition": "{\n      type: [String],\n    }",
+          "flags": {
+            "type": "[String]"
+          }
+        },
+        {
+          "name": "expiredAt",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 371,
+          "definition": "{\n      type: Date,\n    }",
+          "flags": {
+            "type": "Date"
+          }
+        },
+        {
+          "name": "tenantId",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 374,
+          "definition": "{\n      type: String,\n      index: true,\n    }",
+          "flags": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "pinned",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 378,
+          "definition": "{\n      type: Boolean,\n    }",
+          "flags": {
+            "type": "Boolean"
+          }
+        },
+        {
+          "name": "archivedAt",
+          "file": "packages/data-schemas/src/schema/convo.ts",
+          "line": 385,
+          "definition": "{\n      type: Date,\n    }",
+          "flags": {
+            "type": "Date"
+          }
+        }
+      ],
+      "overrides": [
+        "agent_id",
+        "tags"
+      ],
+      "options": "{ timestamps: true }",
+      "members": [
+        {
+          "name": "conversationId",
+          "optional": false,
+          "type": "string",
+          "line": 250
+        },
+        {
+          "name": "title",
+          "optional": true,
+          "type": "string",
+          "line": 251
+        },
+        {
+          "name": "user",
+          "optional": true,
+          "type": "string",
+          "line": 252
+        },
+        {
+          "name": "messages",
+          "optional": true,
+          "type": "Types.ObjectId[]",
+          "line": 253
+        },
+        {
+          "name": "isTemporary",
+          "optional": true,
+          "type": "boolean",
+          "line": 254
+        },
+        {
+          "name": "endpoint",
+          "optional": true,
+          "type": "string",
+          "line": 256
+        },
+        {
+          "name": "endpointType",
+          "optional": true,
+          "type": "string",
+          "line": 257
+        },
+        {
+          "name": "model",
+          "optional": true,
+          "type": "string",
+          "line": 258
+        },
+        {
+          "name": "region",
+          "optional": true,
+          "type": "string",
+          "line": 259
+        },
+        {
+          "name": "chatGptLabel",
+          "optional": true,
+          "type": "string",
+          "line": 260
+        },
+        {
+          "name": "examples",
+          "optional": true,
+          "type": "unknown[]",
+          "line": 261
+        },
+        {
+          "name": "modelLabel",
+          "optional": true,
+          "type": "string",
+          "line": 262
+        },
+        {
+          "name": "promptPrefix",
+          "optional": true,
+          "type": "string",
+          "line": 263
+        },
+        {
+          "name": "temperature",
+          "optional": true,
+          "type": "number",
+          "line": 264
+        },
+        {
+          "name": "top_p",
+          "optional": true,
+          "type": "number",
+          "line": 265
+        },
+        {
+          "name": "topP",
+          "optional": true,
+          "type": "number",
+          "line": 266
+        },
+        {
+          "name": "topK",
+          "optional": true,
+          "type": "number",
+          "line": 267
+        },
+        {
+          "name": "maxOutputTokens",
+          "optional": true,
+          "type": "number",
+          "line": 268
+        },
+        {
+          "name": "maxTokens",
+          "optional": true,
+          "type": "number",
+          "line": 269
+        },
+        {
+          "name": "presence_penalty",
+          "optional": true,
+          "type": "number",
+          "line": 270
+        },
+        {
+          "name": "frequency_penalty",
+          "optional": true,
+          "type": "number",
+          "line": 271
+        },
+        {
+          "name": "file_ids",
+          "optional": true,
+          "type": "string[]",
+          "line": 272
+        },
+        {
+          "name": "resendImages",
+          "optional": true,
+          "type": "boolean",
+          "line": 273
+        },
+        {
+          "name": "promptCache",
+          "optional": true,
+          "type": "boolean",
+          "line": 274
+        },
+        {
+          "name": "promptCacheTtl",
+          "optional": true,
+          "type": "'5m' | '1h'",
+          "line": 275
+        },
+        {
+          "name": "thinking",
+          "optional": true,
+          "type": "boolean",
+          "line": 276
+        },
+        {
+          "name": "thinkingBudget",
+          "optional": true,
+          "type": "number",
+          "line": 277
+        },
+        {
+          "name": "effort",
+          "optional": true,
+          "type": "string",
+          "line": 278
+        },
+        {
+          "name": "system",
+          "optional": true,
+          "type": "string",
+          "line": 279
+        },
+        {
+          "name": "resendFiles",
+          "optional": true,
+          "type": "boolean",
+          "line": 280
+        },
+        {
+          "name": "imageDetail",
+          "optional": true,
+          "type": "string",
+          "line": 281
+        },
+        {
+          "name": "agent_id",
+          "optional": true,
+          "type": "string",
+          "line": 282
+        },
+        {
+          "name": "codeApprovalMode",
+          "optional": true,
+          "type": "CodeApprovalMode",
+          "line": 283
+        },
+        {
+          "name": "codeEnvironmentMode",
+          "optional": true,
+          "type": "CodeEnvironmentMode",
+          "line": 284
+        },
+        {
+          "name": "codeWorkspaces",
+          "optional": true,
+          "type": "CodeWorkspaceSelection[]",
+          "line": 285
+        },
+        {
+          "name": "initial_agent_id",
+          "optional": true,
+          "type": "string | null",
+          "line": 287
+        },
+        {
+          "name": "subagentThread",
+          "optional": true,
+          "type": "TSubagentThreadLineage",
+          "line": 288
+        },
+        {
+          "name": "subagentThreadLease",
+          "optional": true,
+          "type": "ISubagentThreadLease",
+          "line": 290
+        },
+        {
+          "name": "agentEventBinding",
+          "optional": true,
+          "type": "IAgentEventBinding",
+          "line": 292
+        },
+        {
+          "name": "agentEventActor",
+          "optional": true,
+          "type": "IAgentEventActorState",
+          "line": 294
+        },
+        {
+          "name": "agentEventActorCleanup",
+          "optional": true,
+          "type": "IAgentEventActorCheckpoint[]",
+          "line": 296
+        },
+        {
+          "name": "agentEventActorReconciliations",
+          "optional": true,
+          "type": "IAgentEventActorReconciliation[]",
+          "line": 298
+        },
+        {
+          "name": "agentEventActorEpoch",
+          "optional": true,
+          "type": "number",
+          "line": 300
+        },
+        {
+          "name": "agentEventActorLegacyTurn",
+          "optional": true,
+          "type": "IAgentEventActorLegacyTurn",
+          "line": 302
+        },
+        {
+          "name": "agentEventActorSuspension",
+          "optional": true,
+          "type": "IAgentEventActorSuspension",
+          "line": 304
+        },
+        {
+          "name": "assistant_id",
+          "optional": true,
+          "type": "string",
+          "line": 305
+        },
+        {
+          "name": "instructions",
+          "optional": true,
+          "type": "string",
+          "line": 306
+        },
+        {
+          "name": "stop",
+          "optional": true,
+          "type": "string[]",
+          "line": 307
+        },
+        {
+          "name": "isArchived",
+          "optional": true,
+          "type": "boolean",
+          "line": 308
+        },
+        {
+          "name": "archivedAt",
+          "optional": true,
+          "type": "Date | null",
+          "line": 310
+        },
+        {
+          "name": "pinned",
+          "optional": true,
+          "type": "boolean",
+          "line": 311
+        },
+        {
+          "name": "isShared",
+          "optional": true,
+          "type": "boolean",
+          "line": 313
+        },
+        {
+          "name": "iconURL",
+          "optional": true,
+          "type": "string",
+          "line": 314
+        },
+        {
+          "name": "greeting",
+          "optional": true,
+          "type": "string",
+          "line": 315
+        },
+        {
+          "name": "spec",
+          "optional": true,
+          "type": "string",
+          "line": 316
+        },
+        {
+          "name": "tags",
+          "optional": true,
+          "type": "string[]",
+          "line": 317
+        },
+        {
+          "name": "chatProjectId",
+          "optional": true,
+          "type": "string | null",
+          "line": 318
+        },
+        {
+          "name": "tools",
+          "optional": true,
+          "type": "string[]",
+          "line": 319
+        },
+        {
+          "name": "maxContextTokens",
+          "optional": true,
+          "type": "number",
+          "line": 320
+        },
+        {
+          "name": "max_tokens",
+          "optional": true,
+          "type": "number",
+          "line": 321
+        },
+        {
+          "name": "reasoning_effort",
+          "optional": true,
+          "type": "string",
+          "line": 322
+        },
+        {
+          "name": "reasoning_summary",
+          "optional": true,
+          "type": "string",
+          "line": 323
+        },
+        {
+          "name": "reasoning_mode",
+          "optional": true,
+          "type": "string",
+          "line": 324
+        },
+        {
+          "name": "reasoning_context",
+          "optional": true,
+          "type": "string",
+          "line": 325
+        },
+        {
+          "name": "verbosity",
+          "optional": true,
+          "type": "string",
+          "line": 326
+        },
+        {
+          "name": "useResponsesApi",
+          "optional": true,
+          "type": "boolean",
+          "line": 327
+        },
+        {
+          "name": "web_search",
+          "optional": true,
+          "type": "boolean",
+          "line": 328
+        },
+        {
+          "name": "url_context",
+          "optional": true,
+          "type": "boolean",
+          "line": 329
+        },
+        {
+          "name": "disableStreaming",
+          "optional": true,
+          "type": "boolean",
+          "line": 330
+        },
+        {
+          "name": "fileTokenLimit",
+          "optional": true,
+          "type": "number",
+          "line": 331
+        },
+        {
+          "name": "files",
+          "optional": true,
+          "type": "string[]",
+          "line": 333
+        },
+        {
+          "name": "expiredAt",
+          "optional": true,
+          "type": "Date",
+          "line": 334
+        },
+        {
+          "name": "createdAt",
+          "optional": true,
+          "type": "Date",
+          "line": 335
+        },
+        {
+          "name": "updatedAt",
+          "optional": true,
+          "type": "Date",
+          "line": 336
+        },
+        {
+          "name": "tenantId",
+          "optional": true,
+          "type": "string",
+          "line": 337
+        }
+      ],
+      "schemaOnly": [
+        "thinkingLevel"
+      ],
+      "interfaceOnly": [
+        "isShared",
+        "createdAt",
+        "updatedAt"
+      ],
+      "hidden": [
+        "initial_agent_id",
+        "subagentThreadLease",
+        "agentEventBinding",
+        "agentEventActor",
+        "agentEventActorCleanup",
+        "agentEventActorReconciliations",
+        "agentEventActorEpoch",
+        "agentEventActorLegacyTurn",
+        "agentEventActorSuspension"
+      ]
+    }
+  ]
+}

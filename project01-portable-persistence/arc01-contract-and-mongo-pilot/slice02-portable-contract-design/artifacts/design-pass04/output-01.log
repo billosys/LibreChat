@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "comparisons": 28,
+  "lifecycleCases": [
+    {
+      "name": "normal-lifecycle-and-plain-dto",
+      "passed": true
+    },
+    {
+      "name": "conversation-before-message",
+      "passed": true
+    },
+    {
+      "name": "duplicate-message",
+      "passed": true
+    },
+    {
+      "name": "concurrent-message",
+      "passed": true
+    },
+    {
+      "name": "duplicate-conversation",
+      "passed": true
+    },
+    {
+      "name": "concurrent-conversation",
+      "passed": true
+    },
+    {
+      "name": "release-before-message",
+      "passed": true
+    },
+    {
+      "name": "release-during-message",
+      "passed": true
+    },
+    {
+      "name": "release-during-conversation",
+      "passed": true
+    },
+    {
+      "name": "message-rejection",
+      "passed": true
+    },
+    {
+      "name": "conversation-rejection",
+      "passed": true
+    },
+    {
+      "name": "absent",
+      "passed": true
+    },
+    {
+      "name": "noLocator",
+      "passed": true
+    },
+    {
+      "name": "other-owner",
+      "passed": true
+    },
+    {
+      "name": "other-tenant",
+      "passed": true
+    },
+    {
+      "name": "scoped-to-system",
+      "passed": true
+    },
+    {
+      "name": "system-to-scoped",
+      "passed": true
+    },
+    {
+      "name": "unscoped-to-scoped",
+      "passed": true
+    },
+    {
+      "name": "strict-missing-scope",
+      "passed": true
+    },
+    {
+      "name": "allowed-unscoped",
+      "passed": true
+    },
+    {
+      "name": "allowed-system",
+      "passed": true
+    },
+    {
+      "name": "strict-enabled-after-begin",
+      "passed": true
+    },
+    {
+      "name": "overlapping-handles-reverse-completion",
+      "passed": true
+    },
+    {
+      "name": "caller-dto-mutation",
+      "passed": true
+    },
+    {
+      "name": "observed-row-after-recreation",
+      "passed": true
+    },
+    {
+      "name": "reject-caller-physical-linkage",
+      "passed": true
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "re-resolve-after-recreation",
+      "detected": true
+    },
+    {
+      "name": "shared-locator-slot",
+      "detected": true
+    },
+    {
+      "name": "bypassed-scope-recheck",
+      "detected": true
+    },
+    {
+      "name": "omitted-release",
+      "detected": true
+    },
+    {
+      "name": "early-snapshot",
+      "detected": true
+    }
+  ]
+}

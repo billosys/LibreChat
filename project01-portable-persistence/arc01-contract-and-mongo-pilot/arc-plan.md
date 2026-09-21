@@ -72,10 +72,13 @@ Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decisi
 
 **Pass-3 correction:** [Slice02 lifecycle evidence](slice02-portable-contract-design/artifacts/design-pass03/decision.md) supersedes the pass-2 hint preference: two controls held, four lifecycle cases broke reference value equivalence, and two negative controls were detected. Reject silent hot/cold resolution. Next compare a per-invocation turn-write handle retaining the observed row privately, while preserving current application sequencing. This remains investigation; real application conformance, concrete DTOs, lifecycle/scope enforcement and acceptance remain pending.
 
+**Pass-4 progress:** [Slice02 comparison and mapping](slice02-portable-contract-design/artifacts/design-pass04/decision.md) retains the handle as the working handoff: 28 orchestration cases, 26 lifecycle/scope cases and five negative controls. The source field census and patch/error table now guide DTO work. Remaining implementation prerequisites include projection/consumer reconciliation, invalid-input versus strict-scope validation ordering, current source builds and real-method conformance. Slice02 remains active; no roadmap expansion or contributor transition.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.8 | 2026-09-20 | Slice02 pass 4 validated the bounded handle prototype and added source-field/partial-outcome mapping; scoped remaining DTO and integration work. |
 | v1.7 | 2026-09-20 | Slice02 pass 3 rejected invisible locator caching after real-Mongo lifecycle counterexamples; recorded the next explicit observed-write candidate without expanding source scope. |
 | v1.6 | 2026-09-20 | Slice02 pass 2 compared actual source orchestration and private logical-reference translation; refined D02 direction with explicit mocking, lifetime and source-build limits. |
 | v1.5 | 2026-09-20 | Refined D02 direction using the Operator's future-Lance guidance; denormalization is not a preferred solution, and named-operation/logical-identity hypotheses need concrete validation. |
