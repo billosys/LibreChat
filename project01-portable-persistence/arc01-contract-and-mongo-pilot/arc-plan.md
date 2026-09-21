@@ -9,6 +9,7 @@
 | Depends on | Existing interface proposal and completed read-only Claude reconciliation; implementation baseline decision before code |
 | Blocks | Arc02's broader persistence conversion; Arc03's first concrete adapter contract |
 | Workflow | One contributor for current investigation; later transitions follow the project plan |
+| Execution mode | Expedited Mode; see the project plan for cadence, unchanged gates, and prompt-path reporting |
 | Current slice | [Slice01 — Behavior baseline](slice01-behavior-baseline/slice-plan.md) |
 
 ## Capability
@@ -67,4 +68,5 @@ Execute Slice01's dependency tracing and test preflight. Its artifacts will dist
 
 | Version | Date | Change |
 |---|---|---|
+| v1.1 | 2026-09-20 | Applied project-level Expedited Mode; investigation workflow and acceptance requirements unchanged. |
 | v1.0 | 2026-09-20 | Opened Arc01 at the Operator's request; defined three slices and opened only the first investigation slice. No application behavior or project acceptance requirement changed. |

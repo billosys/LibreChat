@@ -6,6 +6,7 @@
 | Arc | [Arc01](../arc-plan.md) |
 | Status | Open — investigation assignment active; baseline execution pending |
 | Workflow | One contributor, explicitly selected by the Operator |
+| Execution mode | Expedited Mode under the project policy; current one-contributor assignment unchanged |
 | Assignment | This slice plan; no separate CC assignment in the current workflow |
 | Source baseline | `ba44443fdb232bbe6d4977e2619774b5a72586ac` |
 | Artifact home | `artifacts/` inside this slice |
@@ -64,4 +65,5 @@ Current evidence is self-checked, not independent acceptance. Existing project/a
 
 | Version | Date | Change |
 |---|---|---|
+| v1.1 | 2026-09-20 | Applied Operator-requested Expedited Mode and inherited prompt-path reporting; no new contributor assignment or acceptance claim. |
 | v1.0 | 2026-09-20 | Opened the bounded behavior-baseline investigation under one-contributor workflow. |

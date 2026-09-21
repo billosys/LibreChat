@@ -2,7 +2,7 @@
 
 The immediate goal is a portable application persistence boundary: first backed by existing MongoDB behavior, then exercised by one genuinely different backend.
 
-Current work: [Arc01 — Contract and first Mongo conversion](project01-portable-persistence/arc01-contract-and-mongo-pilot/arc-plan.md), beginning with [Slice01 — Behavior baseline](project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/slice-plan.md). Both are open under one-contributor investigation.
+Current work: [Arc01 — Contract and first Mongo conversion](project01-portable-persistence/arc01-contract-and-mongo-pilot/arc-plan.md), beginning with [Slice01 — Behavior baseline](project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/slice-plan.md). Both are open under one-contributor investigation, with Operator-selected Expedited Mode enabled. Issued contributor prompts will be reported in chat as plain paths relative to `project01-portable-persistence/`; no contributor prompt has been issued yet.
 
 Start with [Project01](project01-portable-persistence/project-plan.md). Its design package contains:
 

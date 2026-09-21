@@ -87,6 +87,18 @@ During one-contributor investigation, unresolved design and scope questions retu
 
 Current investigation checks are recorded in the owning research/planning documents without fictional independent-verification files. Later use `cdc-verification.md` for two-contributor slice review and `crc-verification.md` for three-contributor slice review; three-contributor arc/project closure retains both records as required by the framework. Existing independent and Operator acceptance requirements remain in force. Detailed slice artifacts live under their owning slice unless an explicit override is recorded.
 
+### Expedited Mode — enabled 2026-09-20
+
+The Operator explicitly requested Expedited Mode and project-relative prompt paths in chat. It applies to Project01, including the current Arc01 investigation, and remains independent of contributor count. One-contributor investigation is still active; no CC or CRC context is assigned by enabling this mode.
+
+- Commit completed planning/review updates with explicit path allowlists and concise reports. When CC is assigned, its instructions likewise require explicit-path commits of its work before reviewer acceptance; those commits remain proposed-done.
+- Close a slice as soon as its full evidence, required review, and Operator gates permit; immediately open the next planned slice. At the last slice, perform formal arc closure and open the next arc/first slice when the roadmap and required gates permit. Preserve the designated contributor's authority for each action.
+- Report every newly issued initial or iteration prompt in chat as a plain copy/paste path relative to `project01-portable-persistence/`, including its full arc/slice path. A Markdown link may supplement the path but does not replace it. Identify the assigned role and current assignment; do not report a nonexistent or superseded prompt as actionable.
+- While this investigation uses one contributor, the current slice plan is the assignment. No synthetic CC prompt is required. When a real contributor handoff is ready, complete the existing readiness and workflow-transition requirements and report the resulting prompt path.
+- No shortcuts, skipped validation, weaker evidence/review, inferred source scope, scope reduction/change, timeline interpretation, or override of explicit Operator gates. Unresolved escalations and required independent/Operator gates still stop affected advancement; unaffected authorized work can continue.
+
+Activation state: planning baseline `e4f437873`; Arc01/Slice01 open with all acceptance rows open; no implementation prompt issued and no application test baseline run. This policy changes cadence and reporting, not the acceptance state.
+
 ### Transition record — 2026-09-20
 
 - Prior state: default two-contributor planning, initialized at planning commit `c90d56654`; no CC assignment or reviewer acceptance issued.
@@ -118,6 +130,7 @@ These outputs have a stopping rule: the first conversion must be describable wit
 
 | Version | Date | Change |
 |---|---|---|
+| v1.6 | 2026-09-20 | Enabled Operator-requested Expedited Mode and exact project-relative prompt reporting; retained one-contributor investigation and all existing scope, evidence, and review gates. |
 | v1.5 | 2026-09-20 | Opened Arc01 and its first investigation slice at the Operator's request; recorded the three-slice roadmap, ledgers, artifact home, and confirmed remote dev-branch absence. No implementation or acceptance claim. |
 | v1.4 | 2026-09-20 | Recorded authorized read-only Mongo reconciliation with complete population accounting, retained failed/corrected oracle attempts, concrete source fidelity losses, and unchanged open SQLite acceptance. |
 | v1.3 | 2026-09-20 | Recorded Operator-reported local Mongo startup/import, resolved initial route and source location, verified archive/JSON identity and source counts, and identified concrete structured-content preservation requirements. |
