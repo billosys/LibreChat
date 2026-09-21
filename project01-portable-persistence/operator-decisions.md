@@ -1,0 +1,19 @@
+# Operator decisions — normalization and development branches
+
+Recorded 2026-09-20, after Slice02's first design pass. These decisions supplement that pass without rewriting its preserved evidence.
+
+## Practical storage design
+
+The Operator explicitly accepts denormalization for performance and practical considerations. Complete database normalization is not a requirement. The earlier message-link question concerned keeping Mongo's physical IDs out of the portable interface while avoiding another lookup on every save; it was not a request to require normalized tables.
+
+Denormalized references, duplicated logical IDs, embedded membership or adapter-owned indexes are valid design candidates. Select them by read/write cost and maintainability, with a clear authoritative value and update/recovery rules. Tenant/owner isolation, retry behavior and relationship correctness still apply. This preference expands D02's options; it does not by itself select a schema, approve inconsistent duplicates or require a Mongo data migration. The next contract pass should compare a denormalized logical-link representation alongside the receipt and named-operation alternatives.
+
+## Source worktree decision — D06 resolved
+
+The Operator requested `billo-guildhall` for this project's implementation and `features` for independent UI features, with planning retained separately and main kept pristine. See [repository workflow](../repository-workflow.md) for actual paths, upstream references and synchronization policy.
+
+Upstream dev was fetched and both branches start at `fe79265b2f47937051625719f3ba5080189912c1`. Main was fast-forwarded to `0cc52cd8c71e8ccbceb8f001ddf8059b10501fce` and tracks upstream main. No branch was created from the orphan planning history. This resolves D06's missing source lineage; it does not resolve D07's build/runtime validation or the remaining contract choices.
+
+Slice01 and the first Slice02 packet remain historical evidence at `ba44443fd`. Resume source work from the Guildhall worktree, refreshing relevant instructions, dependency/plugin changes and test prerequisites before implementation. The original baseline's saved artifacts and checksums are preserved.
+
+Project02 owns the newly requested UI memory/project imports. Coordinate shared persistence needs, but do not silently fold those features into Project01's ordinary-turn Mongo pilot.

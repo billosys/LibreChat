@@ -7,7 +7,7 @@
 | Status | Active — design preparation; not implementation-ready |
 | Workflow | One contributor; Expedited Mode |
 | Assignment | This plan, owned by the current conversation; no CC/CRC handoff |
-| Source baseline | `ba44443fdb232bbe6d4977e2619774b5a72586ac` |
+| Source baseline | First-pass evidence: `ba44443fdb232bbe6d4977e2619774b5a72586ac`; next source work: `billo-guildhall` from `fe79265b2f47937051625719f3ba5080189912c1`, requiring revalidation |
 | Artifact home | `artifacts/` within this slice |
 | Depends on | Slice01 attested evidence; unresolved findings retained below |
 | Blocks | Slice03 implementation assignment |
@@ -42,8 +42,13 @@ The slice is complete only when all ledger criteria have concrete dispositions, 
 |---|---|---|---|---|
 | This slice plan v1.0, current conversation | 2026-09-20 | Slice01 evidence packet | Operator explicitly requested continuation after reading the report | Active design preparation; no implementation prompt |
 
+## Subsequent Operator decisions
+
+See [Operator decisions](../../operator-decisions.md): practical denormalization is permitted, and source work now belongs in the new Guildhall worktree. Include adapter-owned denormalized logical links in the D02 comparison, with authority/update/recovery rules. D06's missing-dev blocker is resolved by the verified upstream dev base. The preserved first-pass contract/report still describe the decisions and source state at their creation; these later decisions supersede their D06-open status without changing those evidence files. Revalidate relevant upstream changes before implementation; no feature import is added to this pilot.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.1 | 2026-09-20 | Recorded denormalization preference and new source worktree/base, resolving D06 while preserving first-pass artifacts and D07 revalidation. |
 | v1.0 | 2026-09-20 | Opened the planned contract-design slice under explicit continuation authority; retained pending Slice01 acceptance and source-work gates. |

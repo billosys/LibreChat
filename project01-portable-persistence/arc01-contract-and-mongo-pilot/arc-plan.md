@@ -56,7 +56,7 @@ Child completion alone does not prove the arc composes. Arc close requires integ
 
 This conversation is the sole active contributor. The Operator remains the design partner and scope authority. Current work is investigation and planning with self-checks; no fictional CC/CRC assignments or independent verification files are created. The project retains its intended progression to two contributors for deeper work and three for well-defined implementation. Record actual assignments and effective scope at transition.
 
-The fork currently exposes `main` at the inspected source commit and no `dev` ref in the explicit remote query. Source instructions require implementation branches and PRs against `dev`. This does not block read-only investigation or isolated tests; resolve the implementation baseline with the Operator before creating an implementation branch. Do not silently retarget to `main` or fabricate an upstream lineage.
+The earlier fork-only remote query found no dev ref. This is now resolved: the Operator requested a `billo-guildhall` implementation worktree, created from verified `upstream/dev` at `fe79265b2f47937051625719f3ba5080189912c1`. Source instructions still require upstream PRs against dev; main remains pristine. See [repository workflow](../../repository-workflow.md) and [Operator decisions](../operator-decisions.md). Earlier evidence remains at its original source commit; refresh source/build validation before implementation.
 
 Keep the running LibreChat/Mongo corpus unchanged. Test suites must be inspected for isolated database setup and teardown before execution. Tests may mutate only their disposable databases. Keep private exports and conversation contents outside Git; use sanitized fixtures for later tests.
 
@@ -66,12 +66,13 @@ Slice01 delivered its [proposed closing packet](slice01-behavior-baseline/closin
 
 Slice02 has delivered a [first contract pass](slice02-portable-contract-design/artifacts/contract-design.md) and [cursor characterization](slice02-portable-contract-design/artifacts/pagination-findings.md). The synthetic control returned 6/6; the equal-timestamp fixture returned 4/6 and declared completion, confirming the suspected gap in the installed build. A pagination correction is proposed as separate work; the adapter must not silently change compatibility behavior. The initial proposal also overstated injection: BaseClient imports the database singleton; only the save helper accepts injected dependencies. That correction is reflected in the project design input.
 
-Current design work is relationship translation without exposing physical IDs or adding a serial lookup, field-level DTO/projection validation, conservative partial-write outcomes and the exact route/code fence. These findings deepen Slice02 without broadening the three-slice roadmap or implementation scope. Node 24/source-build reproduction and dev-lineage resolution remain prerequisites before affected implementation acceptance/branching.
+Current design work is relationship translation without exposing physical IDs or adding a serial lookup, field-level DTO/projection validation, conservative partial-write outcomes and the exact route/code fence. These findings deepen Slice02 without broadening the three-slice roadmap or implementation scope. D06 dev lineage is now resolved through the upstream-based Guildhall worktree; Node 24/source-build reproduction remains pending. The Operator permits denormalization for performance/practicality; Slice02 should include adapter-owned denormalized logical links among its design alternatives, with explicit consistency rules.
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.4 | 2026-09-20 | Incorporated Operator denormalization preference and verified worktree/base decision; D06 resolved, historical test evidence preserved and current-build validation still required. |
 | v1.3 | 2026-09-20 | Recorded Operator-authorized Slice02 design continuation while retaining Slice01 acceptance; bubbled confirmed cursor gap and injection correction from Slice02, with unresolved contract choices explicit and no source scope change. |
 | v1.2 | 2026-09-20 | Slice01 delivered the attested map/matrix and 641-test baseline; added concrete contract/coverage/runtime findings and retained independent acceptance. Roadmap unchanged pending reviewed sizing in Slice02. |
 | v1.1 | 2026-09-20 | Applied project-level Expedited Mode; investigation workflow and acceptance requirements unchanged. |
