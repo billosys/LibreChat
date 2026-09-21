@@ -1,0 +1,16 @@
+[
+  {
+    "argv": [
+      "/Users/oubiwann/.local/bin/node",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+      "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+      "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/guildhall-cdc-replay-lm3uxke_/result.json"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exit": 0,
+    "stdout": "{\n  \"success\": true,\n  \"readCases\": 16,\n  \"gateCases\": 2,\n  \"preflightCases\": [\n    {\n      \"name\": \"missing-owner\",\n      \"direct\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"deferred\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"missing-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"malformed-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    }\n  ],\n  \"negativeControls\": [\n    {\n      \"name\": \"wrong-owner\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"no-projection\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"eager-strict-scope\",\n      \"detected\": true\n    }\n  ]\n}\n",
+    "stderr": ""
+  }
+]

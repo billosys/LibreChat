@@ -1,0 +1,132 @@
+{
+  "subjectCommit": "99d5ecd794d00cd1c0db7a199633042766af5953",
+  "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+  "replayExactlyMatchesCC": true,
+  "readCases": 16,
+  "gateCases": 2,
+  "preflightCases": 3,
+  "negativeControls": 3,
+  "coverageFields": 117,
+  "selectedRoots": 10,
+  "nestedExclusions": 12,
+  "sourceFingerprintsChecked": 23,
+  "artifactHashesVerified": 87,
+  "subjectVerifierSha256": "5899fe36a58657f55197c7962ea5d43ea196fd225dfd6f8652c182d138411976",
+  "verifierProvenanceControls": [
+    {
+      "mutation": "node",
+      "rejected": false,
+      "returned": {
+        "behaviorFieldsComparedExactly": [
+          "readCases",
+          "gateCases",
+          "preflightCases",
+          "negativeControls",
+          "success",
+          "modelAccesses",
+          "error"
+        ],
+        "provenanceFieldsComparedIndividually": [
+          "sourceHead",
+          "node",
+          "compiler",
+          "sources",
+          "experimentSha256",
+          "priorHandle"
+        ],
+        "allowedProvenanceDifferences": [
+          {
+            "field": "node",
+            "sealed": "v22.22.3",
+            "replay": "v0.invalid"
+          }
+        ]
+      }
+    },
+    {
+      "mutation": "sourceHead",
+      "rejected": false,
+      "returned": {
+        "behaviorFieldsComparedExactly": [
+          "readCases",
+          "gateCases",
+          "preflightCases",
+          "negativeControls",
+          "success",
+          "modelAccesses",
+          "error"
+        ],
+        "provenanceFieldsComparedIndividually": [
+          "sourceHead",
+          "node",
+          "compiler",
+          "sources",
+          "experimentSha256",
+          "priorHandle"
+        ],
+        "allowedProvenanceDifferences": [
+          {
+            "field": "sourceHead",
+            "sealed": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+            "replay": "0000000000000000000000000000000000000000"
+          }
+        ]
+      }
+    },
+    {
+      "mutation": "compiler",
+      "rejected": false,
+      "returned": {
+        "behaviorFieldsComparedExactly": [
+          "readCases",
+          "gateCases",
+          "preflightCases",
+          "negativeControls",
+          "success",
+          "modelAccesses",
+          "error"
+        ],
+        "provenanceFieldsComparedIndividually": [
+          "sourceHead",
+          "node",
+          "compiler",
+          "sources",
+          "experimentSha256",
+          "priorHandle"
+        ],
+        "allowedProvenanceDifferences": [
+          {
+            "field": "compiler",
+            "sealed": {
+              "path": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+              "version": "5.9.3",
+              "sha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675"
+            },
+            "replay": {
+              "path": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+              "version": "5.9.3",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "verifierClassificationControl": {
+    "rejected": false,
+    "returned": {
+      "coverageRows": 117,
+      "uniqueCoverageKeys": 117,
+      "selectedRoots": 10,
+      "nestedExclusions": 12,
+      "classificationCounts": {
+        "selected nested root": 10,
+        "other scalar/array field outside this deep inspection": 91,
+        "default-hidden specialized field": 14,
+        "adapter-private physical relationship": 1
+      }
+    }
+  },
+  "ccPacketUnchanged": true,
+  "evidenceLimits": "Replay of existing storage-double harness and independent structural checks. Semantic review is separately recorded; no integrated Mongo/build acceptance."
+}

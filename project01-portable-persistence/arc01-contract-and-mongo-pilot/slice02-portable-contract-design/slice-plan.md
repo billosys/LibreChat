@@ -6,7 +6,7 @@
 | Arc | [Arc01](../arc-plan.md) |
 | Status | Active — design preparation; not implementation-ready |
 | Workflow | Two contributors: CDC + CC; Expedited Mode |
-| Assignment | [cc-prompt.md](cc-prompt.md), initial bounded evidence assignment; pending Operator relay and CC acknowledgement |
+| Assignment | [cc-prompt-iteration01.md](cc-prompt-iteration01.md), first correction for R1–R3; pending Operator relay/CC acknowledgement |
 | Source baseline | Current CC inspection: `3e3c5410d3863118fdba694fb0cd51baeb7102f9` on `billo-guildhall`; first-pass evidence remains at `ba44443fdb232bbe6d4977e2619774b5a72586ac` |
 | Artifact home | `artifacts/` within this slice |
 | Depends on | Slice01 attested evidence; unresolved findings retained below |
@@ -41,15 +41,16 @@ The slice is complete only when all ledger criteria have concrete dispositions, 
 | Assignment | Date | Predecessor | Reason | Disposition |
 |---|---|---|---|---|
 | This slice plan v1.0, current conversation | 2026-09-20 | Slice01 evidence packet | Operator explicitly requested continuation after reading the report | Historical one-contributor investigation through pass05; superseded for execution by the initial CC prompt |
-| [cc-prompt.md](cc-prompt.md) | 2026-09-21 | One-contributor design passes 1–5; no prior CC prompt | Operator selected CDC + CC; replay pass05 and inventory ten nested roots for CDC decisions | Active assignment issued for Operator relay; receiving context/acknowledgement pending |
+| [cc-prompt.md](cc-prompt.md) | 2026-09-21 | One-contributor design passes 1–5; no prior CC prompt | Operator selected CDC + CC; replay pass05 and inventory ten nested roots for CDC decisions | Returned by separate CC context at `99d5ecd794`; CDC reproduced replay/counts and returned R1–R3 for correction |
+| [cc-prompt-iteration01.md](cc-prompt-iteration01.md) | 2026-09-21 | [cc-prompt.md](cc-prompt.md), delivery `99d5ecd794` | CDC review R1–R3: verifier/preservation, nested detail and inspection evidence | Active first correction; pending Operator relay and acknowledgement |
 
-## Current contributor handoff — 2026-09-21
+## Historical initial handoff — 2026-09-21
 
 The Operator selected CDC + CC because the investigation had grown involved. This conversation becomes CDC; a separate CC session receives `cc-prompt.md` through the Operator and records its identity/acknowledgement in the permitted intake file. No CC execution or receipt is claimed at issue time. No CRC is enabled. This supersedes the workflow/assignment statements in historical packets, whose contents remain sealed.
 
 The active assignment produces only `artifacts/cc-evidence01/{intake.md,report.md,nested-fields.json,replay-result.json,execution.log,replay.py,SHA256SUMS}`. CC replays pass05 and inspects ten named nested roots against all 117 fields and twelve nested exclusions. It does not implement DTOs, query live data, update plans/ledgers or close the slice. CDC owns nested codec policy, exact composition/file fence, D07 prerequisites, production prompt authorship and sizing. All seven criteria remain open; future CC refinements preserve the initial prompt and use canonical numbered siblings. Prior exploratory passes and any recorded iteration limits are not reset.
 
-### CDC readiness for this evidence assignment
+### CDC readiness for the initial evidence assignment
 
 1. **Source-grounded:** current source head/instructions, message/conversation/preset/fading definitions, direct types, public projection and the sealed pass05 harness were inspected. Source remains read-only; source drift blocks same-baseline claims.
 2. **Design-complete for investigation:** the prompt binds inspection populations, output schema, preservation rules, replay method and stop conditions. Final DTO/Mixed-value policy remains explicitly CDC-owned; no dependent production work is issued.
@@ -57,6 +58,14 @@ The active assignment produces only `artifacts/cc-evidence01/{intake.md,report.m
 4. **Executable:** existing Node/compiler and sealed harness paths are known; the seven-file output fence fits the canonical artifact home. Missing/runtime-drift inputs have explicit blocker handling; no install or DB dependency is added.
 5. **Falsifiable:** exact reference/candidate case comparisons retain wrong-owner, missing-projection and eager-strict-scope controls; coverage keys and nested paths are checked as sets, not trusted totals. Semantic interpretation is reviewed from sources, not inferred from hash/count checks.
 6. **Coherent/sized:** prompt, plan and ledger retain all acceptance rows and distinguish historical role text. This is one replay plus ten bounded nested-root investigations, not completion of all DTO/composition work; reading/query scopes are bounded and packet creation stops at the decision inputs. No Slice03 source assignment is implied.
+
+## Current correction assignment — 2026-09-21
+
+CC returned the seven-file packet at `99d5ecd794d00cd1c0db7a199633042766af5953`, identifying a separate Codex API session without an exposed identifier. The Operator relayed its report. [CDC verification](cdc-verification.md) reproduced all behavior output, the actual classifications and 87 artifact hashes. This accepts those bounded observations for continued design; no ledger row or slice is accepted.
+
+The active [iteration01 prompt](cc-prompt-iteration01.md) corrects R1 (provenance/classification predicates and sealed-packet safety), R2 (concrete nested members, array paths and source witnesses), and R3 (truthful read/query evidence). Its seven-file output home is `artifacts/cc-evidence02/`; the exact filenames remain intake.md, report.md, nested-fields.json, replay-result.json, execution.log, replay.py, SHA256SUMS. CC may not alter evidence01, the review, issued prompts or plans. This is the first CC correction iteration; receipt/execution is pending Operator relay. All seven rows and Slice01 acceptance remain open.
+
+CDC readiness: the review inspected the committed driver/inventory/report and source witnesses, ran the sealed harness in temporary storage and exercised the same verifier predicates with four counterexamples. The prompt supplies concrete CLI modes, preflight/equality/preservation rules, negative-control oracles and the exact ten-root repair method; the required-reading manifest and seven-file fence remain bounded. Domain constraints remain source CLAUDE's Type Safety and Workspace Boundaries, applied as source-backed type reuse and explicit open-value boundaries. The correction does not choose DTO policy or authorize source changes. CDC owns those decisions after the repaired evidence returns; remaining composition/build/sizing work is unchanged.
 
 ## Subsequent Operator decisions
 
@@ -90,6 +99,7 @@ The matrix accounts for all 117 declared schema fields and nested public exclusi
 
 | Version | Date | Change |
 |---|---|---|
+| v1.8 | 2026-09-21 | Reviewed initial CC evidence: replay and classifications reproduced; issued first correction for R1–R3 without changing slice scope or acceptance. |
 | v1.7 | 2026-09-21 | Activated Operator-selected CDC + CC; issued the initial bounded replay/nested-field evidence prompt with explicit ownership, output fence, intake and readiness record. |
 | v1.6 | 2026-09-21 | Fixed the read/caller boundary using source comparison; corrected handle scope-capture order and completed the top-level provider/projection matrix. |
 | v1.5 | 2026-09-20 | Supported per-invocation handoff with 28 comparison/26 lifecycle cases and five mutants; added AST field inventory and patch/error mapping without claiming complete DTO or real-method conformance. |

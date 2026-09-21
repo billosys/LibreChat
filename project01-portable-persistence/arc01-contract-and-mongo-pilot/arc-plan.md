@@ -54,7 +54,7 @@ Child completion alone does not prove the arc composes. Arc close requires integ
 
 ## Workflow and source boundaries
 
-The Operator switched Project01 to CDC + CC on 2026-09-21, superseding the initial one-contributor investigation. This conversation is CDC. The [initial Slice02 evidence prompt](slice02-portable-contract-design/cc-prompt.md) awaits Operator relay and acknowledgement by a separate CC context. CDC reviews new CC work; prior CDC-authored evidence retains its pending separate verification. CRC is not enabled. The [project transition record](../project-plan.md#transition-record--2026-09-21) carries source state, open findings and unchanged gates.
+The Operator switched Project01 to CDC + CC on 2026-09-21, superseding the initial one-contributor investigation. This conversation is CDC. The separate CC context returned evidence01 at `99d5ecd794`; [CDC review](slice02-portable-contract-design/cdc-verification.md) reproduced its replay/counts and issued the [first correction](slice02-portable-contract-design/cc-prompt-iteration01.md), now awaiting Operator relay/acknowledgement. CDC reviews new CC work; prior CDC-authored evidence retains its pending separate verification. CRC is not enabled. The [project transition record](../project-plan.md#transition-record--2026-09-21) carries source state, open findings and unchanged gates.
 
 The earlier fork-only remote query found no dev ref. This is now resolved: the Operator requested a `billo-guildhall` implementation worktree, created from verified `upstream/dev` at `fe79265b2f47937051625719f3ba5080189912c1`. Source instructions still require upstream PRs against dev; main remains pristine. See [repository workflow](../../repository-workflow.md) and [Operator decisions](../operator-decisions.md). Earlier evidence remains at its original source commit; refresh source/build validation before implementation.
 
@@ -76,10 +76,13 @@ Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decisi
 
 **Pass-5 progress:** [Slice02 read contract](slice02-portable-contract-design/artifacts/design-pass05/read-contract.md) records the selected reload/by-ID/history paths, shared probe wiring and explicit legacy exclusions. It preserves parallel admission gating (16 comparisons plus two deferred checks) and source preflight ordering (three cases). Begin-time strict enforcement from pass 4 is superseded by non-enforcing scope capture with legacy query enforcement. The 117-field matrix resolves declared projection/provider differences; full nested codecs and source integration remain pending.
 
+**CC review:** Slice02 retains reproduced replay and field-classification results. R1–R3 require a read-only, fail-closed evidence verifier; concrete nested members/projection traversal; and inspectable read/query records. The correction stays in planning artifacts and does not open Slice03 or change the roadmap.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.11 | 2026-09-21 | Slice02 CC evidence reviewed and returned for bounded R1–R3 correction; replay/counts reproduced, with all acceptance and implementation gates retained. |
 | v1.10 | 2026-09-21 | Operator selected CDC + CC as Slice02 deepened; initial bounded evidence assignment and separate-context review ownership recorded, with the existing roadmap and acceptance unchanged. |
 | v1.9 | 2026-09-21 | Slice02 pass 5 made D01 read scope explicit, corrected D04 validation ordering and reconciled declared fields with provider/public projections. |
 | v1.8 | 2026-09-20 | Slice02 pass 4 validated the bounded handle prototype and added source-field/partial-outcome mapping; scoped remaining DTO and integration work. |
