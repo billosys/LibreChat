@@ -3,7 +3,7 @@
 | Metadata | Value |
 |---|---|
 | Project | project01-portable-persistence |
-| Status | Draft design and roadmap; no implementation arc active |
+| Status | Active — Arc01 open; Slice01 investigation active; no conversion implementation assigned |
 | Depends on | LibreChat source baseline; resolution of source `dev` branch before implementation |
 | Blocks | A validated Mongo-free LibreChat deployment through the new boundary |
 | Related | Billo Guildhall; CCDP; memory research; AI Engineering concept cards and ontology work |
@@ -46,7 +46,7 @@ Define repeat-import behavior, duplicate detection, resumable progress, and comp
 
 | Arc | Capability | Depends on | Current state |
 |---|---|---|---|
-| Arc01 — Contract and first Mongo conversion | Characterize ordinary saves and Claude import requirements; establish portable contracts and real-database conformance; convert one bounded application path with Mongo underneath | Operator design review; current source branch resolved | Candidate scope only |
+| [Arc01 — Contract and first Mongo conversion](arc01-contract-and-mongo-pilot/arc-plan.md) | Characterize ordinary saves and Claude import requirements; establish portable contracts and real-database conformance; convert one bounded application path with Mongo underneath | Reconciliation complete; concrete design and source branch resolution before code | Active: Slice01 behavior-baseline investigation |
 | Arc02 — Complete Mongo boundary | Migrate the remaining persistence families and startup/lifecycle wiring; make bypasses and supported capabilities explicit | Arc01 | Not detailed |
 | Arc03 — Rust service and SQLite adapter | Implement the second adapter and transport, using the established contract and Mongo behavioral reference | Arc01 contract; Arc02 coverage before full integration acceptance | Not detailed |
 | Arc04 — Migration and complete cutover | Rehearse migration/rollback, validate full selected-backend composition, recovery, and native operation | Arc02 and Arc03 | Not detailed |
@@ -112,12 +112,13 @@ These outputs have a stopping rule: the first conversion must be describable wit
 
 ## Current status
 
-The orphan planning checkout and initial design inputs exist. The Operator reports successful local startup and Claude import into Mongo. Read-only source inventory confirms 820 conversations and 9,838 messages in the archive-matching JSON, including content the importer does not carry through. No arc or slice is accepted, no application source behavior has changed, and no implementation tests or benchmarks have been run. Read-only reconciliation now confirms every conversation and retained message matches the current importer representation: 820 conversations, 9,731 retained messages, and 107 explained skips. It also confirms source-content loss and 95 changed retained parent relationships across 55 conversations. Source preservation, richer intake design, and every project composition criterion remain open; this does not accept SQLite migration. See [corpus-baseline.md](corpus-baseline.md) and [corpus-reconciliation.md](corpus-reconciliation.md).
+[Arc01](arc01-contract-and-mongo-pilot/arc-plan.md) is open at the Operator's request, with [Slice01](arc01-contract-and-mongo-pilot/slice01-behavior-baseline/slice-plan.md) active under one-contributor investigation. The arc and slice ledgers are open; no CC prompt or implementation assignment is issued. The explicit remote query confirmed that the fork has `main` at the source baseline and no `dev` ref; implementation branching remains a recorded decision, while source investigation and isolated testing can proceed. The orphan planning checkout and initial design inputs exist. The Operator reports successful local startup and Claude import into Mongo. Read-only source inventory confirms 820 conversations and 9,838 messages in the archive-matching JSON, including content the importer does not carry through. No arc or slice is accepted, no application source behavior has changed, and no implementation tests or benchmarks have been run. Read-only reconciliation now confirms every conversation and retained message matches the current importer representation: 820 conversations, 9,731 retained messages, and 107 explained skips. It also confirms source-content loss and 95 changed retained parent relationships across 55 conversations. Source preservation, richer intake design, and every project composition criterion remain open; this does not accept SQLite migration. See [corpus-baseline.md](corpus-baseline.md) and [corpus-reconciliation.md](corpus-reconciliation.md).
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.5 | 2026-09-20 | Opened Arc01 and its first investigation slice at the Operator's request; recorded the three-slice roadmap, ledgers, artifact home, and confirmed remote dev-branch absence. No implementation or acceptance claim. |
 | v1.4 | 2026-09-20 | Recorded authorized read-only Mongo reconciliation with complete population accounting, retained failed/corrected oracle attempts, concrete source fidelity losses, and unchanged open SQLite acceptance. |
 | v1.3 | 2026-09-20 | Recorded Operator-reported local Mongo startup/import, resolved initial route and source location, verified archive/JSON identity and source counts, and identified concrete structured-content preservation requirements. |
 | v1.2 | 2026-09-20 | Added Operator-requested Claude initial corpus, full SQLite reconciliation before OpenAI/GPT import, and import fidelity questions surfaced by source inspection. Initial import route and export location remain pending. |
