@@ -1,6 +1,6 @@
 # First non-Mongo backend — SQLite proposal
 
-Status: **recommended by CDC; awaiting Operator selection**. Date: 2026-09-20. No backend benchmark, migration, or application acceptance test has been performed.
+Status: **SQLite named by the Operator as the initial Claude corpus target; Rust-service architecture remains proposed**. Date: 2026-09-20. No backend benchmark, migration, or application acceptance test has been performed.
 
 ## Recommendation
 

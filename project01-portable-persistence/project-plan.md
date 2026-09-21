@@ -20,6 +20,18 @@ In scope: application persistence and its lifecycle, identity and tenant semanti
 
 Outside this project's delivery: a general-purpose memory protocol, ontology extraction, replacing existing knowledge graphs, an HTN planner, a CCDP dispatcher, a ratatui client, Lance projections, vector-search redesign, replacing every external search/RAG/file service, or making Node-based LibreChat itself a Rust application. Those directions inform boundaries without becoming prerequisites.
 
+## Initial corpus — Operator addition, 2026-09-20
+
+Use the Operator's historical **Claude conversations as the initial LibreChat dataset**. Account for the complete Claude corpus in SQLite before proceeding to an **OpenAI/GPT log import** as the next dataset. SQLite is now the named target in the Operator's requested sequence; the Rust-service architecture remains a proposal.
+
+The export location and route are pending clarification: import through the existing Mongo-backed LibreChat first and migrate, or first ingest directly into SQLite once ready. No live import is authorized against an unidentified destination or user account; prepare mappings and isolated rehearsals before selecting the actual target. This routing question does not block source investigation.
+
+Arc01 must characterize the existing Claude importer alongside the ordinary-save pilot before freezing the contract. This does not automatically make the whole importer part of the first code slice. Determine whether import requirements alter that slice's boundary, and record the reason if they do. The corpus becomes a concrete migration/reload acceptance dataset in Arc04; the later OpenAI/GPT import exercises the same boundary after Claude acceptance.
+
+Preserve the original export as a local source artifact outside version-controlled planning/source trees. Record source identity and fingerprints, original IDs and timestamps, relationships, and the mapping to LibreChat IDs. Inventory content kinds present in the actual export, including any attachments, artifacts, tools, or branching metadata, before deciding their storage representation. Distinguish what is absent from the export from what a converter cannot represent. Preserve source material and report unsupported items explicitly; a successful import notification or matching conversation count alone does not establish fidelity.
+
+Define repeat-import behavior, duplicate detection, resumable progress, and complete population accounting. Start with a representative isolated rehearsal, then process and reconcile the full corpus. Use sanitized fixtures in committed tests; keep private raw conversations out of repository evidence. Do not initiate the OpenAI/GPT batch until the Claude population has been accounted for and its agreed acceptance checks pass in SQLite.
+
 ## Definition of done
 
 1. Application consumers use explicit portable operations; engine types and query languages remain inside the relevant adapter. Any remaining Mongo dependency is classified and cannot run on the SQLite-selected path.
@@ -28,12 +40,13 @@ Outside this project's delivery: a general-purpose memory protocol, ontology ext
 4. A documented migration rehearsal preserves identities, tenant boundaries, relationships, temporal metadata, supported content, and deletion semantics, with mismatch accounting and a demonstrated rollback strategy.
 5. A representative enabled-feature deployment starts, authenticates, saves and reloads conversations, and performs its background work without a Mongo service or URI. The enabled-feature matrix is explicit; omitted features are not counted as supported. Project closure requires resolving every Mongo-dependent default feature, not disabling defaults to make a smoke test pass.
 6. Relevant regression, recovery, isolation, latency, and packaging checks pass with retained evidence and reviewer reproduction. See [ledger.md](ledger.md).
+7. The full initial Claude corpus is reconciled in SQLite with explicit transformations and unresolved items visible; then perform and evaluate the subsequent OpenAI/GPT import when its source export is available.
 
 ## Arc roadmap
 
 | Arc | Capability | Depends on | Current state |
 |---|---|---|---|
-| Arc01 — Contract and first Mongo conversion | Establish portable contract conventions and real-database conformance; convert one complete, bounded application path with Mongo underneath | Operator design review; current source branch resolved | Candidate scope only |
+| Arc01 — Contract and first Mongo conversion | Characterize ordinary saves and Claude import requirements; establish portable contracts and real-database conformance; convert one bounded application path with Mongo underneath | Operator design review; current source branch resolved | Candidate scope only |
 | Arc02 — Complete Mongo boundary | Migrate the remaining persistence families and startup/lifecycle wiring; make bypasses and supported capabilities explicit | Arc01 | Not detailed |
 | Arc03 — Rust service and SQLite adapter | Implement the second adapter and transport, using the established contract and Mongo behavioral reference | Arc01 contract; Arc02 coverage before full integration acceptance | Not detailed |
 | Arc04 — Migration and complete cutover | Rehearse migration/rollback, validate full selected-backend composition, recovery, and native operation | Arc02 and Arc03 | Not detailed |
@@ -44,7 +57,7 @@ These arcs describe capabilities, not estimated sprint sizes. Arc02 in particula
 
 The recommended first conversion is the ordinary message-save/conversation-update path. It is recognizable to the user and already has an injected store, but its retention, provenance, logical/storage IDs, and partial-failure semantics require careful characterization. Arc01 must scope ordinary turns explicitly and preserve compatibility with other callers; it cannot silently absorb all subagent scheduling and import workflows.
 
-Before issuing its first slice:
+Before issuing its first implementation slice:
 
 1. Resolve the source branch baseline and read applicable current instructions.
 2. Trace all callers and lifecycle effects of the selected methods; identify which remain behind compatibility adapters.
@@ -56,11 +69,46 @@ There is no implementation estimate yet. Import counts are reconnaissance measur
 
 ## Workflow and authority
 
-Use the collaboration framework's **Two-Contributor Workflow**. This conversation is CDC; the Operator reviews consequential design choices. CC will be a separately assigned implementation context. CDC performs source-grounded review and required reproduction. No CRC context has been appointed.
+The Operator selected **One-Contributor Workflow for investigation** on 2026-09-20. This assistant works directly with the Operator on research, design, and planning, and reports its checks as self-checks. No separate CC or CRC context is assigned, and no synthetic implementation or verification handoff is required for this investigation.
 
-The Operator has authorized research/design/planning and the standard planning worktree. The implementation objectives are established; the design alternatives here have not yet been selected by the Operator. Ordinary planning preparation proceeds under existing authorization. Record a settled backend or architecture choice before issuing dependent implementation work.
+The Operator's intended progression is:
 
-Scope, architecture, acceptance, or cross-arc changes return to CDC and the Operator. Preserve issued prompts; use the framework's iteration filenames and assignment history. Verification filenames use `cdc-verification.md` in the default workflow; contributor reports alone do not close reviewer-owned acceptance. Detailed slice artifacts live under their owning slice unless an explicit override is recorded.
+| Stage | Workflow | Transition condition |
+|---|---|---|
+| Current focused investigation | One contributor | Active now; characterize the pilot and resolve design questions |
+| Deeper design and bounded implementation work | Two contributors: CDC + CC | Record the effective scope and assign a separate contributor when that separation becomes useful |
+| Well-defined implementation programme | Three contributors: CDC + CRC + CC | Once the implementation is concrete, record activation, actual contexts, reviewer authority, and the first handoff |
+
+The later modes are not active merely because they appear in this table. Use the Operator-selected progression, record the transition when its condition is met, and establish actual context assignments before dependent work. Adding a reviewer does not retroactively turn this investigation's self-checks into independent evidence.
+
+The Operator has authorized research/design/planning and the standard planning worktree. The implementation objectives and Claude-first/SQLite-before-GPT sequence are established; the Rust service and detailed interface design remain proposals. Ordinary planning preparation proceeds under existing authorization. Record a settled backend or architecture choice before issuing dependent implementation work.
+
+During one-contributor investigation, unresolved design and scope questions return directly to the Operator. Once multiple contributors are active, scope, architecture, acceptance, or cross-arc changes return through CDC and the Operator. Preserve any issued prompts and use the framework's iteration filenames and assignment history.
+
+Current investigation checks are recorded in the owning research/planning documents without fictional independent-verification files. Later use `cdc-verification.md` for two-contributor slice review and `crc-verification.md` for three-contributor slice review; three-contributor arc/project closure retains both records as required by the framework. Existing independent and Operator acceptance requirements remain in force. Detailed slice artifacts live under their owning slice unless an explicit override is recorded.
+
+### Transition record — 2026-09-20
+
+- Prior state: default two-contributor planning, initialized at planning commit `c90d56654`; no CC assignment or reviewer acceptance issued.
+- Effective state: one contributor for investigation and design preparation, authorized by the Operator's latest message. This conversation owns the next action.
+- Application baseline: `ba44443fdb232bbe6d4977e2619774b5a72586ac`, unchanged and clean at transition.
+- Evidence: source reconnaissance and document self-checks only; no runtime tests or benchmarks. All project ledger rows remain open.
+- Open findings owned by this contributor: pilot caller/lifecycle coverage, exact contract semantics, executable baseline evidence, and the required implementation branch baseline.
+- Open design decisions: service architecture, concrete operation schemas, and initial Claude import route remain unresolved. The Operator subsequently named SQLite as the Claude corpus target; workflow selection alone did not settle those design questions.
+- Current prompt: none. No receiving contributor exists yet; record acknowledgement when a future handoff occurs.
+
+## Arc01 readiness assessment — 2026-09-20
+
+**Ready to begin focused Arc01 investigation and detailed planning; not yet ready to implement the Mongo conversion.** The current evidence supports the direction and a candidate pilot. It does not yet establish that the pilot is a complete, bounded change with a proven behavior baseline.
+
+The recommended opening work has four concrete outputs:
+
+1. **Pilot dependency map:** all callers of the selected operations, ownership/tenant context, plugin and background effects, and explicit compatibility boundaries for writers outside the pilot.
+2. **Behavior matrix:** identities and relationship translation; absent/null/empty/clear states; provenance and retention; ordering; duplicate saves; and failure between message and conversation writes. Include Claude import transformations, source-to-target mapping, non-text content, repeat-import behavior, and population accounting. Link each behavior to source and existing or needed tests.
+3. **Executed baseline:** run the relevant existing Mongo tests in an isolated test environment, retain results including failures or unavailable prerequisites, and distinguish pre-existing problems from new changes. No application database mutation is needed for this baseline.
+4. **Implementation-ready contract and slice boundary:** precise inputs/outcomes, module ownership, adapter translation, discriminating acceptance cases, and the resolved source branch baseline.
+
+These outputs have a stopping rule: the first conversion must be describable without leaving consequential behavior choices to its implementer. Then deepen the contributor workflow and prepare the implementation assignment. Broader database comparison is not a prerequisite for this Mongo-focused work. The named SQLite target does not require settling the Rust-service transport or initial import route before source characterization.
 
 ## Current status
 
@@ -70,4 +118,6 @@ The orphan planning checkout and initial design inputs exist. No arc or slice is
 
 | Version | Date | Change |
 |---|---|---|
+| v1.2 | 2026-09-20 | Added Operator-requested Claude initial corpus, full SQLite reconciliation before OpenAI/GPT import, and import fidelity questions surfaced by source inspection. Initial import route and export location remain pending. |
+| v1.1 | 2026-09-20 | Recorded Operator-selected one-contributor investigation, intended later workflow progression, transition state, and bounded Arc01 readiness work. No implementation or acceptance scope changed. |
 | v1.0 | 2026-09-20 | Initial proposed roadmap from the Operator's three persistence objectives and pinned LibreChat reconnaissance. No arc-close bubble-up yet. |

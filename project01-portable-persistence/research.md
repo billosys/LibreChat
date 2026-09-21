@@ -92,3 +92,14 @@ The first slice needs discriminating tests for its exact contract, not a new sui
 ## What this pass establishes
 
 It establishes a source-grounded starting seam, concrete examples of engine leakage and hidden persistence semantics, an explicit research scope, and a proposed backend direction. It does not establish runtime compatibility, performance, migration safety, complete boundary coverage, or readiness to issue an implementation prompt. Those remain open in the project ledger.
+
+## Follow-up: initial Claude corpus, 2026-09-20
+
+The Operator requested historical Claude data as the first dataset, fully brought into SQLite before an OpenAI/GPT import. A bounded inspection of the existing importer found these concrete behaviors at the same source baseline:
+
+- `api/server/utils/import/importers.js:173`: `extractClaudeContent` collects text and thinking blocks, with a text fallback. This function does not preserve arbitrary content blocks.
+- `api/server/utils/import/importers.js:202`: `importClaudeConvo` assigns fresh UUIDs, links each retained message to the previous one, skips messages with no extracted text/thinking, and advances non-increasing timestamps by one millisecond. It assigns a configured/default model. Therefore source identity, topology, time, and model provenance require explicit mapping if fidelity is the goal; do not mistake these transformed fields for preserved source metadata.
+- `api/server/utils/import/importConversations.js`: the import job reads a JSON file and unlinks the passed path in `finally`. Preserve the original export and pass a disposable working copy to any rehearsal using this job.
+- `packages/api/src/conversations/import.ts:1`: import batches use BSON/ObjectId types and Mongo document-size checks. The write orchestrator begins at line 83 and uses staged saves with cleanup after errors. Import has its own persistence and failure contract; routing ordinary message saves does not migrate this path automatically.
+
+These observations do not establish which fields or content kinds exist in the Operator's export; no private export has been inspected. They establish questions to resolve before a real import and before declaring the portable interface sufficient. No import or runtime test was executed in this follow-up.
