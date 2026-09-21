@@ -74,10 +74,13 @@ Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decisi
 
 **Pass-4 progress:** [Slice02 comparison and mapping](slice02-portable-contract-design/artifacts/design-pass04/decision.md) retains the handle as the working handoff: 28 orchestration cases, 26 lifecycle/scope cases and five negative controls. The source field census and patch/error table now guide DTO work. Remaining implementation prerequisites include projection/consumer reconciliation, invalid-input versus strict-scope validation ordering, current source builds and real-method conformance. Slice02 remains active; no roadmap expansion or contributor transition.
 
+**Pass-5 progress:** [Slice02 read contract](slice02-portable-contract-design/artifacts/design-pass05/read-contract.md) records the selected reload/by-ID/history paths, shared probe wiring and explicit legacy exclusions. It preserves parallel admission gating (16 comparisons plus two deferred checks) and source preflight ordering (three cases). Begin-time strict enforcement from pass 4 is superseded by non-enforcing scope capture with legacy query enforcement. The 117-field matrix resolves declared projection/provider differences; full nested codecs and source integration remain pending.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.9 | 2026-09-21 | Slice02 pass 5 made D01 read scope explicit, corrected D04 validation ordering and reconciled declared fields with provider/public projections. |
 | v1.8 | 2026-09-20 | Slice02 pass 4 validated the bounded handle prototype and added source-field/partial-outcome mapping; scoped remaining DTO and integration work. |
 | v1.7 | 2026-09-20 | Slice02 pass 3 rejected invisible locator caching after real-Mongo lifecycle counterexamples; recorded the next explicit observed-write candidate without expanding source scope. |
 | v1.6 | 2026-09-20 | Slice02 pass 2 compared actual source orchestration and private logical-reference translation; refined D02 direction with explicit mocking, lifetime and source-build limits. |

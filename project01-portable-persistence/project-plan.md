@@ -134,10 +134,13 @@ The Operator clarified that denormalization was only an option, not a recommenda
 
 **Pass-4 progress:** [Arc01/Slice02 handle and contract evidence](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/decision.md) supports per-invocation observed-write ownership: 28 mocked orchestration comparisons, 26 lifecycle/scope cases using actual tenant policy, and five detected mutants. A source AST census records 44 message and 73 conversation fields and exposes schema/interface differences; patch and partial-commit mappings are recorded. This establishes the working handoff direction, not full conformance. Named projections/consumers, concrete DTOs, validation ordering and pinned-runtime source builds remain open. No new source scope or contributor assignment.
 
+**Pass-5 progress:** [Arc01/Slice02 read contract](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/read-contract.md) fixes the ordinary full-reload/by-ID/history/probe boundary and retains the combined query/search/pagination route on legacy methods. Sixteen source-executed read comparisons and two admission-gating cases passed. Three preflight cases require a correction: capture scope without enforcing it at handle creation; preserve strict enforcement in the existing query methods/plugins. A field matrix now reconciles all 117 top-level schema fields with provider declarations and projections. Concrete nested types, composition injection, the exact implementation file fence and pinned-runtime builds remain open; no scope or acceptance expansion.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.14 | 2026-09-21 | Arc01/Slice02 pass 5 settled the read-route fence and corrected strict-scope validation ordering; added the complete top-level projection/provider matrix while retaining nested DTO and build prerequisites. |
 | v1.13 | 2026-09-20 | Arc01/Slice02 pass 4 supported the explicit turn-write handle and advanced field/partial-outcome mapping; retained actual scope, DTO and integration limits. |
 | v1.12 | 2026-09-20 | Arc01/Slice02 pass 3 falsified invisible-cache reference equivalence in four Mongo lifecycle cases; superseded the hint candidate with explicit observed-write ownership for further comparison. |
 | v1.11 | 2026-09-20 | Incorporated Arc01/Slice02 pass 2 evidence and the refined staged-write/logical-reference candidate; no implementation, conformance acceptance or roadmap change. |

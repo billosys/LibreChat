@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "readCases": 16,
+  "gateCases": 2,
+  "preflightCases": [
+    {
+      "name": "missing-owner",
+      "direct": {
+        "error": "User not authenticated"
+      },
+      "deferred": {
+        "error": "User not authenticated"
+      },
+      "eager": {
+        "error": "[TenantIsolation] turn-write attempted without tenant context in strict mode"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing-conversation",
+      "direct": {
+        "returned": "<undefined>"
+      },
+      "deferred": {
+        "returned": "<undefined>"
+      },
+      "eager": {
+        "error": "[TenantIsolation] turn-write attempted without tenant context in strict mode"
+      },
+      "passed": true
+    },
+    {
+      "name": "malformed-conversation",
+      "direct": {
+        "returned": "<undefined>"
+      },
+      "deferred": {
+        "returned": "<undefined>"
+      },
+      "eager": {
+        "error": "[TenantIsolation] turn-write attempted without tenant context in strict mode"
+      },
+      "passed": true
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "wrong-owner",
+      "detected": true
+    },
+    {
+      "name": "no-projection",
+      "detected": true
+    },
+    {
+      "name": "eager-strict-scope",
+      "detected": true
+    }
+  ]
+}

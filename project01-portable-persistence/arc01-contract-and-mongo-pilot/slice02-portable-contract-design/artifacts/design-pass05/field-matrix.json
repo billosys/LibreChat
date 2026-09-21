@@ -1,0 +1,2193 @@
+{
+  "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+  "sources": [
+    {
+      "path": "packages/data-provider/src/schemas.ts",
+      "sha256": "46256a7a73a7d3e3b3546bde07074d5905e7ff603f864d3f4b092206d83779b6"
+    },
+    {
+      "path": "packages/data-schemas/src/methods/message.ts",
+      "sha256": "fc51a01c8fcf709503c92dbfe172264eb5656cf0248bfc869388ba53dd70ac04"
+    },
+    {
+      "path": "packages/data-provider/src/config.ts",
+      "sha256": "a3a602a9f2f23f68e1855d5a8bde8909c51676968fd3f7a5fc4456d7617dfe2d"
+    },
+    {
+      "path": "api/app/clients/BaseClient.js",
+      "sha256": "53f3c67baa12f10737dfda3723f87bdb4307419658fe60aaa49b621739a9561f"
+    },
+    {
+      "path": "api/server/routes/messages.js",
+      "sha256": "022edeae357ec52aa10645d4167d03f1f22318604d22c0042447b3d803d6bb3f"
+    },
+    {
+      "path": "api/server/middleware/messageValidation.js",
+      "sha256": "9c7bd1a677b45d3292917081b87c6dcf3a9f50216cd110ec11fe17be8817388d"
+    },
+    {
+      "path": "packages/api/src/middleware/messageValidation.ts",
+      "sha256": "36dccce39c6b072d05668353015b5d2ee7a1328e6d907f6f49b09771acdc4f5b"
+    },
+    {
+      "path": "packages/api/src/conversations/save.ts",
+      "sha256": "1a144cf076c8b4fe170f01c2f291c652ab1e2863780521aed79ec55d03779889"
+    },
+    {
+      "path": "packages/data-schemas/src/methods/conversation.ts",
+      "sha256": "46e51f9fa02b9fdfed731bba3593305cc70e07eede998b8fc98854c577ec12d4"
+    },
+    {
+      "path": "api/server/controllers/agents/client.js",
+      "sha256": "23b68629ab73a49ab8999864e8100afef040c6fb426f56a1ed651e17f6b40ac0"
+    },
+    {
+      "path": "packages/api/src/agents/hitl/answers.ts",
+      "sha256": "18046aeeda9e572af53cdf7c352fa0e8b271e269032518397985c3ebe9a8e02a"
+    },
+    {
+      "path": "packages/data-schemas/src/models/plugins/tenantIsolation.ts",
+      "sha256": "a4a2c656a2d76ca34d76f410547693b58dc518c649df2673eb0262904f121fbd"
+    },
+    {
+      "path": "packages/data-schemas/package.json",
+      "sha256": "a4adea468c9b8688efb61ac7b7ddf4f17ee092fd278a59788eb3d8ee0f256026"
+    },
+    {
+      "path": "packages/data-schemas/tsdown.config.mjs",
+      "sha256": "5d32bdc94783deed2b6e194f7269e40d8023a3ec8c6453e084bed245796255e6"
+    },
+    {
+      "path": "api/models/index.js",
+      "sha256": "4b2ba00c4de5bfc61cb9d65c9d018f25d70dea349f24fd5cc4881f6f8cd92ddf"
+    }
+  ],
+  "census": {
+    "path": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.json",
+    "sha256": "845eb74a93285be66a6072f23a3468ab7fbd258000b687f9ebe2fe5db77b806f"
+  },
+  "exclusions": [
+    "_id",
+    "__v",
+    "user",
+    "clientId",
+    "invocationId",
+    "conversationSignature",
+    "summary",
+    "summaryTokenCount",
+    "contextMeta",
+    "langfuseSampled",
+    "langfuseDestinationIds",
+    "langfuseRunId",
+    "metadata.thoughtSignatures",
+    "content.tool_call.backgroundTask.resultClaim",
+    "content.tool_call.backgroundTask.completionWakeup",
+    "attachments.web_search.knowledgeGraph",
+    "attachments.web_search.peopleAlsoAsk",
+    "attachments.web_search.relatedSearches",
+    "attachments.web_search.shopping",
+    "attachments.web_search.places",
+    "attachments.web_search.news",
+    "attachments.web_search.organic.sitelinks",
+    "attachments.web_search.organic.highlights",
+    "attachments.web_search.topStories.highlights"
+  ],
+  "excludedKeys": [
+    "conversationId",
+    "agentEventBinding",
+    "agentEventActor",
+    "agentEventActorCleanup",
+    "agentEventActorSuspension",
+    "agentEventActorReconciliations",
+    "agentEventActorEpoch",
+    "agentEventActorLegacyTurn",
+    "subagentThread",
+    "title",
+    "iconURL",
+    "greeting",
+    "endpoint",
+    "endpointType",
+    "createdAt",
+    "updatedAt",
+    "expiredAt",
+    "isTemporary",
+    "messages",
+    "isArchived",
+    "pinned",
+    "archivedAt",
+    "tags",
+    "user",
+    "__v",
+    "_id",
+    "tools",
+    "model",
+    "files",
+    "spec",
+    "disableParams",
+    "chatProjectId"
+  ],
+  "messageProviderExtensions": [
+    "children",
+    "content",
+    "files",
+    "depth",
+    "siblingIndex",
+    "attachments",
+    "clientTimestamp",
+    "clientQueueParentMessageId",
+    "feedback"
+  ],
+  "records": [
+    {
+      "name": "messageSchema",
+      "fields": [
+        {
+          "name": "messageId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 7
+          },
+          "storageDefinition": "{\n      type: String,\n      required: true,\n      index: true,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "messageId",
+            "definition": "z.string()",
+            "line": 886
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "conversationId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 13
+          },
+          "storageDefinition": "{\n      type: String,\n      index: true,\n      required: true,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "conversationId",
+            "definition": "z.string().nullable()",
+            "line": 889
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "user",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 19
+          },
+          "storageDefinition": "{\n      type: String,\n      index: true,\n      required: true,\n      default: null,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "model",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 26
+          },
+          "storageDefinition": "{\n      type: String,\n      default: null,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "model",
+            "definition": "z.string().nullable().optional()",
+            "line": 894
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "endpoint",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 30
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "endpoint",
+            "definition": "z.string().optional()",
+            "line": 887
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "conversationSignature",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 33
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "clientId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 36
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "clientId",
+            "definition": "z.string().nullable().optional()",
+            "line": 888
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "invocationId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 39
+          },
+          "storageDefinition": "{\n      type: Number,\n    }",
+          "interfaceType": "number",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "parentMessageId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 42
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string | null",
+          "provider": {
+            "name": "parentMessageId",
+            "definition": "z.string().nullable()",
+            "line": 890
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "tokenCount",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 45
+          },
+          "storageDefinition": "{\n      type: Number,\n    }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "tokenCount",
+            "definition": "z.number().optional()",
+            "line": 931
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "summaryTokenCount",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 48
+          },
+          "storageDefinition": "{\n      type: Number,\n    }",
+          "interfaceType": "number",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "sender",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 51
+          },
+          "storageDefinition": "{\n      type: String,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "sender",
+            "definition": "z.string().optional()",
+            "line": 896
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "text",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 55
+          },
+          "storageDefinition": "{\n      type: String,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "text",
+            "definition": "z.string()",
+            "line": 897
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "summary",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 59
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "isCreatedByUser",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 62
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      required: true,\n      default: false,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "isCreatedByUser",
+            "definition": "z.boolean()",
+            "line": 900
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "isUserSubmitted",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 67
+          },
+          "storageDefinition": "{\n      type: Boolean,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "isUserSubmitted",
+            "definition": "z.boolean().optional()",
+            "line": 902
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "userSubmittedPaths",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 70
+          },
+          "storageDefinition": "{\n      type: [String],\n      default: undefined,\n    }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "userSubmittedPaths",
+            "definition": "z.array(z.string().startsWith('/')).optional()",
+            "line": 904
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "userSubmittedMessageFieldPaths",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 74
+          },
+          "storageDefinition": "{\n      type: [\n        {\n          _id: false,\n          path: { type: String, required: true },\n          field: {\n            type: String,\n            enum: ['answer', 'decision_response', 'decision_reason'],\n            required: true,\n          },\n        },\n      ],\n      default: undefined,\n    }",
+          "interfaceType": "UserSubmittedMessageFieldPath[]",
+          "provider": {
+            "name": "userSubmittedMessageFieldPaths",
+            "definition": "z.array(userSubmittedMessageFieldPathSchema).optional()",
+            "line": 906
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "isTemporary",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 88
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "isTemporary",
+            "definition": "z.boolean().optional()",
+            "line": 907
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "unfinished",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 92
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "unfinished",
+            "definition": "z.boolean().optional()",
+            "line": 920
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "error",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 96
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "error",
+            "definition": "z.boolean().optional()",
+            "line": 909
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "finish_reason",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 100
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "finish_reason",
+            "definition": "z.string().optional()",
+            "line": 922
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "feedback",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 103
+          },
+          "storageDefinition": "{\n      type: {\n        rating: {\n          type: String,\n          enum: ['thumbsUp', 'thumbsDown'],\n          required: true,\n        },\n        tag: {\n          type: mongoose.Schema.Types.Mixed,\n          required: false,\n        },\n        text: {\n          type: String,\n          required: false,\n        },\n      },\n      default: undefined,\n      required: false,\n    }",
+          "interfaceType": "{\n    rating: TFeedbackRating;\n    tag: TFeedbackTag | undefined;\n    text?: string;\n  }",
+          "provider": {
+            "name": "feedback",
+            "definition": "feedbackSchema.optional()",
+            "line": 927
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "langfuseSampled",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 122
+          },
+          "storageDefinition": "{\n      type: Boolean,\n    }",
+          "interfaceType": "boolean",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "langfuseDestinationIds",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 125
+          },
+          "storageDefinition": "{\n      type: [String],\n      default: undefined,\n    }",
+          "interfaceType": "string[]",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "langfuseRunId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 129
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "_meiliIndex",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 132
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      required: false,\n      select: false,\n      default: false,\n    }",
+          "interfaceType": "boolean",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "hidden by schema",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "files",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 138
+          },
+          "storageDefinition": "{ type: [{ type: mongoose.Schema.Types.Mixed }], default: undefined }",
+          "interfaceType": "unknown[]",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "content",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 139
+          },
+          "storageDefinition": "{\n      type: [{ type: mongoose.Schema.Types.Mixed }],\n      default: undefined,\n      meiliIndex: true,\n    }",
+          "interfaceType": "unknown[]",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included with nested exclusions",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "thread_id",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 144
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "thread_id",
+            "definition": "z.string().optional()",
+            "line": 924
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "iconURL",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 148
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "iconURL",
+            "definition": "z.string().nullable().optional()",
+            "line": 926
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "metadata",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 151
+          },
+          "storageDefinition": "{ type: mongoose.Schema.Types.Mixed }",
+          "interfaceType": "Record<string, unknown>",
+          "provider": {
+            "name": "metadata",
+            "definition": "z.record(z.unknown()).optional()",
+            "line": 929
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included with nested exclusions",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "subagentTranscript",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 152
+          },
+          "storageDefinition": "{\n      type: {\n        taskId: { type: String, required: true },\n        mode: { type: String, enum: ['append', 'replace'], required: true },\n        messagesJson: { type: String, required: true },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "interfaceType": "{\n    taskId: string;\n    mode: 'append' | 'replace';\n    messagesJson: string;\n  }",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "hidden by schema",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "subagentActivityProjection",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 162
+          },
+          "storageDefinition": "{\n      type: {\n        taskId: { type: String, required: true },\n        version: { type: Number, enum: [1], required: true },\n        activityJson: { type: String, required: true },\n        truncated: { type: Boolean, required: true },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "interfaceType": "{\n    taskId: string;\n    version: 1;\n    activityJson: string;\n    truncated: boolean;\n  }",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "hidden by schema",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "subagentTriggerProjection",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 174
+          },
+          "storageDefinition": "{\n      type: {\n        version: { type: Number, enum: [1], required: true },\n        eventType: { type: String, required: true },\n        sourceType: { type: String, required: true },\n        occurredAt: { type: Date, required: true },\n        expectedActionToolName: { type: String },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "interfaceType": "SubagentTriggerProjection",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "hidden by schema",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "subagentTask",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 187
+          },
+          "storageDefinition": "{\n      type: {\n        attemptKey: { type: String, required: true },\n        parentRunId: { type: String },\n        requestFingerprint: { type: String },\n        status: {\n          type: String,\n          enum: ['running', 'completed', 'error', 'cancelled'],\n          required: true,\n        },\n        resultClaim: {\n          type: {\n            kind: { type: String, enum: ['manual', 'wakeup'], required: true },\n            claimId: { type: String, required: true },\n            claimedAt: { type: Date, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        controlReceipts: {\n          type: [\n            {\n              invocationId: { type: String, required: true },\n              fingerprint: { type: String, required: true },\n              controlId: { type: String },\n              action: {\n                type: String,\n                enum: ['steer', 'queue', 'interrupt', 'cancel', 'cancel_message'],\n                required: true,\n              },\n              status: {\n                type: String,\n                enum: ['reserved', 'accepted', 'applied', 'rejected', 'failed'],\n                required: true,\n              },\n              createdAt: { type: Date, required: true },\n              updatedAt: { type: Date, required: true },\n              boundary: { type: String, enum: ['preempt', 'tool', 'turn'] },\n              reason: { type: String },\n              message: { type: String },\n              messageTruncated: { type: Boolean },\n              _id: false,\n            },\n          ],\n          default: undefined,\n        },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }",
+          "interfaceType": "{\n    attemptKey: string;\n    /** Parent response that initiated this exact child task. */\n    parentRunId?: string;\n    requestFingerprint?: string;\n    status: 'running' | 'completed' | 'error' | 'cancelled';\n    resultClaim?: {\n      kind: 'manual' | 'wakeup';\n      claimId: string;\n      claimedAt: Date;\n      /** Response generation that owns a manual delivery claim. */\n      generationId?: string;\n    };\n    controlReceipts?: ISubagentTaskControlReceipt[];\n  }",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "hidden by schema",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "contextMeta",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 238
+          },
+          "storageDefinition": "{\n      type: {\n        calibrationRatio: { type: Number },\n        encoding: { type: String },\n        ...agentFadingContextDefinition,\n      },\n      _id: false,\n      default: undefined,\n    }",
+          "interfaceType": "Partial<IAgentEventActorContextMeta>",
+          "provider": {
+            "name": "contextMeta",
+            "definition": "z\n    .object({\n      calibrationRatio: z\n        .number()\n        .optional()\n        .describe(\n          'EMA ratio of provider-reported vs local token estimates; seeds the pruner on subsequent runs',\n        ),\n      encoding: z\n        .string()\n        .optional()\n        .describe(\n          'Tokenizer encoding used when this ratio was computed (e.g. \"claude\", \"o200k_base\")',\n        ),\n      fading: agentFadingTierSchema\n        .optional()\n        .describe(\n          'Latched context-fading tier of the default agent; seeds the next run so the provider projection of history keeps the same bytes',\n        ),\n      fadingTiers: z\n        .array(agentFadingTierSchema.extend({ agentId: z.string().min(1) }))\n        .optional()\n        .describe('Latched context-fading tiers keyed by agent ID, stored as entries'),\n    })\n    .optional()",
+            "line": 932
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "excluded",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "attachments",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 247
+          },
+          "storageDefinition": "{ type: [{ type: mongoose.Schema.Types.Mixed }], default: undefined }",
+          "interfaceType": "unknown[]",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included with nested exclusions",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "manualSkills",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 255
+          },
+          "storageDefinition": "{ type: [String], default: undefined }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "manualSkills",
+            "definition": "z.array(z.string()).optional()",
+            "line": 965
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "alwaysAppliedSkills",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 263
+          },
+          "storageDefinition": "{ type: [String], default: undefined }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "alwaysAppliedSkills",
+            "definition": "z.array(z.string()).optional()",
+            "line": 973
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "quotes",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 272
+          },
+          "storageDefinition": "{ type: [String], default: undefined }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "quotes",
+            "definition": "z.array(z.string()).optional()",
+            "line": 981
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "expiredAt",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 295
+          },
+          "storageDefinition": "{\n      type: Date,\n    }",
+          "interfaceType": "Date | null",
+          "provider": {
+            "name": "expiredAt",
+            "definition": "z.string().nullable().optional()",
+            "line": 908
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "addedConvo",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 298
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      default: undefined,\n    }",
+          "interfaceType": "boolean",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        },
+        {
+          "name": "tenantId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/message.ts",
+            "line": 302
+          },
+          "storageDefinition": "{\n      type: String,\n      index: true,\n    }",
+          "interfaceType": "string",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "included",
+          "endpointUnsetRule": null
+        }
+      ],
+      "providerOnly": [
+        "responseMessageId",
+        "overrideParentMessageId",
+        "bg",
+        "title",
+        "generation",
+        "clientTimestamp",
+        "createdAt",
+        "updatedAt",
+        "current",
+        "searchResult"
+      ],
+      "interfaceOnly": [
+        "plugin",
+        "plugins",
+        "createdAt",
+        "updatedAt"
+      ],
+      "implicit": {
+        "createdAt": "timestamp; preserve Date locally and string at HTTP serialization",
+        "updatedAt": "timestamp; preserve Date locally and string at HTTP serialization",
+        "_id": "adapter-private; omit from portable record",
+        "__v": "adapter-private; omit from portable record"
+      }
+    },
+    {
+      "name": "convoSchema",
+      "fields": [
+        {
+          "name": "conversationId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 22
+          },
+          "storageDefinition": "{\n      type: String,\n      required: true,\n      index: true,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "conversationId",
+            "definition": "z.string().nullable()",
+            "line": 1116
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "title",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 28
+          },
+          "storageDefinition": "{\n      type: String,\n      default: 'New Chat',\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "title",
+            "definition": "z.string().nullable().or(z.literal('New Chat')).default('New Chat')",
+            "line": 1137
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "user",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 33
+          },
+          "storageDefinition": "{\n      type: String,\n      index: true,\n      meiliIndex: true,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "user",
+            "definition": "z.string().optional()",
+            "line": 1138
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "messages",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 38
+          },
+          "storageDefinition": "[{ type: Schema.Types.ObjectId, ref: 'Message' }]",
+          "interfaceType": "Types.ObjectId[]",
+          "provider": {
+            "name": "messages",
+            "definition": "z.array(z.string()).optional()",
+            "line": 1139
+          },
+          "defaultRead": "included",
+          "portableServerRead": "omit physical relationship array",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "isTemporary",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 39
+          },
+          "storageDefinition": "{\n      type: Boolean,\n      default: false,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "isTemporary",
+            "definition": "z.boolean().optional()",
+            "line": 1221
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "endpoint",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 215
+          },
+          "storageDefinition": "{\n    type: String,\n    default: null,\n    required: true,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "endpoint",
+            "definition": "eModelEndpointSchema.nullable()",
+            "line": 1117
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "endpointType",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 220
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "endpointType",
+            "definition": "eModelEndpointSchema.nullable().optional()",
+            "line": 1118
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "model",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 224
+          },
+          "storageDefinition": "{\n    type: String,\n    required: false,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "model",
+            "definition": "z.string().nullable().optional()",
+            "line": 1143
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "protected only when agent-owned"
+        },
+        {
+          "name": "region",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 229
+          },
+          "storageDefinition": "{\n    type: String,\n    required: false,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "region",
+            "definition": "z.string().optional()",
+            "line": 1205
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "chatGptLabel",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 234
+          },
+          "storageDefinition": "{\n    type: String,\n    required: false,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "chatGptLabel",
+            "definition": "z.string().nullable().optional()",
+            "line": 1227
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "examples",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 239
+          },
+          "storageDefinition": "{ type: [{ type: Schema.Types.Mixed }], default: undefined }",
+          "interfaceType": "unknown[]",
+          "provider": {
+            "name": "examples",
+            "definition": "z.array(tExampleSchema).optional()",
+            "line": 1167
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "modelLabel",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 240
+          },
+          "storageDefinition": "{\n    type: String,\n    required: false,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "modelLabel",
+            "definition": "z.string().nullable().optional()",
+            "line": 1141
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "promptPrefix",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 244
+          },
+          "storageDefinition": "{\n    type: String,\n    required: false,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "promptPrefix",
+            "definition": "z.string().nullable().optional()",
+            "line": 1144
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "temperature",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 248
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "temperature",
+            "definition": "z.number().nullable().optional()",
+            "line": 1145
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "top_p",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 252
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "top_p",
+            "definition": "z.number().optional()",
+            "line": 1148
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "topP",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 257
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "topP",
+            "definition": "z.number().optional()",
+            "line": 1146
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "topK",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 261
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "topK",
+            "definition": "z.number().optional()",
+            "line": 1147
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "maxOutputTokens",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 265
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "maxOutputTokens",
+            "definition": "coerceNumber.nullable().optional()",
+            "line": 1152
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "maxTokens",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 269
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "maxTokens",
+            "definition": "coerceNumber.optional()",
+            "line": 1206
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "presence_penalty",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 273
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "presence_penalty",
+            "definition": "z.number().optional()",
+            "line": 1150
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "frequency_penalty",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 277
+          },
+          "storageDefinition": "{\n    type: Number,\n    required: false,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "frequency_penalty",
+            "definition": "z.number().optional()",
+            "line": 1149
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "file_ids",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 281
+          },
+          "storageDefinition": "{ type: [{ type: String }], default: undefined }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "file_ids",
+            "definition": "z.array(z.string()).optional()",
+            "line": 1175
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "resendImages",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 283
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "resendImages",
+            "definition": "z.boolean().optional()",
+            "line": 1225
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "promptCache",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 287
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "promptCache",
+            "definition": "z.boolean().optional()",
+            "line": 1156
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "promptCacheTtl",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 290
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "'5m' | '1h'",
+          "provider": {
+            "name": "promptCacheTtl",
+            "definition": "z.enum(['5m', '1h']).optional()",
+            "line": 1157
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "thinking",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 293
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "thinking",
+            "definition": "z.boolean().optional()",
+            "line": 1159
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "thinkingBudget",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 296
+          },
+          "storageDefinition": "{\n    type: Number,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "thinkingBudget",
+            "definition": "coerceNumber.optional()",
+            "line": 1160
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "thinkingLevel",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 299
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": null,
+          "provider": {
+            "name": "thinkingLevel",
+            "definition": "eThinkingLevelSchema.optional()",
+            "line": 1161
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "effort",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 302
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "effort",
+            "definition": "eAnthropicEffortSchema.optional().nullable()",
+            "line": 1189
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "system",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 305
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "system",
+            "definition": "z.string().optional()",
+            "line": 1158
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "resendFiles",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 309
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "resendFiles",
+            "definition": "z.boolean().optional()",
+            "line": 1174
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "imageDetail",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 312
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "imageDetail",
+            "definition": "eImageDetailSchema.optional()",
+            "line": 1177
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "agent_id",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 44
+          },
+          "storageDefinition": "{\n      type: String,\n    }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "agent_id",
+            "definition": "z.string().optional()",
+            "line": 1201
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "codeApprovalMode",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 319
+          },
+          "storageDefinition": "{\n    type: String,\n    enum: [...CODE_APPROVAL_MODES],\n  }",
+          "interfaceType": "CodeApprovalMode",
+          "provider": {
+            "name": "codeApprovalMode",
+            "definition": "z.enum(CODE_APPROVAL_MODES).optional()",
+            "line": 1125
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "codeEnvironmentMode",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 323
+          },
+          "storageDefinition": "{\n    type: String,\n    enum: [...CODE_ENVIRONMENT_MODES],\n  }",
+          "interfaceType": "CodeEnvironmentMode",
+          "provider": {
+            "name": "codeEnvironmentMode",
+            "definition": "z.enum(CODE_ENVIRONMENT_MODES).optional()",
+            "line": 1126
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "codeWorkspaces",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 327
+          },
+          "storageDefinition": "{\n    type: [\n      {\n        environmentId: { type: String, required: true },\n        workspaceId: { type: String, required: true },\n        _id: false,\n      },\n    ],\n    default: undefined,\n  }",
+          "interfaceType": "CodeWorkspaceSelection[]",
+          "provider": {
+            "name": "codeWorkspaces",
+            "definition": "z\n    .array(\n      z\n        .object({\n          environmentId: z.string().regex(CODE_WORKSPACE_ID_PATTERN),\n          workspaceId: z.string().regex(CODE_WORKSPACE_ID_PATTERN),\n        })\n        .strict(),\n    )\n    .optional()",
+            "line": 1127
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "assistant_id",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 338
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "assistant_id",
+            "definition": "z.string().optional()",
+            "line": 1199
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "instructions",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 341
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "instructions",
+            "definition": "z.string().optional()",
+            "line": 1209
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "stop",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 344
+          },
+          "storageDefinition": "{ type: [{ type: String }], default: undefined }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "stop",
+            "definition": "z.array(z.string()).optional()",
+            "line": 1214
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "isArchived",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 345
+          },
+          "storageDefinition": "{\n    type: Boolean,\n    default: false,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "isArchived",
+            "definition": "z.boolean().optional()",
+            "line": 1119
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "iconURL",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 350
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "iconURL",
+            "definition": "z.string().nullable().optional()",
+            "line": 1218
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "kept-key exception: undefined may unset"
+        },
+        {
+          "name": "greeting",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 353
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "greeting",
+            "definition": "z.string().optional()",
+            "line": 1216
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "spec",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 356
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "spec",
+            "definition": "z.string().nullable().optional()",
+            "line": 1217
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "kept-key exception: undefined may unset"
+        },
+        {
+          "name": "tags",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 358
+          },
+          "storageDefinition": "{\n      type: [String],\n      default: [],\n      meiliIndex: true,\n    }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "tags",
+            "definition": "z.array(z.string()).optional()",
+            "line": 1169
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "tools",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 363
+          },
+          "storageDefinition": "{ type: [{ type: String }], default: undefined }",
+          "interfaceType": "string[]",
+          "provider": {
+            "name": "tools",
+            "definition": "z.union([z.array(tPluginSchema), z.array(z.string())]).optional()",
+            "line": 1140
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "maxContextTokens",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 364
+          },
+          "storageDefinition": "{\n    type: Number,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "maxContextTokens",
+            "definition": "coerceNumber.optional()",
+            "line": 1153
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "max_tokens",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 367
+          },
+          "storageDefinition": "{\n    type: Number,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "max_tokens",
+            "definition": "coerceNumber.optional()",
+            "line": 1154
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "useResponsesApi",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 370
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "useResponsesApi",
+            "definition": "z.boolean().optional()",
+            "line": 1187
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "web_search",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 374
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "web_search",
+            "definition": "z.boolean().optional()",
+            "line": 1193
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "url_context",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 378
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "url_context",
+            "definition": "z.boolean().optional()",
+            "line": 1195
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "disableStreaming",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 381
+          },
+          "storageDefinition": "{\n    type: Boolean,\n  }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "disableStreaming",
+            "definition": "z.boolean().optional()",
+            "line": 1197
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "fileTokenLimit",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 384
+          },
+          "storageDefinition": "{\n    type: Number,\n  }",
+          "interfaceType": "number",
+          "provider": {
+            "name": "fileTokenLimit",
+            "definition": "coerceNumber.optional()",
+            "line": 1223
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "reasoning_effort",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 388
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "reasoning_effort",
+            "definition": "eReasoningEffortSchema.optional().nullable()",
+            "line": 1179
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "reasoning_summary",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 391
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "reasoning_summary",
+            "definition": "eReasoningSummarySchema.optional().nullable()",
+            "line": 1180
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "reasoning_mode",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 395
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "reasoning_mode",
+            "definition": "eReasoningModeSchema.optional().nullable()",
+            "line": 1182
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "reasoning_context",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 398
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "reasoning_context",
+            "definition": "eReasoningContextSchema.optional().nullable()",
+            "line": 1183
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "verbosity",
+          "source": {
+            "file": "packages/data-schemas/src/schema/defaults.ts",
+            "line": 402
+          },
+          "storageDefinition": "{\n    type: String,\n  }",
+          "interfaceType": "string",
+          "provider": {
+            "name": "verbosity",
+            "definition": "eVerbositySchema.optional().nullable()",
+            "line": 1185
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "initial_agent_id",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 47
+          },
+          "storageDefinition": "{\n      type: String,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "string | null",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "subagentThread",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 52
+          },
+          "storageDefinition": "{\n      type: {\n        rootConversationId: { type: String, required: true },\n        parentConversationId: { type: String, required: true },\n        parentMessageId: { type: String, required: true },\n        parentToolCallId: { type: String, required: true },\n        parentAgentId: { type: String },\n        subagentType: { type: String, required: true },\n        subagentKind: { type: String, enum: ['agent', 'graph'], required: true },\n        depth: { type: Number, min: 1, required: true },\n      },\n      _id: false,\n      default: undefined,\n    }",
+          "interfaceType": "TSubagentThreadLineage",
+          "provider": {
+            "name": "subagentThread",
+            "definition": "subagentThreadLineageSchema.optional()",
+            "line": 1203
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "subagentThreadLease",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 67
+          },
+          "storageDefinition": "{\n      type: {\n        token: { type: String, required: true },\n        taskId: { type: String, required: true },\n        expiresAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "ISubagentThreadLease",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "agentEventBinding",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 79
+          },
+          "storageDefinition": "{\n      type: {\n        bindingId: { type: String, required: true },\n        sourceKeyId: { type: String, required: true },\n        actorId: { type: String, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "IAgentEventBinding",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "agentEventActor",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 91
+          },
+          "storageDefinition": "{\n      type: {\n        generation: { type: Number, min: 1, required: true },\n        checkpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          required: true,\n        },\n        contextFingerprint: {\n          type: {\n            algorithm: { type: String, enum: ['sha256'], required: true },\n            version: { type: Number, min: 1, required: true },\n            digest: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        skillManifest: {\n          type: [\n            {\n              id: { type: String, required: true },\n              name: { type: String, required: true },\n              version: { type: Number, min: 1, required: true },\n              contentDigest: { type: String, default: undefined },\n              _id: false,\n            },\n          ],\n          default: undefined,\n          validate: {\n            validator: (skills: unknown[]) => skills.length <= MAX_AGENT_EVENT_ACTOR_SKILLS,\n            message: `Event actor Skill manifest exceeds ${MAX_AGENT_EVENT_ACTOR_SKILLS}`,\n          },\n        },\n        discoveredToolNames: {\n          type: [{ type: String, maxlength: MAX_AGENT_EVENT_ACTOR_TOOL_NAME_LENGTH }],\n          default: undefined,\n          validate: {\n            validator: (names: unknown[]) => names.length <= MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS,\n            message: `Event actor discovered-tool state exceeds ${MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS}`,\n          },\n        },\n        summary: {\n          type: {\n            text: {\n              type: String,\n              required: true,\n              maxlength: MAX_AGENT_EVENT_ACTOR_SUMMARY_LENGTH,\n            },\n            tokenCount: { type: Number, min: 0, required: true },\n            version: { type: Number, min: 1 },\n          },\n          _id: false,\n          default: undefined,\n        },\n        contextMeta: {\n          type: {\n            calibrationRatio: { type: Number, min: 0.5, max: 5, required: true },\n            encoding: {\n              type: String,\n              maxlength: MAX_AGENT_EVENT_ACTOR_ENCODING_LENGTH,\n              default: undefined,\n            },\n            ...agentFadingContextDefinition,\n          },\n          _id: false,\n          default: undefined,\n        },\n        compactionSemanticIndex: {\n          type: {\n            version: { type: Number, enum: [1], required: true },\n            entries: {\n              type: [\n                {\n                  type: {\n                    type: String,\n                    enum: ['tool_intent', 'tool_outcome', 'activity_phase', 'reasoning_label'],\n                    required: true,\n                  },\n                  sourceMessageId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    required: true,\n                  },\n                  sourceContentIndex: {\n                    type: Number,\n                    min: 0,\n                    max: MAX_COMPACTION_SEMANTIC_INDEX_SOURCE_CONTENT_INDEX,\n                    required: true,\n                  },\n                  revision: { type: Number, min: 0, required: true },\n                  status: { type: String, enum: ['committed', 'pending'], required: true },\n                  text: {\n                    type: String,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_TEXT_LENGTH,\n                  },\n                  redacted: { type: Boolean, default: undefined },\n                  toolCallId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  reasoningStepId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  _id: false,\n                },\n              ],\n              validate: {\n                validator: (entries: unknown[]) =>\n                  entries.length <= MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES,\n                message: `Compaction semantic index exceeds ${MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES} entries`,\n              },\n            },\n            providedEntryCount: { type: Number, min: 0, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n          validate: {\n            validator: isCompactionSemanticIndexProjection,\n            message: 'Compaction semantic index projection is invalid',\n          },\n        },\n        previousCheckpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        requiresColdStart: { type: Boolean, default: undefined },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "IAgentEventActorState",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "agentEventActorCleanup",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 240
+          },
+          "storageDefinition": "{\n      type: [\n        {\n          threadId: { type: String, required: true },\n          checkpointId: { type: String, required: true },\n          checkpointNs: { type: String, required: true },\n          _id: false,\n        },\n      ],\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "IAgentEventActorCheckpoint[]",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "agentEventActorReconciliations",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 252
+          },
+          "storageDefinition": "{\n      type: [\n        {\n          invocationId: { type: String, required: true },\n          actionAdmitted: { type: Boolean, default: undefined },\n          status: {\n            type: String,\n            enum: [\n              'invocation_pending',\n              'persistence_pending',\n              'history_persisted',\n              'commit_conflict',\n              'commit_indeterminate',\n              'persistence_failed',\n              'settled',\n            ],\n            required: true,\n          },\n          checkpoint: {\n            type: {\n              threadId: { type: String, required: true },\n              checkpointId: { type: String, default: undefined },\n              checkpointNs: { type: String, required: true },\n            },\n            _id: false,\n            required: true,\n          },\n          action: {\n            type: {\n              toolName: { type: String, required: true },\n              toolCallId: { type: String, default: undefined },\n            },\n            _id: false,\n            required: true,\n          },\n          error: { type: String, default: undefined },\n          resolution: {\n            type: String,\n            enum: ['checkpoint_verified', 'action_compensated', 'history_repaired'],\n            default: undefined,\n          },\n          observedAt: { type: Date, required: true },\n          _id: false,\n        },\n      ],\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "IAgentEventActorReconciliation[]",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "agentEventActorEpoch",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 302
+          },
+          "storageDefinition": "{\n      type: Number,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "number",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "agentEventActorLegacyTurn",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 309
+          },
+          "storageDefinition": "{\n      type: {\n        token: { type: String, required: true },\n        startedAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "IAgentEventActorLegacyTurn",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "agentEventActorSuspension",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 321
+          },
+          "storageDefinition": "{\n      type: {\n        suspension: { type: Schema.Types.Mixed, required: true },\n        kind: {\n          type: String,\n          enum: ['human_decision', 'internal_completion'],\n          default: 'human_decision',\n        },\n        appliedAction: {\n          type: {\n            toolName: { type: String, required: true },\n            toolCallId: { type: String, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n        },\n        handlingGenerationCreatedAt: { type: Number, min: 0, default: undefined },\n        actionId: { type: String, required: true },\n        jobCreatedAt: { type: Number, required: true },\n        status: {\n          type: String,\n          enum: ['pending', 'claimed', 'pending_owned', 'claimed_owned', 'closed'],\n          required: true,\n        },\n        resumeAttemptId: { type: String, default: undefined },\n        outcome: {\n          type: String,\n          enum: ['committed', 'stale', 'settled', 'cancelled'],\n          default: undefined,\n        },\n        closedAt: { type: Date, default: undefined },\n        observedAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }",
+          "interfaceType": "IAgentEventActorSuspension",
+          "provider": null,
+          "defaultRead": "hidden",
+          "portableServerRead": "not fetched by default",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "chatProjectId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 363
+          },
+          "storageDefinition": "{\n      type: String,\n      default: null,\n      index: true,\n    }",
+          "interfaceType": "string | null",
+          "provider": {
+            "name": "chatProjectId",
+            "definition": "z.string().nullable().optional()",
+            "line": 1170
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "files",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 368
+          },
+          "storageDefinition": "{\n      type: [String],\n    }",
+          "interfaceType": "string[]",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "expiredAt",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 371
+          },
+          "storageDefinition": "{\n      type: Date,\n    }",
+          "interfaceType": "Date",
+          "provider": {
+            "name": "expiredAt",
+            "definition": "z.string().nullable().optional()",
+            "line": 1220
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "tenantId",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 374
+          },
+          "storageDefinition": "{\n      type: String,\n      index: true,\n    }",
+          "interfaceType": "string",
+          "provider": null,
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "undefined option may unset existing key"
+        },
+        {
+          "name": "pinned",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 378
+          },
+          "storageDefinition": "{\n      type: Boolean,\n    }",
+          "interfaceType": "boolean",
+          "provider": {
+            "name": "pinned",
+            "definition": "z.boolean().optional()",
+            "line": 1122
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        },
+        {
+          "name": "archivedAt",
+          "source": {
+            "file": "packages/data-schemas/src/schema/convo.ts",
+            "line": 385
+          },
+          "storageDefinition": "{\n      type: Date,\n    }",
+          "interfaceType": "Date | null",
+          "provider": {
+            "name": "archivedAt",
+            "definition": "z.string().nullable().optional()",
+            "line": 1121
+          },
+          "defaultRead": "included",
+          "portableServerRead": "preserve field and presence",
+          "publicRead": "not in pilot public conversation scope",
+          "endpointUnsetRule": "excluded from unset enumeration"
+        }
+      ],
+      "providerOnly": [
+        "isShared",
+        "userLabel",
+        "parentMessageId",
+        "stream",
+        "artifacts",
+        "context",
+        "createdAt",
+        "updatedAt",
+        "thinkingDisplay",
+        "additionalModelRequestFields",
+        "additional_instructions",
+        "append_current_datetime",
+        "presetOverride"
+      ],
+      "interfaceOnly": [
+        "isShared",
+        "createdAt",
+        "updatedAt"
+      ],
+      "implicit": {
+        "createdAt": "timestamp; preserve Date locally and string at HTTP serialization",
+        "updatedAt": "timestamp; preserve Date locally and string at HTTP serialization",
+        "_id": "adapter-private; omit from portable record",
+        "__v": "adapter-private; omit from portable record"
+      }
+    }
+  ],
+  "limits": "Static declared/default projection rules; no runtime Mongoose selection/casting or historical Mixed-value validation. Provider-only fields are not automatically persistence requirements."
+}

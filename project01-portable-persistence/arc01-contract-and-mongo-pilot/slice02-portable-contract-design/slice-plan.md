@@ -58,16 +58,23 @@ The [real-Mongo lifecycle packet](artifacts/design-pass03/decision.md) rejects t
 
 The working replacement is a per-invocation turn-write handle retaining the observed row privately, separate from value-based logical references. Its proposed lifecycle, release, scope and failure rules are in the decision. Next compare that candidate against the prior 28 orchestration scenarios plus lifecycle/overlap cases, then complete field-level DTO and failure mapping. No source conversion or contributor prompt is issued; all seven acceptance rows remain open. The prior packets stay sealed.
 
-## Current design result — pass 4
+## Historical design result — pass 4
 
 The [handle comparison](artifacts/design-pass04/decision.md) matched 28 source-based orchestration cases, passed 26 lifecycle/scope checks and detected five mutants. It uses actual tenant policy/AsyncLocalStorage with mocked stores. Per-invocation observed-write ownership is the working direction; do not reopen identity alternatives without new evidence.
 
 The [field/patch/outcome mapping](artifacts/design-pass04/contract-mapping.md) and reproducible census cover 44 message and 73 conversation schema fields. Next reconcile provider types, named read projections and actual ordinary callers; define concrete DTOs and settle strict-scope versus invalid-input validation ordering. Source build/runtime and integrated adapter checks remain required. No source change, CC prompt or acceptance claim follows; all seven rows stay open.
 
+## Current design result — pass 5
+
+The [read contract and field matrix](artifacts/design-pass05/read-contract.md) select the ordinary full reload, by-ID, server history and shared ownership-probe paths. The combined query/search/pagination route remains legacy. Sixteen source-based read comparisons, two controlled admission-gating checks and three early-validation cases passed; three mutants were detected. The handle now captures non-enforcing scope so actual legacy methods retain strict-mode validation order; this supersedes the pass-4 begin-time strict check.
+
+The matrix accounts for all 117 declared schema fields and nested public exclusions. Next finish concrete nested DTO/patch types and historical Mixed-value policy, then the composition/injection file fence and pinned-runtime/source-build prerequisites. This narrows remaining work rather than reopening the handoff alternatives. All acceptance rows remain open and no implementation prompt is issued.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.6 | 2026-09-21 | Fixed the read/caller boundary using source comparison; corrected handle scope-capture order and completed the top-level provider/projection matrix. |
 | v1.5 | 2026-09-20 | Supported per-invocation handoff with 28 comparison/26 lifecycle cases and five mutants; added AST field inventory and patch/error mapping without claiming complete DTO or real-method conformance. |
 | v1.4 | 2026-09-20 | Real-Mongo lifecycle characterization superseded pass 2's private-hint preference; separated logical reference meaning from observed-write ownership and specified the next candidate's validation obligations. |
 | v1.3 | 2026-09-20 | Added source-based logical-reference prototype evidence: 28 matched scenarios, eight memo cases, three detected negative controls; preferred the staged-write/private-hint candidate over an early compound snapshot, with lifetime and real-DB validation still open. |

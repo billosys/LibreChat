@@ -1,0 +1,17 @@
+{
+  "check": "passed",
+  "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+  "trackedSourceClean": true,
+  "untrackedPreserved": [],
+  "readComparisons": 16,
+  "admissionGatingChecks": 2,
+  "preflightCases": 3,
+  "negativeControls": 3,
+  "fieldMatrixReproduced": true,
+  "schemaFields": 117,
+  "priorArtifactHashesPreserved": 71,
+  "linksChecked": 80,
+  "openLedgerRows": 7,
+  "manifestEntries": null,
+  "evidenceClass": "source-executed read orchestration and preflight with storage doubles; static field matrix, not real-adapter or independent acceptance"
+}
