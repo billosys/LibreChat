@@ -1,0 +1,85 @@
+# CC evidence01 execution log
+Append-only command attempts and structural checks.
+
+[2026-09-21T05:54:41.509388+00:00] inventory structural checks
+{
+  "coverageRows": 117,
+  "uniqueCoverageKeys": 117,
+  "selectedRoots": 10,
+  "nestedExclusions": 12,
+  "classificationCounts": {
+    "selected nested root": 10,
+    "other scalar/array field outside this deep inspection": 92,
+    "default-hidden specialized field": 14,
+    "adapter-private physical relationship": 1
+  }
+}
+
+[2026-09-21T05:54:41.787381+00:00] pass05 replay
+{
+  "argv": [
+    "/Users/oubiwann/.local/bin/node",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+    "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay-result.json"
+  ],
+  "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+  "startedAt": "2026-09-21T05:54:41.509538+00:00",
+  "finishedAt": "2026-09-21T05:54:41.787268+00:00",
+  "exitCode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"readCases\": 16,\n  \"gateCases\": 2,\n  \"preflightCases\": [\n    {\n      \"name\": \"missing-owner\",\n      \"direct\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"deferred\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"missing-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"malformed-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    }\n  ],\n  \"negativeControls\": [\n    {\n      \"name\": \"wrong-owner\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"no-projection\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"eager-strict-scope\",\n      \"detected\": true\n    }\n  ]\n}\n",
+  "stderr": ""
+}
+
+[2026-09-21T05:54:41.787918+00:00] replay comparison
+{
+  "behaviorFieldsComparedExactly": [
+    "readCases",
+    "gateCases",
+    "preflightCases",
+    "negativeControls",
+    "success",
+    "modelAccesses",
+    "error"
+  ],
+  "provenanceFieldsComparedIndividually": [
+    "sourceHead",
+    "node",
+    "compiler",
+    "sources",
+    "experimentSha256",
+    "priorHandle"
+  ],
+  "allowedProvenanceDifferences": []
+}
+
+[2026-09-21T05:54:42.260983+00:00] sealed pass05 validator
+{
+  "argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validate.py",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall"
+  ],
+  "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+  "startedAt": "2026-09-21T05:54:41.787974+00:00",
+  "finishedAt": "2026-09-21T05:54:42.260866+00:00",
+  "exitCode": 0,
+  "stdout": "{\n  \"check\": \"passed\",\n  \"sourceHead\": \"3e3c5410d3863118fdba694fb0cd51baeb7102f9\",\n  \"trackedSourceClean\": true,\n  \"untrackedPreserved\": [],\n  \"readComparisons\": 16,\n  \"admissionGatingChecks\": 2,\n  \"preflightCases\": 3,\n  \"negativeControls\": 3,\n  \"fieldMatrixReproduced\": true,\n  \"schemaFields\": 117,\n  \"priorArtifactHashesPreserved\": 71,\n  \"linksChecked\": 87,\n  \"openLedgerRows\": 7,\n  \"manifestEntries\": 10,\n  \"evidenceClass\": \"source-executed read orchestration and preflight with storage doubles; static field matrix, not real-adapter or independent acceptance\"\n}\n",
+  "stderr": ""
+}
+
+[2026-09-21T05:54:42.317537+00:00] source preservation check
+{
+  "head": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+  "status": "",
+  "clean": true
+}
+
+[manual preflight records retained after the successful run]
+The first bounded-search attempt was run from PLAN with relative SOURCE paths and failed: `rg ... /Users/.../billo-guildhall/...`: `No such file or directory`. The corrected bounded search was then run against the pinned SOURCE path; its broad-name counts and representative witnesses are reported in report.md.
+
+The first manifest check was run from PLAN with relative artifact paths and failed all relative checks. A mistaken lookup for `artifacts/design-pass01/SHA256SUMS` also failed because pass01 is sealed by the slice-root manifest. Corrected checks were run from each manifest's parent directory and passed. These unsuccessful attempts are retained as preflight history, not treated as evidence.
+
+The first verification of the new `SHA256SUMS` was run from PLAN with its relative filenames and failed to open all six files. The corrected verification was run from OUT, where the manifest's relative filenames resolve.
