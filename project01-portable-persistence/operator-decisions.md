@@ -21,3 +21,7 @@ Project02 owns the newly requested UI memory/project imports. Coordinate shared 
 ## Fork policy and commit attribution — 2026-09-20
 
 The Operator subsequently made `billo-guildhall` the common base for all new source branches and the required merge destination for completed feature work. Main remains pristine, and the orphan planning branch remains the documentation exception. Every commit we author carries both specified co-author trailers. See [BILLO.md](../BILLO.md), [repository workflow](../repository-workflow.md) and [the message-only rewrite map](../commit-message-migration.md). This supersedes independent source integration lines; it does not broaden the persistence pilot or assign feature implementation.
+
+## Two-Contributor Workflow — 2026-09-21
+
+After pass05, the Operator requested “switch over to 2-contributor (CDC + CC)” because the work was becoming involved. Project01 now follows that selection: the existing design conversation is CDC, and a separate CC session receives the preserved Slice02 evidence prompt through the Operator. Expedited Mode remains enabled; no CRC, source implementation, expanded scope or acceptance waiver follows. See the [project transition record](project-plan.md#transition-record--2026-09-21) and [Slice02 assignment](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/cc-prompt.md). Receiver identity and acknowledgement are pending relay; previous evidence stays at its recorded strength.

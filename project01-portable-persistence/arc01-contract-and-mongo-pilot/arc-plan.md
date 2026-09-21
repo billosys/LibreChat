@@ -8,7 +8,7 @@
 | Opened | 2026-09-20, explicitly requested by the Operator |
 | Depends on | Existing interface proposal and completed read-only Claude reconciliation; implementation baseline decision before code |
 | Blocks | Arc02's broader persistence conversion; Arc03's first concrete adapter contract |
-| Workflow | One contributor for current investigation; later transitions follow the project plan |
+| Workflow | CDC + CC from 2026-09-21; context/relay state in the project plan |
 | Execution mode | Expedited Mode; see the project plan for cadence, unchanged gates, and prompt-path reporting |
 | Current slice | [Slice02 — Portable contract design](slice02-portable-contract-design/slice-plan.md); Slice01 acceptance remains pending |
 
@@ -40,7 +40,7 @@ Outside this arc's implementation: full importer migration, corrective writes to
 | [Slice02 — Portable contract design](slice02-portable-contract-design/slice-plan.md) | Resolve operation schemas, source/operational identity mapping, failure semantics, conformance cases, module boundaries, and the precise code fence | Slice01 attested evidence; explicit Operator authorization to continue design preparation | Active; first design pass and cursor characterization delivered; not implementation-ready |
 | Slice03 — First Mongo conversion | Implement the reviewed pilot contract and Mongo binding, convert its consumers, and demonstrate integrated behavior and regression protection | Slice02 design; resolved implementation baseline; assigned contributor/reviewer workflow | Planned; detail when near |
 
-Slice02 produces the implementation-ready Slice03 assignment after satisfying the prompt-authoring readiness requirements. Do not issue a speculative CC prompt now. If the actual dependency map makes Slice03 too large for one context, split it before assignment and record the roadmap amendment; do not silently broaden the pilot.
+Slice02 produces the implementation-ready Slice03 assignment after satisfying the prompt-authoring readiness requirements. Production implementation remains held until that readiness check passes. A bounded Slice02 evidence prompt is now issued under the 2026-09-21 workflow transition. If the actual dependency map makes Slice03 too large for one context, split it before assignment and record the roadmap amendment; do not silently broaden the pilot.
 
 Slice01 and Slice02 have owning directories/open sets. Slice03 remains a roadmap entry, not an empty execution packet. The earlier Slice01-only state is superseded by the Operator-authorized design continuation recorded below.
 
@@ -54,7 +54,7 @@ Child completion alone does not prove the arc composes. Arc close requires integ
 
 ## Workflow and source boundaries
 
-This conversation is the sole active contributor. The Operator remains the design partner and scope authority. Current work is investigation and planning with self-checks; no fictional CC/CRC assignments or independent verification files are created. The project retains its intended progression to two contributors for deeper work and three for well-defined implementation. Record actual assignments and effective scope at transition.
+The Operator switched Project01 to CDC + CC on 2026-09-21, superseding the initial one-contributor investigation. This conversation is CDC. The [initial Slice02 evidence prompt](slice02-portable-contract-design/cc-prompt.md) awaits Operator relay and acknowledgement by a separate CC context. CDC reviews new CC work; prior CDC-authored evidence retains its pending separate verification. CRC is not enabled. The [project transition record](../project-plan.md#transition-record--2026-09-21) carries source state, open findings and unchanged gates.
 
 The earlier fork-only remote query found no dev ref. This is now resolved: the Operator requested a `billo-guildhall` implementation worktree, created from verified `upstream/dev` at `fe79265b2f47937051625719f3ba5080189912c1`. Source instructions still require upstream PRs against dev; main remains pristine. See [repository workflow](../../repository-workflow.md) and [Operator decisions](../operator-decisions.md). Earlier evidence remains at its original source commit; refresh source/build validation before implementation.
 
@@ -80,6 +80,7 @@ Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decisi
 
 | Version | Date | Change |
 |---|---|---|
+| v1.10 | 2026-09-21 | Operator selected CDC + CC as Slice02 deepened; initial bounded evidence assignment and separate-context review ownership recorded, with the existing roadmap and acceptance unchanged. |
 | v1.9 | 2026-09-21 | Slice02 pass 5 made D01 read scope explicit, corrected D04 validation ordering and reconciled declared fields with provider/public projections. |
 | v1.8 | 2026-09-20 | Slice02 pass 4 validated the bounded handle prototype and added source-field/partial-outcome mapping; scoped remaining DTO and integration work. |
 | v1.7 | 2026-09-20 | Slice02 pass 3 rejected invisible locator caching after real-Mongo lifecycle counterexamples; recorded the next explicit observed-write candidate without expanding source scope. |

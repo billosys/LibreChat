@@ -5,9 +5,9 @@
 | Slice | slice02-portable-contract-design |
 | Arc | [Arc01](../arc-plan.md) |
 | Status | Active — design preparation; not implementation-ready |
-| Workflow | One contributor; Expedited Mode |
-| Assignment | This plan, owned by the current conversation; no CC/CRC handoff |
-| Source baseline | First-pass evidence: `ba44443fdb232bbe6d4977e2619774b5a72586ac`; next source work: `billo-guildhall` from `fe79265b2f47937051625719f3ba5080189912c1`, requiring revalidation |
+| Workflow | Two contributors: CDC + CC; Expedited Mode |
+| Assignment | [cc-prompt.md](cc-prompt.md), initial bounded evidence assignment; pending Operator relay and CC acknowledgement |
+| Source baseline | Current CC inspection: `3e3c5410d3863118fdba694fb0cd51baeb7102f9` on `billo-guildhall`; first-pass evidence remains at `ba44443fdb232bbe6d4977e2619774b5a72586ac` |
 | Artifact home | `artifacts/` within this slice |
 | Depends on | Slice01 attested evidence; unresolved findings retained below |
 | Blocks | Slice03 implementation assignment |
@@ -28,11 +28,11 @@ Write only this slice's planning/evidence files and necessary parent-plan, ledge
 2. Draft operations and context, identity/value/patch rules, named read projections, lifecycle ownership, partial outcomes and compatibility mapping in `artifacts/contract-design.md`. Resolve Mongo relationship translation before freezing signatures. An unresolved alternative stays visibly open.
 3. Characterize D05's equal-key cursor risk using the predeclared `artifacts/pagination-protocol.md`. Preserve the harness, all attempt metadata/raw output/results and hashes. This is a controlled property check, not a performance benchmark or independent validation. No existing suite rerun without a new reason.
 4. Design discriminating conformance cases and the proposed code fence in the contract document. Account for import losses, adjacent legacy callers, source/dist parity, runtime and branch prerequisites. Determine whether the implementation still fits one slice after remaining choices are resolved.
-5. Bubble actionable findings into the parent plans immediately. Keep criteria open until their evidence and review requirements are satisfied. Once the design is complete, prepare the actual workflow transition and source-grounded implementation assignment using the prompt-authoring guide; do not issue a speculative prompt now.
+5. Bubble actionable findings into the parent plans immediately. Keep criteria open until their evidence and review requirements are satisfied. The Operator has now selected CDC + CC. Execute only the bounded evidence prompt issued below; once the design is complete, CDC prepares the source-grounded production implementation assignment using the prompt-authoring guide.
 
 ## Verification and exit
 
-Every contract choice must trace to a current caller requirement or a clearly labeled intended change. Check scoped authorization, field-state distinctions, no-upsert and retry/partial-commit behavior explicitly. Demonstrate that the public dependency graph and DTO census can exclude engine details before declaring implementation readiness. Synthetic experiments must fail closed on database target selection and retain unsuccessful attempts. Verify Markdown links, source cleanliness, exact artifact inventory and hashes, and explicit-path commits. These are self-checks, not independent acceptance.
+Every contract choice must trace to a current caller requirement or a clearly labeled intended change. Check scoped authorization, field-state distinctions, no-upsert and retry/partial-commit behavior explicitly. Demonstrate that the public dependency graph and DTO census can exclude engine details before declaring implementation readiness. Synthetic experiments must fail closed on database target selection and retain unsuccessful attempts. Verify Markdown links, source cleanliness, exact artifact inventory and hashes, and explicit-path commits. Historical self-checks remain attested. New CC work returns to CDC for actual review; a replay of an old harness does not by itself establish integrated conformance or acceptance.
 
 The slice is complete only when all ledger criteria have concrete dispositions, the consequential choices are resolved, the implementation fence and conformance recipe are precise, and applicable review gates are satisfied. A first draft does not close this slice.
 
@@ -40,7 +40,23 @@ The slice is complete only when all ledger criteria have concrete dispositions, 
 
 | Assignment | Date | Predecessor | Reason | Disposition |
 |---|---|---|---|---|
-| This slice plan v1.0, current conversation | 2026-09-20 | Slice01 evidence packet | Operator explicitly requested continuation after reading the report | Active design preparation; no implementation prompt |
+| This slice plan v1.0, current conversation | 2026-09-20 | Slice01 evidence packet | Operator explicitly requested continuation after reading the report | Historical one-contributor investigation through pass05; superseded for execution by the initial CC prompt |
+| [cc-prompt.md](cc-prompt.md) | 2026-09-21 | One-contributor design passes 1–5; no prior CC prompt | Operator selected CDC + CC; replay pass05 and inventory ten nested roots for CDC decisions | Active assignment issued for Operator relay; receiving context/acknowledgement pending |
+
+## Current contributor handoff — 2026-09-21
+
+The Operator selected CDC + CC because the investigation had grown involved. This conversation becomes CDC; a separate CC session receives `cc-prompt.md` through the Operator and records its identity/acknowledgement in the permitted intake file. No CC execution or receipt is claimed at issue time. No CRC is enabled. This supersedes the workflow/assignment statements in historical packets, whose contents remain sealed.
+
+The active assignment produces only `artifacts/cc-evidence01/{intake.md,report.md,nested-fields.json,replay-result.json,execution.log,replay.py,SHA256SUMS}`. CC replays pass05 and inspects ten named nested roots against all 117 fields and twelve nested exclusions. It does not implement DTOs, query live data, update plans/ledgers or close the slice. CDC owns nested codec policy, exact composition/file fence, D07 prerequisites, production prompt authorship and sizing. All seven criteria remain open; future CC refinements preserve the initial prompt and use canonical numbered siblings. Prior exploratory passes and any recorded iteration limits are not reset.
+
+### CDC readiness for this evidence assignment
+
+1. **Source-grounded:** current source head/instructions, message/conversation/preset/fading definitions, direct types, public projection and the sealed pass05 harness were inspected. Source remains read-only; source drift blocks same-baseline claims.
+2. **Design-complete for investigation:** the prompt binds inspection populations, output schema, preservation rules, replay method and stop conditions. Final DTO/Mixed-value policy remains explicitly CDC-owned; no dependent production work is issued.
+3. **Guideline-applied:** engineering-methods' investigation/intake rules require source witnesses and complete declared-data coverage; scientific-methods' evidence/validity guides separate replay from conformance; source CLAUDE's Type Safety/Workspace Boundaries rules require identifying existing types and engine-dependent gaps rather than declaring an opaque catch-all portable. Exact guide paths and applied constraints are in the prompt.
+4. **Executable:** existing Node/compiler and sealed harness paths are known; the seven-file output fence fits the canonical artifact home. Missing/runtime-drift inputs have explicit blocker handling; no install or DB dependency is added.
+5. **Falsifiable:** exact reference/candidate case comparisons retain wrong-owner, missing-projection and eager-strict-scope controls; coverage keys and nested paths are checked as sets, not trusted totals. Semantic interpretation is reviewed from sources, not inferred from hash/count checks.
+6. **Coherent/sized:** prompt, plan and ledger retain all acceptance rows and distinguish historical role text. This is one replay plus ten bounded nested-root investigations, not completion of all DTO/composition work; reading/query scopes are bounded and packet creation stops at the decision inputs. No Slice03 source assignment is implied.
 
 ## Subsequent Operator decisions
 
@@ -74,6 +90,7 @@ The matrix accounts for all 117 declared schema fields and nested public exclusi
 
 | Version | Date | Change |
 |---|---|---|
+| v1.7 | 2026-09-21 | Activated Operator-selected CDC + CC; issued the initial bounded replay/nested-field evidence prompt with explicit ownership, output fence, intake and readiness record. |
 | v1.6 | 2026-09-21 | Fixed the read/caller boundary using source comparison; corrected handle scope-capture order and completed the top-level provider/projection matrix. |
 | v1.5 | 2026-09-20 | Supported per-invocation handoff with 28 comparison/26 lifecycle cases and five mutants; added AST field inventory and patch/error mapping without claiming complete DTO or real-method conformance. |
 | v1.4 | 2026-09-20 | Real-Mongo lifecycle characterization superseded pass 2's private-hint preference; separated logical reference meaning from observed-write ownership and specified the next candidate's validation obligations. |
