@@ -44,11 +44,12 @@ The slice is complete only when all ledger criteria have concrete dispositions, 
 
 ## Subsequent Operator decisions
 
-See [Operator decisions](../../operator-decisions.md): practical denormalization is permitted, and source work now belongs in the new Guildhall worktree. Include adapter-owned denormalized logical links in the D02 comparison, with authority/update/recovery rules. D06's missing-dev blocker is resolved by the verified upstream dev base. The preserved first-pass contract/report still describe the decisions and source state at their creation; these later decisions supersede their D06-open status without changing those evidence files. Revalidate relevant upstream changes before implementation; no feature import is added to this pilot.
+See [Operator decisions](../../operator-decisions.md): practical denormalization is permitted, and source work now belongs in the new Guildhall worktree. The Operator then clarified that denormalization is merely an option. Follow the [working identity direction](../../interface-design.md#working-identity-direction-toward-the-cognitive-data-plane), making lightweight guesses about future Lance/cognitive-data models. Start D02 with a named turn operation that keeps physical linkage internal; validate sequence, policy ownership and read counts before freezing that choice. Preserve logical entity identity across future revisions/representations without implementing those future stores now. D06's missing-dev blocker is resolved by the verified upstream dev base. The preserved first-pass contract/report still describe the decisions and source state at their creation; these later decisions supersede their D06-open status without changing those evidence files. Revalidate relevant upstream changes before implementation; no feature import is added to this pilot.
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.2 | 2026-09-20 | Refined D02 after Operator clarification: future-oriented semantic identity guides the design; denormalization remains optional and physical schema choices remain tentative. |
 | v1.1 | 2026-09-20 | Recorded denormalization preference and new source worktree/base, resolving D06 while preserving first-pass artifacts and D07 revalidation. |
 | v1.0 | 2026-09-20 | Opened the planned contract-design slice under explicit continuation authority; retained pending Slice01 acceptance and source-work gates. |

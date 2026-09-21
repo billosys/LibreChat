@@ -91,6 +91,38 @@ Tests must distinguish at least: a first turn from a later turn; absent conversa
 
 This pilot is not the full conversation lifecycle. Deletion, imports, sharing, subagent threads, queued deliveries, and other writers must remain correctly routed through existing behavior until migrated. The first slice must identify its boundary rather than rewrite a many-thousand-line module wholesale.
 
+## Working identity direction toward the cognitive data plane
+
+**Status: lightweight design hypothesis, 2026-09-20.** This follows the Operator's clarification that denormalization was an option, not a recommendation. It draws on this document's Guildhall direction and the [backend proposal](backend-decision.md); it is not a survey of current LanceDB APIs or a commitment to particular tables, graph products, UUID formats or storage features.
+
+The useful long-lived commitment is to semantic identity and provenance. A message, memory assertion, concept or project should remain addressable when its physical representation changes. Mongo, SQLite and possible Lance/graph views can locate the same entity differently. Existing ontology identifiers retain their own authority; a shared reference convention need not mean one universal entity table or one ID issuer.
+
+**Strong working preference:** use scoped, typed logical references at domain boundaries; keep storage addresses private. Preserve existing LibreChat IDs and separately map original import identities. The authenticated context governs access: knowing or supplying a reference never grants authority.
+
+**Plausible future model, subject to revision:**
+
+| Meaning | Illustrative shape | Why preserve the distinction |
+|---|---|---|
+| Entity identity | `(namespace, kind, logical_id)` with explicit ownership/scope policy | Survives movement between physical stores; namespace rules need not duplicate tenant in every payload |
+| Entity revision | `(entity_ref, revision_ref)` | Identifies the specific state from which a claim, summary or trace was derived; do not assume existing Mongo `__v` provides this contract |
+| Source identity | `(source_namespace/account, kind, native_id)` plus export/version evidence | Preserves external identity and repeat-import mapping without replacing operational IDs |
+| Derived representation | Own representation ID, source revision refs, derivation/version metadata | Allows multiple chunks, embeddings or views of one entity, and eventual rebuilds without changing that entity's ID |
+| Relationship | Typed endpoints plus supporting provenance and validity where needed | Supports parentage, project membership and evidential links without assuming a particular graph engine or physical join |
+
+For example, message `m17` could have revision `r3`, with two retrieval chunks referring to `(m17,r3)`. An assertion extracted from it would be a distinct entity with its own identity and an evidence link to that message revision. A rebuild could replace the chunks while preserving `m17` and the assertion's identity. This is a conceptual example, not permission to add a revision column or emit assertions during an ordinary chat save.
+
+Our tentative Lance role remains a cognitive data plane: reusable source/derived material and appropriate query views, alongside operational storage where useful. Candidate message/content, representation, relationship and trace datasets could share these references. Their exact partitioning, mutation strategy and physical schema remain open. Some content and derived artifacts may be authoritative within their own domains; do not assume that all Lance data is a disposable copy of SQLite, or that every row is immutable and append-only.
+
+Embedding rows, chunk positions, internal Mongo IDs and graph indices must not become the public identity of a memory or concept. Derivation needs enough version/provenance information to recognize stale material. Retention, deletion and access rules must follow referenced and derived data; rebuilding a projection is not a substitute for those rules. Full event sourcing and eagerly materializing every possible view remain unnecessary for the current pilot.
+
+### Consequence for the immediate Mongo seam
+
+My first candidate to explore is a **named ordinary-turn persistence operation** with logical inputs, under which the binding can retain the saved Mongo record and reuse its `_id` for the conversation link. Returning and then re-resolving that physical identity through a public receipt should not be our default merely to reproduce today's call shape.
+
+This is a choice of boundary to investigate, not a transaction guarantee. It must preserve retention pre-reads, cache distinctions, seed order, protected fields, skip-conversation behavior and the separate message/conversation writes and partial outcomes. If the needed application decisions cannot be supplied without moving excessive policy into the adapter or adding reads, reconsider the boundary before committing to it. Existing orchestration remains the behavioral reference.
+
+D02's next comparison should therefore start with the complete named-operation sequence and its lookup count, then compare a receipt or denormalized logical links only where they solve a demonstrated problem. Future SQLite and cognitive-data-plane mappings need to agree on the logical meaning, not mimic Mongo's physical link storage. No new Lance, revision, event-log or graph implementation is required to take this direction now.
+
 ## Transactions, retries, and events
 
 Do not promise that saving a message and updating its conversation is already one atomic transaction. The observed path performs separate calls, and the source has explicit transaction-capability probing. Characterize the actual deployment-dependent behavior before assigning stronger guarantees.
@@ -149,4 +181,5 @@ The memory API can later expose search, retrieve, assert, revise, invalidate, li
 
 | Date | Change |
 |---|---|
+| 2026-09-20 | Added lightweight Guildhall/Lance-oriented identity hypotheses after the Operator clarified that denormalization is not a recommendation; prefer investigating a named turn operation before a public physical-link receipt. |
 | 2026-09-20 | Slice02 corrected the initial injection claim using `BaseClient.js:54,1332–1388` and `save.ts:124–187`; linked the current refinement. No API or implementation scope was frozen. The earlier document remains the architectural starting proposal. |

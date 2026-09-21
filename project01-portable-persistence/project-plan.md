@@ -128,12 +128,13 @@ These outputs have a stopping rule: the first conversion must be describable wit
 
 Arc01/Slice02 has now supplied a [first contract draft](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/contract-design.md) and a [bounded synthetic cursor experiment](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-findings.md): 6/6 unique-time records returned, but only 4/6 equal-time records, despite cursor exhaustion. This finding is separate from the earlier 641-test baseline. A corrective pagination change requires separate scope; it is not silently included in compatibility work. The current draft leaves relationship translation, field-level schema/projection mapping and exact code fence open. No SQLite migration or implementation-readiness claim follows from this design pass.
 
-Current Operator preferences permit denormalization for practical/performance reasons; strict normalization is not a requirement. D02 still must define identity and consistency across the adapter boundary. Project02 separately tracks memory/project UI imports; those additions do not broaden the current persistence pilot.
+The Operator clarified that denormalization was only an option, not a recommendation. D02 now follows the [working Guildhall/Lance identity direction](interface-design.md#working-identity-direction-toward-the-cognitive-data-plane): stable scoped logical references, distinct entity/revision/representation identities and adapter-private physical mappings. Explore a named turn-persistence operation first; schema and implementation choices remain revisable. Project02 separately tracks memory/project UI imports; those additions do not broaden the current persistence pilot.
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.10 | 2026-09-20 | Incorporated the Operator clarification: treat denormalization as an option and guide D02 with lightweight future cognitive-data-plane models, without freezing schemas or expanding implementation scope. |
 | v1.9 | 2026-09-20 | Recorded Operator-approved denormalization options and separate Guildhall/features worktrees; resolved D06 using upstream dev, preserved historical evidence and separated Project02 feature scope. |
 | v1.8 | 2026-09-20 | Arc01/Slice02 opened for explicitly authorized design continuation; recorded first contract pass, confirmed cursor gap and corrected singleton/injection premise. Slice01 review and all implementation gates remain pending; roadmap unchanged. |
 | v1.7 | 2026-09-20 | Slice01 delivered its attested 641-test baseline and bounded source/behavior/design package. Updated current evidence status; preserved all acceptance gates, roadmap and implementation boundaries. |
