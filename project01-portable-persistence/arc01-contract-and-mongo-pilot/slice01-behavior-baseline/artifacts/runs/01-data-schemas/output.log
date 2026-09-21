@@ -1,0 +1,45 @@
+PASS src/methods/conversation.spec.ts (9.182 s)
+PASS src/methods/message.spec.ts (8.765 s)
+PASS src/methods/message.traces.spec.ts
+PASS src/methods/convoStructure.spec.ts
+  ● Console
+
+    console.log
+      Retrieved Messages: [
+        {
+          messageId: 'parent',
+          parentMessageId: null,
+          createdAt: 2023-01-01T00:00:00.000Z
+        },
+        {
+          messageId: 'child1',
+          parentMessageId: 'parent',
+          createdAt: 2023-01-01T00:01:00.000Z
+        },
+        {
+          messageId: 'child2',
+          parentMessageId: 'parent',
+          createdAt: 2023-01-01T00:02:00.000Z
+        },
+        {
+          messageId: 'grandchild1',
+          parentMessageId: 'child1',
+          createdAt: 2023-01-01T00:03:00.000Z
+        }
+      ]
+
+      at Object.log (src/methods/convoStructure.spec.ts:274:13)
+
+    console.log
+      Tree structure: [ { messageId: 'parent', children: [ [Object], [Object] ] } ]
+
+      at Object.log (src/methods/convoStructure.spec.ts:287:13)
+
+PASS src/tenant/conformance.mongoose.spec.ts
+
+Test Suites: 5 passed, 5 total
+Tests:       370 passed, 370 total
+Snapshots:   0 total
+Time:        23.128 s
+Ran all test suites within paths "src/tenant/conformance.mongoose.spec.ts", "src/methods/message.spec.ts", "src/methods/conversation.spec.ts", "src/methods/convoStructure.spec.ts", "src/methods/message.traces.spec.ts".
+Test results written to: ../../../../../../../tmp/guildhall-slice01-20260920/01-data-schemas/jest.json

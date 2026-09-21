@@ -1,0 +1,19 @@
+PASS src/conversations/save.spec.ts
+  seedTurnConversation
+    ✓ creates the row a deferred first message has not written yet (963 ms)
+    ✓ lets the deferred message save reuse the seeded row and append its message (215 ms)
+    ✓ leaves an existing conversation to the message save (8 ms)
+    ✓ never creates a subagent thread row, which only its parent run may create (4 ms)
+    ✓ stamps a temporary chat with its retention (5 ms)
+    ✓ settles instead of rejecting when the lookup fails, so the message still saves (7 ms)
+    ✓ does nothing for a request without a user (1 ms)
+  runAfterSeed
+    ✓ holds the write while the seed is in flight (1 ms)
+    ✓ starts the write synchronously once the seed has landed (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        3.105 s
+Ran all test suites within paths "src/conversations/save.spec.ts".
+Test results written to: ../../../../../../../tmp/guildhall-slice01-20260920/02-save-orchestration/jest.json

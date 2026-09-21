@@ -1,0 +1,642 @@
+attempt	suite	status	full_name
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should save a conversation for an authenticated user
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo rejects actor checkpoint ownership evidence through ordinary saves and imports
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo sets immutable agent attribution from server metadata only on insert
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo stores explicit null attribution for a new non-agent conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should query messages when saving a conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should handle newConversationId when provided
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo refreshes project stats when archiving a project conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo bulkSaveConvos keeps owned project ids and strips orphan ones
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo bulkSaveConvos strips supplied attribution and stores explicit null on insert
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo refreshes both projects when a save moves a conversation between them
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo bulkSaveConvos refreshes the project a conversation leaves
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should not create a conversation when noUpsert is true and conversation does not exist
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should update an existing conversation when noUpsert is true
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should still upsert by default when noUpsert is not provided
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should handle unsetFields metadata
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo should set createdAt from metadata only on insert
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserves insert defaults and suppressed timestamps for an archive pipeline upsert
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt leaves updatedAt untouched across an archive and unarchive round trip
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt keeps the original archivedAt when the chat is already archived
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt archives with plain update operators rather than an aggregation pipeline
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt does not report a missing chat when an unarchive splits the archive writes
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt does not report a missing chat when every archive retry is split
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt stamps again when unarchive lands before a pending repeated archive write
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt stamps archivedAt on the first archive when the caller omits it
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt clears archivedAt on unarchive when the caller omits it
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt does not drag a project pointer back when only metadata changes
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt keeps updatedAt through the retention backfill
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt still bumps updatedAt for an ordinary save
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo preserveUpdatedAt does not insert a timestampless conversation for an unknown id
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo setConvoPinned pins a conversation without disturbing its timestamps
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo setConvoPinned unpins a conversation without disturbing its timestamps
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo setConvoPinned does not read the conversation messages
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo setConvoPinned leaves the stored message list alone
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo setConvoPinned returns null for an unknown id rather than inserting one
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo setConvoPinned cannot pin another user’s conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves preserves attached through an approval pause and later saves
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves preserves without_attached through an approval pause and later saves
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves cannot overwrite an explicit move with a stale turn-start snapshot
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves seeds imported decisions without letting repeated imports undo a move
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves preserves a legacy decision
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves records the first decision of a saved chat that holds none
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves keeps the decision it recorded when a later turn resolves another
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations code environment persistence during ordinary saves leaves a chat undecided when a save carries selections without a mode
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations replaceConvoCodeEnvironmentDecision replaces the decision it read without disturbing timestamps
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations replaceConvoCodeEnvironmentDecision replaces a legacy decision stored without a mode
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations replaceConvoCodeEnvironmentDecision replaces a decision that saveConvo persisted
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations replaceConvoCodeEnvironmentDecision leaves a decision that changed after it was read untouched
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations replaceConvoCodeEnvironmentDecision does not treat a reordered selection list as the decision it read
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations replaceConvoCodeEnvironmentDecision cannot move another user’s conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo appendMessageIds appends the provided ids without reading the messages collection
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo appendMessageIds does not duplicate an id that is already recorded
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo appendMessageIds creates the conversation with the appended id when it does not exist yet
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo appendMessageIds ignores a caller-supplied messages field so $set cannot conflict with the append
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations saveConvo appendMessageIds still rebuilds the array from the database when the option is absent
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should save a conversation with expiredAt when isTemporary is true
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling preserves an exact inherited expiration instead of recomputing retention
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should save a conversation without expiredAt when isTemporary is false
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should save a conversation without expiredAt when isTemporary is not provided
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should use custom retention period from config
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should handle minimum retention period (1 hour)
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should handle maximum retention period (8760 hours)
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should handle missing config gracefully
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should use default retention when config is not provided
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should update expiredAt when saving existing temporary conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should preserve temporary retention when saving without isTemporary
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should not set expiredAt when updating non-temporary conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=true
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=false
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=undefined
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling ignores caller-supplied retention fields
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling preserves the stored deadline when chat type true is omitted
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling preserves the stored deadline when chat type false is omitted
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling preserves an explicitly inherited deadline with separate retention periods
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should set expiredAt for non-temporary conversation when retentionMode is ALL
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should mark retained conversation non-temporary when retentionMode is ALL and isTemporary is omitted
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should preserve existing temporary flag when retentionMode is ALL and isTemporary is omitted
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should not set expiredAt when retentionMode is temporary and not isTemporary
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should filter out temporary conversations in getConvosByCursor
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling should filter out temporary conversations in getConvosQueried
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations isTemporary conversation handling hides durable subagent threads from conversation lists and search results
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations searchConversation should find a conversation by conversationId
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations searchConversation should return null if conversation not found
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvo should retrieve a conversation for a user
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvo should return null if conversation not found
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoOwnership resolves only the owning user id, without the preset or message list
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoOwnership returns null for another user or a missing conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoOwnership hides retention-expired conversations before TTL cleanup
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoOwnership includes child-thread identity without materializing conversation content
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoOwnership selects the exact tenant when conversation identifiers collide
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoRetention should retrieve only retention fields for a user conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoTitle should return the conversation title
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoTitle should return null if conversation has no title
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoTitle should return "New Chat" if conversation not found
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoFiles should return conversation files
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoFiles should return empty array if no files
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvoFiles should return empty array if conversation not found
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos retires queued-turn work before each conversation deletion wave
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos preserves background receipts when a pre-delete drain fails
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos finishes descendant bookkeeping and message cleanup when receipt erasure fails
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos fails closed before deleting a conversation when queued-turn retirement fails
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should delete conversations and associated messages
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos cascades parent deletion through owner-scoped child-thread lineage
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos reports a partial cascade failure instead of silently succeeding
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos does not delete a parent when deleting one child thread
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should throw error if no conversations found
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos allows a single-conversation cleanup retry after topology and messages are gone
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos supports an idempotent empty recovery sweep without hiding storage failures
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should decrement tag counts for a deleted bookmarked conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should decrement counts for every tag on the deleted conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should decrement a shared tag once per deleted conversation when clearing all
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should not double-decrement duplicate tag entries within one conversation
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should clamp tag counts at zero and never go negative
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should not touch tags belonging to another user
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos should not decrement tag counts when the delete removed nothing (lost race)
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteConvos still decrements tag counts AND returns the deleted ids when message deletion fails
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos defines an index for the user-scoped ObjectId batch scan
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos archives every unarchived conversation for the user only
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos archives large snapshots in bounded batches
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos recovers destination projects from the sweep marker, not a per-conversation id list
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos recovers a batch-sized destination move from the marker alone
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos replays a failed project refresh without abandoning the rest of the run
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos leaves already-archived conversations untouched
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos skips temporary and retention-expired conversations
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos preserves each conversation updatedAt so the archived view keeps its order
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos stamps archivedAt so the sweep is dated and sorted as archived now
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos leaves the archivedAt of an already-archived chat alone
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos refreshes stats for every project the archived conversations belonged to
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos does not archive a project conversation created after the initial snapshot
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos retries destination-project discovery after a transient distinct failure
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos reconciles the destination project when discovery retries exhaust after a move
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos refreshes the destination project when a captured conversation moves before archiving
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos refreshes project stats for committed batches when a later batch fails
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos reconciles projects when an archive write commits but its result is lost
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos does not let a save in flight restore the project pointer it just cleared
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos repairs the project when the sweep lands while the pointer write is in flight
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations archiveAllConvos returns zero when the user has no conversations
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations deleteNullOrEmptyConversations should delete conversations with null, empty, or missing conversationIds
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations Error Handling should handle database errors in saveConvo
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should flag conversations that have an active shared link
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should skip the shared lookup when shared links are disabled
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should page through titles that share a timestamp
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should page past conversations that have no title
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should not skip conversations at page boundaries
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should include conversation at exact page boundary (item 26 bug fix)
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should sort by updatedAt DESC by default
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should handle conversations with same updatedAt (tie-breaker)
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should handle cursor pagination with conversations updated during pagination
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should correctly decode and use cursor for pagination
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should support sortBy createdAt when explicitly requested
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should handle empty result set gracefully
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pagination should handle exactly limit number of conversations (no next page)
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor archivedAt sorting accepts archivedAt as a sort field
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor archivedAt sorting pages across stamped and unstamped chats without repeating or dropping any
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor archivedAt sorting orders unstamped chats last when sorting newest first
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor archivedAt sorting pages across stamped and unstamped chats when sorting oldest first
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor archivedAt sorting orders the legacy group by the createdAt it displays, not last activity
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor archivedAt sorting still rejects a sort field that is not allowed
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pinned filter returns only pinned conversations when pinned is requested
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pinned filter returns a pin that falls outside the first page of the unfiltered list
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pinned filter excludes archived pins and other users’ pins
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor pinned filter leaves the list unfiltered when pinned is not requested
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor page size bounds bounds a negative page size
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor page size bounds bounds a zero page size
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor page size bounds bounds a oversized page size
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor page size bounds caps an oversized page size at the ceiling and still pages the remainder
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor page size bounds serves a page size inside the range unchanged
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases reserves child lineage once without overwriting a concurrent winner
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases reads a child only through its exact parent and tenant with the private lease
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases lists bounded child metadata while collapsing private event bindings to actor identity
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases hides retention-expired children before TTL cleanup
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases keeps an older child with a live lease inside the bounded parent index
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases resolves an event binding only through its owner, tenant, and API key
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases serializes owned suspension ownership through claim, re-pause, and resumed commit
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases serializes legacy suspension ownership through claim, re-pause, and resumed commit
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases closes a resumed suspension when the actor-head commit is stale
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases commits event actor heads with full checkpoint CAS and two-checkpoint retention
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases persists complete warm-continuation state with the actor head
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases retains exact legacy settled receipts until delivery-ledger migration
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases confirms action admission only on the exact pending lifecycle
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases does not confirm a stale marker after a checkpoint-distinct successor wins
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases clears an exact reconciled invocation without retaining a conversation receipt
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases does not prune legacy settled receipts during new invocation admission
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases expires dormant legacy settled receipts independently of matching delivery replay
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases sends a pure inclusion projection for the candidate read
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases retains an expired legacy receipt while its delivery handling is nonterminal
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases pages raw conversations before filtering and advances past protected receipts
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases clears a compensated headless lifecycle without creating a partial actor head
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases clears an exact settled legacy receipt after delivery-ledger migration
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases does not compensate an action that has not passed invocation admission
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases versions every legacy invalidation so a stale prepared fork cannot commit past it
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases serializes legacy-turn and fork-lifecycle acquisition before either can execute
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases uses a DocumentDB-compatible classic update for legacy fence open
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases does not let a legacy settled journal cap block a healthy actor
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases admits one cross-replica owner and fences renewal and release by token
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations subagent thread leases allows takeover only after the prior lease expires
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations tenantId stripping saveConvo should not write caller-supplied tenantId to the document
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations tenantId stripping bulkSaveConvos should not overwrite tenantId via update payload
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations tenantId stripping bulkSaveConvos refreshes stats for cloned project conversations
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor search should include conversations matched only by message content
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor search should dedupe conversations matched by both title and message search
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor search should return an empty result when neither titles nor messages match
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor search should fall back to title matches when the message index search fails
+01-data-schemas	packages/data-schemas/src/methods/conversation.spec.ts	passed	Conversation Operations getConvosByCursor search should search titles when message methods are not injected
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage should save a message for an authenticated user
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage round-trips context usage metadata without narrowing tool fields or unknown data
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage unsets a previously stored context meta in the same update as the terminal save
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage unsets a stored context meta atomically through the provenance merge as well
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage should persist optional user-submitted provenance independently of message role
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage stamps native model output without overriding explicit provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage bounds and validates stored user-submitted provenance paths
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage validates and atomically preserves exact HITL field provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage adds semantic steer paths without replacing existing field provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage saves provenance when update arrays are rejected at the collection boundary
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage merges provenance from concurrent first saves
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage persists dollar-prefixed message values literally while merging provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage should throw an error for unauthenticated user
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage should handle invalid conversation ID gracefully
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations saveMessage should not log message params for invalid conversation IDs
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations bulkSaveMessages preserves unknown provenance when cloning an unmarked assistant row
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations bulkSaveMessages caps exact field provenance without promoting model output to whole-message provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordMessage stamps native model output without overriding explicit provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations preserves unknown provenance when message savers update legacy assistant rows
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessageText should update message text for the authenticated user
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage should update a message for the authenticated user
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage atomically merges provenance from concurrent edits to distinct fields
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage retries a stale provenance snapshot without dropping either writer
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage atomically caps repeated provenance unions and promotes overflow to whole-message provenance
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage keeps repeated exact-field overflow scoped instead of promoting the whole message
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage returns the generation-time Langfuse routing decisions with feedback updates
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateMessage should throw an error if message is not found
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult patches only the matching tool_call part and appends attachments atomically
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult appends to existing attachments instead of replacing them
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult is idempotent: re-applying the same patch does not duplicate attachments
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult dedupes download-fallback attachments (no file_id) by filepath on re-apply
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult returns false when the message row does not exist yet (caller retries)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult scopes the patch by agentId when provider ids repeat across agents
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult patches only the matching run step when one agent repeats a provider id
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult reports no match when the targeted tool-call part is absent
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult flags unfinished partial rows so callers keep re-applying until finalize
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult persists a terminal background receipt without replacing its existing claim
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult stamps a supplied claim only on a part that carries none
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult reports exhausted attachment-merge contention as unmatched instead of throwing
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult disarms a previously armed completion wakeup when the new receipt omits it
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult lets a same-generation manual poll claim an anchored terminal receipt
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult restores same-generation claim ownership after the final response save
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult recovers an unclaimed terminal receipt by task id after process-local state is lost
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult reports an exact durable launch handle as outcome unknown after executor loss
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult leaves a durable subagent handle to the routed subagent store
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult claims a terminal result whose persisted claim stamp is a stored null
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult claims a cancelled ordinary background-tool result as terminal evidence
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult elects one result consumer and batches terminal siblings for a wakeup
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult keeps independent receipt ownership out of message batches (root=true)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult keeps independent receipt ownership out of message batches (root=false)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult bounds escaped metadata before claiming and freezes membership across competing same-owner preparations
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult revalidates each sibling inside the atomic batch claim
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult does not batch a terminal sibling that elected poll-only delivery
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult uses nested tool-call agent identity when batching sibling results
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult releases only the exact wakeup batch claim
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult keeps a sibling AGENT’s attachment when both id and file key collide
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult keeps a sibling tool call’s attachment when file ids repeat across calls
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations updateToolCallResult does not match another user’s message
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations deleteMessagesSince should delete messages only for the authenticated user
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations deleteMessagesSince should return undefined if no message is found
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations CLIENT_MESSAGE_SELECT projection strips server-internal fields and dead SERP verticals, keeping rendered data
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations conversation fetch index declares the compound index that serves the conversation fetch and its sort
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessages should retrieve messages with the correct filter
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessages should limit retrieved messages when requested
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView bounds text in MongoDB before returning the public projection
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView anchors older pages by an exact scoped message without exposing Mongo ids
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView projects only the bounded display-safe external event identity
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView projects bounded private transcripts for the retained linear history
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView keeps the budgeted timeline a contiguous newest suffix past an oversized entry
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView fits ordinary persisted child activity into the aggregate byte budget, newest first
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView bounds ordinary persisted child activity before returning it to the API
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView bounds public control receipts before materializing the message page
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView bounds transcript materialization while retaining the exact selected task
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView omits an oversized private transcript before returning the application result
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations getMessagesForSubagentThreadView prefers the bounded settlement projection without materializing its private transcript
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations listSubagentTasksForThreads derives event task status from ordinary durable turn rows
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations listSubagentTasksForThreads batches threads, deduplicates task rows, and bounds each newest task list
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations listSubagentTasksForThreads marks every selected child truncated when one busy child fills the shared source window
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations listSubagentTasksForThreads preserves a newer recent task when the latest-per-thread snapshot is stale
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations listSubagentTasksForThreads preserves Mongo occurrence ordering when task timestamps tie
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations deleteMessages should delete messages with the correct filter
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Conversation Hijacking Prevention should not allow editing a message in another user's conversation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Conversation Hijacking Prevention should not allow deleting messages from another user's conversation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Conversation Hijacking Prevention should not allow inserting a new message into another user's conversation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Conversation Hijacking Prevention should allow retrieving messages from any conversation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should save a message with expiredAt when isTemporary is true
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling preserves an exact inherited expiration instead of recomputing retention
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should save a message without expiredAt when isTemporary is false
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should save a message without expiredAt when isTemporary is not provided
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should use custom retention period from config
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should handle minimum retention period (1 hour)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should handle maximum retention period (8760 hours)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling uses the independent retention period for isTemporary=true
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling uses the independent retention period for isTemporary=false
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling uses the independent retention period for isTemporary=undefined
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling atomically assigns general retention when inserting without a chat type
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling ignores caller-supplied retention fields
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling preserves the stored deadline when chat type true is omitted
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling preserves the stored deadline when chat type false is omitted
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling preserves an explicitly inherited deadline with separate retention periods
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should set expiredAt for non-temporary message when retentionMode is ALL
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should mark retained message non-temporary when retentionMode is ALL and isTemporary is omitted
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should preserve existing temporary flag when retentionMode is ALL and isTemporary is omitted
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should not set expiredAt when retentionMode is temporary and not isTemporary
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should handle missing config gracefully
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should use default retention when config is not provided
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should not update expiredAt on message update
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should preserve expiredAt when saving existing temporary message
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should preserve temporary retention when saving without isTemporary
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations isTemporary message handling should handle bulk operations with temporary messages
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should return messages for a conversation with pagination
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should not skip message at page boundary (item 26 bug fix)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should sort by createdAt DESC by default
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should support ascending sort direction
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should handle empty conversation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should only return messages for the specified user
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should handle exactly pageSize number of messages (no next page)
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should handle pageSize of 1
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations Message cursor pagination should handle messages with same createdAt timestamp
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations tenantId stripping merges provenance within the active tenant context
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations tenantId stripping saveMessage should not write caller-supplied tenantId to the document
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations tenantId stripping bulkSaveMessages should not overwrite tenantId via update payload
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations tenantId stripping recordMessage should not write caller-supplied tenantId to the document
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations tenantId stripping updateMessage should not write caller-supplied tenantId to the document
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt advances one invocation monotonically and enforces ownership
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt updates only the authorized tenant when message identities collide
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt reads an exact authorized receipt and persists a new terminal rejection
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt replays an applied cancellation as cancelled before its terminal row exists
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt reports every accepted control when replaying one durable invocation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt rejects an invocation fingerprint conflict without reporting persistence
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt retains concurrent receipts without requiring an aggregation-pipeline update
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt retains accepted commands while bounding terminal receipt history
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations recordSubagentTaskControlReceipt refuses to evict active receipt fences at durable capacity
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations claimSubagentTaskResult hands one terminal result to a single polling invocation
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations claimSubagentTaskResult elects either a manual poll or one idempotent automatic wakeup
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations claimSubagentTaskResult preserves and upgrades retries of legacy manual claims without a kind
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations claimSubagentTaskResult releases only the exact rejected wakeup so manual collection can take over
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations claimSubagentTaskResult reports a result that is missing or still running as not found
+01-data-schemas	packages/data-schemas/src/methods/message.spec.ts	passed	Message Operations claimSubagentTaskResult never hands one owner’s result to another user
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs returns the first message time and sampled responses oldest first
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs orders responses saved in the same millisecond by id, so every read rebuilds one order
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs reads a bounded page of sampled responses ending at a position a previous read returned
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs never treats a client-authored row as a sampled response
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs never returns another user's messages from a conversation with the same id
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs reads only the active tenant
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	getConversationTraceRefs scopes to the given tenant even without request tenant context
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	hasSampledTraceMessage finds a newer response held by a readable destination after older ones went elsewhere
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	hasSampledTraceMessage counts a response with no recorded destinations for any destination
+01-data-schemas	packages/data-schemas/src/methods/message.traces.spec.ts	passed	hasSampledTraceMessage ignores unsampled responses, an empty destination record, other users and client-authored rows
+01-data-schemas	packages/data-schemas/src/methods/convoStructure.spec.ts	passed	Conversation Structure Tests Tree stays intact when inconsistent timestamps scramble retrieval order
+01-data-schemas	packages/data-schemas/src/methods/convoStructure.spec.ts	passed	Conversation Structure Tests Fix: Conversation structure maintained with more than 16 messages
+01-data-schemas	packages/data-schemas/src/methods/convoStructure.spec.ts	passed	Conversation Structure Tests Tree stays intact under MongoDB ordering churn with close timestamps
+01-data-schemas	packages/data-schemas/src/methods/convoStructure.spec.ts	passed	Conversation Structure Tests Fix: Preserve order with more than 16 messages by maintaining original timestamps
+01-data-schemas	packages/data-schemas/src/methods/convoStructure.spec.ts	passed	Conversation Structure Tests Random order dates between parent and children messages
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose reads sees only the active tenant
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose reads counts only the active tenant
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose reads sees every tenant under the system sentinel
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose reads sees every tenant with no context, for pre-tenancy deployments
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose writes stamps the active tenant onto an insert
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose writes refuses a caller-chosen tenant on insert in strict mode
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose writes tolerates a caller-chosen tenant on insert outside strict mode
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose writes cannot rename another tenant row
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose writes cannot delete another tenant row
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose writes refuses an update that reassigns the tenant
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose strict mode refuses a read with no tenant context
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose strict mode refuses a write with no tenant context
+01-data-schemas	packages/data-schemas/src/tenant/conformance.mongoose.spec.ts	passed	tenant isolation conformance: mongoose strict mode still allows the system sentinel through
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation creates the row a deferred first message has not written yet
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation lets the deferred message save reuse the seeded row and append its message
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation leaves an existing conversation to the message save
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation never creates a subagent thread row, which only its parent run may create
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation stamps a temporary chat with its retention
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation settles instead of rejecting when the lookup fails, so the message still saves
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	seedTurnConversation does nothing for a request without a user
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	runAfterSeed holds the write while the seed is in flight
+02-save-orchestration	packages/api/src/conversations/save.spec.ts	passed	runAfterSeed starts the write synchronously once the seed has landed
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should import conversation correctly
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should maintain correct message hierarchy (tree parent/children relationship)
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should handle system messages without breaking parent-child relationships
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should maintain correct sender for user messages regardless of GPT-4 model
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should correctly extract and format model names from various model slugs
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should merge thinking content into assistant message
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should skip reasoning_recap and thoughts messages as separate entries
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should set createdAt from ChatGPT create_time
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should import messages missing metadata without failing (newer ChatGPT exports)
+03-import	api/server/utils/import/importers.spec.js	passed	importChatGptConvo should rethrow errors so failed imports are not reported as successful
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo should import conversation correctly
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo strips MCP-UI attachments from linear imports
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo strips MCP-UI attachments from recursive imports
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo strips MCP-UI attachments from numeric-author imports
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo strips MCP-UI attachments from omitted-author imports
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo drops server-private context meta and trace sampling from imported messages
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo sanitizes singleton content and attachment fields before Mongoose array casting
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo matches text and content renderers for author flag true while stripping attachments
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo matches text and content renderers for author flag null while stripping attachments
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo should import linear, non-recursive thread correctly with correct endpoint
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo should maintain correct message hierarchy (tree parent/children relationship)
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo should maintain correct message hierarchy (non-recursive)
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo should retain properties from the original conversation as well as new settings
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo finishConversation should retain properties from the original conversation as well as update with new settings
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo finishConversation should use default values if not provided in the original conversation or as parameters
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo finishConversation should default to the anthropic model for anthropic-endpoint conversations
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo finishConversation should default to the openAI model for openAI-endpoint conversations
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo finishConversation applies all-data retention to imports with general retention undefined
+03-import	api/server/utils/import/importers.spec.js	passed	importLibreChatConvo finishConversation applies all-data retention to imports with general retention 2160
+03-import	api/server/utils/import/importers.spec.js	passed	importChatBotUiConvo should import custom conversation correctly
+03-import	api/server/utils/import/importers.spec.js	passed	getImporter should throw an error if the import type is not supported
+03-import	api/server/utils/import/importers.spec.js	passed	getImporter should throw for array-based files that are not ChatGPT or Claude exports
+03-import	api/server/utils/import/importers.spec.js	passed	getImporter should route empty arrays to the ChatGPT importer without throwing
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should correctly process citations and replace them with markdown links
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle message with no citations
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle citations with missing metadata
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle citations with non-webpage type
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle empty message text
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle undefined message text
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle invalid citation indices
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should correctly process citations from real ChatGPT data
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should link tens of thousands of citations in one message
+03-import	api/server/utils/import/importers.spec.js	passed	processAssistantMessage should handle potential ReDoS attack payloads
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should import basic Claude conversation correctly
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should merge thinking content into assistant message
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should not include model field (Claude exports do not contain model info)
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should set the conversation endpoint and a Claude model so the chat UI loads correctly without a refresh
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should prefer the first runtime-configured anthropic model over the hardcoded default
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should fall back to the anthropic hardcoded default when modelsConfig has no anthropic models
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should fall back to the anthropic hardcoded default when getModelsConfig throws
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should correct timestamp inversions (child before parent)
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should use conversation create_time for null message timestamps
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should use text field as fallback when content array is empty
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should skip empty messages
+03-import	api/server/utils/import/importers.spec.js	passed	importClaudeConvo should use default name for unnamed conversations
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering LibreChat Import - Timestamp Issues should maintain proper timestamp order between parent and child messages
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering LibreChat Import - Timestamp Issues should handle complex multi-branch scenario with out-of-order timestamps
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering LibreChat Import - Timestamp Issues recursive format should NOW have timestamp protection
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering ChatGPT Import - Timestamp Issues should correct timestamp inversions (child before parent)
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering ChatGPT Import - Timestamp Issues should use conv.create_time for null message timestamps
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering ChatGPT Import - Timestamp Issues should terminate on cyclic parent relationships and break cycles before saving
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering ChatGPT Import - Timestamp Issues should not hang when findValidParent encounters a skippable-message cycle
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering Comparison with Fork Functionality fork functionality correctly handles timestamp issues (for comparison)
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering Large exports imports a flat LibreChat export whose messages all name an absent parent
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering Large exports orders a long LibreChat chain whose timestamps all collide
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering Large exports orders a long ChatGPT branch listed deepest-first
+03-import	api/server/utils/import/importers-timestamp.spec.js	passed	Import Timestamp Ordering Large exports attaches many ChatGPT replies behind one long run of system messages
+03-import	api/server/utils/import/importConversations.database.spec.js	passed	importConversations database hardening round-trips an existing browser export for its owner and tenant
+03-import	api/server/utils/import/importConversations.database.spec.js	passed	importConversations database hardening rejects an oversized BSON record before persisting any part of a browser import
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient persists only the host-authored external event display projection on the user turn
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient returns the input messages without instructions when addInstructions() is called with empty instructions
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient returns the input messages with instructions properly added when addInstructions() is called with non-empty instructions
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient returns the input messages with instructions properly added when addInstructions() with legacy flag
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient concats messages correctly in concatenateMessages()
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient refines messages correctly in summarizeMessages()
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient gets messages within token limit (under limit) correctly in getMessagesWithinTokenLimit()
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient gets result over token limit correctly in getMessagesWithinTokenLimit()
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient loadHistory skips the database when the parent is the root sentinel: no message can match it
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient loadHistory still loads and walks the chain for a real parent
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient loadHistory prunes pre-summary history before hydrating attachments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should return an empty array if the parentMessageId does not exist
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should handle messages with messageId property
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should handle messages with null parentMessageId that are not root
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should handle cyclic references without going into an infinite loop
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should return ordered messages based on parentMessageId
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should return ordered messages from a branched array based on parentMessageId
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should return an empty array if no messages are provided
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should map over the ordered messages if mapMethod is provided
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should start with the message that has a summary property and continue until the specified parentMessageId
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should handle multiple summaries and return the branch from the latest to the parentMessageId
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should handle summary at root edge case and continue until the parentMessageId
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should detect summary content block and use it over legacy fields (summary mode)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should prefer content block summary over legacy summary field
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should fallback to legacy summary when no content block exists
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesForConversation should not stop traversal at a failed summary, keeping the prior history
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage sendMessage should return a response message
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage persists exact provenance paths for edited and steered assistant content
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should replace responseMessageId with new UUID when isRegenerate is true and messageId ends with underscore
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should not replace responseMessageId when isRegenerate is false
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should not replace responseMessageId when it does not end with underscore
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage sendMessage should work with provided conversationId and parentMessageId
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage runs the restored-history guard before building model input
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage cancels a deferred user-message write when the model boundary rejects content
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage starts a deferred user-message write after a safe no-model completion
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage seeding the conversation for a deferred user message creates a new conversation row while the message itself waits for admission
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage seeding the conversation for a deferred user message leaves an existing conversation to the deferred message write
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage seeding the conversation for a deferred user message holds the deferred message write until an in-flight seed lands
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage seeding the conversation for a deferred user message keeps the deferral cancellable after seeding when the model boundary rejects content
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage seeding the conversation for a deferred user message does not seed when the client holds back every write
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage preserves eager user-message persistence for non-policy provider failures
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage starts a deferred user-message write when Stop aborts an in-flight completion
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage keeps an abort-started write when a late policy error loses the settlement race
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage blocks persisted user text selected by the built model payload
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage allows persisted user text that the built model payload prunes out
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage blocks historical tool arguments without classifying assistant prose as user input
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage resolves and inspects owner-scoped historical files before building messages
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage keeps the turn view of historical files that projection and steer replay read
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage does not block a missing historical file omitted from the final payload
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage surfaces historical file lookup failures instead of silently dropping context
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage ignores historical file refs when the endpoint does not resend files
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage keeps a materialized current attachment inspectable when historical replay is disabled
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should return chat history
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage loadHistory should scope database reads to the current user
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should not push userMessage to currentMessages when isEdited is true and vice versa
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage honors response and user message IDs preallocated before initialization
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage applies edited reasoning content from its typed payload before regeneration
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage setOptions is called with the correct arguments only when replaceOptions is set to true
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage loadHistory is called with the correct arguments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage getReqData is called with the correct arguments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage onStart is called with the correct arguments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage saveMessageToDatabase is called with the correct arguments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage does not start the completed response write when terminal ownership is denied
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage starts the completed response write only after terminal ownership is granted
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage persists the generation-time Langfuse sampling decision for agent responses
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage persists the Langfuse sampling decision for agent clients using a provider endpoint
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage persists no Langfuse destination when a sampled trace has no configured export
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should handle existing conversation when getConvo retrieves one
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage should correctly handle existing conversation and unset fields appropriately
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage sendCompletion is called with the correct arguments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage records history and message-build startup milestones
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage getTokenCount for response is called with the correct arguments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage returns an object with the correct shape
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage saveMessageToDatabase appends the saved message id instead of rebuilding the array
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage saveMessageToDatabase rebuilds the array when the saved message has no _id
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage saveMessageToDatabase returns early when this.options is null (client disposed)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage saveMessageToDatabase uses snapshot of options, immune to mid-await disposal
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage saveMessageToDatabase reuses conversation resolved on the request
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage userMessagePromise is awaited before saving response message
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient recordTokenUsage model assignment should pass this.model to recordTokenUsage, not the agent ID from responseMessage.model
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient recordTokenUsage model assignment should pass this.model even when this.model differs from modelOptions.model
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient recordTokenUsage transactions config should forward the resolved transactions config to recordTokenUsage
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient recordTokenUsage transactions config should default to enabled transactions when no app config is present
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient recordTokenUsage transactions config should forward transactions as enabled when balance tracking overrides the setting
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient balance reservation lifecycle releases the reservation once the response usage is recorded, before persistence
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient balance reservation lifecycle releases the reservation when the completion fails
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient balance reservation lifecycle releases the reservation when work after the completion fails
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient balance reservation lifecycle takes no reservation when the balance check refuses the request
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesWithinTokenLimit with instructions should always include instructions when present
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesWithinTokenLimit with instructions should handle case when messages exceed limit but instructions must be preserved
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesWithinTokenLimit with instructions should work correctly without instructions (1/2)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesWithinTokenLimit with instructions should work correctly without instructions (2/2)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient getMessagesWithinTokenLimit with instructions should handle case when only instructions fit within limit
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population populates userMessage.files before saveMessageToDatabase is called
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population strips text and _id from files before saving
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population deletes image_urls from userMessage when files are present
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population does not set files when no attachments match request file IDs
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population skips file population when attachments is not an array (Promise case)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population skips file population when skipSaveUserMessage is true
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage file population ignores file_id: undefined entries in req.body.files (no set poisoning)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization tool-routed files on a later turn replays the stored text when this turn runs no tool that can read the file
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization tool-routed files on a later turn replays the stored text once the endpoint routes the type to text
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization tool-routed files on a later turn admits a historical tool-routed file this turn sends to the provider
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization tool-routed files on a later turn keeps the file off the prompt when the sandbox running it holds the file
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization tool-routed files on a later turn replays the stored text when file search never received the file
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization rehydrates historical file refs from owner-scoped DB rows only
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization hydrates files referenced by non-steer provider content parts
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization hydrates nested provider file references
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization preserves owner-scoped historical attachments when file patterns are inactive
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization strips an unresolved historical file reference without pre-pruning enforcement
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization strips historical file context when no authenticated owner scope is available
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization preserves repeated owner-authorized historical file refs after the first context use
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization extracts historical file context while encoding provider attachments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization preserves download-only historical attachments without trusting file fields
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization processes only historical files admitted by the runtime endpoint policy
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization includes nested steer file references in historical admission
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization preserves repeated steer file injections in historical admission
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization keeps canonical byte metadata for processed historical survivors
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient addPreviousAttachments authorization merges safe per-message metadata onto authorized DB-backed attachments
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage quote references attaches normalized quotes before getReqData fires and keeps stored text clean
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage quote references persists multiple quotes in order on the saved message
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient sendMessage quote references leaves the message untouched when no quotes are provided
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient mergeEditedContent phase boundaries carries the new reasoning label when adjacent THINK parts merge
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient mergeEditedContent phase boundaries clears a retained reasoning label when the merged THINK has no label
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient mergeEditedContent phase boundaries does not merge commentary into a final answer
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient mergeEditedContent phase boundaries does not merge phased and unphased text (undefined → commentary)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient mergeEditedContent phase boundaries does not merge phased and unphased text (commentary → undefined)
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps a none image in returned files without adding image URLs
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling does not inject extracted text after the current provider resolves none
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling injects the text stored for a tool-routed file when this turn runs no reader
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling delivers a late steer through fallback even when the initialized agent has file tools
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps a tool-routed file off the prompt when the sandbox running it holds the file
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling delivers the text when File Search has yet to receive the file
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling leaves a file Run Code can read with Run Code before the sandbox holds it
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling does not fall back on an endpoint that has not enabled it
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling does not fall back when the turn tools are unknown
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling does not inject extracted text when the current provider resolves native delivery
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling re-resolves a path stored under a different provider
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling re-resolves a converted image against the type it was routed on
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling reads the Responses setting the turn runs on from the settled routing
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling resolves a custom endpoint policy by the name the admin configured
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling resolves an agent policy by its own endpoint, not the agents container
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps an explicitly named destination even under a different provider
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps a none PDF in returned files without adding documents
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps a text-delivery markdown file in returned files without adding documents
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling still delivers a provider PDF that lazy provisioning marked embedded
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling still delivers a provider image that carries a codeEnvRef
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps a code output out of the prompt once its expired sandbox reference is cleared
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling keeps excluding embedded legacy files that have no delivery path
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient processAttachments llmDeliveryPath handling routes legacy files without llmDeliveryPath normally
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient compaction turns presents the leaf as the user message and never re-saves it
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient compaction turns refuses a compaction whose anchor is not the loaded leaf
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient compaction turns refuses to compact a branch whose leaf is already a finished compaction
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient compaction turns lets an interrupted compaction be retried
+04-client-read	api/app/clients/specs/BaseClient.test.js	passed	BaseClient compaction turns parents the response onto the leaf and persists only the response
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters preflights opaque content from the direct stored-message request body
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters preserves provenance when branching marked user-submitted assistant content
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters preserves provenance when branching legacy unmarked model content
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters inherits the source message retention when branching
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters uses the guard-loaded retention for both writes when a message spoofs the chat type
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters carries server-private context meta onto the branch
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters leaves context meta absent when the source has none
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters does not hydrate branch files for an inert file policy
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters rechecks branched user-authored content under the current policy before saving
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters should pass only mutable conversation fields to saveConvo
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters should filter conversation message reads by authenticated user
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters uses the default page size for message search limits
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters uses the custom page size for message search limits
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters uses the capped page size for message search limits
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters uses the invalid page size for message search limits
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters strips server-private context meta from hydrated search hits
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters returns indistinguishable not-found responses for child and missing query reads
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters starts the single-message query read before ownership validation resolves
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters starts the cursor query read before ownership validation resolves
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters allows an ordinary owned conversation query read
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters allows an owner-scoped active generation before its conversation row exists
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters projects a single-message query read like every other client read
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters should start conversation message reads before validation resolves
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters should not return fetched messages when conversation validation fails
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters should filter single message reads by authenticated user
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters should classify indexed text edits as message content parts
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters marks direct assistant text edits as user-submitted
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters filters the finalized indexed edit without rescanning persisted siblings
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters filters partial fragments when indexed stored-message traversal exceeds its bound
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters allows indexed edits when a bounded traversal only affects unprotected scopes
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters filters the final artifact text assembled from existing and submitted content
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters returns a raw-free traversal response when artifact content cannot be fully inspected
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters marks successful assistant artifact edits as user-submitted
+04-client-read	api/server/routes/__tests__/messages-get.spec.js	passed	message route conversation ownership filters filters edited text after recombining persisted user quotes
+04-client-read	api/server/routes/__tests__/messages-get-real-validation.spec.js	passed	GET /api/messages/:conversationId with real validation middleware returns the existing empty response for new conversations without fetching messages
+04-client-read	api/server/routes/__tests__/messages-get-real-validation.spec.js	passed	GET /api/messages/:conversationId with real validation middleware starts user-scoped message reads before real conversation validation resolves
+04-client-read	api/server/routes/__tests__/messages-get-real-validation.spec.js	passed	GET /api/messages/:conversationId with real validation middleware does not return messages for a directly addressed child thread
+04-client-read	api/server/routes/__tests__/messages-get-real-validation.spec.js	passed	GET /api/messages/:conversationId with real validation middleware does not expose a directly addressed child thread through HEAD

@@ -1,0 +1,17 @@
+PASS server/utils/import/importers.spec.js
+PASS server/utils/import/importers-timestamp.spec.js
+PASS server/utils/import/importConversations.database.spec.js (5.402 s)
+  ● Console
+
+    console.log
+      [Slice01 isolation] Mongo connection allowed on loopback port 56249; default port negative control passed
+
+      at NativeConnection.mongoose.Connection.openUri (../../../../../../private/tmp/guildhall-slice01-mongo-guard.cjs:16:11)
+
+
+Test Suites: 3 passed, 3 total
+Tests:       69 passed, 69 total
+Snapshots:   0 total
+Time:        11.769 s
+Ran all test suites within paths "server/utils/import/importers.spec.js", "server/utils/import/importers-timestamp.spec.js", "server/utils/import/importConversations.database.spec.js".
+Test results written to: ../../../../../../tmp/guildhall-slice01-20260920/03-import/jest.json

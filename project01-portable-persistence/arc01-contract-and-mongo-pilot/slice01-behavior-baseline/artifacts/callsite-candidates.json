@@ -1,0 +1,1242 @@
+[
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 261,
+    "text": "  saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 294,
+    "text": "  bulkSaveConvos(conversations: Array<Record<string, unknown>>): Promise<unknown>;",
+    "symbols": [
+      "bulkSaveConvos"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 319,
+    "text": "  getConvo(user: string, conversationId: string): Promise<IConversation | null>;",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 567,
+    "text": "  async function getConvo(user: string, conversationId: string) {",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 2148,
+    "text": "  async function saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 2203,
+    "text": "        update.messages = await getMessages({ conversationId, user: userId }, '_id');",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 2623,
+    "text": "  async function bulkSaveConvos(conversations: Array<Record<string, unknown>>) {",
+    "symbols": [
+      "bulkSaveConvos"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 3101,
+    "text": "      const convo = await getConvo(user, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "line": 3166,
+    "text": "          getMessages({ user, conversationId: filter.conversationId }, '_id', { limit: 1 }),",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/middleware/messageValidation.ts",
+    "line": 147,
+    "text": "    const conversation = await deps.getConvo(req.user.id, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "line": 630,
+    "text": "  saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "line": 703,
+    "text": "  bulkSaveMessages(",
+    "symbols": [
+      "bulkSaveMessages"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "line": 791,
+    "text": "  getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "line": 848,
+    "text": "  async function saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "line": 1061,
+    "text": "  async function bulkSaveMessages(",
+    "symbols": [
+      "bulkSaveMessages"
+    ]
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "line": 2397,
+    "text": "  async function getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/files/retention.ts",
+    "line": 139,
+    "text": "      const convo = await dependencies.getConvo(userId, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/files/retention.ts",
+    "line": 254,
+    "text": "  const convo = await dependencies.getConvo(userId, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/langfuse/session.ts",
+    "line": 37,
+    "text": "  const messages = await getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 99,
+    "text": "  const message = await saveMessage(ctx, userMessage);",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 100,
+    "text": "  const savedConvo = await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 142,
+    "text": "  const message = await saveMessage(ctx, {",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 161,
+    "text": "  const savedConvo = await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 256,
+    "text": "    recordPromises.push(saveMessage(ctx, { ...dbMessage, user: openai.req.user.id }));",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 363,
+    "text": "  const savedConvo = await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "line": 486,
+    "text": "  const dbMessages = await getMessages({ conversationId, user: openai.req.user.id });",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/utils/message.ts",
+    "line": 127,
+    "text": "  const messages = await getMessages(filter, '_id');",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/conversations/save.ts",
+    "line": 135,
+    "text": "  return deps.getConvo(write.ctx.userId, write.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/conversations/save.ts",
+    "line": 146,
+    "text": "  const conversation = await deps.saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/conversations/save.ts",
+    "line": 171,
+    "text": "export async function saveTurnConversation(",
+    "symbols": [
+      "saveTurnConversation"
+    ]
+  },
+  {
+    "path": "packages/api/src/conversations/save.ts",
+    "line": 185,
+    "text": "export async function seedTurnConversation(",
+    "symbols": [
+      "seedTurnConversation"
+    ]
+  },
+  {
+    "path": "packages/api/src/conversations/save.ts",
+    "line": 196,
+    "text": "      req.resolvedConversation = await deps.getConvo(userId, fields.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 71,
+    "text": "        const conversation = await db.getConvo(...args);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 118,
+    "text": "        ? db.getMessages({ conversationId, messageId, user }, CLIENT_MESSAGE_SELECT)",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 177,
+    "text": "      const dbMessages = await db.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 362,
+    "text": "    const savedMessage = await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 453,
+    "text": "    const savedMessage = await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 497,
+    "text": "      ? db.getMessages({ conversationId, user: req.user.id }, CLIENT_MESSAGE_SELECT).then(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 540,
+    "text": "    const savedMessage = await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 554,
+    "text": "    await db.saveConvo(reqCtx, conversationUpdate, {",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 568,
+    "text": "    const message = await db.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "line": 586,
+    "text": "      await db.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/middleware/abortMiddleware.js",
+    "line": 81,
+    "text": "  await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/middleware/abortMiddleware.js",
+    "line": 93,
+    "text": "  const conversation = await db.getConvo(userId, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/middleware/denyRequest.js",
+    "line": 45,
+    "text": "    await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/middleware/abortRun.js",
+    "line": 15,
+    "text": "  const conversation = await getConvo(req.user.id, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/middleware/error.js",
+    "line": 50,
+    "text": "    await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/middleware/error.js",
+    "line": 69,
+    "text": "      query = await getMessages(requestMessage);",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/middleware/error.js",
+    "line": 70,
+    "text": "      convo = await getConvo(user, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/convos.js",
+    "line": 214,
+    "text": "  const convo = await db.getConvo(req.user.id, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/convos.js",
+    "line": 610,
+    "text": "    const dbResponse = await db.saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/convos.js",
+    "line": 712,
+    "text": "    const dbResponse = await db.saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/openai.js",
+    "line": 458,
+    "text": "        const conversation = await db.getConvo(principal.userId, request.conversation_id);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/errors.js",
+    "line": 132,
+    "text": "        conversation: await getConvo(req.user.id, conversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/services/Endpoints/agents/title.js",
+    "line": 161,
+    "text": "    await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "line": 255,
+    "text": "      const [row] = await getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "line": 312,
+    "text": "  const savedResponseMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "line": 517,
+    "text": "    const savedResponseMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "line": 561,
+    "text": "    const convo = await getConvo(userId, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "line": 1005,
+    "text": "        const [row] = await getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "line": 1316,
+    "text": "          getConvo(userId, req._agentEventBindingParentConversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/services/Endpoints/agents/initialize.js",
+    "line": 229,
+    "text": "    loadConversation: (conversationId) => db.getConvo(req.user.id, conversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/routes/agents/index.js",
+    "line": 831,
+    "text": "              const persistedRequest = await saveMessage(messageContext, requestMessage, {",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/routes/agents/index.js",
+    "line": 842,
+    "text": "              const persistedResponse = await saveMessage(messageContext, responseMessage, {",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentActivity.ts",
+    "line": 352,
+    "text": "  const messages = await deps.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "line": 923,
+    "text": "          const seed = seedTurnConversation(",
+    "symbols": [
+      "seedTurnConversation"
+    ]
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "line": 932,
+    "text": "          startPersistence = runAfterSeed(seed, startUserMessagePersistence);",
+    "symbols": [
+      "runAfterSeed"
+    ]
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "line": 1263,
+    "text": "    const messages = (await db.getMessages({ conversationId, user: this.user })) ?? [];",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "line": 1349,
+    "text": "      req.resolvedConversation = await db.getConvo(req.user.id, message.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "line": 1352,
+    "text": "    const savedMessage = await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "line": 1368,
+    "text": "    const { conversation, initialized } = await saveTurnConversation(db, {",
+    "symbols": [
+      "saveTurnConversation"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 326,
+    "text": "    const messages = await db.getMessages({ conversationId, user: userId });",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 375,
+    "text": "      await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 426,
+    "text": "  await db.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 456,
+    "text": "  await db.saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 700,
+    "text": "        const previousConversation = await db.getConvo(",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 1755,
+    "text": "    const conversation = await db.getConvo(userId, responseId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "line": 1768,
+    "text": "    const messages = await db.getMessages({ conversationId: responseId, user: userId });",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/services/Endpoints/assistants/title.js",
+    "line": 77,
+    "text": "    await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/services/Endpoints/assistants/title.js",
+    "line": 104,
+    "text": "    await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 129,
+    "text": "      conversation !== undefined ? Promise.resolve(conversation) : getConvo(userId, conversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 425,
+    "text": "    const existing = await getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 433,
+    "text": "      const partial = await getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 458,
+    "text": "      const savedUserMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 479,
+    "text": "    const savedErrorMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 530,
+    "text": "    await saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 1726,
+    "text": "        getConvo(userId, req._agentEventBindingParentConversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 1899,
+    "text": "          saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 2703,
+    "text": "                  const savedUserMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 2729,
+    "text": "              const savedResponseMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 2940,
+    "text": "          const savedUserMessage = await saveMessage(reqCtx, userMessage, {",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "line": 2959,
+    "text": "        const savedResponseMessage = await saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importBatchBuilder.js",
+    "line": 126,
+    "text": "    const message = this.saveMessage({",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importBatchBuilder.js",
+    "line": 143,
+    "text": "    const message = this.saveMessage({",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importBatchBuilder.js",
+    "line": 222,
+    "text": "        saveConversations: () => bulkSaveConvos(this.conversations),",
+    "symbols": [
+      "bulkSaveConvos"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importBatchBuilder.js",
+    "line": 223,
+    "text": "        saveMessages: () => bulkSaveMessages(this.messages, true),",
+    "symbols": [
+      "bulkSaveMessages"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importBatchBuilder.js",
+    "line": 254,
+    "text": "  saveMessage({",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/controllers/assistants/errors.js",
+    "line": 183,
+    "text": "        conversation: await getConvo(req.user.id, conversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/assistants/chatV1.js",
+    "line": 257,
+    "text": "        conversation: await getConvo(req.user.id, conversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/assistants/chatV1.js",
+    "line": 387,
+    "text": "        const convo = await getConvo(req.user.id, convoId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/controllers/assistants/chatV2.js",
+    "line": 264,
+    "text": "      existingConversationPromise ??= getConvo(req.user.id, convoId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importers.js",
+    "line": 265,
+    "text": "        importBatchBuilder.saveMessage(message);",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/importers.js",
+    "line": 535,
+    "text": "    importBatchBuilder.saveMessage(message);",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/control.ts",
+    "line": 212,
+    "text": "      const [taskInput] = await deps.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 275,
+    "text": "      : methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 290,
+    "text": "    methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 409,
+    "text": "        return await methods.getConvo(input.userId, threadId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 627,
+    "text": "      methods.getConvo(userId, envelope.target.conversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 628,
+    "text": "      methods.getConvo(userId, registration.threadId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 629,
+    "text": "      methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 675,
+    "text": "      const [supersedingTerminal] = await methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "line": 721,
+    "text": "    const parentMessages = await methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 1540,
+    "text": "      [message] = await this.methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 1568,
+    "text": "        this.methods.getConvo(scope.userId, scope.parentConversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 1569,
+    "text": "        this.methods.getConvo(scope.userId, threadId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 2199,
+    "text": "      targetIds.map((conversationId) => this.methods.getConvo(userId, conversationId)),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 2756,
+    "text": "      this.methods.getConvo(scope.userId, scope.parentConversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 2757,
+    "text": "      this.methods.getConvo(scope.userId, threadId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 2857,
+    "text": "        this.methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 2920,
+    "text": "        const savedAbandoned = await this.methods.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 2981,
+    "text": "        this.methods.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3007,
+    "text": "      const currentParent = await this.methods.getConvo(scope.userId, scope.parentConversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3106,
+    "text": "    const savedAssistantMessage = await this.methods.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3152,
+    "text": "    const savedFailure = await this.methods.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3221,
+    "text": "    const savedCancellation = await this.methods.saveMessage(",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3258,
+    "text": "      this.methods.getConvo(scope.userId, scope.parentConversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3259,
+    "text": "      this.methods.getConvo(scope.userId, threadId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3316,
+    "text": "    const messages = await this.methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "line": 3360,
+    "text": "      const saved = await this.methods.saveConvo(",
+    "symbols": [
+      "saveConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 37,
+    "text": "    importBatchBuilder.saveMessage(clonedMessage);",
+    "symbols": [
+      "saveMessage"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 73,
+    "text": "    const originalConvo = await getConvo(requestUserId, originalConvoId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 74,
+    "text": "    let originalMessages = await getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 132,
+    "text": "    const conversation = await getConvo(requestUserId, result.conversation.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 133,
+    "text": "    const messages = await getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 463,
+    "text": "    const conversation = await getConvo(requestUserId, result.conversation.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 464,
+    "text": "    const messages = await getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 495,
+    "text": "  const originalConvo = await getConvo(userId, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 500,
+    "text": "  const originalMessages = await getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 528,
+    "text": "  const conversation = await getConvo(userId, result.conversation.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "line": 529,
+    "text": "  const messages = await getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/guard.ts",
+    "line": 105,
+    "text": "  const parent = await deps.getConvo(target.userId, binding.lineage.parentConversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/guard.ts",
+    "line": 135,
+    "text": "      : getConvo(userId, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/guard.ts",
+    "line": 212,
+    "text": "        const parent = await deps.getConvo(userId, lineage.parentConversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/queuedTurns.ts",
+    "line": 507,
+    "text": "    const conversation = await methods.getConvo(userId, envelope.target.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/queuedTurns.ts",
+    "line": 549,
+    "text": "      messages = await methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/backgroundCompletionWakeup.ts",
+    "line": 296,
+    "text": "    const parent = await methods.getConvo(userId, envelope.target.conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/backgroundCompletionWakeup.ts",
+    "line": 304,
+    "text": "    const parentMessages = await methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/queuedTurnHttp.ts",
+    "line": 172,
+    "text": "  const conversation = await deps.methods.getConvo(user.id, conversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/triggers/bindingResolver.ts",
+    "line": 82,
+    "text": "      parent = await methods.getConvo(",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/triggers/bindingResolver.ts",
+    "line": 140,
+    "text": "      [latestAssistant] = await methods.getMessages(",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/triggers/bindings.ts",
+    "line": 254,
+    "text": "        deps.getConvo(principal.userId, parentConversationId),",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/triggers/bindings.ts",
+    "line": 305,
+    "text": "        const currentParent = await deps.getConvo(principal.userId, parentConversationId);",
+    "symbols": [
+      "getConvo"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/hitl/inspection.ts",
+    "line": 294,
+    "text": "      (await getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/hitl/answers.ts",
+    "line": 382,
+    "text": "    return (await getMessages({ conversationId, user: userId }, RETAINED_ANSWER_ROW_FIELDS)) ?? [];",
+    "symbols": [
+      "getMessages"
+    ]
+  },
+  {
+    "path": "packages/api/src/agents/hitl/protection.ts",
+    "line": 1047,
+    "text": "      (await dependencies.getMessages({",
+    "symbols": [
+      "getMessages"
+    ]
+  }
+]

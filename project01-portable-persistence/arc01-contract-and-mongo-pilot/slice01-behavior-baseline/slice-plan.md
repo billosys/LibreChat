@@ -4,7 +4,7 @@
 |---|---|
 | Slice | slice01-behavior-baseline |
 | Arc | [Arc01](../arc-plan.md) |
-| Status | Open — investigation assignment active; baseline execution pending |
+| Status | Investigation delivered — proposed-done; independent acceptance pending |
 | Workflow | One contributor, explicitly selected by the Operator |
 | Execution mode | Expedited Mode under the project policy; current one-contributor assignment unchanged |
 | Assignment | This slice plan; no separate CC assignment in the current workflow |
@@ -59,11 +59,12 @@ Current evidence is self-checked, not independent acceptance. Existing project/a
 
 | Assignment | Date | Predecessor | Reason | Disposition |
 |---|---|---|---|---|
-| This slice plan, v1.0; current conversation | 2026-09-20 | None | Operator requested opening Arc01 after source/import reconciliation | Active investigation; no CC prompt issued |
+| This slice plan, v1.0; current conversation | 2026-09-20 | None | Operator requested opening Arc01 after source/import reconciliation | Evidence delivered in this conversation; proposed-done; no CC prompt issued |
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.2 | 2026-09-20 | Executed the authorized one-contributor investigation: mapped the pilot, ran 641 existing tests, and delivered all four artifacts with runtime/build caveats. Formal acceptance remains pending; no scope change. |
 | v1.1 | 2026-09-20 | Applied Operator-requested Expedited Mode and inherited prompt-path reporting; no new contributor assignment or acceptance claim. |
 | v1.0 | 2026-09-20 | Opened the bounded behavior-baseline investigation under one-contributor workflow. |

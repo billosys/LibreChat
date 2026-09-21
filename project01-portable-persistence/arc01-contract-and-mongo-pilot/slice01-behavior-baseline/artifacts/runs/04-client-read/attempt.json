@@ -1,0 +1,42 @@
+{
+  "name": "04-client-read",
+  "cwd": "/Users/oubiwann/lab/billosys/LibreChat/api",
+  "argv": [
+    "/Users/oubiwann/.local/bin/node",
+    "/Users/oubiwann/lab/billosys/LibreChat/node_modules/jest/bin/jest.js",
+    "--runInBand",
+    "--watch=false",
+    "--coverage=false",
+    "--runTestsByPath",
+    "app/clients/specs/BaseClient.test.js",
+    "server/routes/__tests__/messages-get.spec.js",
+    "server/routes/__tests__/messages-get-real-validation.spec.js",
+    "--json",
+    "--outputFile",
+    "/tmp/guildhall-slice01-20260920/04-client-read/jest.json",
+    "--cacheDirectory",
+    "/tmp/guildhall-slice01-20260920/jest-cache",
+    "--setupFilesAfterEnv",
+    "/tmp/guildhall-slice01-mongo-guard.cjs"
+  ],
+  "environment_overrides": {
+    "CI": "true",
+    "NODE_ENV": "test",
+    "MONGO_URI": "mongodb://127.0.0.1:1/guildhall_slice01_forbidden_live",
+    "MONGOMS_SYSTEM_BINARY": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/.cache/mongodb-memory-server/mongod-arm64-darwin-8.2.1",
+    "MONGOMS_VERSION": "8.2.1",
+    "MONGOMS_RUNTIME_DOWNLOAD": "false",
+    "JEST_JUNIT_OUTPUT_DIR": "/tmp/guildhall-slice01-20260920/04-client-read",
+    "JEST_JUNIT_OUTPUT_NAME": "junit.xml",
+    "LOG_TO_FILE": "false",
+    "USE_REDIS": "false",
+    "USE_REDIS_STREAMS": "false",
+    "MEILI_HOST": "",
+    "MEILI_MASTER_KEY": ""
+  },
+  "started_at": "2026-09-21T02:49:15.890445+00:00",
+  "source_head": "ba44443fdb232bbe6d4977e2619774b5a72586ac",
+  "node_version": "v22.22.3",
+  "exit_code": 0,
+  "finished_at": "2026-09-21T02:49:20.476759+00:00"
+}

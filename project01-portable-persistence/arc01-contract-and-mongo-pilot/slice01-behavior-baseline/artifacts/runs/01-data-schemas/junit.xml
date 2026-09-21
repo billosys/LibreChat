@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="370" failures="0" errors="0" time="23.135">
+  <testsuite name="Conversation Operations" errors="0" failures="0" skipped="0" timestamp="2026-09-21T02:45:38" time="9.182" tests="203">
+    <testcase classname="Conversation Operations saveConvo should save a conversation for an authenticated user" name="Conversation Operations saveConvo should save a conversation for an authenticated user" time="1.222">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo rejects actor checkpoint ownership evidence through ordinary saves and imports" name="Conversation Operations saveConvo rejects actor checkpoint ownership evidence through ordinary saves and imports" time="0.013">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo sets immutable agent attribution from server metadata only on insert" name="Conversation Operations saveConvo sets immutable agent attribution from server metadata only on insert" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo stores explicit null attribution for a new non-agent conversation" name="Conversation Operations saveConvo stores explicit null attribution for a new non-agent conversation" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should query messages when saving a conversation" name="Conversation Operations saveConvo should query messages when saving a conversation" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should handle newConversationId when provided" name="Conversation Operations saveConvo should handle newConversationId when provided" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo refreshes project stats when archiving a project conversation" name="Conversation Operations saveConvo refreshes project stats when archiving a project conversation" time="0.028">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo bulkSaveConvos keeps owned project ids and strips orphan ones" name="Conversation Operations saveConvo bulkSaveConvos keeps owned project ids and strips orphan ones" time="0.01">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo bulkSaveConvos strips supplied attribution and stores explicit null on insert" name="Conversation Operations saveConvo bulkSaveConvos strips supplied attribution and stores explicit null on insert" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo refreshes both projects when a save moves a conversation between them" name="Conversation Operations saveConvo refreshes both projects when a save moves a conversation between them" time="0.017">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo bulkSaveConvos refreshes the project a conversation leaves" name="Conversation Operations saveConvo bulkSaveConvos refreshes the project a conversation leaves" time="0.018">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should not create a conversation when noUpsert is true and conversation does not exist" name="Conversation Operations saveConvo should not create a conversation when noUpsert is true and conversation does not exist" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should update an existing conversation when noUpsert is true" name="Conversation Operations saveConvo should update an existing conversation when noUpsert is true" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should still upsert by default when noUpsert is not provided" name="Conversation Operations saveConvo should still upsert by default when noUpsert is not provided" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should handle unsetFields metadata" name="Conversation Operations saveConvo should handle unsetFields metadata" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo should set createdAt from metadata only on insert" name="Conversation Operations saveConvo should set createdAt from metadata only on insert" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserves insert defaults and suppressed timestamps for an archive pipeline upsert" name="Conversation Operations saveConvo preserves insert defaults and suppressed timestamps for an archive pipeline upsert" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt leaves updatedAt untouched across an archive and unarchive round trip" name="Conversation Operations saveConvo preserveUpdatedAt leaves updatedAt untouched across an archive and unarchive round trip" time="0.086">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt keeps the original archivedAt when the chat is already archived" name="Conversation Operations saveConvo preserveUpdatedAt keeps the original archivedAt when the chat is already archived" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt archives with plain update operators rather than an aggregation pipeline" name="Conversation Operations saveConvo preserveUpdatedAt archives with plain update operators rather than an aggregation pipeline" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt does not report a missing chat when an unarchive splits the archive writes" name="Conversation Operations saveConvo preserveUpdatedAt does not report a missing chat when an unarchive splits the archive writes" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt does not report a missing chat when every archive retry is split" name="Conversation Operations saveConvo preserveUpdatedAt does not report a missing chat when every archive retry is split" time="0.015">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt stamps again when unarchive lands before a pending repeated archive write" name="Conversation Operations saveConvo preserveUpdatedAt stamps again when unarchive lands before a pending repeated archive write" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt stamps archivedAt on the first archive when the caller omits it" name="Conversation Operations saveConvo preserveUpdatedAt stamps archivedAt on the first archive when the caller omits it" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt clears archivedAt on unarchive when the caller omits it" name="Conversation Operations saveConvo preserveUpdatedAt clears archivedAt on unarchive when the caller omits it" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt does not drag a project pointer back when only metadata changes" name="Conversation Operations saveConvo preserveUpdatedAt does not drag a project pointer back when only metadata changes" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt keeps updatedAt through the retention backfill" name="Conversation Operations saveConvo preserveUpdatedAt keeps updatedAt through the retention backfill" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt still bumps updatedAt for an ordinary save" name="Conversation Operations saveConvo preserveUpdatedAt still bumps updatedAt for an ordinary save" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo preserveUpdatedAt does not insert a timestampless conversation for an unknown id" name="Conversation Operations saveConvo preserveUpdatedAt does not insert a timestampless conversation for an unknown id" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo setConvoPinned pins a conversation without disturbing its timestamps" name="Conversation Operations saveConvo setConvoPinned pins a conversation without disturbing its timestamps" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo setConvoPinned unpins a conversation without disturbing its timestamps" name="Conversation Operations saveConvo setConvoPinned unpins a conversation without disturbing its timestamps" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo setConvoPinned does not read the conversation messages" name="Conversation Operations saveConvo setConvoPinned does not read the conversation messages" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo setConvoPinned leaves the stored message list alone" name="Conversation Operations saveConvo setConvoPinned leaves the stored message list alone" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo setConvoPinned returns null for an unknown id rather than inserting one" name="Conversation Operations saveConvo setConvoPinned returns null for an unknown id rather than inserting one" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo setConvoPinned cannot pin another user’s conversation" name="Conversation Operations saveConvo setConvoPinned cannot pin another user’s conversation" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves preserves attached through an approval pause and later saves" name="Conversation Operations code environment persistence during ordinary saves preserves attached through an approval pause and later saves" time="0.013">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves preserves without_attached through an approval pause and later saves" name="Conversation Operations code environment persistence during ordinary saves preserves without_attached through an approval pause and later saves" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves cannot overwrite an explicit move with a stale turn-start snapshot" name="Conversation Operations code environment persistence during ordinary saves cannot overwrite an explicit move with a stale turn-start snapshot" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves seeds imported decisions without letting repeated imports undo a move" name="Conversation Operations code environment persistence during ordinary saves seeds imported decisions without letting repeated imports undo a move" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves preserves a legacy decision" name="Conversation Operations code environment persistence during ordinary saves preserves a legacy decision" time="0.063">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves records the first decision of a saved chat that holds none" name="Conversation Operations code environment persistence during ordinary saves records the first decision of a saved chat that holds none" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves keeps the decision it recorded when a later turn resolves another" name="Conversation Operations code environment persistence during ordinary saves keeps the decision it recorded when a later turn resolves another" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations code environment persistence during ordinary saves leaves a chat undecided when a save carries selections without a mode" name="Conversation Operations code environment persistence during ordinary saves leaves a chat undecided when a save carries selections without a mode" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations replaceConvoCodeEnvironmentDecision replaces the decision it read without disturbing timestamps" name="Conversation Operations replaceConvoCodeEnvironmentDecision replaces the decision it read without disturbing timestamps" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations replaceConvoCodeEnvironmentDecision replaces a legacy decision stored without a mode" name="Conversation Operations replaceConvoCodeEnvironmentDecision replaces a legacy decision stored without a mode" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations replaceConvoCodeEnvironmentDecision replaces a decision that saveConvo persisted" name="Conversation Operations replaceConvoCodeEnvironmentDecision replaces a decision that saveConvo persisted" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations replaceConvoCodeEnvironmentDecision leaves a decision that changed after it was read untouched" name="Conversation Operations replaceConvoCodeEnvironmentDecision leaves a decision that changed after it was read untouched" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations replaceConvoCodeEnvironmentDecision does not treat a reordered selection list as the decision it read" name="Conversation Operations replaceConvoCodeEnvironmentDecision does not treat a reordered selection list as the decision it read" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations replaceConvoCodeEnvironmentDecision cannot move another user’s conversation" name="Conversation Operations replaceConvoCodeEnvironmentDecision cannot move another user’s conversation" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo appendMessageIds appends the provided ids without reading the messages collection" name="Conversation Operations saveConvo appendMessageIds appends the provided ids without reading the messages collection" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo appendMessageIds does not duplicate an id that is already recorded" name="Conversation Operations saveConvo appendMessageIds does not duplicate an id that is already recorded" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo appendMessageIds creates the conversation with the appended id when it does not exist yet" name="Conversation Operations saveConvo appendMessageIds creates the conversation with the appended id when it does not exist yet" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo appendMessageIds ignores a caller-supplied messages field so $set cannot conflict with the append" name="Conversation Operations saveConvo appendMessageIds ignores a caller-supplied messages field so $set cannot conflict with the append" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations saveConvo appendMessageIds still rebuilds the array from the database when the option is absent" name="Conversation Operations saveConvo appendMessageIds still rebuilds the array from the database when the option is absent" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should save a conversation with expiredAt when isTemporary is true" name="Conversation Operations isTemporary conversation handling should save a conversation with expiredAt when isTemporary is true" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling preserves an exact inherited expiration instead of recomputing retention" name="Conversation Operations isTemporary conversation handling preserves an exact inherited expiration instead of recomputing retention" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should save a conversation without expiredAt when isTemporary is false" name="Conversation Operations isTemporary conversation handling should save a conversation without expiredAt when isTemporary is false" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should save a conversation without expiredAt when isTemporary is not provided" name="Conversation Operations isTemporary conversation handling should save a conversation without expiredAt when isTemporary is not provided" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should use custom retention period from config" name="Conversation Operations isTemporary conversation handling should use custom retention period from config" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should handle minimum retention period (1 hour)" name="Conversation Operations isTemporary conversation handling should handle minimum retention period (1 hour)" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should handle maximum retention period (8760 hours)" name="Conversation Operations isTemporary conversation handling should handle maximum retention period (8760 hours)" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should handle missing config gracefully" name="Conversation Operations isTemporary conversation handling should handle missing config gracefully" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should use default retention when config is not provided" name="Conversation Operations isTemporary conversation handling should use default retention when config is not provided" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should update expiredAt when saving existing temporary conversation" name="Conversation Operations isTemporary conversation handling should update expiredAt when saving existing temporary conversation" time="0.106">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should preserve temporary retention when saving without isTemporary" name="Conversation Operations isTemporary conversation handling should preserve temporary retention when saving without isTemporary" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should not set expiredAt when updating non-temporary conversation" name="Conversation Operations isTemporary conversation handling should not set expiredAt when updating non-temporary conversation" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=true" name="Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=true" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=false" name="Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=false" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=undefined" name="Conversation Operations isTemporary conversation handling uses the independent retention period for isTemporary=undefined" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling ignores caller-supplied retention fields" name="Conversation Operations isTemporary conversation handling ignores caller-supplied retention fields" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling preserves the stored deadline when chat type true is omitted" name="Conversation Operations isTemporary conversation handling preserves the stored deadline when chat type true is omitted" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling preserves the stored deadline when chat type false is omitted" name="Conversation Operations isTemporary conversation handling preserves the stored deadline when chat type false is omitted" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling preserves an explicitly inherited deadline with separate retention periods" name="Conversation Operations isTemporary conversation handling preserves an explicitly inherited deadline with separate retention periods" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should set expiredAt for non-temporary conversation when retentionMode is ALL" name="Conversation Operations isTemporary conversation handling should set expiredAt for non-temporary conversation when retentionMode is ALL" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should mark retained conversation non-temporary when retentionMode is ALL and isTemporary is omitted" name="Conversation Operations isTemporary conversation handling should mark retained conversation non-temporary when retentionMode is ALL and isTemporary is omitted" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should preserve existing temporary flag when retentionMode is ALL and isTemporary is omitted" name="Conversation Operations isTemporary conversation handling should preserve existing temporary flag when retentionMode is ALL and isTemporary is omitted" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should not set expiredAt when retentionMode is temporary and not isTemporary" name="Conversation Operations isTemporary conversation handling should not set expiredAt when retentionMode is temporary and not isTemporary" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should filter out temporary conversations in getConvosByCursor" name="Conversation Operations isTemporary conversation handling should filter out temporary conversations in getConvosByCursor" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling should filter out temporary conversations in getConvosQueried" name="Conversation Operations isTemporary conversation handling should filter out temporary conversations in getConvosQueried" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations isTemporary conversation handling hides durable subagent threads from conversation lists and search results" name="Conversation Operations isTemporary conversation handling hides durable subagent threads from conversation lists and search results" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations searchConversation should find a conversation by conversationId" name="Conversation Operations searchConversation should find a conversation by conversationId" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations searchConversation should return null if conversation not found" name="Conversation Operations searchConversation should return null if conversation not found" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations getConvo should retrieve a conversation for a user" name="Conversation Operations getConvo should retrieve a conversation for a user" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvo should return null if conversation not found" name="Conversation Operations getConvo should return null if conversation not found" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoOwnership resolves only the owning user id, without the preset or message list" name="Conversation Operations getConvoOwnership resolves only the owning user id, without the preset or message list" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoOwnership returns null for another user or a missing conversation" name="Conversation Operations getConvoOwnership returns null for another user or a missing conversation" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoOwnership hides retention-expired conversations before TTL cleanup" name="Conversation Operations getConvoOwnership hides retention-expired conversations before TTL cleanup" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoOwnership includes child-thread identity without materializing conversation content" name="Conversation Operations getConvoOwnership includes child-thread identity without materializing conversation content" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoOwnership selects the exact tenant when conversation identifiers collide" name="Conversation Operations getConvoOwnership selects the exact tenant when conversation identifiers collide" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoRetention should retrieve only retention fields for a user conversation" name="Conversation Operations getConvoRetention should retrieve only retention fields for a user conversation" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoTitle should return the conversation title" name="Conversation Operations getConvoTitle should return the conversation title" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoTitle should return null if conversation has no title" name="Conversation Operations getConvoTitle should return null if conversation has no title" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoTitle should return &quot;New Chat&quot; if conversation not found" name="Conversation Operations getConvoTitle should return &quot;New Chat&quot; if conversation not found" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoFiles should return conversation files" name="Conversation Operations getConvoFiles should return conversation files" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoFiles should return empty array if no files" name="Conversation Operations getConvoFiles should return empty array if no files" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations getConvoFiles should return empty array if conversation not found" name="Conversation Operations getConvoFiles should return empty array if conversation not found" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos retires queued-turn work before each conversation deletion wave" name="Conversation Operations deleteConvos retires queued-turn work before each conversation deletion wave" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos preserves background receipts when a pre-delete drain fails" name="Conversation Operations deleteConvos preserves background receipts when a pre-delete drain fails" time="0.065">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos finishes descendant bookkeeping and message cleanup when receipt erasure fails" name="Conversation Operations deleteConvos finishes descendant bookkeeping and message cleanup when receipt erasure fails" time="0.031">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos fails closed before deleting a conversation when queued-turn retirement fails" name="Conversation Operations deleteConvos fails closed before deleting a conversation when queued-turn retirement fails" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should delete conversations and associated messages" name="Conversation Operations deleteConvos should delete conversations and associated messages" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos cascades parent deletion through owner-scoped child-thread lineage" name="Conversation Operations deleteConvos cascades parent deletion through owner-scoped child-thread lineage" time="0.016">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos reports a partial cascade failure instead of silently succeeding" name="Conversation Operations deleteConvos reports a partial cascade failure instead of silently succeeding" time="0.145">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos does not delete a parent when deleting one child thread" name="Conversation Operations deleteConvos does not delete a parent when deleting one child thread" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should throw error if no conversations found" name="Conversation Operations deleteConvos should throw error if no conversations found" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos allows a single-conversation cleanup retry after topology and messages are gone" name="Conversation Operations deleteConvos allows a single-conversation cleanup retry after topology and messages are gone" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos supports an idempotent empty recovery sweep without hiding storage failures" name="Conversation Operations deleteConvos supports an idempotent empty recovery sweep without hiding storage failures" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should decrement tag counts for a deleted bookmarked conversation" name="Conversation Operations deleteConvos should decrement tag counts for a deleted bookmarked conversation" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should decrement counts for every tag on the deleted conversation" name="Conversation Operations deleteConvos should decrement counts for every tag on the deleted conversation" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should decrement a shared tag once per deleted conversation when clearing all" name="Conversation Operations deleteConvos should decrement a shared tag once per deleted conversation when clearing all" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should not double-decrement duplicate tag entries within one conversation" name="Conversation Operations deleteConvos should not double-decrement duplicate tag entries within one conversation" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should clamp tag counts at zero and never go negative" name="Conversation Operations deleteConvos should clamp tag counts at zero and never go negative" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should not touch tags belonging to another user" name="Conversation Operations deleteConvos should not touch tags belonging to another user" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos should not decrement tag counts when the delete removed nothing (lost race)" name="Conversation Operations deleteConvos should not decrement tag counts when the delete removed nothing (lost race)" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations deleteConvos still decrements tag counts AND returns the deleted ids when message deletion fails" name="Conversation Operations deleteConvos still decrements tag counts AND returns the deleted ids when message deletion fails" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos defines an index for the user-scoped ObjectId batch scan" name="Conversation Operations archiveAllConvos defines an index for the user-scoped ObjectId batch scan" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos archives every unarchived conversation for the user only" name="Conversation Operations archiveAllConvos archives every unarchived conversation for the user only" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos archives large snapshots in bounded batches" name="Conversation Operations archiveAllConvos archives large snapshots in bounded batches" time="0.156">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos recovers destination projects from the sweep marker, not a per-conversation id list" name="Conversation Operations archiveAllConvos recovers destination projects from the sweep marker, not a per-conversation id list" time="0.171">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos recovers a batch-sized destination move from the marker alone" name="Conversation Operations archiveAllConvos recovers a batch-sized destination move from the marker alone" time="0.205">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos replays a failed project refresh without abandoning the rest of the run" name="Conversation Operations archiveAllConvos replays a failed project refresh without abandoning the rest of the run" time="0.043">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos leaves already-archived conversations untouched" name="Conversation Operations archiveAllConvos leaves already-archived conversations untouched" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos skips temporary and retention-expired conversations" name="Conversation Operations archiveAllConvos skips temporary and retention-expired conversations" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos preserves each conversation updatedAt so the archived view keeps its order" name="Conversation Operations archiveAllConvos preserves each conversation updatedAt so the archived view keeps its order" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos stamps archivedAt so the sweep is dated and sorted as archived now" name="Conversation Operations archiveAllConvos stamps archivedAt so the sweep is dated and sorted as archived now" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos leaves the archivedAt of an already-archived chat alone" name="Conversation Operations archiveAllConvos leaves the archivedAt of an already-archived chat alone" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos refreshes stats for every project the archived conversations belonged to" name="Conversation Operations archiveAllConvos refreshes stats for every project the archived conversations belonged to" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos does not archive a project conversation created after the initial snapshot" name="Conversation Operations archiveAllConvos does not archive a project conversation created after the initial snapshot" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos retries destination-project discovery after a transient distinct failure" name="Conversation Operations archiveAllConvos retries destination-project discovery after a transient distinct failure" time="0.014">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos reconciles the destination project when discovery retries exhaust after a move" name="Conversation Operations archiveAllConvos reconciles the destination project when discovery retries exhaust after a move" time="0.015">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos refreshes the destination project when a captured conversation moves before archiving" name="Conversation Operations archiveAllConvos refreshes the destination project when a captured conversation moves before archiving" time="0.016">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos refreshes project stats for committed batches when a later batch fails" name="Conversation Operations archiveAllConvos refreshes project stats for committed batches when a later batch fails" time="0.218">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos reconciles projects when an archive write commits but its result is lost" name="Conversation Operations archiveAllConvos reconciles projects when an archive write commits but its result is lost" time="0.016">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos does not let a save in flight restore the project pointer it just cleared" name="Conversation Operations archiveAllConvos does not let a save in flight restore the project pointer it just cleared" time="0.02">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos repairs the project when the sweep lands while the pointer write is in flight" name="Conversation Operations archiveAllConvos repairs the project when the sweep lands while the pointer write is in flight" time="0.018">
+    </testcase>
+    <testcase classname="Conversation Operations archiveAllConvos returns zero when the user has no conversations" name="Conversation Operations archiveAllConvos returns zero when the user has no conversations" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations deleteNullOrEmptyConversations should delete conversations with null, empty, or missing conversationIds" name="Conversation Operations deleteNullOrEmptyConversations should delete conversations with null, empty, or missing conversationIds" time="0.013">
+    </testcase>
+    <testcase classname="Conversation Operations Error Handling should handle database errors in saveConvo" name="Conversation Operations Error Handling should handle database errors in saveConvo" time="0.034">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should flag conversations that have an active shared link" name="Conversation Operations getConvosByCursor pagination should flag conversations that have an active shared link" time="0.043">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should skip the shared lookup when shared links are disabled" name="Conversation Operations getConvosByCursor pagination should skip the shared lookup when shared links are disabled" time="0.025">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should page through titles that share a timestamp" name="Conversation Operations getConvosByCursor pagination should page through titles that share a timestamp" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should page past conversations that have no title" name="Conversation Operations getConvosByCursor pagination should page past conversations that have no title" time="0.014">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should not skip conversations at page boundaries" name="Conversation Operations getConvosByCursor pagination should not skip conversations at page boundaries" time="0.029">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should include conversation at exact page boundary (item 26 bug fix)" name="Conversation Operations getConvosByCursor pagination should include conversation at exact page boundary (item 26 bug fix)" time="0.117">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should sort by updatedAt DESC by default" name="Conversation Operations getConvosByCursor pagination should sort by updatedAt DESC by default" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should handle conversations with same updatedAt (tie-breaker)" name="Conversation Operations getConvosByCursor pagination should handle conversations with same updatedAt (tie-breaker)" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should handle cursor pagination with conversations updated during pagination" name="Conversation Operations getConvosByCursor pagination should handle cursor pagination with conversations updated during pagination" time="0.032">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should correctly decode and use cursor for pagination" name="Conversation Operations getConvosByCursor pagination should correctly decode and use cursor for pagination" time="0.031">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should support sortBy createdAt when explicitly requested" name="Conversation Operations getConvosByCursor pagination should support sortBy createdAt when explicitly requested" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should handle empty result set gracefully" name="Conversation Operations getConvosByCursor pagination should handle empty result set gracefully" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pagination should handle exactly limit number of conversations (no next page)" name="Conversation Operations getConvosByCursor pagination should handle exactly limit number of conversations (no next page)" time="0.024">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor archivedAt sorting accepts archivedAt as a sort field" name="Conversation Operations getConvosByCursor archivedAt sorting accepts archivedAt as a sort field" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor archivedAt sorting pages across stamped and unstamped chats without repeating or dropping any" name="Conversation Operations getConvosByCursor archivedAt sorting pages across stamped and unstamped chats without repeating or dropping any" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor archivedAt sorting orders unstamped chats last when sorting newest first" name="Conversation Operations getConvosByCursor archivedAt sorting orders unstamped chats last when sorting newest first" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor archivedAt sorting pages across stamped and unstamped chats when sorting oldest first" name="Conversation Operations getConvosByCursor archivedAt sorting pages across stamped and unstamped chats when sorting oldest first" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor archivedAt sorting orders the legacy group by the createdAt it displays, not last activity" name="Conversation Operations getConvosByCursor archivedAt sorting orders the legacy group by the createdAt it displays, not last activity" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor archivedAt sorting still rejects a sort field that is not allowed" name="Conversation Operations getConvosByCursor archivedAt sorting still rejects a sort field that is not allowed" time="0.002">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pinned filter returns only pinned conversations when pinned is requested" name="Conversation Operations getConvosByCursor pinned filter returns only pinned conversations when pinned is requested" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pinned filter returns a pin that falls outside the first page of the unfiltered list" name="Conversation Operations getConvosByCursor pinned filter returns a pin that falls outside the first page of the unfiltered list" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pinned filter excludes archived pins and other users’ pins" name="Conversation Operations getConvosByCursor pinned filter excludes archived pins and other users’ pins" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor pinned filter leaves the list unfiltered when pinned is not requested" name="Conversation Operations getConvosByCursor pinned filter leaves the list unfiltered when pinned is not requested" time="0.004">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor page size bounds bounds a negative page size" name="Conversation Operations getConvosByCursor page size bounds bounds a negative page size" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor page size bounds bounds a zero page size" name="Conversation Operations getConvosByCursor page size bounds bounds a zero page size" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor page size bounds bounds a oversized page size" name="Conversation Operations getConvosByCursor page size bounds bounds a oversized page size" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor page size bounds caps an oversized page size at the ceiling and still pages the remainder" name="Conversation Operations getConvosByCursor page size bounds caps an oversized page size at the ceiling and still pages the remainder" time="0.106">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor page size bounds serves a page size inside the range unchanged" name="Conversation Operations getConvosByCursor page size bounds serves a page size inside the range unchanged" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases reserves child lineage once without overwriting a concurrent winner" name="Conversation Operations subagent thread leases reserves child lineage once without overwriting a concurrent winner" time="1.515">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases reads a child only through its exact parent and tenant with the private lease" name="Conversation Operations subagent thread leases reads a child only through its exact parent and tenant with the private lease" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases lists bounded child metadata while collapsing private event bindings to actor identity" name="Conversation Operations subagent thread leases lists bounded child metadata while collapsing private event bindings to actor identity" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases hides retention-expired children before TTL cleanup" name="Conversation Operations subagent thread leases hides retention-expired children before TTL cleanup" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases keeps an older child with a live lease inside the bounded parent index" name="Conversation Operations subagent thread leases keeps an older child with a live lease inside the bounded parent index" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases resolves an event binding only through its owner, tenant, and API key" name="Conversation Operations subagent thread leases resolves an event binding only through its owner, tenant, and API key" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases serializes owned suspension ownership through claim, re-pause, and resumed commit" name="Conversation Operations subagent thread leases serializes owned suspension ownership through claim, re-pause, and resumed commit" time="0.04">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases serializes legacy suspension ownership through claim, re-pause, and resumed commit" name="Conversation Operations subagent thread leases serializes legacy suspension ownership through claim, re-pause, and resumed commit" time="0.032">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases closes a resumed suspension when the actor-head commit is stale" name="Conversation Operations subagent thread leases closes a resumed suspension when the actor-head commit is stale" time="0.02">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases commits event actor heads with full checkpoint CAS and two-checkpoint retention" name="Conversation Operations subagent thread leases commits event actor heads with full checkpoint CAS and two-checkpoint retention" time="0.08">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases persists complete warm-continuation state with the actor head" name="Conversation Operations subagent thread leases persists complete warm-continuation state with the actor head" time="0.016">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases retains exact legacy settled receipts until delivery-ledger migration" name="Conversation Operations subagent thread leases retains exact legacy settled receipts until delivery-ledger migration" time="0.071">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases confirms action admission only on the exact pending lifecycle" name="Conversation Operations subagent thread leases confirms action admission only on the exact pending lifecycle" time="0.014">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases does not confirm a stale marker after a checkpoint-distinct successor wins" name="Conversation Operations subagent thread leases does not confirm a stale marker after a checkpoint-distinct successor wins" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases clears an exact reconciled invocation without retaining a conversation receipt" name="Conversation Operations subagent thread leases clears an exact reconciled invocation without retaining a conversation receipt" time="0.013">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases does not prune legacy settled receipts during new invocation admission" name="Conversation Operations subagent thread leases does not prune legacy settled receipts during new invocation admission" time="0.022">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases expires dormant legacy settled receipts independently of matching delivery replay" name="Conversation Operations subagent thread leases expires dormant legacy settled receipts independently of matching delivery replay" time="0.009">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases sends a pure inclusion projection for the candidate read" name="Conversation Operations subagent thread leases sends a pure inclusion projection for the candidate read" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases retains an expired legacy receipt while its delivery handling is nonterminal" name="Conversation Operations subagent thread leases retains an expired legacy receipt while its delivery handling is nonterminal" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases pages raw conversations before filtering and advances past protected receipts" name="Conversation Operations subagent thread leases pages raw conversations before filtering and advances past protected receipts" time="0.01">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases clears a compensated headless lifecycle without creating a partial actor head" name="Conversation Operations subagent thread leases clears a compensated headless lifecycle without creating a partial actor head" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases clears an exact settled legacy receipt after delivery-ledger migration" name="Conversation Operations subagent thread leases clears an exact settled legacy receipt after delivery-ledger migration" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases does not compensate an action that has not passed invocation admission" name="Conversation Operations subagent thread leases does not compensate an action that has not passed invocation admission" time="0.01">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases versions every legacy invalidation so a stale prepared fork cannot commit past it" name="Conversation Operations subagent thread leases versions every legacy invalidation so a stale prepared fork cannot commit past it" time="0.044">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases serializes legacy-turn and fork-lifecycle acquisition before either can execute" name="Conversation Operations subagent thread leases serializes legacy-turn and fork-lifecycle acquisition before either can execute" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases uses a DocumentDB-compatible classic update for legacy fence open" name="Conversation Operations subagent thread leases uses a DocumentDB-compatible classic update for legacy fence open" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases does not let a legacy settled journal cap block a healthy actor" name="Conversation Operations subagent thread leases does not let a legacy settled journal cap block a healthy actor" time="0.146">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases admits one cross-replica owner and fences renewal and release by token" name="Conversation Operations subagent thread leases admits one cross-replica owner and fences renewal and release by token" time="0.015">
+    </testcase>
+    <testcase classname="Conversation Operations subagent thread leases allows takeover only after the prior lease expires" name="Conversation Operations subagent thread leases allows takeover only after the prior lease expires" time="0.007">
+    </testcase>
+    <testcase classname="Conversation Operations tenantId stripping saveConvo should not write caller-supplied tenantId to the document" name="Conversation Operations tenantId stripping saveConvo should not write caller-supplied tenantId to the document" time="0.005">
+    </testcase>
+    <testcase classname="Conversation Operations tenantId stripping bulkSaveConvos should not overwrite tenantId via update payload" name="Conversation Operations tenantId stripping bulkSaveConvos should not overwrite tenantId via update payload" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations tenantId stripping bulkSaveConvos refreshes stats for cloned project conversations" name="Conversation Operations tenantId stripping bulkSaveConvos refreshes stats for cloned project conversations" time="0.012">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor search should include conversations matched only by message content" name="Conversation Operations getConvosByCursor search should include conversations matched only by message content" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor search should dedupe conversations matched by both title and message search" name="Conversation Operations getConvosByCursor search should dedupe conversations matched by both title and message search" time="0.011">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor search should return an empty result when neither titles nor messages match" name="Conversation Operations getConvosByCursor search should return an empty result when neither titles nor messages match" time="0.003">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor search should fall back to title matches when the message index search fails" name="Conversation Operations getConvosByCursor search should fall back to title matches when the message index search fails" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Operations getConvosByCursor search should search titles when message methods are not injected" name="Conversation Operations getConvosByCursor search should search titles when message methods are not injected" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Message Operations" errors="0" failures="0" skipped="0" timestamp="2026-09-21T02:45:47" time="8.765" tests="139">
+    <testcase classname="Message Operations saveMessage should save a message for an authenticated user" name="Message Operations saveMessage should save a message for an authenticated user" time="0.975">
+    </testcase>
+    <testcase classname="Message Operations saveMessage round-trips context usage metadata without narrowing tool fields or unknown data" name="Message Operations saveMessage round-trips context usage metadata without narrowing tool fields or unknown data" time="0.148">
+    </testcase>
+    <testcase classname="Message Operations saveMessage unsets a previously stored context meta in the same update as the terminal save" name="Message Operations saveMessage unsets a previously stored context meta in the same update as the terminal save" time="0.103">
+    </testcase>
+    <testcase classname="Message Operations saveMessage unsets a stored context meta atomically through the provenance merge as well" name="Message Operations saveMessage unsets a stored context meta atomically through the provenance merge as well" time="0.008">
+    </testcase>
+    <testcase classname="Message Operations saveMessage should persist optional user-submitted provenance independently of message role" name="Message Operations saveMessage should persist optional user-submitted provenance independently of message role" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations saveMessage stamps native model output without overriding explicit provenance" name="Message Operations saveMessage stamps native model output without overriding explicit provenance" time="0.009">
+    </testcase>
+    <testcase classname="Message Operations saveMessage bounds and validates stored user-submitted provenance paths" name="Message Operations saveMessage bounds and validates stored user-submitted provenance paths" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations saveMessage validates and atomically preserves exact HITL field provenance" name="Message Operations saveMessage validates and atomically preserves exact HITL field provenance" time="0.173">
+    </testcase>
+    <testcase classname="Message Operations saveMessage adds semantic steer paths without replacing existing field provenance" name="Message Operations saveMessage adds semantic steer paths without replacing existing field provenance" time="0.008">
+    </testcase>
+    <testcase classname="Message Operations saveMessage saves provenance when update arrays are rejected at the collection boundary" name="Message Operations saveMessage saves provenance when update arrays are rejected at the collection boundary" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations saveMessage merges provenance from concurrent first saves" name="Message Operations saveMessage merges provenance from concurrent first saves" time="3.616">
+    </testcase>
+    <testcase classname="Message Operations saveMessage persists dollar-prefixed message values literally while merging provenance" name="Message Operations saveMessage persists dollar-prefixed message values literally while merging provenance" time="0.086">
+    </testcase>
+    <testcase classname="Message Operations saveMessage should throw an error for unauthenticated user" name="Message Operations saveMessage should throw an error for unauthenticated user" time="0.043">
+    </testcase>
+    <testcase classname="Message Operations saveMessage should handle invalid conversation ID gracefully" name="Message Operations saveMessage should handle invalid conversation ID gracefully" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations saveMessage should not log message params for invalid conversation IDs" name="Message Operations saveMessage should not log message params for invalid conversation IDs" time="0.024">
+    </testcase>
+    <testcase classname="Message Operations bulkSaveMessages preserves unknown provenance when cloning an unmarked assistant row" name="Message Operations bulkSaveMessages preserves unknown provenance when cloning an unmarked assistant row" time="0.027">
+    </testcase>
+    <testcase classname="Message Operations bulkSaveMessages caps exact field provenance without promoting model output to whole-message provenance" name="Message Operations bulkSaveMessages caps exact field provenance without promoting model output to whole-message provenance" time="0.022">
+    </testcase>
+    <testcase classname="Message Operations recordMessage stamps native model output without overriding explicit provenance" name="Message Operations recordMessage stamps native model output without overriding explicit provenance" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations preserves unknown provenance when message savers update legacy assistant rows" name="Message Operations preserves unknown provenance when message savers update legacy assistant rows" time="0.013">
+    </testcase>
+    <testcase classname="Message Operations updateMessageText should update message text for the authenticated user" name="Message Operations updateMessageText should update message text for the authenticated user" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations updateMessage should update a message for the authenticated user" name="Message Operations updateMessage should update a message for the authenticated user" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateMessage atomically merges provenance from concurrent edits to distinct fields" name="Message Operations updateMessage atomically merges provenance from concurrent edits to distinct fields" time="0.008">
+    </testcase>
+    <testcase classname="Message Operations updateMessage retries a stale provenance snapshot without dropping either writer" name="Message Operations updateMessage retries a stale provenance snapshot without dropping either writer" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateMessage atomically caps repeated provenance unions and promotes overflow to whole-message provenance" name="Message Operations updateMessage atomically caps repeated provenance unions and promotes overflow to whole-message provenance" time="0.034">
+    </testcase>
+    <testcase classname="Message Operations updateMessage keeps repeated exact-field overflow scoped instead of promoting the whole message" name="Message Operations updateMessage keeps repeated exact-field overflow scoped instead of promoting the whole message" time="0.027">
+    </testcase>
+    <testcase classname="Message Operations updateMessage returns the generation-time Langfuse routing decisions with feedback updates" name="Message Operations updateMessage returns the generation-time Langfuse routing decisions with feedback updates" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateMessage should throw an error if message is not found" name="Message Operations updateMessage should throw an error if message is not found" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult patches only the matching tool_call part and appends attachments atomically" name="Message Operations updateToolCallResult patches only the matching tool_call part and appends attachments atomically" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult appends to existing attachments instead of replacing them" name="Message Operations updateToolCallResult appends to existing attachments instead of replacing them" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult is idempotent: re-applying the same patch does not duplicate attachments" name="Message Operations updateToolCallResult is idempotent: re-applying the same patch does not duplicate attachments" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult dedupes download-fallback attachments (no file_id) by filepath on re-apply" name="Message Operations updateToolCallResult dedupes download-fallback attachments (no file_id) by filepath on re-apply" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult returns false when the message row does not exist yet (caller retries)" name="Message Operations updateToolCallResult returns false when the message row does not exist yet (caller retries)" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult scopes the patch by agentId when provider ids repeat across agents" name="Message Operations updateToolCallResult scopes the patch by agentId when provider ids repeat across agents" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult patches only the matching run step when one agent repeats a provider id" name="Message Operations updateToolCallResult patches only the matching run step when one agent repeats a provider id" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult reports no match when the targeted tool-call part is absent" name="Message Operations updateToolCallResult reports no match when the targeted tool-call part is absent" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult flags unfinished partial rows so callers keep re-applying until finalize" name="Message Operations updateToolCallResult flags unfinished partial rows so callers keep re-applying until finalize" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult persists a terminal background receipt without replacing its existing claim" name="Message Operations updateToolCallResult persists a terminal background receipt without replacing its existing claim" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult stamps a supplied claim only on a part that carries none" name="Message Operations updateToolCallResult stamps a supplied claim only on a part that carries none" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult reports exhausted attachment-merge contention as unmatched instead of throwing" name="Message Operations updateToolCallResult reports exhausted attachment-merge contention as unmatched instead of throwing" time="0.008">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult disarms a previously armed completion wakeup when the new receipt omits it" name="Message Operations updateToolCallResult disarms a previously armed completion wakeup when the new receipt omits it" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult lets a same-generation manual poll claim an anchored terminal receipt" name="Message Operations updateToolCallResult lets a same-generation manual poll claim an anchored terminal receipt" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult restores same-generation claim ownership after the final response save" name="Message Operations updateToolCallResult restores same-generation claim ownership after the final response save" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult recovers an unclaimed terminal receipt by task id after process-local state is lost" name="Message Operations updateToolCallResult recovers an unclaimed terminal receipt by task id after process-local state is lost" time="0.009">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult reports an exact durable launch handle as outcome unknown after executor loss" name="Message Operations updateToolCallResult reports an exact durable launch handle as outcome unknown after executor loss" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult leaves a durable subagent handle to the routed subagent store" name="Message Operations updateToolCallResult leaves a durable subagent handle to the routed subagent store" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult claims a terminal result whose persisted claim stamp is a stored null" name="Message Operations updateToolCallResult claims a terminal result whose persisted claim stamp is a stored null" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult claims a cancelled ordinary background-tool result as terminal evidence" name="Message Operations updateToolCallResult claims a cancelled ordinary background-tool result as terminal evidence" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult elects one result consumer and batches terminal siblings for a wakeup" name="Message Operations updateToolCallResult elects one result consumer and batches terminal siblings for a wakeup" time="0.008">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult keeps independent receipt ownership out of message batches (root=true)" name="Message Operations updateToolCallResult keeps independent receipt ownership out of message batches (root=true)" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult keeps independent receipt ownership out of message batches (root=false)" name="Message Operations updateToolCallResult keeps independent receipt ownership out of message batches (root=false)" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult bounds escaped metadata before claiming and freezes membership across competing same-owner preparations" name="Message Operations updateToolCallResult bounds escaped metadata before claiming and freezes membership across competing same-owner preparations" time="0.009">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult revalidates each sibling inside the atomic batch claim" name="Message Operations updateToolCallResult revalidates each sibling inside the atomic batch claim" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult does not batch a terminal sibling that elected poll-only delivery" name="Message Operations updateToolCallResult does not batch a terminal sibling that elected poll-only delivery" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult uses nested tool-call agent identity when batching sibling results" name="Message Operations updateToolCallResult uses nested tool-call agent identity when batching sibling results" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult releases only the exact wakeup batch claim" name="Message Operations updateToolCallResult releases only the exact wakeup batch claim" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult keeps a sibling AGENT’s attachment when both id and file key collide" name="Message Operations updateToolCallResult keeps a sibling AGENT’s attachment when both id and file key collide" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult keeps a sibling tool call’s attachment when file ids repeat across calls" name="Message Operations updateToolCallResult keeps a sibling tool call’s attachment when file ids repeat across calls" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations updateToolCallResult does not match another user’s message" name="Message Operations updateToolCallResult does not match another user’s message" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations deleteMessagesSince should delete messages only for the authenticated user" name="Message Operations deleteMessagesSince should delete messages only for the authenticated user" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations deleteMessagesSince should return undefined if no message is found" name="Message Operations deleteMessagesSince should return undefined if no message is found" time="0.001">
+    </testcase>
+    <testcase classname="Message Operations CLIENT_MESSAGE_SELECT projection strips server-internal fields and dead SERP verticals, keeping rendered data" name="Message Operations CLIENT_MESSAGE_SELECT projection strips server-internal fields and dead SERP verticals, keeping rendered data" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations conversation fetch index declares the compound index that serves the conversation fetch and its sort" name="Message Operations conversation fetch index declares the compound index that serves the conversation fetch and its sort" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations getMessages should retrieve messages with the correct filter" name="Message Operations getMessages should retrieve messages with the correct filter" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations getMessages should limit retrieved messages when requested" name="Message Operations getMessages should limit retrieved messages when requested" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView bounds text in MongoDB before returning the public projection" name="Message Operations getMessagesForSubagentThreadView bounds text in MongoDB before returning the public projection" time="0.009">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView anchors older pages by an exact scoped message without exposing Mongo ids" name="Message Operations getMessagesForSubagentThreadView anchors older pages by an exact scoped message without exposing Mongo ids" time="0.015">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView projects only the bounded display-safe external event identity" name="Message Operations getMessagesForSubagentThreadView projects only the bounded display-safe external event identity" time="0.009">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView projects bounded private transcripts for the retained linear history" name="Message Operations getMessagesForSubagentThreadView projects bounded private transcripts for the retained linear history" time="0.01">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView keeps the budgeted timeline a contiguous newest suffix past an oversized entry" name="Message Operations getMessagesForSubagentThreadView keeps the budgeted timeline a contiguous newest suffix past an oversized entry" time="0.009">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView fits ordinary persisted child activity into the aggregate byte budget, newest first" name="Message Operations getMessagesForSubagentThreadView fits ordinary persisted child activity into the aggregate byte budget, newest first" time="0.01">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView bounds ordinary persisted child activity before returning it to the API" name="Message Operations getMessagesForSubagentThreadView bounds ordinary persisted child activity before returning it to the API" time="0.01">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView bounds public control receipts before materializing the message page" name="Message Operations getMessagesForSubagentThreadView bounds public control receipts before materializing the message page" time="0.021">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView bounds transcript materialization while retaining the exact selected task" name="Message Operations getMessagesForSubagentThreadView bounds transcript materialization while retaining the exact selected task" time="0.023">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView omits an oversized private transcript before returning the application result" name="Message Operations getMessagesForSubagentThreadView omits an oversized private transcript before returning the application result" time="0.01">
+    </testcase>
+    <testcase classname="Message Operations getMessagesForSubagentThreadView prefers the bounded settlement projection without materializing its private transcript" name="Message Operations getMessagesForSubagentThreadView prefers the bounded settlement projection without materializing its private transcript" time="0.022">
+    </testcase>
+    <testcase classname="Message Operations listSubagentTasksForThreads derives event task status from ordinary durable turn rows" name="Message Operations listSubagentTasksForThreads derives event task status from ordinary durable turn rows" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations listSubagentTasksForThreads batches threads, deduplicates task rows, and bounds each newest task list" name="Message Operations listSubagentTasksForThreads batches threads, deduplicates task rows, and bounds each newest task list" time="0.023">
+    </testcase>
+    <testcase classname="Message Operations listSubagentTasksForThreads marks every selected child truncated when one busy child fills the shared source window" name="Message Operations listSubagentTasksForThreads marks every selected child truncated when one busy child fills the shared source window" time="0.011">
+    </testcase>
+    <testcase classname="Message Operations listSubagentTasksForThreads preserves a newer recent task when the latest-per-thread snapshot is stale" name="Message Operations listSubagentTasksForThreads preserves a newer recent task when the latest-per-thread snapshot is stale" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations listSubagentTasksForThreads preserves Mongo occurrence ordering when task timestamps tie" name="Message Operations listSubagentTasksForThreads preserves Mongo occurrence ordering when task timestamps tie" time="0.001">
+    </testcase>
+    <testcase classname="Message Operations deleteMessages should delete messages with the correct filter" name="Message Operations deleteMessages should delete messages with the correct filter" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations Conversation Hijacking Prevention should not allow editing a message in another user&apos;s conversation" name="Message Operations Conversation Hijacking Prevention should not allow editing a message in another user&apos;s conversation" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations Conversation Hijacking Prevention should not allow deleting messages from another user&apos;s conversation" name="Message Operations Conversation Hijacking Prevention should not allow deleting messages from another user&apos;s conversation" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations Conversation Hijacking Prevention should not allow inserting a new message into another user&apos;s conversation" name="Message Operations Conversation Hijacking Prevention should not allow inserting a new message into another user&apos;s conversation" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations Conversation Hijacking Prevention should allow retrieving messages from any conversation" name="Message Operations Conversation Hijacking Prevention should allow retrieving messages from any conversation" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should save a message with expiredAt when isTemporary is true" name="Message Operations isTemporary message handling should save a message with expiredAt when isTemporary is true" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling preserves an exact inherited expiration instead of recomputing retention" name="Message Operations isTemporary message handling preserves an exact inherited expiration instead of recomputing retention" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should save a message without expiredAt when isTemporary is false" name="Message Operations isTemporary message handling should save a message without expiredAt when isTemporary is false" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should save a message without expiredAt when isTemporary is not provided" name="Message Operations isTemporary message handling should save a message without expiredAt when isTemporary is not provided" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should use custom retention period from config" name="Message Operations isTemporary message handling should use custom retention period from config" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should handle minimum retention period (1 hour)" name="Message Operations isTemporary message handling should handle minimum retention period (1 hour)" time="0.001">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should handle maximum retention period (8760 hours)" name="Message Operations isTemporary message handling should handle maximum retention period (8760 hours)" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling uses the independent retention period for isTemporary=true" name="Message Operations isTemporary message handling uses the independent retention period for isTemporary=true" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling uses the independent retention period for isTemporary=false" name="Message Operations isTemporary message handling uses the independent retention period for isTemporary=false" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling uses the independent retention period for isTemporary=undefined" name="Message Operations isTemporary message handling uses the independent retention period for isTemporary=undefined" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling atomically assigns general retention when inserting without a chat type" name="Message Operations isTemporary message handling atomically assigns general retention when inserting without a chat type" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling ignores caller-supplied retention fields" name="Message Operations isTemporary message handling ignores caller-supplied retention fields" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling preserves the stored deadline when chat type true is omitted" name="Message Operations isTemporary message handling preserves the stored deadline when chat type true is omitted" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling preserves the stored deadline when chat type false is omitted" name="Message Operations isTemporary message handling preserves the stored deadline when chat type false is omitted" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling preserves an explicitly inherited deadline with separate retention periods" name="Message Operations isTemporary message handling preserves an explicitly inherited deadline with separate retention periods" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should set expiredAt for non-temporary message when retentionMode is ALL" name="Message Operations isTemporary message handling should set expiredAt for non-temporary message when retentionMode is ALL" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should mark retained message non-temporary when retentionMode is ALL and isTemporary is omitted" name="Message Operations isTemporary message handling should mark retained message non-temporary when retentionMode is ALL and isTemporary is omitted" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should preserve existing temporary flag when retentionMode is ALL and isTemporary is omitted" name="Message Operations isTemporary message handling should preserve existing temporary flag when retentionMode is ALL and isTemporary is omitted" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should not set expiredAt when retentionMode is temporary and not isTemporary" name="Message Operations isTemporary message handling should not set expiredAt when retentionMode is temporary and not isTemporary" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should handle missing config gracefully" name="Message Operations isTemporary message handling should handle missing config gracefully" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should use default retention when config is not provided" name="Message Operations isTemporary message handling should use default retention when config is not provided" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should not update expiredAt on message update" name="Message Operations isTemporary message handling should not update expiredAt on message update" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should preserve expiredAt when saving existing temporary message" name="Message Operations isTemporary message handling should preserve expiredAt when saving existing temporary message" time="0.106">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should preserve temporary retention when saving without isTemporary" name="Message Operations isTemporary message handling should preserve temporary retention when saving without isTemporary" time="0.004">
+    </testcase>
+    <testcase classname="Message Operations isTemporary message handling should handle bulk operations with temporary messages" name="Message Operations isTemporary message handling should handle bulk operations with temporary messages" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should return messages for a conversation with pagination" name="Message Operations Message cursor pagination should return messages for a conversation with pagination" time="0.027">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should not skip message at page boundary (item 26 bug fix)" name="Message Operations Message cursor pagination should not skip message at page boundary (item 26 bug fix)" time="0.02">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should sort by createdAt DESC by default" name="Message Operations Message cursor pagination should sort by createdAt DESC by default" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should support ascending sort direction" name="Message Operations Message cursor pagination should support ascending sort direction" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should handle empty conversation" name="Message Operations Message cursor pagination should handle empty conversation" time="0.002">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should only return messages for the specified user" name="Message Operations Message cursor pagination should only return messages for the specified user" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should handle exactly pageSize number of messages (no next page)" name="Message Operations Message cursor pagination should handle exactly pageSize number of messages (no next page)" time="0.02">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should handle pageSize of 1" name="Message Operations Message cursor pagination should handle pageSize of 1" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations Message cursor pagination should handle messages with same createdAt timestamp" name="Message Operations Message cursor pagination should handle messages with same createdAt timestamp" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations tenantId stripping merges provenance within the active tenant context" name="Message Operations tenantId stripping merges provenance within the active tenant context" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations tenantId stripping saveMessage should not write caller-supplied tenantId to the document" name="Message Operations tenantId stripping saveMessage should not write caller-supplied tenantId to the document" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations tenantId stripping bulkSaveMessages should not overwrite tenantId via update payload" name="Message Operations tenantId stripping bulkSaveMessages should not overwrite tenantId via update payload" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations tenantId stripping recordMessage should not write caller-supplied tenantId to the document" name="Message Operations tenantId stripping recordMessage should not write caller-supplied tenantId to the document" time="0.003">
+    </testcase>
+    <testcase classname="Message Operations tenantId stripping updateMessage should not write caller-supplied tenantId to the document" name="Message Operations tenantId stripping updateMessage should not write caller-supplied tenantId to the document" time="0.005">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt advances one invocation monotonically and enforces ownership" name="Message Operations recordSubagentTaskControlReceipt advances one invocation monotonically and enforces ownership" time="0.012">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt updates only the authorized tenant when message identities collide" name="Message Operations recordSubagentTaskControlReceipt updates only the authorized tenant when message identities collide" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt reads an exact authorized receipt and persists a new terminal rejection" name="Message Operations recordSubagentTaskControlReceipt reads an exact authorized receipt and persists a new terminal rejection" time="0.017">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt replays an applied cancellation as cancelled before its terminal row exists" name="Message Operations recordSubagentTaskControlReceipt replays an applied cancellation as cancelled before its terminal row exists" time="0.008">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt reports every accepted control when replaying one durable invocation" name="Message Operations recordSubagentTaskControlReceipt reports every accepted control when replaying one durable invocation" time="0.01">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt rejects an invocation fingerprint conflict without reporting persistence" name="Message Operations recordSubagentTaskControlReceipt rejects an invocation fingerprint conflict without reporting persistence" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt retains concurrent receipts without requiring an aggregation-pipeline update" name="Message Operations recordSubagentTaskControlReceipt retains concurrent receipts without requiring an aggregation-pipeline update" time="0.81">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt retains accepted commands while bounding terminal receipt history" name="Message Operations recordSubagentTaskControlReceipt retains accepted commands while bounding terminal receipt history" time="0.357">
+    </testcase>
+    <testcase classname="Message Operations recordSubagentTaskControlReceipt refuses to evict active receipt fences at durable capacity" name="Message Operations recordSubagentTaskControlReceipt refuses to evict active receipt fences at durable capacity" time="0.278">
+    </testcase>
+    <testcase classname="Message Operations claimSubagentTaskResult hands one terminal result to a single polling invocation" name="Message Operations claimSubagentTaskResult hands one terminal result to a single polling invocation" time="0.007">
+    </testcase>
+    <testcase classname="Message Operations claimSubagentTaskResult elects either a manual poll or one idempotent automatic wakeup" name="Message Operations claimSubagentTaskResult elects either a manual poll or one idempotent automatic wakeup" time="0.012">
+    </testcase>
+    <testcase classname="Message Operations claimSubagentTaskResult preserves and upgrades retries of legacy manual claims without a kind" name="Message Operations claimSubagentTaskResult preserves and upgrades retries of legacy manual claims without a kind" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations claimSubagentTaskResult releases only the exact rejected wakeup so manual collection can take over" name="Message Operations claimSubagentTaskResult releases only the exact rejected wakeup so manual collection can take over" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations claimSubagentTaskResult reports a result that is missing or still running as not found" name="Message Operations claimSubagentTaskResult reports a result that is missing or still running as not found" time="0.006">
+    </testcase>
+    <testcase classname="Message Operations claimSubagentTaskResult never hands one owner’s result to another user" name="Message Operations claimSubagentTaskResult never hands one owner’s result to another user" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="getConversationTraceRefs" errors="0" failures="0" skipped="0" timestamp="2026-09-21T02:45:56" time="2.257" tests="10">
+    <testcase classname="getConversationTraceRefs returns the first message time and sampled responses oldest first" name="getConversationTraceRefs returns the first message time and sampled responses oldest first" time="0.728">
+    </testcase>
+    <testcase classname="getConversationTraceRefs orders responses saved in the same millisecond by id, so every read rebuilds one order" name="getConversationTraceRefs orders responses saved in the same millisecond by id, so every read rebuilds one order" time="0.274">
+    </testcase>
+    <testcase classname="getConversationTraceRefs reads a bounded page of sampled responses ending at a position a previous read returned" name="getConversationTraceRefs reads a bounded page of sampled responses ending at a position a previous read returned" time="0.121">
+    </testcase>
+    <testcase classname="getConversationTraceRefs never treats a client-authored row as a sampled response" name="getConversationTraceRefs never treats a client-authored row as a sampled response" time="0.24">
+    </testcase>
+    <testcase classname="getConversationTraceRefs never returns another user&apos;s messages from a conversation with the same id" name="getConversationTraceRefs never returns another user&apos;s messages from a conversation with the same id" time="0.004">
+    </testcase>
+    <testcase classname="getConversationTraceRefs reads only the active tenant" name="getConversationTraceRefs reads only the active tenant" time="0.007">
+    </testcase>
+    <testcase classname="getConversationTraceRefs scopes to the given tenant even without request tenant context" name="getConversationTraceRefs scopes to the given tenant even without request tenant context" time="0.006">
+    </testcase>
+    <testcase classname="hasSampledTraceMessage finds a newer response held by a readable destination after older ones went elsewhere" name="hasSampledTraceMessage finds a newer response held by a readable destination after older ones went elsewhere" time="0.003">
+    </testcase>
+    <testcase classname="hasSampledTraceMessage counts a response with no recorded destinations for any destination" name="hasSampledTraceMessage counts a response with no recorded destinations for any destination" time="0.002">
+    </testcase>
+    <testcase classname="hasSampledTraceMessage ignores unsampled responses, an empty destination record, other users and client-authored rows" name="hasSampledTraceMessage ignores unsampled responses, an empty destination record, other users and client-authored rows" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Conversation Structure Tests" errors="0" failures="0" skipped="0" timestamp="2026-09-21T02:45:58" time="2.047" tests="5">
+    <testcase classname="Conversation Structure Tests Tree stays intact when inconsistent timestamps scramble retrieval order" name="Conversation Structure Tests Tree stays intact when inconsistent timestamps scramble retrieval order" time="1.188">
+    </testcase>
+    <testcase classname="Conversation Structure Tests Fix: Conversation structure maintained with more than 16 messages" name="Conversation Structure Tests Fix: Conversation structure maintained with more than 16 messages" time="0.008">
+    </testcase>
+    <testcase classname="Conversation Structure Tests Tree stays intact under MongoDB ordering churn with close timestamps" name="Conversation Structure Tests Tree stays intact under MongoDB ordering churn with close timestamps" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Structure Tests Fix: Preserve order with more than 16 messages by maintaining original timestamps" name="Conversation Structure Tests Fix: Preserve order with more than 16 messages by maintaining original timestamps" time="0.006">
+    </testcase>
+    <testcase classname="Conversation Structure Tests Random order dates between parent and children messages" name="Conversation Structure Tests Random order dates between parent and children messages" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="tenant isolation conformance: mongoose" errors="0" failures="0" skipped="0" timestamp="2026-09-21T02:46:00" time="0.82" tests="13">
+    <testcase classname="tenant isolation conformance: mongoose reads sees only the active tenant" name="tenant isolation conformance: mongoose reads sees only the active tenant" time="0.118">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose reads counts only the active tenant" name="tenant isolation conformance: mongoose reads counts only the active tenant" time="0.005">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose reads sees every tenant under the system sentinel" name="tenant isolation conformance: mongoose reads sees every tenant under the system sentinel" time="0.003">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose reads sees every tenant with no context, for pre-tenancy deployments" name="tenant isolation conformance: mongoose reads sees every tenant with no context, for pre-tenancy deployments" time="0.004">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose writes stamps the active tenant onto an insert" name="tenant isolation conformance: mongoose writes stamps the active tenant onto an insert" time="0.003">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose writes refuses a caller-chosen tenant on insert in strict mode" name="tenant isolation conformance: mongoose writes refuses a caller-chosen tenant on insert in strict mode" time="0.009">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose writes tolerates a caller-chosen tenant on insert outside strict mode" name="tenant isolation conformance: mongoose writes tolerates a caller-chosen tenant on insert outside strict mode" time="0.001">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose writes cannot rename another tenant row" name="tenant isolation conformance: mongoose writes cannot rename another tenant row" time="0.003">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose writes cannot delete another tenant row" name="tenant isolation conformance: mongoose writes cannot delete another tenant row" time="0.002">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose writes refuses an update that reassigns the tenant" name="tenant isolation conformance: mongoose writes refuses an update that reassigns the tenant" time="0.007">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose strict mode refuses a read with no tenant context" name="tenant isolation conformance: mongoose strict mode refuses a read with no tenant context" time="0.001">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose strict mode refuses a write with no tenant context" name="tenant isolation conformance: mongoose strict mode refuses a write with no tenant context" time="0.001">
+    </testcase>
+    <testcase classname="tenant isolation conformance: mongoose strict mode still allows the system sentinel through" name="tenant isolation conformance: mongoose strict mode still allows the system sentinel through" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

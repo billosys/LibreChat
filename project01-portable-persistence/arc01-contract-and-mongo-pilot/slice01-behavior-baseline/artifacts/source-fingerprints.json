@@ -1,0 +1,542 @@
+[
+  {
+    "path": ".nvmrc",
+    "bytes": 8,
+    "sha256": "2722b61f414f07f08be7f1f1316012813818f26f1c40d6a24a748686cec7d2ff"
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 7415,
+    "sha256": "2032e8b546cba1715f661e528309ea113f368ea44862462ae476ab16fca93c5a"
+  },
+  {
+    "path": "CLAUDE.md",
+    "bytes": 23170,
+    "sha256": "4585a29ce9a07b76eb8296de2ccd46c05f589ca96c84fb31b162022ca3999212"
+  },
+  {
+    "path": "api/app/clients/BaseClient.js",
+    "bytes": 73245,
+    "sha256": "53f3c67baa12f10737dfda3723f87bdb4307419658fe60aaa49b621739a9561f"
+  },
+  {
+    "path": "api/app/clients/specs/BaseClient.test.js",
+    "bytes": 153512,
+    "sha256": "2e8697ce2c0674f29db347651f2481638d068578fea5cb1c895588af9165578c"
+  },
+  {
+    "path": "api/app/clients/specs/FakeClient.js",
+    "bytes": 3580,
+    "sha256": "1343f8d3c6acf43446628846fe937fb51fad714b5f48d543b6d950401b7ed065"
+  },
+  {
+    "path": "api/db/index.js",
+    "bytes": 528,
+    "sha256": "6f7bd629cf088a4d31d3f8f04bdf7af53802c14d67f7ff7b0001a0967300b75a"
+  },
+  {
+    "path": "api/jest.config.js",
+    "bytes": 1222,
+    "sha256": "1c9e757f80b50db4a7baad831d4639be240689aaa07a83440d804a989a0a7d71"
+  },
+  {
+    "path": "api/models/index.js",
+    "bytes": 648,
+    "sha256": "4b2ba00c4de5bfc61cb9d65c9d018f25d70dea349f24fd5cc4881f6f8cd92ddf"
+  },
+  {
+    "path": "api/server/controllers/agents/client.js",
+    "bytes": 259809,
+    "sha256": "1099d1c4faa0f6957e5adde10b1648330613b52830fba70f1842bf86d2fa67cc"
+  },
+  {
+    "path": "api/server/controllers/agents/errors.js",
+    "bytes": 4933,
+    "sha256": "7c9ecdbffbdc409b0e257c36bbcdb5f62db58b427a9250963b1a02a0698e86e1"
+  },
+  {
+    "path": "api/server/controllers/agents/openai.js",
+    "bytes": 50359,
+    "sha256": "1d55f59ced1243ce1c35d2dfb12bbfc4f82555c51dacc62d4803e749b4a6024f"
+  },
+  {
+    "path": "api/server/controllers/agents/request.js",
+    "bytes": 141754,
+    "sha256": "8b1e6daa882a5ceb18059dfe92d36d5a7c65e23bcf2dda183c8e812578c5ce45"
+  },
+  {
+    "path": "api/server/controllers/agents/responses.js",
+    "bytes": 63928,
+    "sha256": "93c21f63665521bea7cdb24bcfb64d27abcf6fd2b3f9066db9bf83a2f9fc91bd"
+  },
+  {
+    "path": "api/server/controllers/agents/resume.js",
+    "bytes": 84758,
+    "sha256": "d796f4f0faab1b1365fc6a9b884c8b849d2209bb7023a595771f320ec56e3b02"
+  },
+  {
+    "path": "api/server/controllers/assistants/chatV1.js",
+    "bytes": 22528,
+    "sha256": "9602166afe487ee5794680d8a07c9bf54d415ed3b80b22cfdba33e6fa05a2144"
+  },
+  {
+    "path": "api/server/controllers/assistants/chatV2.js",
+    "bytes": 16659,
+    "sha256": "6d37ab5d0a3b66338d3f42ca971ee481924a5fdccb5eaa84916b547ec6ddc4d9"
+  },
+  {
+    "path": "api/server/controllers/assistants/errors.js",
+    "bytes": 6808,
+    "sha256": "a9f1de9793f0c91c8378a0eef785c397a6825aa43af3ed1863abee436d38a996"
+  },
+  {
+    "path": "api/server/middleware/abortMiddleware.js",
+    "bytes": 7295,
+    "sha256": "35054eb1b1d5d125f16264e02c021f88cb0ce2e8e8c7fa2deba53eab7a1d5305"
+  },
+  {
+    "path": "api/server/middleware/abortRun.js",
+    "bytes": 3354,
+    "sha256": "164e6126f09a1973b4495a3e719baf03b5fe059c4480c6257328b75112571c58"
+  },
+  {
+    "path": "api/server/middleware/denyRequest.js",
+    "bytes": 2445,
+    "sha256": "d44813da4de4448bb4bd24bfafed2a92563dd7d13b5f41ca464d8ea13fe8163f"
+  },
+  {
+    "path": "api/server/middleware/error.js",
+    "bytes": 3419,
+    "sha256": "89a48d538be4c8ade5c3f757b5c6a4c166f5a2a8467b3a1f58486aef2335bb85"
+  },
+  {
+    "path": "api/server/middleware/messageValidation.js",
+    "bytes": 422,
+    "sha256": "9c7bd1a677b45d3292917081b87c6dcf3a9f50216cd110ec11fe17be8817388d"
+  },
+  {
+    "path": "api/server/middleware/validate/subagentThreadTurn.js",
+    "bytes": 686,
+    "sha256": "55455012488dce96e57afdf7d602120989f23beb1e9e2a82099f82a090143d46"
+  },
+  {
+    "path": "api/server/routes/__tests__/messages-get-real-validation.spec.js",
+    "bytes": 6602,
+    "sha256": "16ea001b2b3b62ff11540cc97b822414ddae128c2ceb5089ebda51ed73b5dcf5"
+  },
+  {
+    "path": "api/server/routes/__tests__/messages-get.spec.js",
+    "bytes": 41728,
+    "sha256": "654c5054e7967736ad47dca2677c59b2f0dd83f753fb6732f7b47479ea6ed94f"
+  },
+  {
+    "path": "api/server/routes/admin/langfuse.js",
+    "bytes": 2073,
+    "sha256": "7fabd931f1343f7f8a5f4b780decb8cec41f2ef87dff36ceb8ed1cc66229e1ec"
+  },
+  {
+    "path": "api/server/routes/agents/index.js",
+    "bytes": 46759,
+    "sha256": "50d753ba968beed7d22d8e5b84e88d59ef01812974df905be8a48957e98fad99"
+  },
+  {
+    "path": "api/server/routes/agents/openai.js",
+    "bytes": 4303,
+    "sha256": "0c6d865cc5baef81a7464a801dcda06db93770ae53e4c4b874094ad56122c570"
+  },
+  {
+    "path": "api/server/routes/code-environments.js",
+    "bytes": 2073,
+    "sha256": "7bbe37a098dcaf3a18e3357cf3ea2c30b1b2cf4bd3c8cc86f01ed0b570db66cf"
+  },
+  {
+    "path": "api/server/routes/convos.js",
+    "bytes": 30269,
+    "sha256": "dd8df5b504a06a4899f545dc9d20eda7867a32761531e2a8916764da51c505c5"
+  },
+  {
+    "path": "api/server/routes/messages.js",
+    "bytes": 27254,
+    "sha256": "022edeae357ec52aa10645d4167d03f1f22318604d22c0042447b3d803d6bb3f"
+  },
+  {
+    "path": "api/server/routes/share.js",
+    "bytes": 28079,
+    "sha256": "351d80332943f8817a8a8b369036c9a326a34faae75608559f298f36ffd8fcad"
+  },
+  {
+    "path": "api/server/services/Endpoints/agents/addedConvo.js",
+    "bytes": 9355,
+    "sha256": "ca1bea63edf5d3eb8bc3d24ed6aebfa506158a89bb75e019e6001d36cd1680ff"
+  },
+  {
+    "path": "api/server/services/Endpoints/agents/initialize.js",
+    "bytes": 72264,
+    "sha256": "349abe6b82a102a83c7113acfda256a8addba1a84a0d4c7ef82a88979ac32763"
+  },
+  {
+    "path": "api/server/services/Endpoints/agents/subagentThreadStore.js",
+    "bytes": 5693,
+    "sha256": "5947e64eb844e428f604c9d29b1b1912cbc37b51231d0a442df41940d54eb7dd"
+  },
+  {
+    "path": "api/server/services/Endpoints/agents/title.js",
+    "bytes": 6406,
+    "sha256": "3de72be16fdf9b51cd3e80defc31a6011e33eaefaf639dc1c13c16af495d2190"
+  },
+  {
+    "path": "api/server/services/Endpoints/assistants/title.js",
+    "bytes": 4019,
+    "sha256": "e3aaf3d48a438271794e261ab7bb8c950582e80fee0dd9d5680af064d12b5d71"
+  },
+  {
+    "path": "api/server/services/Files/retention.js",
+    "bytes": 2154,
+    "sha256": "755adab450e53a0ef4ed12b4c8a9308641120abc493d47fec460e5b014bf6c41"
+  },
+  {
+    "path": "api/server/services/Threads/manage.js",
+    "bytes": 24466,
+    "sha256": "d1fcc5edb919dda271e1b83e0bdbcf1009ef2108f9d865d6d06b5ffe63064497"
+  },
+  {
+    "path": "api/server/utils/import/fork.js",
+    "bytes": 22972,
+    "sha256": "8449308845a3d7f3a87f4d7d038047135b597caabb6f41dff772f44a46c4bb9d"
+  },
+  {
+    "path": "api/server/utils/import/importBatchBuilder.js",
+    "bytes": 10770,
+    "sha256": "b27aab8f2d323e04905b6fb80e2dfc8a02c61902622fd63d467719a7770c6ab1"
+  },
+  {
+    "path": "api/server/utils/import/importConversations.database.spec.js",
+    "bytes": 4356,
+    "sha256": "3c928bdccc01aa620884a33161708c44900ad1148bd621f93b62445029e072fd"
+  },
+  {
+    "path": "api/server/utils/import/importConversations.js",
+    "bytes": 1886,
+    "sha256": "9cdbe3e9473108e5d165fd757c4e1e56361e871962034f08475e0b1e50727c45"
+  },
+  {
+    "path": "api/server/utils/import/importers-timestamp.spec.js",
+    "bytes": 23602,
+    "sha256": "ffb947904fd3b5bb3406f1d992fcd85bc49efc6c23d3b2bdfd54b7f3bbbcd0c4"
+  },
+  {
+    "path": "api/server/utils/import/importers.js",
+    "bytes": 20518,
+    "sha256": "8bdadb2ed23759f2cdfe0fdc2b8d98c94fa2e7ac99ebbe5bf1b9e0e7320aab70"
+  },
+  {
+    "path": "api/server/utils/import/importers.spec.js",
+    "bytes": 77982,
+    "sha256": "79c91d3eac9b8dfe81e41ba91876019971fb393236d4381502366a7942d07c48"
+  },
+  {
+    "path": "api/test/__mocks__/logger.js",
+    "bytes": 1860,
+    "sha256": "c148d64bdcbc5bfcc868729dc91c1a3b10d6164880f364956572ee3166cec11c"
+  },
+  {
+    "path": "api/test/jestSetup.js",
+    "bytes": 1463,
+    "sha256": "0ef6468d3c036b6402d7313b1599236cdb0fdb7bb06da6be277c437c375c6a5e"
+  },
+  {
+    "path": "config/jest.setup.logging.cjs",
+    "bytes": 558,
+    "sha256": "f7700b55e5e998ad2652850237001b89d28df067072598a546e14a2513c92975"
+  },
+  {
+    "path": "config/jest.workers.cjs",
+    "bytes": 1075,
+    "sha256": "b05b022136b5a314f20d247f9cd49904e29e6a627a2ee0ae74bf82ed20b45d43"
+  },
+  {
+    "path": "package-lock.json",
+    "bytes": 1692552,
+    "sha256": "b7ad213d54a111a493e1e8a98259417b7d9d84d82a6aba5dd4b8188a0ae5697c"
+  },
+  {
+    "path": "package.json",
+    "bytes": 15698,
+    "sha256": "9404796b55f3b7b999d1b68d05e5a788142335e5664438357e0dfe41a174a58d"
+  },
+  {
+    "path": "packages/api/jest.config.mjs",
+    "bytes": 1481,
+    "sha256": "0b9d95d646dedba31a70e9bc0f5553de50e918f2e0f1b89d7e65ab193b195e75"
+  },
+  {
+    "path": "packages/api/jest.setup.cjs",
+    "bytes": 963,
+    "sha256": "654b150637725d924df3721ea540f731e989a9131286956add63b0d0bd2e9c20"
+  },
+  {
+    "path": "packages/api/package.json",
+    "bytes": 7983,
+    "sha256": "9436571816e121cbaff51ac61072d431ea32ffc1f31d887552bc2d40b596f13f"
+  },
+  {
+    "path": "packages/api/src/admin/langfuse.ts",
+    "bytes": 19177,
+    "sha256": "418c253266b8ff5987890f4ba5b8a0c591c92f9f0b33499edb84a38a46990c51"
+  },
+  {
+    "path": "packages/api/src/agents/backgroundCompletionWakeup.ts",
+    "bytes": 25635,
+    "sha256": "8a097301e54e38a0fac220c67ceb9323fe9b53509704b7bc3013b35fa5c252b3"
+  },
+  {
+    "path": "packages/api/src/agents/control.ts",
+    "bytes": 10363,
+    "sha256": "677d1332f27166a0ebcd6ba7759b74bee8693930e0ed4ba9159a0d90772e9726"
+  },
+  {
+    "path": "packages/api/src/agents/guard.ts",
+    "bytes": 9015,
+    "sha256": "b68203af3b24f14eb8f7db171afe5550e228957a27fd5391956a4e42fe99e35c"
+  },
+  {
+    "path": "packages/api/src/agents/hitl/answers.ts",
+    "bytes": 25054,
+    "sha256": "18046aeeda9e572af53cdf7c352fa0e8b271e269032518397985c3ebe9a8e02a"
+  },
+  {
+    "path": "packages/api/src/agents/hitl/inspection.ts",
+    "bytes": 12715,
+    "sha256": "c15a184e52845876a2553583b810a4c20c3dac1dd27cf29475d3a8b2d31da503"
+  },
+  {
+    "path": "packages/api/src/agents/hitl/protection.ts",
+    "bytes": 41620,
+    "sha256": "f16741923d3dbe6bd2f4f9946fb210aab7a65e0943acdd76b782283ecbf18f5a"
+  },
+  {
+    "path": "packages/api/src/agents/initialize.ts",
+    "bytes": 105359,
+    "sha256": "3a64e62345deccff16e418d5abf3a3d454cabe670e9623c951a3a5f3ebfbb813"
+  },
+  {
+    "path": "packages/api/src/agents/queuedTurnHttp.ts",
+    "bytes": 15978,
+    "sha256": "d5215848975d8576e991e54c89bd3ece0f399008902129850a79df9f3b5dd20d"
+  },
+  {
+    "path": "packages/api/src/agents/queuedTurns.ts",
+    "bytes": 36319,
+    "sha256": "f37b94d58300f38f69d584dc084051c290b64ccdbae555a2437e1550bccf3712"
+  },
+  {
+    "path": "packages/api/src/agents/subagentActivity.ts",
+    "bytes": 18745,
+    "sha256": "c361844f68df8813414b7d27e228bfecca1d0ee02cd3cfe296e1c4ab34d9591f"
+  },
+  {
+    "path": "packages/api/src/agents/subagentCompletionWakeup.ts",
+    "bytes": 29396,
+    "sha256": "5ba9bda1f8baa1aadea3cda6b9841110bfb131d6d56b627378edfc855ab204f9"
+  },
+  {
+    "path": "packages/api/src/agents/subagentThreads.ts",
+    "bytes": 133949,
+    "sha256": "9b44f313bfb182902f9dfc7c89340718bcbf34d3b0f11861d6e0582955d8461e"
+  },
+  {
+    "path": "packages/api/src/agents/triggers/bindingResolver.ts",
+    "bytes": 5628,
+    "sha256": "bd246b027189aa1f1b4a90ef990b9bccd15af6c5e4828bcf7f9c1a18e2e7ade6"
+  },
+  {
+    "path": "packages/api/src/agents/triggers/bindings.ts",
+    "bytes": 15530,
+    "sha256": "dd09d853b018a4e674405e74736746244f55526d358874af79b8eb3010ef1d74"
+  },
+  {
+    "path": "packages/api/src/cache/cacheConfig.ts",
+    "bytes": 12203,
+    "sha256": "2ced78610cdccae4f765f466b4c5aa75960d86f2d156213b010536429940eb26"
+  },
+  {
+    "path": "packages/api/src/cache/keyvMongo.ts",
+    "bytes": 7487,
+    "sha256": "d7e3da1d2f7becf7a139e75d00f7802d9236b8d931b8bca6a0686f589d55f9a3"
+  },
+  {
+    "path": "packages/api/src/conversations/import.ts",
+    "bytes": 3675,
+    "sha256": "218f4e108c43c9009aeb19fda83d46b1868d113b6aa0975852b99b9d020c2b74"
+  },
+  {
+    "path": "packages/api/src/conversations/save.spec.ts",
+    "bytes": 7047,
+    "sha256": "a541d36c2b4082b01b5a8d0798cebd5d93ec6054660c6ffa691d0f01e500c73a"
+  },
+  {
+    "path": "packages/api/src/conversations/save.ts",
+    "bytes": 8366,
+    "sha256": "1a144cf076c8b4fe170f01c2f291c652ab1e2863780521aed79ec55d03779889"
+  },
+  {
+    "path": "packages/api/src/files/retention.ts",
+    "bytes": 9184,
+    "sha256": "74f746ea9876c48647a6e661cb8531f732d82c1dd0cfb7beaba33709e1e4fc2a"
+  },
+  {
+    "path": "packages/api/src/langfuse/session.ts",
+    "bytes": 1911,
+    "sha256": "37b93c109aa3832a4e55b49203a0a6605087b29dcd32c8c3805b74cc2e2e889f"
+  },
+  {
+    "path": "packages/api/src/middleware/messageValidation.ts",
+    "bytes": 7381,
+    "sha256": "36dccce39c6b072d05668353015b5d2ee7a1328e6d907f6f49b09771acdc4f5b"
+  },
+  {
+    "path": "packages/api/src/schedules/fire.ts",
+    "bytes": 35508,
+    "sha256": "b3ae8a730d0fb2d362afb8f1fe6f512b7cc704f1220713cf57920b1c45a53a5e"
+  },
+  {
+    "path": "packages/api/src/schedules/types.ts",
+    "bytes": 14896,
+    "sha256": "b82cb1cfa4a4ad96ac6f5890dc00a0d3a3100b723aef42ba882cc74d9f2e32ff"
+  },
+  {
+    "path": "packages/api/src/shared-links/session.ts",
+    "bytes": 2604,
+    "sha256": "f63835f8690d8d1a8ce32fc4e9126e669566e994b13be1a0b8832f7808915f53"
+  },
+  {
+    "path": "packages/api/src/utils/message.ts",
+    "bytes": 6959,
+    "sha256": "7997bf3455d37025063b9b31d58050bdcc718316358968aba809fe8899ae9552"
+  },
+  {
+    "path": "packages/data-provider/package.json",
+    "bytes": 2321,
+    "sha256": "b0002738c5c90b19a241a3baf6f9d1f7bf65c869b2b4a915c292924f728a2426"
+  },
+  {
+    "path": "packages/data-schemas/babel.config.cjs",
+    "bytes": 178,
+    "sha256": "5581fc3938f1b38c74a71b8ffcd5c35d5ad09fc22d844b2fdc8b201cb20eb277"
+  },
+  {
+    "path": "packages/data-schemas/jest.config.mjs",
+    "bytes": 1278,
+    "sha256": "a53ab6d565df9fcb75271bfd8842dbb5d1962968d9c5f15cb21495acdb8a2b48"
+  },
+  {
+    "path": "packages/data-schemas/jest.globalSetup.mjs",
+    "bytes": 1193,
+    "sha256": "2f12c80491696d6ef2bd8371e865493ad51ce21448f6b697c76c1102e4a819fc"
+  },
+  {
+    "path": "packages/data-schemas/package.json",
+    "bytes": 2525,
+    "sha256": "a4adea468c9b8688efb61ac7b7ddf4f17ee092fd278a59788eb3d8ee0f256026"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/chatProject.ts",
+    "bytes": 17876,
+    "sha256": "451709d2acb08b8b7a9b33cf40ac492a58de40cec6e7e61f8245f900b9ca30f9"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.spec.ts",
+    "bytes": 271747,
+    "sha256": "75b3508eff00c47f879b12b5c66de076604e22b4f3b0dc397111b57456ae0ab6"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/conversation.ts",
+    "bytes": 137499,
+    "sha256": "46e51f9fa02b9fdfed731bba3593305cc70e07eede998b8fc98854c577ec12d4"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/convoStructure.spec.ts",
+    "bytes": 10726,
+    "sha256": "30913f4690138ab4d2717f36227dee6eb1f9a1b189397f8b4687dde5fe21dffa"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/index.ts",
+    "bytes": 20359,
+    "sha256": "f86b0654b806595821c99f70242d1d0b2e1d101d84e2df96e0182467e5830580"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.spec.ts",
+    "bytes": 174359,
+    "sha256": "4658ffc557884499d29d97e12d9dba34899396296131916b95780c8db9c56e58"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.traces.spec.ts",
+    "bytes": 11507,
+    "sha256": "7fb7732fd1e8144d3bb2f4d8ba986df42f3241376e2c9c7f41ef63d8ddd7613c"
+  },
+  {
+    "path": "packages/data-schemas/src/methods/message.ts",
+    "bytes": 135914,
+    "sha256": "fc51a01c8fcf709503c92dbfe172264eb5656cf0248bfc869388ba53dd70ac04"
+  },
+  {
+    "path": "packages/data-schemas/src/models/convo.ts",
+    "bytes": 895,
+    "sha256": "ab395c4bb15002dacb84616212c6c1e11c3a09859f3b5a85ffe0983ffe24d314"
+  },
+  {
+    "path": "packages/data-schemas/src/models/message.ts",
+    "bytes": 783,
+    "sha256": "87837e77b244e87de6365ac3bcd8b897f2fde4cf131108fe35ce2b7c18690b7a"
+  },
+  {
+    "path": "packages/data-schemas/src/models/plugins/mongoMeili.ts",
+    "bytes": 44615,
+    "sha256": "fd251c913f1813fc5974756905ddbe789cbd6900bb7f368e9e33f79fb8556272"
+  },
+  {
+    "path": "packages/data-schemas/src/models/plugins/tenantIsolation.ts",
+    "bytes": 7312,
+    "sha256": "a4a2c656a2d76ca34d76f410547693b58dc518c649df2673eb0262904f121fbd"
+  },
+  {
+    "path": "packages/data-schemas/src/schema/convo.ts",
+    "bytes": 15442,
+    "sha256": "168d995b5100bde6287dbe371dba3380f7b355b14354a21886e5ff9ac4f8f8c0"
+  },
+  {
+    "path": "packages/data-schemas/src/schema/message.ts",
+    "bytes": 10262,
+    "sha256": "7581f945999b17c59528ab22dbe3096a8ee2a680092e68b0d8fd5307aecc15b5"
+  },
+  {
+    "path": "packages/data-schemas/src/tenant/conformance.mongoose.spec.ts",
+    "bytes": 2246,
+    "sha256": "d341b52c76b62795c507ff8fe0becb86248569d72e0900690369da475146fdc0"
+  },
+  {
+    "path": "packages/data-schemas/src/tenant/conformance.ts",
+    "bytes": 7634,
+    "sha256": "ee819378da1507ed700a09300a277d82e70d7d6bf6c9e12058f29718e6f5ef1a"
+  },
+  {
+    "path": "packages/data-schemas/src/tenant/policy.ts",
+    "bytes": 8935,
+    "sha256": "b86b7465d379818e272743228fff4341aba4bbb849251e837bb35e1f611d6dcc"
+  },
+  {
+    "path": "packages/data-schemas/src/utils/retention.ts",
+    "bytes": 1089,
+    "sha256": "7f33cc3ce794dfdc39e103868d15906624085a42e2b902be7a43a20197b03347"
+  },
+  {
+    "path": "packages/data-schemas/src/utils/tempChatRetention.ts",
+    "bytes": 3228,
+    "sha256": "f55c24f4933a13f92e917ffd05c929bac37d60ab6bf26754a81738521d968578"
+  },
+  {
+    "path": "packages/data-schemas/src/utils/tenantBulkWrite.ts",
+    "bytes": 4984,
+    "sha256": "982a4abd6f3c10b568fd2af136496fb426e61f28173eef227568e1225fd43143"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "cwd": "/Users/oubiwann/lab/billosys/LibreChat",
+  "argv": [
+    "rg",
+    "--json",
+    "\\b(saveMessage|saveConvo|getConvo|getMessages|saveTurnConversation|seedTurnConversation|runAfterSeed|bulkSaveMessages|bulkSaveConvos)\\b",
+    "api",
+    "packages/api/src",
+    "packages/data-schemas/src",
+    "--glob",
+    "!*.spec.*",
+    "--glob",
+    "!*.test.*",
+    "--glob",
+    "!**/__tests__/**",
+    "--glob",
+    "!**/__test-utils__/**",
+    "--glob",
+    "!**/test/**",
+    "--glob",
+    "!**/dist/**",
+    "--glob",
+    "!*.map"
+  ],
+  "exit_code": 0,
+  "reference_lines": 305,
+  "reference_files": 60,
+  "candidate_lines": 155,
+  "candidate_files": 43,
+  "scope": "Lexical scan, includes declarations and builder namesakes. Initial exploration included four mock-only lines in __test-utils__; final query excludes that directory. Renamed aliases require the manual wiring notes in dependency-map.md."
+}

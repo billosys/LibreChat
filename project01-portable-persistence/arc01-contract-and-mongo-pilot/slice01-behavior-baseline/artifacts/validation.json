@@ -1,0 +1,45 @@
+{
+  "evidence_strength": "self-checked / attested",
+  "source_head": "ba44443fdb232bbe6d4977e2619774b5a72586ac",
+  "source_clean": true,
+  "fingerprints_rechecked": {
+    "source-fingerprints.json": 108,
+    "dist-fingerprints.json": 105
+  },
+  "attempts": {
+    "01-data-schemas": {
+      "tests": 370,
+      "suites": 5
+    },
+    "02-save-orchestration": {
+      "tests": 9,
+      "suites": 1
+    },
+    "03-import": {
+      "tests": 69,
+      "suites": 3
+    },
+    "04-client-read": {
+      "tests": 193,
+      "suites": 3
+    }
+  },
+  "passed_tests": 641,
+  "passed_suites": 12,
+  "ledger_rows": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+  ],
+  "ledger_status": "all open for independent acceptance",
+  "behavior_rows": 22,
+  "decision_rows": 9,
+  "markdown_targets_checked": 73,
+  "git_diff_check": "passed",
+  "new_application_source_files": 0,
+  "forbidden_fake_contributor_records": 0
+}

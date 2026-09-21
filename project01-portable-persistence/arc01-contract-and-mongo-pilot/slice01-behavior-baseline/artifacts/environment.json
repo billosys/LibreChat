@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-09-21T02:58:40.577068+00:00",
+  "source_head": "ba44443fdb232bbe6d4977e2619774b5a72586ac",
+  "source_status_porcelain": "",
+  "platform": "Darwin arm64",
+  "node_executable": "/Users/oubiwann/.local/bin/node",
+  "node_version": "v22.22.3",
+  "node_repository_pin": "24.16.0",
+  "packages": {
+    "jest": "30.2.0",
+    "mongoose": "8.24.1",
+    "mongodb-memory-server": "11.0.1",
+    "mongodb-memory-server-core": "11.0.1",
+    "mongodb": "6.20.0"
+  },
+  "mongo_binary": {
+    "path": "node_modules/.cache/mongodb-memory-server/mongod-arm64-darwin-8.2.1",
+    "bytes": 146864160,
+    "sha256": "615abcb4bc87deba83906e69eb1a40352e19ca1f1302fa547b81512a2641ae48"
+  },
+  "inherited_environment_presence_only": {
+    "MEILI_HOST": false,
+    "MEILI_MASTER_KEY": false,
+    "USE_REDIS": false,
+    "USE_REDIS_STREAMS": false,
+    "CI": false,
+    "NODE_ENV": false,
+    "MONGO_URI": false,
+    "TEMP_CHAT_RETENTION_HOURS": false,
+    "TENANT_ISOLATION_STRICT": false
+  },
+  "limitations": [
+    "No dist/source equivalence proof",
+    "No independent reproduction",
+    "No release-runtime run",
+    "No live database re-read or write in this slice"
+  ]
+}

@@ -24,7 +24,7 @@ The arc's implementation remains bounded to the pilot. Source-preserving intake 
 - [Source reconnaissance](../research.md) and [Claude reconciliation](../corpus-reconciliation.md).
 - Source baseline: `ba44443fdb232bbe6d4977e2619774b5a72586ac`; planning intake: `d5e9f5370`.
 - Mongo contains all 820 conversations and the expected 9,731 retained messages; 107 source messages were skipped under the current importer. The operational import matches its current rules, with demonstrated source-content and relationship losses.
-- No application test baseline has yet been executed by this investigation. Corpus reconciliation is not a substitute for save-path, policy, and failure tests.
+- Opening state (superseded by Slice01 evidence): no application test baseline had been executed. Slice01 now records 12 suites / 641 passing existing tests, with mocked versus real-Mongo coverage and Node/dist limitations separated. Corpus reconciliation remains a distinct check.
 
 ## Scope
 
@@ -36,7 +36,7 @@ Outside this arc's implementation: full importer migration, corrective writes to
 
 | Slice | Capability | Dependencies | State |
 |---|---|---|---|
-| Slice01 — Behavior baseline | Map the pilot and relevant import boundary, execute existing isolated Mongo tests, and produce a source-grounded behavior/coverage matrix | Starting evidence above | Open; one-contributor investigation |
+| Slice01 — Behavior baseline | Map the pilot and relevant import boundary, execute existing isolated Mongo tests, and produce a source-grounded behavior/coverage matrix | Starting evidence above | Investigation delivered; proposed-done, independent acceptance pending |
 | Slice02 — Portable contract design | Resolve operation schemas, source/operational identity mapping, failure semantics, conformance cases, module boundaries, and the precise code fence | Slice01 evidence and disposition of its findings | Planned; detail when near |
 | Slice03 — First Mongo conversion | Implement the reviewed pilot contract and Mongo binding, convert its consumers, and demonstrate integrated behavior and regression protection | Slice02 design; resolved implementation baseline; assigned contributor/reviewer workflow | Planned; detail when near |
 
@@ -62,11 +62,12 @@ Keep the running LibreChat/Mongo corpus unchanged. Test suites must be inspected
 
 ## Current action
 
-Execute Slice01's dependency tracing and test preflight. Its artifacts will distinguish observed behavior, an expectation derived from source, a reproduced test result, and a design proposal. Promote findings into Slice02's contract decisions only with their evidence and remaining uncertainty visible.
+Slice01 has delivered its [proposed closing packet](slice01-behavior-baseline/closing-report.md): source map, behavior/coverage matrix, 641-test baseline and design inputs. Evidence is attested; formal acceptance and advancement remain pending the existing separate-review gate. Findings for Slice02 include physical message-link IDs, cached-null lookup state, partial persistence/error-object outcomes, private versus public projections, weak unset coverage, and an uncharacterized equal-key message-cursor risk. The installed Node 22/dist baseline also needs pinned-runtime/source-build reproduction before implementation acceptance. These findings deepen the planned contract design; the three-slice roadmap and implementation scope are unchanged. The prior current action was execution of tracing/test preflight; it is now superseded by this delivered packet and its required review.
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.2 | 2026-09-20 | Slice01 delivered the attested map/matrix and 641-test baseline; added concrete contract/coverage/runtime findings and retained independent acceptance. Roadmap unchanged pending reviewed sizing in Slice02. |
 | v1.1 | 2026-09-20 | Applied project-level Expedited Mode; investigation workflow and acceptance requirements unchanged. |
 | v1.0 | 2026-09-20 | Opened Arc01 at the Operator's request; defined three slices and opened only the first investigation slice. No application behavior or project acceptance requirement changed. |

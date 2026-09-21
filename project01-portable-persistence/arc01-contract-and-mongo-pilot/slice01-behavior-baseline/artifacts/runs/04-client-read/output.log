@@ -1,0 +1,10 @@
+PASS app/clients/specs/BaseClient.test.js
+PASS server/routes/__tests__/messages-get.spec.js
+PASS server/routes/__tests__/messages-get-real-validation.spec.js
+
+Test Suites: 3 passed, 3 total
+Tests:       193 passed, 193 total
+Snapshots:   0 total
+Time:        4.256 s
+Ran all test suites within paths "app/clients/specs/BaseClient.test.js", "server/routes/__tests__/messages-get.spec.js", "server/routes/__tests__/messages-get-real-validation.spec.js".
+Test results written to: ../../../../../../tmp/guildhall-slice01-20260920/04-client-read/jest.json

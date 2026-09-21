@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="9" failures="0" errors="0" time="3.109">
+  <testsuite name="seedTurnConversation" errors="0" failures="0" skipped="0" timestamp="2026-09-21T02:46:28" time="3.072" tests="9">
+    <testcase classname="seedTurnConversation creates the row a deferred first message has not written yet" name="seedTurnConversation creates the row a deferred first message has not written yet" time="0.963">
+    </testcase>
+    <testcase classname="seedTurnConversation lets the deferred message save reuse the seeded row and append its message" name="seedTurnConversation lets the deferred message save reuse the seeded row and append its message" time="0.215">
+    </testcase>
+    <testcase classname="seedTurnConversation leaves an existing conversation to the message save" name="seedTurnConversation leaves an existing conversation to the message save" time="0.008">
+    </testcase>
+    <testcase classname="seedTurnConversation never creates a subagent thread row, which only its parent run may create" name="seedTurnConversation never creates a subagent thread row, which only its parent run may create" time="0.004">
+    </testcase>
+    <testcase classname="seedTurnConversation stamps a temporary chat with its retention" name="seedTurnConversation stamps a temporary chat with its retention" time="0.005">
+    </testcase>
+    <testcase classname="seedTurnConversation settles instead of rejecting when the lookup fails, so the message still saves" name="seedTurnConversation settles instead of rejecting when the lookup fails, so the message still saves" time="0.007">
+    </testcase>
+    <testcase classname="seedTurnConversation does nothing for a request without a user" name="seedTurnConversation does nothing for a request without a user" time="0.001">
+    </testcase>
+    <testcase classname="runAfterSeed holds the write while the seed is in flight" name="runAfterSeed holds the write while the seed is in flight" time="0.001">
+    </testcase>
+    <testcase classname="runAfterSeed starts the write synchronously once the seed has landed" name="runAfterSeed starts the write synchronously once the seed has landed" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
