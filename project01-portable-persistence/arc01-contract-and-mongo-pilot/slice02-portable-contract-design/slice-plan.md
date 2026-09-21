@@ -46,16 +46,23 @@ The slice is complete only when all ledger criteria have concrete dispositions, 
 
 See [Operator decisions](../../operator-decisions.md): practical denormalization is permitted, and source work now belongs in the new Guildhall worktree. The Operator then clarified that denormalization is merely an option. Follow the [working identity direction](../../interface-design.md#working-identity-direction-toward-the-cognitive-data-plane), making lightweight guesses about future Lance/cognitive-data models. Start D02 with a named turn operation that keeps physical linkage internal; validate sequence, policy ownership and read counts before freezing that choice. Preserve logical entity identity across future revisions/representations without implementing those future stores now. D06's missing-dev blocker is resolved by the verified upstream dev base. The preserved first-pass contract/report still describe the decisions and source state at their creation; these later decisions supersede their D06-open status without changing those evidence files. Revalidate relevant upstream changes before implementation; no feature import is added to this pilot.
 
-## Current design result — pass 2
+## Historical design result — pass 2 (preference superseded below)
 
 The [logical-reference comparison](artifacts/design-pass02/decision.md) found a smaller working candidate than the compound command: preserve the two-stage application sequence and let the Mongo binding privately reuse the locator associated with a returned logical-reference object. All 28 source-based orchestration cases matched, eight memo/fallback cases passed, and three negative controls were detected. Stores were mocked; this is not database conformance or an implementation assignment. A naive detached early snapshot changes a mid-await cleanup case.
 
 This result supersedes the earlier instruction to investigate the compound operation first. Next resolve cached-locator lifetime/invalidation under concurrent delete/recreate, then finish field-level DTO/projection and error/patch mapping. The public reference must remain meaningful without the optimization. Artifacts for this pass have their own manifest under `artifacts/design-pass02/`; the first-pass files and checksum list remain frozen historical evidence. No slice acceptance status changes.
 
+## Current design result — pass 3
+
+The [real-Mongo lifecycle packet](artifacts/design-pass03/decision.md) rejects the pass-2 invisible hint/fallback contract. Original and copied references agree in two controls but differ after deletion, recreation, rename and conversation move. All six characterization oracles and both negative controls behaved as predeclared; this is evidence of a defect in the candidate, not six cache-correctness passes.
+
+The working replacement is a per-invocation turn-write handle retaining the observed row privately, separate from value-based logical references. Its proposed lifecycle, release, scope and failure rules are in the decision. Next compare that candidate against the prior 28 orchestration scenarios plus lifecycle/overlap cases, then complete field-level DTO and failure mapping. No source conversion or contributor prompt is issued; all seven acceptance rows remain open. The prior packets stay sealed.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.4 | 2026-09-20 | Real-Mongo lifecycle characterization superseded pass 2's private-hint preference; separated logical reference meaning from observed-write ownership and specified the next candidate's validation obligations. |
 | v1.3 | 2026-09-20 | Added source-based logical-reference prototype evidence: 28 matched scenarios, eight memo cases, three detected negative controls; preferred the staged-write/private-hint candidate over an early compound snapshot, with lifetime and real-DB validation still open. |
 | v1.2 | 2026-09-20 | Refined D02 after Operator clarification: future-oriented semantic identity guides the design; denormalization remains optional and physical schema choices remain tentative. |
 | v1.1 | 2026-09-20 | Recorded denormalization preference and new source worktree/base, resolving D06 while preserving first-pass artifacts and D07 revalidation. |

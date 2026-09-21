@@ -1,0 +1,14 @@
+{
+  "check": "passed",
+  "sourceHead": "fe79265b2f47937051625719f3ba5080189912c1",
+  "sourceClean": true,
+  "characterizationCases": 6,
+  "equivalenceControls": 2,
+  "equivalenceCounterexamples": 4,
+  "negativeControlsDetected": 2,
+  "priorHashesPreserved": 51,
+  "linksChecked": 70,
+  "openLedgerRows": 7,
+  "manifestEntries": null,
+  "evidenceClass": "contributor synthetic Mongo primitive characterization; not integrated or independent acceptance"
+}

@@ -130,10 +130,13 @@ Arc01/Slice02 has now supplied a [first contract draft](arc01-contract-and-mongo
 
 The Operator clarified that denormalization was only an option, not a recommendation. D02 now follows the [working Guildhall/Lance identity direction](interface-design.md#working-identity-direction-toward-the-cognitive-data-plane): stable scoped logical references, distinct entity/revision/representation identities and adapter-private physical mappings. The initial compound-first hypothesis has been refined by [Slice02 pass 2](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/decision.md): preserve staged writes, pass logical references and investigate an adapter-private locator hint. Its 28 source-based comparisons passed with mocked stores; real database/lifetime validation and concrete schemas remain open. Project02 separately tracks memory/project UI imports; those additions do not broaden the current persistence pilot.
 
+**Pass-3 correction (supersedes the private-hint recommendation above):** the [real-Mongo lifecycle fixture](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/decision.md) produced two equivalence controls and four counterexamples: deletion, recreation, rename and conversation move make original-object and copied-reference resolution disagree. Reject the invisible-cache contract. Keep staged application decisions and investigate a per-invocation adapter-owned turn-write handle for the observed-row handoff; keep ordinary logical references value-based. This is bounded Slice02 design refinement, with no source implementation, workflow transition or roadmap expansion. DTO, failure, scope and handle lifecycle validation remain open.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.12 | 2026-09-20 | Arc01/Slice02 pass 3 falsified invisible-cache reference equivalence in four Mongo lifecycle cases; superseded the hint candidate with explicit observed-write ownership for further comparison. |
 | v1.11 | 2026-09-20 | Incorporated Arc01/Slice02 pass 2 evidence and the refined staged-write/logical-reference candidate; no implementation, conformance acceptance or roadmap change. |
 | v1.10 | 2026-09-20 | Incorporated the Operator clarification: treat denormalization as an option and guide D02 with lightweight future cognitive-data-plane models, without freezing schemas or expanding implementation scope. |
 | v1.9 | 2026-09-20 | Recorded Operator-approved denormalization options and separate Guildhall/features worktrees; resolved D06 using upstream dev, preserved historical evidence and separated Project02 feature scope. |

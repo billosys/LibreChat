@@ -1,0 +1,497 @@
+{
+  "startedAt": "2026-09-21T04:26:27.441Z",
+  "node": "v22.22.3",
+  "sourceHead": "fe79265b2f47937051625719f3ba5080189912c1",
+  "sourceFiles": [
+    {
+      "path": "packages/data-schemas/src/methods/message.ts",
+      "sha256": "fc51a01c8fcf709503c92dbfe172264eb5656cf0248bfc869388ba53dd70ac04"
+    },
+    {
+      "path": "packages/data-schemas/src/methods/conversation.ts",
+      "sha256": "46e51f9fa02b9fdfed731bba3593305cc70e07eede998b8fc98854c577ec12d4"
+    },
+    {
+      "path": "packages/data-schemas/src/schema/message.ts",
+      "sha256": "7581f945999b17c59528ab22dbe3096a8ee2a680092e68b0d8fd5307aecc15b5"
+    }
+  ],
+  "experimentSha256": "ce82dc8f58be6b03e1ed8d4e5c7a0047a66c2467b3a2f2bcbf0e79be271d68fd",
+  "prior": {
+    "path": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/experiment.cjs",
+    "sha256": "fac7478c01ca9870121a2bee545896a9789ed1b3334469762dfc2ff01c20b50c",
+    "extractedSource": "const scopeKey = (ctx) => JSON.stringify([ctx.tenantMode, ctx.tenantId ?? null, ctx.userId]);\nconst refKey = (ref) => JSON.stringify([ref.kind, ref.messageId, ref.conversationId]);\nclass LocatorMemo {\n  #entries = new WeakMap();\n  remember(record, ctx) {\n    if (!record?._id) return undefined;\n    const ref = { kind: 'message', messageId: record.messageId, conversationId: record.conversationId };\n    this.#entries.set(ref, { scope: scopeKey(ctx), logical: refKey(ref), locator: record._id });\n    return ref;\n  }\n  async resolve(ref, ctx, lookup, mode = 'normal') {\n    const cached = this.#entries.get(ref);\n    if (mode !== 'always-lookup' && cached && cached.logical === refKey(ref) && (mode === 'unsafe-scope' || cached.scope === scopeKey(ctx))) return cached.locator;\n    const row = await lookup(ref, ctx);\n    if (!row) throw new Error('Message reference unavailable');\n    return row._id;\n  }\n}\n"
+  },
+  "binary": {
+    "path": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/.cache/mongodb-memory-server/mongod-arm64-darwin-8.2.1",
+    "sha256": "615abcb4bc87deba83906e69eb1a40352e19ca1f1302fa547b81512a2641ae48"
+  },
+  "versions": {
+    "mongodb": "6.20.0",
+    "memoryServer": "11.0.1"
+  },
+  "cases": [
+    {
+      "kind": "unchanged",
+      "observed": {
+        "_id": "6ab0b1f33b08fb870f4b9f8c",
+        "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+        "user": "synthetic-owner",
+        "tenantId": "synthetic-tenant",
+        "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+        "text": "synthetic"
+      },
+      "reference": {
+        "kind": "message",
+        "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+        "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b"
+      },
+      "hot": {
+        "id": "6ab0b1f33b08fb870f4b9f8c",
+        "reads": 0
+      },
+      "cold": {
+        "id": "6ab0b1f33b08fb870f4b9f8c",
+        "reads": 1
+      },
+      "same": true,
+      "expectedSame": true,
+      "trace": [
+        {
+          "query": {
+            "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+            "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": {
+            "_id": "6ab0b1f33b08fb870f4b9f8c",
+            "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+            "text": "synthetic"
+          }
+        },
+        {
+          "query": {
+            "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+            "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": {
+            "_id": "6ab0b1f33b08fb870f4b9f8c",
+            "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+            "text": "synthetic"
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": "hot",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d1b",
+            "name": "unchanged-hot",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f8c"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f33b08fb870f4b9f8c",
+            "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+            "text": "synthetic"
+          },
+          "physicalRowExists": true,
+          "matchesReference": true
+        },
+        {
+          "label": "cold",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d1c",
+            "name": "unchanged-cold",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f8c"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f33b08fb870f4b9f8c",
+            "messageId": "94822a50-56d9-48b5-aa7f-ab28c04e560d",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "6e93ab6b-795e-47e0-aa01-46b0c0f9462b",
+            "text": "synthetic"
+          },
+          "physicalRowExists": true,
+          "matchesReference": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "content-update",
+      "observed": {
+        "_id": "6ab0b1f33b08fb870f4b9f8d",
+        "messageId": "d528e613-e679-4cc7-99d9-93c1bf9de340",
+        "user": "synthetic-owner",
+        "tenantId": "synthetic-tenant",
+        "conversationId": "2b6fa965-3734-4ee5-9c54-7024e4843866",
+        "text": "synthetic"
+      },
+      "reference": {
+        "kind": "message",
+        "messageId": "d528e613-e679-4cc7-99d9-93c1bf9de340",
+        "conversationId": "2b6fa965-3734-4ee5-9c54-7024e4843866"
+      },
+      "hot": {
+        "id": "6ab0b1f33b08fb870f4b9f8d",
+        "reads": 0
+      },
+      "cold": {
+        "id": "6ab0b1f33b08fb870f4b9f8d",
+        "reads": 1
+      },
+      "same": true,
+      "expectedSame": true,
+      "trace": [
+        {
+          "query": {
+            "messageId": "d528e613-e679-4cc7-99d9-93c1bf9de340",
+            "conversationId": "2b6fa965-3734-4ee5-9c54-7024e4843866",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": {
+            "_id": "6ab0b1f33b08fb870f4b9f8d",
+            "messageId": "d528e613-e679-4cc7-99d9-93c1bf9de340",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "2b6fa965-3734-4ee5-9c54-7024e4843866",
+            "text": "changed"
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": "hot",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d1d",
+            "name": "content-update-hot",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f8d"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f33b08fb870f4b9f8d",
+            "messageId": "d528e613-e679-4cc7-99d9-93c1bf9de340",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "2b6fa965-3734-4ee5-9c54-7024e4843866",
+            "text": "changed"
+          },
+          "physicalRowExists": true,
+          "matchesReference": true
+        },
+        {
+          "label": "cold",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d1e",
+            "name": "content-update-cold",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f8d"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f33b08fb870f4b9f8d",
+            "messageId": "d528e613-e679-4cc7-99d9-93c1bf9de340",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "2b6fa965-3734-4ee5-9c54-7024e4843866",
+            "text": "changed"
+          },
+          "physicalRowExists": true,
+          "matchesReference": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "delete",
+      "observed": {
+        "_id": "6ab0b1f33b08fb870f4b9f8e",
+        "messageId": "f0d75f9c-60fc-4ee4-a3ae-b30d29ecd2f0",
+        "user": "synthetic-owner",
+        "tenantId": "synthetic-tenant",
+        "conversationId": "62f72b23-499e-4201-a07b-f839a5cbabef",
+        "text": "synthetic"
+      },
+      "reference": {
+        "kind": "message",
+        "messageId": "f0d75f9c-60fc-4ee4-a3ae-b30d29ecd2f0",
+        "conversationId": "62f72b23-499e-4201-a07b-f839a5cbabef"
+      },
+      "hot": {
+        "id": "6ab0b1f33b08fb870f4b9f8e",
+        "reads": 0
+      },
+      "cold": {
+        "error": "Message reference unavailable",
+        "reads": 1
+      },
+      "same": false,
+      "expectedSame": false,
+      "trace": [
+        {
+          "query": {
+            "messageId": "f0d75f9c-60fc-4ee4-a3ae-b30d29ecd2f0",
+            "conversationId": "62f72b23-499e-4201-a07b-f839a5cbabef",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": null
+        }
+      ],
+      "links": [
+        {
+          "label": "hot",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d1f",
+            "name": "delete-hot",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f8e"
+            ]
+          },
+          "linkedRow": null,
+          "physicalRowExists": false,
+          "matchesReference": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "recreate",
+      "observed": {
+        "_id": "6ab0b1f33b08fb870f4b9f8f",
+        "messageId": "8dbe5d65-6634-4f9a-a0c1-8a72bfa0217f",
+        "user": "synthetic-owner",
+        "tenantId": "synthetic-tenant",
+        "conversationId": "4ce56951-a3df-4066-9bf3-6e0c4cb0546f",
+        "text": "synthetic"
+      },
+      "reference": {
+        "kind": "message",
+        "messageId": "8dbe5d65-6634-4f9a-a0c1-8a72bfa0217f",
+        "conversationId": "4ce56951-a3df-4066-9bf3-6e0c4cb0546f"
+      },
+      "hot": {
+        "id": "6ab0b1f33b08fb870f4b9f8f",
+        "reads": 0
+      },
+      "cold": {
+        "id": "6ab0b1f33b08fb870f4b9f90",
+        "reads": 1
+      },
+      "same": false,
+      "expectedSame": false,
+      "trace": [
+        {
+          "query": {
+            "messageId": "8dbe5d65-6634-4f9a-a0c1-8a72bfa0217f",
+            "conversationId": "4ce56951-a3df-4066-9bf3-6e0c4cb0546f",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": {
+            "_id": "6ab0b1f33b08fb870f4b9f90",
+            "messageId": "8dbe5d65-6634-4f9a-a0c1-8a72bfa0217f",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "4ce56951-a3df-4066-9bf3-6e0c4cb0546f",
+            "text": "new incarnation"
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": "hot",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d20",
+            "name": "recreate-hot",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f8f"
+            ]
+          },
+          "linkedRow": null,
+          "physicalRowExists": false,
+          "matchesReference": false
+        },
+        {
+          "label": "cold",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d21",
+            "name": "recreate-cold",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f90"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f33b08fb870f4b9f90",
+            "messageId": "8dbe5d65-6634-4f9a-a0c1-8a72bfa0217f",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "4ce56951-a3df-4066-9bf3-6e0c4cb0546f",
+            "text": "new incarnation"
+          },
+          "physicalRowExists": true,
+          "matchesReference": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "rename",
+      "observed": {
+        "_id": "6ab0b1f33b08fb870f4b9f91",
+        "messageId": "9c23dbeb-d39e-4d1a-835b-95e0c87570aa",
+        "user": "synthetic-owner",
+        "tenantId": "synthetic-tenant",
+        "conversationId": "331bab9f-b161-4d95-8ed0-178d30d93ff1",
+        "text": "synthetic"
+      },
+      "reference": {
+        "kind": "message",
+        "messageId": "9c23dbeb-d39e-4d1a-835b-95e0c87570aa",
+        "conversationId": "331bab9f-b161-4d95-8ed0-178d30d93ff1"
+      },
+      "hot": {
+        "id": "6ab0b1f33b08fb870f4b9f91",
+        "reads": 0
+      },
+      "cold": {
+        "error": "Message reference unavailable",
+        "reads": 1
+      },
+      "same": false,
+      "expectedSame": false,
+      "trace": [
+        {
+          "query": {
+            "messageId": "9c23dbeb-d39e-4d1a-835b-95e0c87570aa",
+            "conversationId": "331bab9f-b161-4d95-8ed0-178d30d93ff1",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": null
+        }
+      ],
+      "links": [
+        {
+          "label": "hot",
+          "conversation": {
+            "_id": "6ab0b1f3aae744578d459d22",
+            "name": "rename-hot",
+            "messages": [
+              "6ab0b1f33b08fb870f4b9f91"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f33b08fb870f4b9f91",
+            "messageId": "1070ca77-6954-4f41-b2dc-b4592de80e11",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "331bab9f-b161-4d95-8ed0-178d30d93ff1",
+            "text": "synthetic"
+          },
+          "physicalRowExists": true,
+          "matchesReference": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "move",
+      "observed": {
+        "_id": "6ab0b1f43b08fb870f4b9f92",
+        "messageId": "af8f5277-3128-4838-8042-4b8d9e584d71",
+        "user": "synthetic-owner",
+        "tenantId": "synthetic-tenant",
+        "conversationId": "b8b430f3-5482-43ab-ac24-dcd8934994a3",
+        "text": "synthetic"
+      },
+      "reference": {
+        "kind": "message",
+        "messageId": "af8f5277-3128-4838-8042-4b8d9e584d71",
+        "conversationId": "b8b430f3-5482-43ab-ac24-dcd8934994a3"
+      },
+      "hot": {
+        "id": "6ab0b1f43b08fb870f4b9f92",
+        "reads": 0
+      },
+      "cold": {
+        "error": "Message reference unavailable",
+        "reads": 1
+      },
+      "same": false,
+      "expectedSame": false,
+      "trace": [
+        {
+          "query": {
+            "messageId": "af8f5277-3128-4838-8042-4b8d9e584d71",
+            "conversationId": "b8b430f3-5482-43ab-ac24-dcd8934994a3",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant"
+          },
+          "row": null
+        }
+      ],
+      "links": [
+        {
+          "label": "hot",
+          "conversation": {
+            "_id": "6ab0b1f4aae744578d459d23",
+            "name": "move-hot",
+            "messages": [
+              "6ab0b1f43b08fb870f4b9f92"
+            ]
+          },
+          "linkedRow": {
+            "_id": "6ab0b1f43b08fb870f4b9f92",
+            "messageId": "af8f5277-3128-4838-8042-4b8d9e584d71",
+            "user": "synthetic-owner",
+            "tenantId": "synthetic-tenant",
+            "conversationId": "c47f1b68-7bb1-44fb-8c00-5f69759445f1",
+            "text": "synthetic"
+          },
+          "physicalRowExists": true,
+          "matchesReference": false
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "negativeControls": [
+    {
+      "name": "default-port",
+      "detected": true
+    },
+    {
+      "name": "always-lookup",
+      "forced": {
+        "id": "6ab0b1f33b08fb870f4b9f8c",
+        "reads": 1
+      },
+      "detected": true
+    }
+  ],
+  "success": true,
+  "openedUri": "mongodb://127.0.0.1:57953/guildhall_synthetic_lifecycle",
+  "mongoVersion": "8.2.1",
+  "cleanedUp": true,
+  "finishedAt": "2026-09-21T04:26:28.187Z"
+}

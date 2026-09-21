@@ -1,0 +1,16 @@
+{
+  "attempt": 1,
+  "command": [
+    "/Users/oubiwann/.local/bin/node",
+    "/tmp/guildhall-pass03/experiment.cjs",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+    "/Users/oubiwann/lab/billosys/LibreChat",
+    "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/experiment.cjs",
+    "/tmp/guildhall-pass03/result-01.json"
+  ],
+  "startedAt": "2026-09-21T04:26:27.237594+00:00",
+  "protocolSha256": "28c578bb4b5685e58353e6c69e345c763394a4d8d732f66252ad523b047e4573",
+  "experimentSha256": "ce82dc8f58be6b03e1ed8d4e5c7a0047a66c2467b3a2f2bcbf0e79be271d68fd",
+  "exitCode": 0,
+  "finishedAt": "2026-09-21T04:26:28.197276+00:00"
+}

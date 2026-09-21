@@ -70,10 +70,13 @@ Current design work is relationship translation without exposing physical IDs or
 
 Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decision.md) now supplies 28 matching source-based orchestration comparisons, eight memo/fallback checks and three detected negative controls. These support the smaller logical-reference/private-locator-hint candidate while preserving the two-stage workflow; a naive early snapshot changes cleanup timing. This supersedes the compound-first hypothesis above as the immediate design direction. Scope/lifetime correctness against real Mongo, DTO schemas and caller/result mappings remain open. There is no new implementation or roadmap scope.
 
+**Pass-3 correction:** [Slice02 lifecycle evidence](slice02-portable-contract-design/artifacts/design-pass03/decision.md) supersedes the pass-2 hint preference: two controls held, four lifecycle cases broke reference value equivalence, and two negative controls were detected. Reject silent hot/cold resolution. Next compare a per-invocation turn-write handle retaining the observed row privately, while preserving current application sequencing. This remains investigation; real application conformance, concrete DTOs, lifecycle/scope enforcement and acceptance remain pending.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.7 | 2026-09-20 | Slice02 pass 3 rejected invisible locator caching after real-Mongo lifecycle counterexamples; recorded the next explicit observed-write candidate without expanding source scope. |
 | v1.6 | 2026-09-20 | Slice02 pass 2 compared actual source orchestration and private logical-reference translation; refined D02 direction with explicit mocking, lifetime and source-build limits. |
 | v1.5 | 2026-09-20 | Refined D02 direction using the Operator's future-Lance guidance; denormalization is not a preferred solution, and named-operation/logical-identity hypotheses need concrete validation. |
 | v1.4 | 2026-09-20 | Incorporated Operator denormalization preference and verified worktree/base decision; D06 resolved, historical test evidence preserved and current-build validation still required. |
