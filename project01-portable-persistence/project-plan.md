@@ -24,7 +24,7 @@ Outside this project's delivery: a general-purpose memory protocol, ontology ext
 
 Use the Operator's historical **Claude conversations as the initial LibreChat dataset**. Account for the complete Claude corpus in SQLite before proceeding to an **OpenAI/GPT log import** as the next dataset. SQLite is now the named target in the Operator's requested sequence; the Rust-service architecture remains a proposal.
 
-The export location and route are pending clarification: import through the existing Mongo-backed LibreChat first and migrate, or first ingest directly into SQLite once ready. No live import is authorized against an unidentified destination or user account; prepare mappings and isolated rehearsals before selecting the actual target. This routing question does not block source investigation.
+The Operator has located the Claude archive and extracted JSON and reports importing it successfully through local Mongo-backed LibreChat on 2026-09-20. The route is therefore Claude export → LibreChat/Mongo → SQLite migration → OpenAI/GPT import. See [corpus-baseline.md](corpus-baseline.md) for exact source fingerprints, counts, observed content kinds, and the distinction between the reported UI result and pending database reconciliation. No corrective import or migration has been performed by this contributor.
 
 Arc01 must characterize the existing Claude importer alongside the ordinary-save pilot before freezing the contract. This does not automatically make the whole importer part of the first code slice. Determine whether import requirements alter that slice's boundary, and record the reason if they do. The corpus becomes a concrete migration/reload acceptance dataset in Arc04; the later OpenAI/GPT import exercises the same boundary after Claude acceptance.
 
@@ -112,12 +112,13 @@ These outputs have a stopping rule: the first conversion must be describable wit
 
 ## Current status
 
-The orphan planning checkout and initial design inputs exist. No arc or slice is accepted, no source behavior has changed, and no runtime tests or benchmarks have been run for this project. Every project composition criterion remains open.
+The orphan planning checkout and initial design inputs exist. The Operator reports successful local startup and Claude import into Mongo. Read-only source inventory confirms 820 conversations and 9,838 messages in the archive-matching JSON, including content the importer does not carry through. No arc or slice is accepted, no application source behavior has changed, and no implementation tests or benchmarks have been run. Database reconciliation and every project composition criterion remain open. See [corpus-baseline.md](corpus-baseline.md).
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.3 | 2026-09-20 | Recorded Operator-reported local Mongo startup/import, resolved initial route and source location, verified archive/JSON identity and source counts, and identified concrete structured-content preservation requirements. |
 | v1.2 | 2026-09-20 | Added Operator-requested Claude initial corpus, full SQLite reconciliation before OpenAI/GPT import, and import fidelity questions surfaced by source inspection. Initial import route and export location remain pending. |
 | v1.1 | 2026-09-20 | Recorded Operator-selected one-contributor investigation, intended later workflow progression, transition state, and bounded Arc01 readiness work. No implementation or acceptance scope changed. |
 | v1.0 | 2026-09-20 | Initial proposed roadmap from the Operator's three persistence objectives and pinned LibreChat reconnaissance. No arc-close bubble-up yet. |
