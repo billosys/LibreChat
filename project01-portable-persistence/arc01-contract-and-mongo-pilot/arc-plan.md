@@ -10,7 +10,7 @@
 | Blocks | Arc02's broader persistence conversion; Arc03's first concrete adapter contract |
 | Workflow | One contributor for current investigation; later transitions follow the project plan |
 | Execution mode | Expedited Mode; see the project plan for cadence, unchanged gates, and prompt-path reporting |
-| Current slice | [Slice01 — Behavior baseline](slice01-behavior-baseline/slice-plan.md) |
+| Current slice | [Slice02 — Portable contract design](slice02-portable-contract-design/slice-plan.md); Slice01 acceptance remains pending |
 
 ## Capability
 
@@ -37,12 +37,12 @@ Outside this arc's implementation: full importer migration, corrective writes to
 | Slice | Capability | Dependencies | State |
 |---|---|---|---|
 | Slice01 — Behavior baseline | Map the pilot and relevant import boundary, execute existing isolated Mongo tests, and produce a source-grounded behavior/coverage matrix | Starting evidence above | Investigation delivered; proposed-done, independent acceptance pending |
-| Slice02 — Portable contract design | Resolve operation schemas, source/operational identity mapping, failure semantics, conformance cases, module boundaries, and the precise code fence | Slice01 evidence and disposition of its findings | Planned; detail when near |
+| [Slice02 — Portable contract design](slice02-portable-contract-design/slice-plan.md) | Resolve operation schemas, source/operational identity mapping, failure semantics, conformance cases, module boundaries, and the precise code fence | Slice01 attested evidence; explicit Operator authorization to continue design preparation | Active; first design pass and cursor characterization delivered; not implementation-ready |
 | Slice03 — First Mongo conversion | Implement the reviewed pilot contract and Mongo binding, convert its consumers, and demonstrate integrated behavior and regression protection | Slice02 design; resolved implementation baseline; assigned contributor/reviewer workflow | Planned; detail when near |
 
 Slice02 produces the implementation-ready Slice03 assignment after satisfying the prompt-authoring readiness requirements. Do not issue a speculative CC prompt now. If the actual dependency map makes Slice03 too large for one context, split it before assignment and record the roadmap amendment; do not silently broaden the pilot.
 
-Only Slice01 has a directory/open set. Later slices are roadmap entries, not empty execution packets.
+Slice01 and Slice02 have owning directories/open sets. Slice03 remains a roadmap entry, not an empty execution packet. The earlier Slice01-only state is superseded by the Operator-authorized design continuation recorded below.
 
 ## Arc acceptance and composition
 
@@ -62,12 +62,17 @@ Keep the running LibreChat/Mongo corpus unchanged. Test suites must be inspected
 
 ## Current action
 
-Slice01 has delivered its [proposed closing packet](slice01-behavior-baseline/closing-report.md): source map, behavior/coverage matrix, 641-test baseline and design inputs. Evidence is attested; formal acceptance and advancement remain pending the existing separate-review gate. Findings for Slice02 include physical message-link IDs, cached-null lookup state, partial persistence/error-object outcomes, private versus public projections, weak unset coverage, and an uncharacterized equal-key message-cursor risk. The installed Node 22/dist baseline also needs pinned-runtime/source-build reproduction before implementation acceptance. These findings deepen the planned contract design; the three-slice roadmap and implementation scope are unchanged. The prior current action was execution of tracing/test preflight; it is now superseded by this delivered packet and its required review.
+Slice01 delivered its [proposed closing packet](slice01-behavior-baseline/closing-report.md), and its findings were already bubbled into this plan and the project plan in `a085652ce`. On 2026-09-20 the Operator read that report and instructed “Please continue, regardless!” This authorizes [Slice02 design preparation](slice02-portable-contract-design/slice-plan.md) using the attested evidence while Slice01's independent acceptance remains pending. The earlier blanket advancement hold is superseded for this preparatory work; no child is formally closed, no review is fabricated, and no source implementation is assigned.
+
+Slice02 has delivered a [first contract pass](slice02-portable-contract-design/artifacts/contract-design.md) and [cursor characterization](slice02-portable-contract-design/artifacts/pagination-findings.md). The synthetic control returned 6/6; the equal-timestamp fixture returned 4/6 and declared completion, confirming the suspected gap in the installed build. A pagination correction is proposed as separate work; the adapter must not silently change compatibility behavior. The initial proposal also overstated injection: BaseClient imports the database singleton; only the save helper accepts injected dependencies. That correction is reflected in the project design input.
+
+Current design work is relationship translation without exposing physical IDs or adding a serial lookup, field-level DTO/projection validation, conservative partial-write outcomes and the exact route/code fence. These findings deepen Slice02 without broadening the three-slice roadmap or implementation scope. Node 24/source-build reproduction and dev-lineage resolution remain prerequisites before affected implementation acceptance/branching.
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.3 | 2026-09-20 | Recorded Operator-authorized Slice02 design continuation while retaining Slice01 acceptance; bubbled confirmed cursor gap and injection correction from Slice02, with unresolved contract choices explicit and no source scope change. |
 | v1.2 | 2026-09-20 | Slice01 delivered the attested map/matrix and 641-test baseline; added concrete contract/coverage/runtime findings and retained independent acceptance. Roadmap unchanged pending reviewed sizing in Slice02. |
 | v1.1 | 2026-09-20 | Applied project-level Expedited Mode; investigation workflow and acceptance requirements unchanged. |
 | v1.0 | 2026-09-20 | Opened Arc01 at the Operator's request; defined three slices and opened only the first investigation slice. No application behavior or project acceptance requirement changed. |

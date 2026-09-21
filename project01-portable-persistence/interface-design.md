@@ -1,6 +1,6 @@
 # Portable persistence interface — initial design proposal
 
-Status: **CDC proposal for discussion, not a frozen API or implementation assignment**. Source observations refer to the baseline in [research.md](research.md).
+Status: **initial design proposal for discussion, not a frozen API or implementation assignment**. Current one-contributor refinement lives in the [Slice02 contract draft](arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/contract-design.md). Source observations refer to the baseline in [research.md](research.md).
 
 ## The boundary we want
 
@@ -81,7 +81,7 @@ Storage neutrality does not mean every engine supports every optional capability
 
 ## The first application path
 
-`BaseClient.saveMessageToDatabase` already uses injected database methods. It saves a message and then calls `saveTurnConversation`; that helper uses `getConvo`/`saveConvo`. This is a promising first visible path because a user can save a turn, reload it, and inspect its conversation.
+`BaseClient.saveMessageToDatabase` currently uses the imported `~/models` singleton. It saves a message and then calls `saveTurnConversation`; that helper accepts injected `getConvo`/`saveConvo` methods. The earlier proposal incorrectly described the whole BaseClient path as already injected; conversion must introduce and verify that dependency boundary. This is a promising first visible path because a user can save a turn, reload it, and inspect its conversation.
 
 The seam is not portable today: `savedMessage._id` crosses into conversation persistence, and `appendMessageIds` carries Mongoose ObjectIds. The proposal is to return a logical saved-message reference. The Mongo adapter translates that reference to its existing storage identity internally, preserving ownership checks and avoiding an unnecessary read where feasible. Whether the reference uses the existing scoped message ID alone or an additional opaque relationship token needs the call-graph review.
 
@@ -144,3 +144,9 @@ Stable references should permit linking a message or observation to a concept, a
 Lance/LanceDB, graph views including possible Lance Graph or petgraph, DuckDB, DataFusion, and Arrow remain future storage/query/interchange candidates. Their evaluation belongs to the relevant Guildhall capabilities, not to the definition of a LibreChat message-save operation. SQLite could continue to serve operational workloads alongside that cognitive data plane; eventual evolution need not mean replacing it everywhere.
 
 The memory API can later expose search, retrieve, assert, revise, invalidate, link, explain, consolidate, and audit, with research-derived semantics and lazy materialization. HTN/planner integrations can refer to procedures, world assertions, and execution traces through their own contracts. This persistence project prepares identity, provenance, and transport boundaries that make those integrations possible; it does not prematurely define their semantics.
+
+## Revision history
+
+| Date | Change |
+|---|---|
+| 2026-09-20 | Slice02 corrected the initial injection claim using `BaseClient.js:54,1332–1388` and `save.ts:124–187`; linked the current refinement. No API or implementation scope was frozen. The earlier document remains the architectural starting proposal. |

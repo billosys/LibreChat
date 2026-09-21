@@ -1,0 +1,19 @@
+[
+  {
+    "attempt": 1,
+    "exitCode": 1,
+    "stage": "structural packet check",
+    "error": "Report link to validation.json checked before that output existed",
+    "disposition": "Create validation output and checksum inventory before final read-only validation; no experimental rerun or application change."
+  },
+  {
+    "attempt": 2,
+    "exitCode": 0,
+    "stage": "structural packet check",
+    "command": [
+      "python3",
+      "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/verify-packet.py"
+    ],
+    "disposition": "Passed; regenerated checksum inventory after writing validation output and this attempt account."
+  }
+]

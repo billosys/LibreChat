@@ -1,0 +1,19 @@
+{
+  "selfCheck": "passed",
+  "sourceHead": "ba44443fdb232bbe6d4977e2619774b5a72586ac",
+  "sourceClean": true,
+  "sourceAndDistFingerprints": {
+    "source-fingerprints.json": 108,
+    "dist-fingerprints.json": 105
+  },
+  "priorPacketHashes": 32,
+  "relativeFileLinksAndAnchors": 73,
+  "sliceLedgerRowsOpen": 7,
+  "experimentAttempts": 1,
+  "fixtureCompleteness": {
+    "unique": "6/6 pass",
+    "tied": "4/6 fail"
+  },
+  "currentPacketHashes": 11,
+  "independentVerification": false
+}

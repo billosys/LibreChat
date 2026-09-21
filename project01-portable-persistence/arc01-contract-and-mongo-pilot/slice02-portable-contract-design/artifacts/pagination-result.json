@@ -1,0 +1,194 @@
+{
+  "startedAt": "2026-09-21T03:26:15.938Z",
+  "node": "v22.22.3",
+  "sourceHead": "ba44443fdb232bbe6d4977e2619774b5a72586ac",
+  "artifacts": [
+    {
+      "file": "/private/tmp/guildhall-slice02/artifacts/pagination-harness.cjs",
+      "sha256": "bb7920883d3f78c38b2043d6ad1fac1cd890e9f0aa9a57f5e68672991a6edf9d"
+    },
+    {
+      "file": "/Users/oubiwann/lab/billosys/LibreChat/packages/data-schemas/dist/index.cjs",
+      "sha256": "981693f7dc0378461e144af8a152d07cdbab657983c4454e2afc34a7b638c771"
+    },
+    {
+      "file": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/.cache/mongodb-memory-server/mongod-arm64-darwin-8.2.1",
+      "sha256": "615abcb4bc87deba83906e69eb1a40352e19ca1f1302fa547b81512a2641ae48"
+    },
+    {
+      "file": "/Users/oubiwann/lab/billosys/LibreChat/packages/data-schemas/src/methods/message.ts",
+      "sha256": "fc51a01c8fcf709503c92dbfe172264eb5656cf0248bfc869388ba53dd70ac04"
+    }
+  ],
+  "versions": {
+    "mongoose": "8.24.1",
+    "memoryServer": "11.0.1"
+  },
+  "trials": [
+    {
+      "kind": "unique",
+      "expected": [
+        "unique-0",
+        "unique-1",
+        "unique-2",
+        "unique-3",
+        "unique-4",
+        "unique-5"
+      ],
+      "storedCount": 6,
+      "fixture": [
+        {
+          "messageId": "unique-0",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "messageId": "unique-1",
+          "createdAt": "2026-01-01T00:00:01.000Z"
+        },
+        {
+          "messageId": "unique-2",
+          "createdAt": "2026-01-01T00:00:02.000Z"
+        },
+        {
+          "messageId": "unique-3",
+          "createdAt": "2026-01-01T00:00:03.000Z"
+        },
+        {
+          "messageId": "unique-4",
+          "createdAt": "2026-01-01T00:00:04.000Z"
+        },
+        {
+          "messageId": "unique-5",
+          "createdAt": "2026-01-01T00:00:05.000Z"
+        }
+      ],
+      "pages": [
+        {
+          "messages": [
+            {
+              "messageId": "unique-0",
+              "createdAt": "2026-01-01T00:00:00.000Z"
+            },
+            {
+              "messageId": "unique-1",
+              "createdAt": "2026-01-01T00:00:01.000Z"
+            }
+          ],
+          "nextCursor": "Wed Dec 31 2025 18:00:01 GMT-0600 (Central Standard Time)"
+        },
+        {
+          "messages": [
+            {
+              "messageId": "unique-2",
+              "createdAt": "2026-01-01T00:00:02.000Z"
+            },
+            {
+              "messageId": "unique-3",
+              "createdAt": "2026-01-01T00:00:03.000Z"
+            }
+          ],
+          "nextCursor": "Wed Dec 31 2025 18:00:03 GMT-0600 (Central Standard Time)"
+        },
+        {
+          "messages": [
+            {
+              "messageId": "unique-4",
+              "createdAt": "2026-01-01T00:00:04.000Z"
+            },
+            {
+              "messageId": "unique-5",
+              "createdAt": "2026-01-01T00:00:05.000Z"
+            }
+          ],
+          "nextCursor": null
+        }
+      ],
+      "termination": "exhausted",
+      "returnedCount": 6,
+      "missing": [],
+      "extra": [],
+      "duplicates": [],
+      "completenessPassed": true
+    },
+    {
+      "kind": "tied",
+      "expected": [
+        "tied-0",
+        "tied-1",
+        "tied-2",
+        "tied-3",
+        "tied-4",
+        "tied-5"
+      ],
+      "storedCount": 6,
+      "fixture": [
+        {
+          "messageId": "tied-0",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "messageId": "tied-1",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "messageId": "tied-2",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "messageId": "tied-3",
+          "createdAt": "2026-01-01T00:00:00.000Z"
+        },
+        {
+          "messageId": "tied-4",
+          "createdAt": "2026-01-01T00:00:01.000Z"
+        },
+        {
+          "messageId": "tied-5",
+          "createdAt": "2026-01-01T00:00:02.000Z"
+        }
+      ],
+      "pages": [
+        {
+          "messages": [
+            {
+              "messageId": "tied-2",
+              "createdAt": "2026-01-01T00:00:00.000Z"
+            },
+            {
+              "messageId": "tied-0",
+              "createdAt": "2026-01-01T00:00:00.000Z"
+            }
+          ],
+          "nextCursor": "Wed Dec 31 2025 18:00:00 GMT-0600 (Central Standard Time)"
+        },
+        {
+          "messages": [
+            {
+              "messageId": "tied-4",
+              "createdAt": "2026-01-01T00:00:01.000Z"
+            },
+            {
+              "messageId": "tied-5",
+              "createdAt": "2026-01-01T00:00:02.000Z"
+            }
+          ],
+          "nextCursor": null
+        }
+      ],
+      "termination": "exhausted",
+      "returnedCount": 4,
+      "missing": [
+        "tied-1",
+        "tied-3"
+      ],
+      "extra": [],
+      "duplicates": [],
+      "completenessPassed": false
+    }
+  ],
+  "harnessSucceeded": true,
+  "defaultPortRejected": true,
+  "openedUri": "mongodb://127.0.0.1:56845/guildhall_synthetic_cursor",
+  "cleanedUp": true,
+  "finishedAt": "2026-09-21T03:26:18.134Z"
+}

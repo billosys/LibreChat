@@ -1,0 +1,15 @@
+# P01 — Message cursor characterization protocol
+
+Declared before execution, 2026-09-20. Question: does `getMessagesByCursor` enumerate all matching messages when more than one page shares a `createdAt` value? Source: `packages/data-schemas/src/methods/message.ts:3583–3619` at the slice baseline. This method sorts and advances on only one value; it has no identity tiebreaker. This check concerns message pagination, not the separately implemented conversation cursor or full-history read.
+
+Hypothesis: strict `$gt` advancement skips unreturned equal-valued records at a page boundary. A six-row unique-key control should enumerate 6/6; a six-row fixture with the first four records sharing the earliest timestamp should enumerate 4/6 with limit 2 and ascending order. Which tied IDs appear on the first page is unspecified; the oracle checks set membership and counts, not natural insertion order.
+
+Use the existing installed `@librechat/data-schemas` CJS entrypoint, Mongoose, MongoMemoryServer and cached Mongo 8.2.1 binary. Record resolved paths and hashes. Do not rebuild dist or install dependencies. Node 22 is available; source pins Node 24. Thus the result characterizes the installed build and supports the source observation, but is not source-build/pinned-runtime acceptance.
+
+The harness must guard Mongoose connection opening to the single exact URI created by this invocation, require IPv4 loopback and a nondefault ephemeral port, reject the live default port as a negative control without connecting, and clean up in `finally`. Disable downloads, external indexing and file logging. Only synthetic data, inserted directly into the fresh Message collection, is used. Direct insertion gives exact timestamps and isolates the read algorithm; it does not test save casting/defaults. No private export or existing database is opened.
+
+Hold owner, conversation filter, page size (2), order (ascending), selected field and six-record count constant. Use two distinct synthetic conversations to prevent fixture contamination. Only the timestamp distribution changes. Use whole-second timestamps deliberately: subsecond cursor precision is a separate untested concern.
+
+Record each returned ID, timestamp, next cursor, missing/extra/duplicate IDs and database count. Stop each traversal on null cursor, a repeated cursor or ten pages; record termination rather than hiding a loop. Always retain both trial results. Exit 0 means the planned characterization and isolation assertions matched, including reproduction of the defect; it does **not** mean the pagination completeness property passed. Any setup/runtime/oracle failure is retained as an unsuccessful attempt before changing the harness. No unplanned repeated trials or source fixes.
+
+Intended later oracle for a corrected, separately reviewed contract: enumerate 6/6 without duplicates for both fixtures, ascending and descending orders, plus cross-scope, cursor-shape, millisecond-precision and mutation cases. Those expanded tests have not been run by this protocol.
