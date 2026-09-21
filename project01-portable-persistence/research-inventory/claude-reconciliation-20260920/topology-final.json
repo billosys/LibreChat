@@ -1,0 +1,16 @@
+{
+  "method": "Source-only graph analysis; independently implement text/thinking skip predicate, normalize observed external-root marker, contract skipped ancestors, compare source parent with previous retained message. Mongo parent chains were checked separately against that sequence.",
+  "counts": {
+    "branch_points": 52,
+    "conversations_with_branch_points": 47,
+    "nonempty_conversation_summaries": 446,
+    "conversation_updated_at_differs_from_created_at": 819,
+    "retained_timestamp_precision_below_ms": 9719,
+    "retained_message_updated_at_differs_from_created_at": 161,
+    "retained_parent_relationships_changed": 95,
+    "conversations_with_parent_relationships_changed": 55,
+    "skipped_messages": 107,
+    "skipped_with_any_file_or_attachment_metadata": 66,
+    "retained_messages_with_skipped_ancestors": 86
+  }
+}

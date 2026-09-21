@@ -1,6 +1,6 @@
 # Initial Claude corpus baseline
 
-Recorded 2026-09-20. Workflow: one-contributor investigation. Application source remains `ba44443fdb232bbe6d4977e2619774b5a72586ac`, with a clean tracked source checkout at inspection.
+Initial record from 2026-09-20; the later [read-only reconciliation](corpus-reconciliation.md) supersedes the pending database checks below. Workflow: one-contributor investigation. Application source remains `ba44443fdb232bbe6d4977e2619774b5a72586ac`, with a clean tracked source checkout at inspection.
 
 ## Operator-reported runtime result
 

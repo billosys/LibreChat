@@ -1,0 +1,16 @@
+{
+  "method": "Source-only topology and metadata analysis; skip rule independently implemented in Python; parent comparison contracts skipped ancestors before comparing with previous retained message.",
+  "counts": {
+    "branch_points": 52,
+    "conversations_with_branch_points": 47,
+    "nonempty_conversation_summaries": 446,
+    "conversation_updated_at_differs_from_created_at": 819,
+    "retained_messages_with_nonempty_source_parent": 9731,
+    "unresolved_source_parents": 833,
+    "retained_timestamp_precision_below_ms": 9719,
+    "retained_message_updated_at_differs_from_created_at": 161,
+    "retained_parent_relationships_changed": 911,
+    "conversations_with_parent_relationships_changed": 816,
+    "skipped_with_any_file_or_attachment_metadata": 66
+  }
+}

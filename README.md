@@ -9,7 +9,7 @@ Start with [Project01](project01-portable-persistence/project-plan.md). Its desi
 - [Backend decision proposal](project01-portable-persistence/backend-decision.md): SQLite, hosted by a local Rust service.
 - [Project ledger](project01-portable-persistence/ledger.md): the still-open composition criteria.
 
-Status: **initial research and draft design prepared; Operator reports successful local startup and Claude import into Mongo**. Source-file inventory is recorded in [the corpus baseline](project01-portable-persistence/corpus-baseline.md); database reconciliation and implementation tests remain pending. The Operator has named SQLite as the target for the initial Claude corpus; the staged Rust-service architecture remains a proposal.
+Status: **initial research and draft design prepared; Operator reports successful local startup and Claude import into Mongo**. Source-file inventory is recorded in [the corpus baseline](project01-portable-persistence/corpus-baseline.md); [Read-only database reconciliation](project01-portable-persistence/corpus-reconciliation.md) now accounts for all 820 conversations and 9,838 source messages (9,731 retained, 107 explained skips); implementation tests remain pending. The imported representation matches current importer behavior but omits source content and topology. The Operator has named SQLite as the target for the initial Claude corpus; the staged Rust-service architecture remains a proposal.
 
 Source baseline: `ba44443fdb232bbe6d4977e2619774b5a72586ac`, source branch `main`, inspected 2026-09-20. Origin: `git@github.com:billosys/LibreChat.git`. The source checkout had no tracked changes at intake. The planning branch is deliberately orphaned; its commit IDs do not identify an application build.
 

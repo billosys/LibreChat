@@ -1,0 +1,158 @@
+{
+  "protocol": "Claude-to-current-importer projection comparison; no claim of raw-source losslessness",
+  "sourcePath": "/Users/oubiwann/lab/oxur/ixy/workbench/conversations.json",
+  "sourceSha256": "558271556db71c662d0a8708769cf5d0acd113cf83b49ce9e8b4d985a6392fed",
+  "sourceCommit": "ba44443fdb232bbe6d4977e2619774b5a72586ac",
+  "database": "LibreChat",
+  "scopeAlias": "99a8d3258a07106f",
+  "began": "2026-09-21T02:22:36.513Z",
+  "ended": "2026-09-21T02:22:37.460Z",
+  "sourceUnchangedDuringRun": true,
+  "repeatedCollectionReadsIdentical": true,
+  "initialDigest": {
+    "conversations": "7516edda44cf238a27e0af50431370710cb607c736302fcc14d9e6ddac6233e1",
+    "messages": "036dd918d2eb69de04312936352a1b4f5cacc31e3a6485b105acccd62539a0c6"
+  },
+  "finalDigest": {
+    "conversations": "7516edda44cf238a27e0af50431370710cb607c736302fcc14d9e6ddac6233e1",
+    "messages": "036dd918d2eb69de04312936352a1b4f5cacc31e3a6485b105acccd62539a0c6"
+  },
+  "counts": {
+    "sourceMessages": 9838,
+    "retainedMessageSubmillisecondPrecisionLost": 9719,
+    "sourceMessagesWithAttachments": 287,
+    "sourceMessagesWithFiles": 583,
+    "predictedSkippedMessages": 107,
+    "skippedMessagesWithAttachments": 38,
+    "skippedMessagesWithFiles": 66,
+    "assistantThinkingMessages": 140,
+    "textFallbacks": 3,
+    "sourceConversations": 820,
+    "expectedRetainedMessages": 9731,
+    "storedConversations": 820,
+    "storedMessages": 9731,
+    "storedContentType:think": 140,
+    "storedContentType:text": 140,
+    "pairedConversations": 820,
+    "conversationEmbeddedMessageListEmpty": 820,
+    "comparedMessages": 9731,
+    "unpairedStoredConversations": 0,
+    "uncomparedStoredMessages": 0,
+    "sourceMessagesAccountedFor": 9838,
+    "storedOrphanMessages": 0
+  },
+  "omissions": {
+    "contentBlocks": {
+      "text": 14416,
+      "tool_use": 8609,
+      "tool_result": 8532,
+      "token_budget": 2388,
+      "thinking": 329
+    },
+    "skippedContentBlocks": {
+      "text": 96
+    },
+    "retainedContentBlocks": {
+      "text": 14320,
+      "tool_use": 8609,
+      "tool_result": 8532,
+      "token_budget": 2388,
+      "thinking": 329
+    },
+    "skippedReasons": {
+      "text": 96,
+      "no_content_blocks": 11
+    }
+  },
+  "sourceShape": {
+    "conversationFields": {
+      "uuid": 820,
+      "name": 820,
+      "summary": 820,
+      "created_at": 820,
+      "updated_at": 820,
+      "account": 820,
+      "chat_messages": 820
+    },
+    "messageFields": {
+      "uuid": 9838,
+      "text": 9838,
+      "content": 9838,
+      "sender": 9838,
+      "created_at": 9838,
+      "updated_at": 9838,
+      "attachments": 9838,
+      "files": 9838,
+      "parent_message_uuid": 9838
+    },
+    "senderValues": {
+      "human": 4939,
+      "assistant": 4899
+    }
+  },
+  "storageShape": {
+    "conversationFields": {
+      "_id": 820,
+      "conversationId": 820,
+      "user": 820,
+      "__v": 820,
+      "chatProjectId": 820,
+      "createdAt": 820,
+      "endpoint": 820,
+      "files": 820,
+      "initial_agent_id": 820,
+      "isArchived": 820,
+      "isTemporary": 820,
+      "messages": 820,
+      "model": 820,
+      "tags": 820,
+      "title": 820,
+      "updatedAt": 820
+    },
+    "messageFields": {
+      "_id": 9731,
+      "messageId": 9731,
+      "__v": 9731,
+      "_meiliIndex": 9731,
+      "conversationId": 9731,
+      "createdAt": 9731,
+      "endpoint": 9731,
+      "error": 9731,
+      "isCreatedByUser": 9731,
+      "isTemporary": 9731,
+      "isUserSubmitted": 9731,
+      "parentMessageId": 9731,
+      "sender": 9731,
+      "text": 9731,
+      "unfinished": 9731,
+      "user": 9731,
+      "content": 140
+    }
+  },
+  "conversationModels": {
+    "claude-fable-5-1": 820
+  },
+  "mismatchCount": 9731,
+  "fieldsFailed": {
+    "isEdited": 9731
+  },
+  "negativeControls": {
+    "text": true,
+    "content": true,
+    "createdAt": true,
+    "sender": true,
+    "isCreatedByUser": true,
+    "isUserSubmitted": true,
+    "parentMessageId": true,
+    "endpoint": true,
+    "scope": true,
+    "unfinished": true,
+    "isEdited": true,
+    "error": true
+  },
+  "commands": {
+    "find": 4,
+    "getMore": 22
+  },
+  "outcome": "requires_investigation"
+}

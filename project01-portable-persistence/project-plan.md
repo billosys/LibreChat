@@ -112,12 +112,13 @@ These outputs have a stopping rule: the first conversion must be describable wit
 
 ## Current status
 
-The orphan planning checkout and initial design inputs exist. The Operator reports successful local startup and Claude import into Mongo. Read-only source inventory confirms 820 conversations and 9,838 messages in the archive-matching JSON, including content the importer does not carry through. No arc or slice is accepted, no application source behavior has changed, and no implementation tests or benchmarks have been run. Database reconciliation and every project composition criterion remain open. See [corpus-baseline.md](corpus-baseline.md).
+The orphan planning checkout and initial design inputs exist. The Operator reports successful local startup and Claude import into Mongo. Read-only source inventory confirms 820 conversations and 9,838 messages in the archive-matching JSON, including content the importer does not carry through. No arc or slice is accepted, no application source behavior has changed, and no implementation tests or benchmarks have been run. Read-only reconciliation now confirms every conversation and retained message matches the current importer representation: 820 conversations, 9,731 retained messages, and 107 explained skips. It also confirms source-content loss and 95 changed retained parent relationships across 55 conversations. Source preservation, richer intake design, and every project composition criterion remain open; this does not accept SQLite migration. See [corpus-baseline.md](corpus-baseline.md) and [corpus-reconciliation.md](corpus-reconciliation.md).
 
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.4 | 2026-09-20 | Recorded authorized read-only Mongo reconciliation with complete population accounting, retained failed/corrected oracle attempts, concrete source fidelity losses, and unchanged open SQLite acceptance. |
 | v1.3 | 2026-09-20 | Recorded Operator-reported local Mongo startup/import, resolved initial route and source location, verified archive/JSON identity and source counts, and identified concrete structured-content preservation requirements. |
 | v1.2 | 2026-09-20 | Added Operator-requested Claude initial corpus, full SQLite reconciliation before OpenAI/GPT import, and import fidelity questions surfaced by source inspection. Initial import route and export location remain pending. |
 | v1.1 | 2026-09-20 | Recorded Operator-selected one-contributor investigation, intended later workflow progression, transition state, and bounded Arc01 readiness work. No implementation or acceptance scope changed. |
