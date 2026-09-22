@@ -1,0 +1,2280 @@
+{
+  "reviewedCommit": "0f81e318bdd78619b5092c188c5149ae5178de35",
+  "packetBefore": {
+    "SHA256SUMS": "75b5e048152d12a488e08939a9a1405f9891722abd4642b6a8a81b61e826dc7e",
+    "execution.log": "9127cbc8a2dd04178098223fd0c04498dba034b089faaa7831437af14652e101",
+    "intake.md": "95371a2b21b5665daf7b007fd9a3357666bca49289a92fb85731ed4bd93f6a3b",
+    "nested-fields.json": "e11928ba8755a0f797b5046a61d48dd5e3bccadc9b567609a2c614a271d25cd3",
+    "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+    "replay.py": "8ffdb79c3862b8e82756851c4e3d145cd4aa1e3b4fb2453161e43b4bc5137426",
+    "report.md": "a36e6098a9d70b523ac2dbd77229cffc7e04f605b70c3a9b0022c64c4d9a7ce9"
+  },
+  "--verify": {
+    "exitCode": 0,
+    "output": {
+      "environmentCommands": [
+        {
+          "argv": [
+            "git",
+            "branch",
+            "--show-current"
+          ],
+          "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+          "exitCode": 0,
+          "finishedAt": "2026-09-22T04:34:09.773664+00:00",
+          "startedAt": "2026-09-22T04:34:09.759226+00:00",
+          "stderr": "",
+          "stdout": "billo-guildhall\n"
+        },
+        {
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+          "exitCode": 0,
+          "finishedAt": "2026-09-22T04:34:09.786359+00:00",
+          "startedAt": "2026-09-22T04:34:09.773740+00:00",
+          "stderr": "",
+          "stdout": "3e3c5410d3863118fdba694fb0cd51baeb7102f9\n"
+        },
+        {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain",
+            "--untracked-files=all"
+          ],
+          "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+          "exitCode": 0,
+          "finishedAt": "2026-09-22T04:34:09.826542+00:00",
+          "startedAt": "2026-09-22T04:34:09.786389+00:00",
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "argv": [
+            "/Users/oubiwann/.local/bin/node",
+            "--version"
+          ],
+          "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+          "exitCode": 0,
+          "finishedAt": "2026-09-22T04:34:09.841238+00:00",
+          "startedAt": "2026-09-22T04:34:09.826601+00:00",
+          "stderr": "",
+          "stdout": "v22.22.3\n"
+        },
+        {
+          "argv": [
+            "/Users/oubiwann/.local/bin/node",
+            "-e",
+            "console.log(require(\"/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js\").version)"
+          ],
+          "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+          "exitCode": 0,
+          "finishedAt": "2026-09-22T04:34:09.958068+00:00",
+          "startedAt": "2026-09-22T04:34:09.841325+00:00",
+          "stderr": "",
+          "stdout": "5.9.3\n"
+        }
+      ],
+      "freshBaselineComparison": {
+        "allowedDifferences": [],
+        "behaviorFieldsExact": [
+          "readCases",
+          "gateCases",
+          "preflightCases",
+          "negativeControls",
+          "success",
+          "modelAccesses",
+          "error"
+        ],
+        "label": "fresh replay versus pinned baseline",
+        "provenanceFieldsExact": [
+          "sourceHead",
+          "node",
+          "compiler",
+          "sources",
+          "experimentSha256",
+          "priorHandle"
+        ]
+      },
+      "freshSubmittedComparison": {
+        "allowedDifferences": [],
+        "behaviorFieldsExact": [
+          "readCases",
+          "gateCases",
+          "preflightCases",
+          "negativeControls",
+          "success",
+          "modelAccesses",
+          "error"
+        ],
+        "label": "fresh replay versus submitted replay",
+        "provenanceFieldsExact": [
+          "sourceHead",
+          "node",
+          "compiler",
+          "sources",
+          "experimentSha256",
+          "priorHandle"
+        ]
+      },
+      "harness": {
+        "argv": [
+          "/Users/oubiwann/.local/bin/node",
+          "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs",
+          "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+          "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+          "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+          "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cc-evidence03-verify-yblq0ipx/replay-result.json"
+        ],
+        "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "exitCode": 0,
+        "finishedAt": "2026-09-22T04:34:10.243444+00:00",
+        "startedAt": "2026-09-22T04:34:09.967905+00:00",
+        "stderr": "",
+        "stdout": "{\n  \"success\": true,\n  \"readCases\": 16,\n  \"gateCases\": 2,\n  \"preflightCases\": [\n    {\n      \"name\": \"missing-owner\",\n      \"direct\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"deferred\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"missing-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"malformed-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    }\n  ],\n  \"negativeControls\": [\n    {\n      \"name\": \"wrong-owner\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"no-projection\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"eager-strict-scope\",\n      \"detected\": true\n    }\n  ]\n}\n"
+      },
+      "mode": "verify",
+      "packetAfter": {
+        "SHA256SUMS": "75b5e048152d12a488e08939a9a1405f9891722abd4642b6a8a81b61e826dc7e",
+        "execution.log": "9127cbc8a2dd04178098223fd0c04498dba034b089faaa7831437af14652e101",
+        "intake.md": "95371a2b21b5665daf7b007fd9a3357666bca49289a92fb85731ed4bd93f6a3b",
+        "nested-fields.json": "e11928ba8755a0f797b5046a61d48dd5e3bccadc9b567609a2c614a271d25cd3",
+        "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+        "replay.py": "8ffdb79c3862b8e82756851c4e3d145cd4aa1e3b4fb2453161e43b4bc5137426",
+        "report.md": "a36e6098a9d70b523ac2dbd77229cffc7e04f605b70c3a9b0022c64c4d9a7ce9"
+      },
+      "packetBefore": {
+        "SHA256SUMS": "75b5e048152d12a488e08939a9a1405f9891722abd4642b6a8a81b61e826dc7e",
+        "execution.log": "9127cbc8a2dd04178098223fd0c04498dba034b089faaa7831437af14652e101",
+        "intake.md": "95371a2b21b5665daf7b007fd9a3357666bca49289a92fb85731ed4bd93f6a3b",
+        "nested-fields.json": "e11928ba8755a0f797b5046a61d48dd5e3bccadc9b567609a2c614a271d25cd3",
+        "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+        "replay.py": "8ffdb79c3862b8e82756851c4e3d145cd4aa1e3b4fb2453161e43b4bc5137426",
+        "report.md": "a36e6098a9d70b523ac2dbd77229cffc7e04f605b70c3a9b0022c64c4d9a7ce9"
+      },
+      "packetUnchanged": true,
+      "preflight": {
+        "environment": {
+          "branch": "billo-guildhall",
+          "compilerSha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675",
+          "compilerVersion": "5.9.3",
+          "node": "v22.22.3",
+          "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+          "sourceStatus": ""
+        },
+        "inventorySourcesChecked": 13,
+        "oldInputs": {
+          "inputSet": {
+            "artifacts/design-pass04/field-census.json": "845eb74a93285be66a6072f23a3468ab7fbd258000b687f9ebe2fe5db77b806f",
+            "artifacts/design-pass04/handle.cjs": "b1efac13c8c2aa1d1a23c2fb8bf3d209673abcb3da798164da49bfab99bcabc4",
+            "artifacts/design-pass05/experiment.cjs": "f33bdd87b9691fdfb26adebb4e058fdb641f50e0be596f6f9e9d8c80b0037339",
+            "artifacts/design-pass05/field-matrix.cjs": "8cbb81dee30eab0a58dc96ec1db2e65f0c4e4ca5266e1501accf7bb42b8fb6f4",
+            "artifacts/design-pass05/field-matrix.json": "c1e32f81a7a105dc32e2f036ffeb08688c5c362e57e5b038d4ea3cd4e6806ab1",
+            "artifacts/design-pass05/protocol.md": "e2c45e56558d9434d61fa110344c80748a00dcfb5482cc3aab4635732e339339",
+            "artifacts/design-pass05/read-contract.md": "3aec3158c4e888640124ac446fff02e06fc4e1ff6ea2d1d90ab0dab09365d99e",
+            "artifacts/design-pass05/result-01.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+            "artifacts/design-pass05/validate.py": "6fb512a7d3564e5c96206cef1f0b7855147f25c75e144e6f90c4ef46d6debb9b"
+          },
+          "manifestSet": {
+            "artifacts/SHA256SUMS": "9a154519192f951b2036c3c4263634bf6815de61a2919e98bba3a8fafeecafff",
+            "artifacts/design-pass02/SHA256SUMS": "f027b20a65290a3c74f6a212241629c23f99d8be75d2aacd580334f76d7cf79f",
+            "artifacts/design-pass03/SHA256SUMS": "dc2348c81b9bb4aafed25600329d14047e1cadf5f7305f52b6aeed7cf2070a77",
+            "artifacts/design-pass04/SHA256SUMS": "34b5c312e5a522916f857a9f1dba6fd8c6d6868c2aed35d9062182d04e7453c8",
+            "artifacts/design-pass05/SHA256SUMS": "515e47b1d388ef3f8bb5d42ff258da0ea340b37c5e8d7e64bc6c6396b05e4c68"
+          },
+          "scope": "explicit pass02-pass05 manifests and pass05/pass04 replay inputs; no global recursive denominator"
+        },
+        "priorPackets": {
+          "cdcReview01Sha256": "f7117ee576164dd0161d0ea41f46457fbc5ca18fd9b802f165febdaf42d806a9",
+          "cdcReview02Sha256": "0d119df11ff117512e46ac4728e32b98bdac26dcede7d81c301ba23fd960d0be",
+          "evidence01": {
+            "entries": {
+              "execution.log": "15b0704d506b5eff9d10fd1ec567b02699a89c9cd0d40683fb40f54dd5fe2440",
+              "intake.md": "97b44e020a1feac7aa25d8358f926e1f924f9600c39df2ab0673f0a306e2294f",
+              "nested-fields.json": "7ecff780e8020b9ba95d1d55ded6736623087afcca6001073acbba6e02b36d0d",
+              "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+              "replay.py": "5899fe36a58657f55197c7962ea5d43ea196fd225dfd6f8652c182d138411976",
+              "report.md": "0ffeba09760b3b24de1f693cf5cc0da8f21303caed2089443ba436272f7ebffd"
+            },
+            "manifestSha256": "6a7aaa9bbae775461ff81615bf8026c36cc10172b0f77657340a9ba85fd0dc3b"
+          },
+          "evidence02": {
+            "entries": {
+              "execution.log": "a05bca318773c1925e80d524f69e4b8a9d8b6c5b63457f1cd4ed556933434a38",
+              "intake.md": "7e561050c2446b2edeb81e8d7705ae87c98bf3b3028ab46adb16112829d9484f",
+              "nested-fields.json": "b8bb9d4e620f15e846efa5e0d6ca5ba4f747a6efd39a49fd715fe8145cc1af5e",
+              "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+              "replay.py": "9dbd4bff5cdd9307cfd13b274554e0bfc495856d6509c50b6b9aae3c33e0f1a0",
+              "report.md": "86b262a5664d5773f007bbe420ff0af31db2daa9740bc619701a0f2dd78a95aa"
+            },
+            "manifestSha256": "9b53fcbcfec705d26af66051b0a34c9947249055bba88ebc920bab6db2c3cb8e"
+          }
+        }
+      },
+      "structural": {
+        "classificationCounts": {
+          "adapter-private physical relationship": 1,
+          "default-hidden specialized field": 14,
+          "other scalar/array field outside this deep inspection": 92,
+          "selected nested root": 10
+        },
+        "coverageRows": 117,
+        "memberCounts": {
+          "attachments": 80,
+          "codeWorkspaces": 3,
+          "content": 83,
+          "contextMeta": 12,
+          "examples": 9,
+          "feedback": 7,
+          "files": 57,
+          "metadata": 10,
+          "subagentThread": 8,
+          "userSubmittedMessageFieldPaths": 5
+        },
+        "nestedExclusions": 12,
+        "selectedRoots": 10,
+        "sourceFingerprints": 13,
+        "uniqueCoverageKeys": 117
+      },
+      "submittedComparison": {
+        "allowedDifferences": [],
+        "behaviorFieldsExact": [
+          "readCases",
+          "gateCases",
+          "preflightCases",
+          "negativeControls",
+          "success",
+          "modelAccesses",
+          "error"
+        ],
+        "label": "submitted replay versus pinned baseline",
+        "provenanceFieldsExact": [
+          "sourceHead",
+          "node",
+          "compiler",
+          "sources",
+          "experimentSha256",
+          "priorHandle"
+        ]
+      }
+    }
+  },
+  "--self-test": {
+    "exitCode": 0,
+    "output": {
+      "negativeControls": [
+        {
+          "control": "actual-verification-path-wrong-runtime",
+          "error": "preflight mismatch node: 'v0.invalid' != 'v22.22.3'",
+          "rejected": true
+        },
+        {
+          "control": "actual-verification-path-wrong-head",
+          "error": "preflight mismatch sourceHead: '0000000000000000000000000000000000000000' != '3e3c5410d3863118fdba694fb0cd51baeb7102f9'",
+          "rejected": true
+        },
+        {
+          "control": "actual-verification-path-wrong-compiler",
+          "error": "preflight mismatch compilerSha256: '0000000000000000000000000000000000000000000000000000000000000000' != '3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675'",
+          "rejected": true
+        },
+        {
+          "control": "actual-verification-path-wrong-source",
+          "error": "inventory source fingerprint mismatch at execution: api/server/controllers/agents/client.js",
+          "rejected": true
+        },
+        {
+          "control": "invalid-classification",
+          "error": "classification mismatch for message.messageId",
+          "rejected": true
+        },
+        {
+          "control": "valid-but-misassigned-classification",
+          "error": "classification mismatch for message.messageId",
+          "rejected": true
+        },
+        {
+          "control": "missing-field",
+          "error": "coverage membership, denominator, or uniqueness mismatch",
+          "rejected": true
+        },
+        {
+          "control": "duplicate-field",
+          "error": "coverage membership, denominator, or uniqueness mismatch",
+          "rejected": true
+        },
+        {
+          "control": "survivor-covered-by-exclusion",
+          "error": "permitted sibling is covered by exclusion: metadata.thoughtSignatures <- metadata.thoughtSignatures",
+          "rejected": true
+        },
+        {
+          "control": "submitted-success-false-through-verification-entry",
+          "error": "submitted replay versus pinned baseline: exact value mismatch in success",
+          "rejected": true
+        },
+        {
+          "control": "submitted-node-wrong-through-verification-entry",
+          "error": "submitted replay versus pinned baseline: exact value mismatch in node",
+          "rejected": true
+        },
+        {
+          "control": "submitted-success-absent-through-verification-entry",
+          "error": "submitted replay versus pinned baseline: key presence mismatch in success; absent and null are distinct",
+          "rejected": true
+        },
+        {
+          "control": "submitted-success-null-through-verification-entry",
+          "error": "submitted replay versus pinned baseline: exact value mismatch in success",
+          "rejected": true
+        },
+        {
+          "control": "negative-runner-mutation-rejected-by-final-guard",
+          "error": "packet hash changed during read-only verification",
+          "rejected": true
+        },
+        {
+          "control": "capture-refuses-sealed-destination",
+          "error": "capture refuses a destination that already has SHA256SUMS",
+          "rejected": true
+        }
+      ],
+      "positiveChecks": [
+        {
+          "control": "positive-unchanged-packet",
+          "hashesUnchanged": true,
+          "packetUnchanged": true,
+          "rejected": false,
+          "runnerCalls": 1
+        },
+        {
+          "control": "positive-unchanged-packet-separate-from-negative-mutation",
+          "negativeMutation": true,
+          "rejected": false,
+          "runnerCalls": 1
+        }
+      ],
+      "rejections": 15,
+      "runnerSentinel": {
+        "expectedFailingPathCalls": 0,
+        "expectedValidPathCalls": 1,
+        "failingPathCalls": 0,
+        "validPathCalls": 1
+      },
+      "sealedPacketHashPreserved": true,
+      "sealedReadOnlyOutput": {
+        "logMutation": false,
+        "mode": "sealed-safe-self-test",
+        "packetMutation": false,
+        "validControl": {
+          "classificationCounts": {
+            "adapter-private physical relationship": 1,
+            "default-hidden specialized field": 14,
+            "other scalar/array field outside this deep inspection": 92,
+            "selected nested root": 10
+          },
+          "coverageRows": 117,
+          "memberCounts": {
+            "attachments": 80,
+            "codeWorkspaces": 3,
+            "content": 83,
+            "contextMeta": 12,
+            "examples": 9,
+            "feedback": 7,
+            "files": 57,
+            "metadata": 10,
+            "subagentThread": 8,
+            "userSubmittedMessageFieldPaths": 5
+          },
+          "nestedExclusions": 12,
+          "selectedRoots": 10,
+          "sourceFingerprints": 13,
+          "uniqueCoverageKeys": 117
+        }
+      },
+      "validControl": {
+        "classificationCounts": {
+          "adapter-private physical relationship": 1,
+          "default-hidden specialized field": 14,
+          "other scalar/array field outside this deep inspection": 92,
+          "selected nested root": 10
+        },
+        "coverageRows": 117,
+        "memberCounts": {
+          "attachments": 80,
+          "codeWorkspaces": 3,
+          "content": 83,
+          "contextMeta": 12,
+          "examples": 9,
+          "feedback": 7,
+          "files": 57,
+          "metadata": 10,
+          "subagentThread": 8,
+          "userSubmittedMessageFieldPaths": 5
+        },
+        "nestedExclusions": 12,
+        "selectedRoots": 10,
+        "sourceFingerprints": 13,
+        "uniqueCoverageKeys": 117
+      }
+    }
+  },
+  "actualSubmittedMatchesBaseline": true,
+  "sourceDeclarationExtraction": {
+    "kind": "syntax-only source declarations; paths and wrapper effects require separate interpretation",
+    "count": 11,
+    "symbols": [
+      {
+        "file": "packages/data-provider/src/types/agents.ts",
+        "symbol": "ToolCall",
+        "start": 81,
+        "end": 135
+      },
+      {
+        "file": "packages/data-provider/src/types/files.ts",
+        "symbol": "TFile",
+        "start": 150,
+        "end": 221
+      },
+      {
+        "file": "packages/data-provider/src/types/content.ts",
+        "symbol": "SummaryContentPart",
+        "start": 200,
+        "end": 220
+      },
+      {
+        "file": "packages/data-provider/src/types/content.ts",
+        "symbol": "TMessageContentParts",
+        "start": 244,
+        "end": 315
+      },
+      {
+        "file": "packages/data-provider/src/filters.ts",
+        "symbol": "userSubmittedMessageFieldPathSchema",
+        "start": 184,
+        "end": 189
+      },
+      {
+        "file": "packages/data-provider/src/schemas.ts",
+        "symbol": "tExampleSchema",
+        "start": 867,
+        "end": 874
+      },
+      {
+        "file": "packages/data-provider/src/schemas.ts",
+        "symbol": "subagentThreadLineageSchema",
+        "start": 1102,
+        "end": 1111
+      },
+      {
+        "file": "packages/data-provider/src/schemas.ts",
+        "symbol": "TMessage",
+        "start": 1063,
+        "end": 1074
+      },
+      {
+        "file": "packages/data-provider/src/schemas.ts",
+        "symbol": "TAttachment",
+        "start": 1054,
+        "end": 1061
+      },
+      {
+        "file": "packages/data-provider/src/schemas.ts",
+        "symbol": "tMessageSchema",
+        "start": 885,
+        "end": 982
+      },
+      {
+        "file": "packages/data-schemas/src/methods/message.ts",
+        "symbol": "CLIENT_MESSAGE_SELECT",
+        "start": 456,
+        "end": 481
+      }
+    ]
+  },
+  "syntaxOnlyOracle": {
+    "SummaryContentPart": [
+      {
+        "name": "type",
+        "type": "ContentTypes.SUMMARY",
+        "optional": false,
+        "line": 201,
+        "declaration": "type: ContentTypes.SUMMARY;"
+      },
+      {
+        "name": "content",
+        "type": "Array<{ type: ContentTypes.TEXT; text: string }>",
+        "optional": true,
+        "line": 202,
+        "declaration": "content?: Array<{ type: ContentTypes.TEXT; text: string }>;"
+      },
+      {
+        "name": "type",
+        "type": "ContentTypes.TEXT",
+        "optional": false,
+        "line": 202,
+        "declaration": "type: ContentTypes.TEXT;"
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "optional": false,
+        "line": 202,
+        "declaration": "text: string"
+      },
+      {
+        "name": "tokenCount",
+        "type": "number",
+        "optional": true,
+        "line": 203,
+        "declaration": "tokenCount?: number;"
+      },
+      {
+        "name": "summarizing",
+        "type": "boolean",
+        "optional": true,
+        "line": 204,
+        "declaration": "summarizing?: boolean;"
+      },
+      {
+        "name": "failed",
+        "type": "boolean",
+        "optional": true,
+        "line": 208,
+        "declaration": "failed?: boolean;"
+      },
+      {
+        "name": "initiatedBy",
+        "type": "'user'",
+        "optional": true,
+        "line": 211,
+        "declaration": "initiatedBy?: 'user';"
+      },
+      {
+        "name": "summaryVersion",
+        "type": "number",
+        "optional": true,
+        "line": 212,
+        "declaration": "summaryVersion?: number;"
+      },
+      {
+        "name": "model",
+        "type": "string",
+        "optional": true,
+        "line": 213,
+        "declaration": "model?: string;"
+      },
+      {
+        "name": "provider",
+        "type": "string",
+        "optional": true,
+        "line": 214,
+        "declaration": "provider?: string;"
+      },
+      {
+        "name": "createdAt",
+        "type": "string",
+        "optional": true,
+        "line": 215,
+        "declaration": "createdAt?: string;"
+      },
+      {
+        "name": "boundary",
+        "type": "{\n    messageId: string;\n    contentIndex: number;\n  }",
+        "optional": true,
+        "line": 216,
+        "declaration": "boundary?: {\n    messageId: string;\n    contentIndex: number;\n  };"
+      },
+      {
+        "name": "messageId",
+        "type": "string",
+        "optional": false,
+        "line": 217,
+        "declaration": "messageId: string;"
+      },
+      {
+        "name": "contentIndex",
+        "type": "number",
+        "optional": false,
+        "line": 218,
+        "declaration": "contentIndex: number;"
+      }
+    ],
+    "userSubmittedMessageFieldPathSchema": [
+      {
+        "name": "path",
+        "expression": "z.string().startsWith('/').max(2048)",
+        "line": 186,
+        "declaration": "path: z.string().startsWith('/').max(2048)"
+      },
+      {
+        "name": "field",
+        "expression": "z.enum(HITL_MESSAGE_FILTER_FIELDS)",
+        "line": 187,
+        "declaration": "field: z.enum(HITL_MESSAGE_FILTER_FIELDS)"
+      }
+    ],
+    "tExampleSchema": [
+      {
+        "name": "input",
+        "expression": "z.object({\n    content: z.string(),\n  })",
+        "line": 868,
+        "declaration": "input: z.object({\n    content: z.string(),\n  })"
+      },
+      {
+        "name": "content",
+        "expression": "z.string()",
+        "line": 869,
+        "declaration": "content: z.string()"
+      },
+      {
+        "name": "output",
+        "expression": "z.object({\n    content: z.string(),\n  })",
+        "line": 871,
+        "declaration": "output: z.object({\n    content: z.string(),\n  })"
+      },
+      {
+        "name": "content",
+        "expression": "z.string()",
+        "line": 872,
+        "declaration": "content: z.string()"
+      }
+    ],
+    "subagentThreadLineageSchema": [
+      {
+        "name": "rootConversationId",
+        "expression": "z.string().min(1)",
+        "line": 1103,
+        "declaration": "rootConversationId: z.string().min(1)"
+      },
+      {
+        "name": "parentConversationId",
+        "expression": "z.string().min(1)",
+        "line": 1104,
+        "declaration": "parentConversationId: z.string().min(1)"
+      },
+      {
+        "name": "parentMessageId",
+        "expression": "z.string().min(1)",
+        "line": 1105,
+        "declaration": "parentMessageId: z.string().min(1)"
+      },
+      {
+        "name": "parentToolCallId",
+        "expression": "z.string().min(1)",
+        "line": 1106,
+        "declaration": "parentToolCallId: z.string().min(1)"
+      },
+      {
+        "name": "parentAgentId",
+        "expression": "z.string().min(1).optional()",
+        "line": 1107,
+        "declaration": "parentAgentId: z.string().min(1).optional()"
+      },
+      {
+        "name": "subagentType",
+        "expression": "z.string().min(1)",
+        "line": 1108,
+        "declaration": "subagentType: z.string().min(1)"
+      },
+      {
+        "name": "subagentKind",
+        "expression": "z.enum(['agent', 'graph'])",
+        "line": 1109,
+        "declaration": "subagentKind: z.enum(['agent', 'graph'])"
+      },
+      {
+        "name": "depth",
+        "expression": "z.number().int().positive()",
+        "line": 1110,
+        "declaration": "depth: z.number().int().positive()"
+      }
+    ]
+  },
+  "otherExclusionControl": {
+    "rejected": false,
+    "mutation": "completionWakeup permitted sibling changed to resultClaim"
+  },
+  "submittedCLIControls": [
+    {
+      "key": "success",
+      "value": false,
+      "exitCode": 1,
+      "rejected": true,
+      "stderr": "{\n  \"mode\": \"verify\",\n  \"success\": false,\n  \"blocked\": true,\n  \"error\": \"submitted replay versus pinned baseline: exact value mismatch in success\"\n}\n"
+    },
+    {
+      "key": "node",
+      "value": "v0.invalid",
+      "exitCode": 1,
+      "rejected": true,
+      "stderr": "{\n  \"mode\": \"verify\",\n  \"success\": false,\n  \"blocked\": true,\n  \"error\": \"submitted replay versus pinned baseline: exact value mismatch in node\"\n}\n"
+    }
+  ],
+  "matrixQueries": {
+    "messageSchema": {
+      "fields": 44,
+      "uniqueFields": 44,
+      "providerOnly": 10,
+      "interfaceOnly": 4,
+      "implicit": [
+        "createdAt",
+        "updatedAt",
+        "_id",
+        "__v"
+      ],
+      "exactSelectedData": true
+    },
+    "convoSchema": {
+      "fields": 73,
+      "uniqueFields": 73,
+      "providerOnly": 13,
+      "interfaceOnly": 3,
+      "implicit": [
+        "createdAt",
+        "updatedAt",
+        "_id",
+        "__v"
+      ],
+      "exactSelectedData": true
+    }
+  },
+  "inventorySemantics": {
+    "content": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public projection survivor",
+          "reason": "The public projection excludes only the separately named background-task members under this root.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "content[].error.text",
+          "arrayBoundary": "content[]",
+          "storageDomain": "Mongo message content",
+          "serverDomain": "message response content",
+          "providerDomain": "provider content union",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "args Record<string, any>, metadata records, and external SDK/tool unions remain open",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/types/content.ts",
+              "lines": [
+                244,
+                315
+              ],
+              "symbol": "TMessageContentParts",
+              "kind": "type-only",
+              "observation": "provider content union; not a storage decoder"
+            },
+            {
+              "path": "packages/data-provider/src/types/agents.ts",
+              "lines": [
+                81,
+                135
+              ],
+              "symbol": "Agents.ToolCall",
+              "kind": "type-only",
+              "observation": "complete local tool-call declaration with open args and dated lifecycle members"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        {
+          "path": "content[].tool_call.backgroundTask.settledAt",
+          "arrayBoundary": "content[]",
+          "storageDomain": "Mongo message content",
+          "serverDomain": "message response content",
+          "providerDomain": "provider content union",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "args Record<string, any>, metadata records, and external SDK/tool unions remain open",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/types/content.ts",
+              "lines": [
+                244,
+                315
+              ],
+              "symbol": "TMessageContentParts",
+              "kind": "type-only",
+              "observation": "provider content union; not a storage decoder"
+            },
+            {
+              "path": "packages/data-provider/src/types/agents.ts",
+              "lines": [
+                81,
+                135
+              ],
+              "symbol": "Agents.ToolCall",
+              "kind": "type-only",
+              "observation": "complete local tool-call declaration with open args and dated lifecycle members"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        {
+          "path": "content[].summary.boundary.contentIndex",
+          "arrayBoundary": "content[]",
+          "storageDomain": "Mongo message content",
+          "serverDomain": "message response content",
+          "providerDomain": "provider content union",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "args Record<string, any>, metadata records, and external SDK/tool unions remain open",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/types/content.ts",
+              "lines": [
+                244,
+                315
+              ],
+              "symbol": "TMessageContentParts",
+              "kind": "type-only",
+              "observation": "provider content union; not a storage decoder"
+            },
+            {
+              "path": "packages/data-provider/src/types/agents.ts",
+              "lines": [
+                81,
+                135
+              ],
+              "symbol": "Agents.ToolCall",
+              "kind": "type-only",
+              "observation": "complete local tool-call declaration with open args and dated lifecycle members"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        }
+      ]
+    },
+    "files": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public projection survivor",
+          "reason": "The projection has no root files exclusion; embedded nested policy remains separately qualified.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "files[].file_id",
+          "arrayBoundary": "files[]",
+          "storageDomain": "Mongo file reference",
+          "serverDomain": "message history file reference",
+          "providerDomain": "provider TFile",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "TFile declaration; attachment variants may wrap this in Partial<TFile>",
+          "requiredness": "required",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "Partial<TFile> and metadata record maps retain outer/nested requiredness separately; referenced FileContext/FileSources remain open",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            },
+            {
+              "path": "packages/data-provider/src/codeEnvRef.ts",
+              "lines": [
+                68,
+                77
+              ],
+              "symbol": "CodeEnvRef",
+              "kind": "type-only",
+              "observation": "local code-environment provenance members"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            }
+          ]
+        },
+        {
+          "path": "files[].metadata.codeEnvRef",
+          "arrayBoundary": "files[]",
+          "storageDomain": "Mongo file reference",
+          "serverDomain": "message history file reference",
+          "providerDomain": "provider TFile",
+          "declaredType": "CodeEnvRef",
+          "declarationContext": "TFile declaration; attachment variants may wrap this in Partial<TFile>",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "Partial<TFile> and metadata record maps retain outer/nested requiredness separately; referenced FileContext/FileSources remain open",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            },
+            {
+              "path": "packages/data-provider/src/codeEnvRef.ts",
+              "lines": [
+                68,
+                77
+              ],
+              "symbol": "CodeEnvRef",
+              "kind": "type-only",
+              "observation": "local code-environment provenance members"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            }
+          ]
+        }
+      ]
+    },
+    "attachments": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                1039,
+                1061
+              ],
+              "symbol": "TAttachmentMetadata/TAttachment",
+              "kind": "type-only",
+              "observation": "attachment variants and metadata branches"
+            },
+            {
+              "path": "packages/data-provider/src/types/web.ts",
+              "lines": [
+                19,
+                58
+              ],
+              "symbol": "SearchResultData",
+              "kind": "type-only",
+              "observation": "named search-result siblings and optional branches"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public projection survivor",
+          "reason": "Web-search exclusions are explicit while permitted SearchResultData siblings remain separate; file_search does not inherit web exclusions.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                1039,
+                1061
+              ],
+              "symbol": "TAttachmentMetadata/TAttachment",
+              "kind": "type-only",
+              "observation": "attachment variants and metadata branches"
+            },
+            {
+              "path": "packages/data-provider/src/types/web.ts",
+              "lines": [
+                19,
+                58
+              ],
+              "symbol": "SearchResultData",
+              "kind": "type-only",
+              "observation": "named search-result siblings and optional branches"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "attachments[].variant2.expiresAt",
+          "arrayBoundary": "attachments[]",
+          "storageDomain": "Mongo attachment union",
+          "serverDomain": "message attachment/tool result consumer",
+          "providerDomain": "provider TAttachment union",
+          "declaredType": "number",
+          "declarationContext": "TAttachment variant; outer Partial<TFile> and nested metadata requiredness are not conflated",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "SearchResultData branches and external result element types remain open at named local boundaries",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                1039,
+                1061
+              ],
+              "symbol": "TAttachmentMetadata/TAttachment",
+              "kind": "type-only",
+              "observation": "attachment variants and metadata branches"
+            },
+            {
+              "path": "packages/data-provider/src/types/web.ts",
+              "lines": [
+                19,
+                58
+              ],
+              "symbol": "SearchResultData",
+              "kind": "type-only",
+              "observation": "named search-result siblings and optional branches"
+            },
+            {
+              "path": "packages/data-provider/src/types/web.ts",
+              "lines": [
+                403,
+                412
+              ],
+              "symbol": "OrganicResult",
+              "kind": "type-only",
+              "observation": "named organic result fields and sitelinks"
+            },
+            {
+              "path": "packages/data-provider/src/types/web.ts",
+              "lines": [
+                415,
+                420
+              ],
+              "symbol": "TopStoryResult",
+              "kind": "type-only",
+              "observation": "named top-story result fields"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            }
+          ]
+        }
+      ]
+    },
+    "metadata": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public exclusion",
+          "reason": "The public projection excludes the root-nested thoughtSignatures path; the remaining named local metadata members are separately listed.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "metadata.codeEnvRef",
+          "arrayBoundary": "metadata",
+          "storageDomain": "Mongo open metadata record",
+          "serverDomain": "message metadata consumer",
+          "providerDomain": "provider metadata record",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "open record: no closed Mongo vocabulary is inferred from repeated names",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/types/files.ts",
+              "lines": [
+                150,
+                221
+              ],
+              "symbol": "TFile",
+              "kind": "type-only",
+              "observation": "complete provider file declaration and nested metadata boundary"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            }
+          ]
+        }
+      ]
+    },
+    "feedback": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/feedback.ts",
+              "lines": [
+                1,
+                145
+              ],
+              "symbol": "TFeedback/TMinimalFeedback/feedbackSchema",
+              "kind": "type-and-schema",
+              "observation": "expanded local tag shape, minimal stored tag, and rating/tag refinement"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                565,
+                705
+              ],
+              "symbol": "history and feedback routes",
+              "kind": "consumer",
+              "observation": "history and feedback route behavior"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public projection survivor",
+          "reason": "Feedback is not a public projection exclusion; stored minimal tag and expanded provider tag are distinct local shapes.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-provider/src/feedback.ts",
+              "lines": [
+                1,
+                145
+              ],
+              "symbol": "TFeedback/TMinimalFeedback/feedbackSchema",
+              "kind": "type-and-schema",
+              "observation": "expanded local tag shape, minimal stored tag, and rating/tag refinement"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                565,
+                705
+              ],
+              "symbol": "history and feedback routes",
+              "kind": "consumer",
+              "observation": "history and feedback route behavior"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": []
+    },
+    "contextMeta": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/controllers/agents/client.js",
+              "lines": [
+                2249,
+                2320
+              ],
+              "symbol": "agent client contextMeta handling",
+              "kind": "consumer",
+              "observation": "server/provider context metadata handling"
+            },
+            {
+              "path": "packages/data-schemas/src/schema/fading.ts",
+              "lines": [
+                1,
+                35
+              ],
+              "symbol": "agentFadingTierDefinition",
+              "kind": "schema",
+              "observation": "fading tier requiredness and optional context containers"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public exclusion",
+          "reason": "contextMeta is explicitly excluded from public messages; established server handling is not a public-survivor claim.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "api/server/controllers/agents/client.js",
+              "lines": [
+                2249,
+                2320
+              ],
+              "symbol": "agent client contextMeta handling",
+              "kind": "consumer",
+              "observation": "server/provider context metadata handling"
+            },
+            {
+              "path": "packages/data-schemas/src/schema/fading.ts",
+              "lines": [
+                1,
+                35
+              ],
+              "symbol": "agentFadingTierDefinition",
+              "kind": "schema",
+              "observation": "fading tier requiredness and optional context containers"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": []
+    },
+    "userSubmittedMessageFieldPaths": {
+      "applicability": {
+        "serverHistory": {
+          "status": "established",
+          "disposition": "message-view member",
+          "reason": "The message history/route path reads this message-side member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                939,
+                975
+              ],
+              "symbol": "message patch/unset handling",
+              "kind": "consumer",
+              "observation": "null/unset and path remapping behavior"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "public projection survivor",
+          "reason": "Path-marker members are not excluded by the named public projection.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                939,
+                975
+              ],
+              "symbol": "message patch/unset handling",
+              "kind": "consumer",
+              "observation": "null/unset and path remapping behavior"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "not applicable",
+          "disposition": "not a conversation result member",
+          "reason": "This is a message-view member, not a conversation result member.",
+          "sourceRefs": []
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe selects ownership/lineage rather than this message result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "userSubmittedMessageFieldPaths[].source",
+          "arrayBoundary": "userSubmittedMessageFieldPaths[]",
+          "storageDomain": "Mongo message path markers",
+          "serverDomain": "path merge/remap consumer",
+          "providerDomain": "provider path markers",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "provider marker metadata beyond named path/field/source/operation is not inferred",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                939,
+                975
+              ],
+              "symbol": "message patch/unset handling",
+              "kind": "consumer",
+              "observation": "null/unset and path remapping behavior"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            },
+            {
+              "path": "packages/data-schemas/src/methods/message.ts",
+              "lines": [
+                456,
+                481
+              ],
+              "symbol": "CLIENT_MESSAGE_SELECT",
+              "kind": "projection",
+              "observation": "public projection exclusions and retained siblings"
+            }
+          ]
+        }
+      ]
+    },
+    "examples": {
+      "applicability": {
+        "serverHistory": {
+          "status": "not applicable",
+          "disposition": "not a message result member",
+          "reason": "This is a conversation-side member and is not a message result member.",
+          "sourceRefs": []
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "not a message result member",
+          "reason": "Conversation examples are not message result members and are not selected by accessProbe.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                867,
+                876
+              ],
+              "symbol": "tExampleSchema",
+              "kind": "schema",
+              "observation": "example input/output content declarations"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "established",
+          "disposition": "conversation-view member",
+          "reason": "Conversation reads and conversation-side schema declarations govern this member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                867,
+                876
+              ],
+              "symbol": "tExampleSchema",
+              "kind": "schema",
+              "observation": "example input/output content declarations"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            }
+          ]
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe does not select this conversation result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "examples[].input.role",
+          "arrayBoundary": "examples[]",
+          "storageDomain": "Mongo conversation examples",
+          "serverDomain": "conversation turn consumer",
+          "providerDomain": "example schema",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "optional",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "example outer object members beyond input/output stop at the enclosing declaration",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                867,
+                876
+              ],
+              "symbol": "tExampleSchema",
+              "kind": "schema",
+              "observation": "example input/output content declarations"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            }
+          ]
+        }
+      ]
+    },
+    "codeWorkspaces": {
+      "applicability": {
+        "serverHistory": {
+          "status": "not applicable",
+          "disposition": "not a message result member",
+          "reason": "This is a conversation-side member and is not a message result member.",
+          "sourceRefs": []
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "not a message result member",
+          "reason": "Workspace selections belong to the conversation view, not to a message result member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                1127,
+                1136
+              ],
+              "symbol": "codeWorkspaces",
+              "kind": "schema",
+              "observation": "workspace selection members"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "established",
+          "disposition": "conversation-view member",
+          "reason": "Conversation reads and conversation-side schema declarations govern this member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-provider/src/schemas.ts",
+              "lines": [
+                1127,
+                1136
+              ],
+              "symbol": "codeWorkspaces",
+              "kind": "schema",
+              "observation": "workspace selection members"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            }
+          ]
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe does not select this conversation result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": []
+    },
+    "subagentThread": {
+      "applicability": {
+        "serverHistory": {
+          "status": "not applicable",
+          "disposition": "not a message result member",
+          "reason": "This is a conversation-side member and is not a message result member.",
+          "sourceRefs": []
+        },
+        "publicMessages": {
+          "status": "established",
+          "disposition": "admission-only",
+          "reason": "Public admission uses lineage rather than treating subagentThread as a public message member; turnConversation consumes the full lineage object.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/schema/convo.ts",
+              "lines": [
+                52,
+                65
+              ],
+              "symbol": "subagentThread",
+              "kind": "schema",
+              "observation": "lineage object requiredness"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        "turnConversation": {
+          "status": "established",
+          "disposition": "conversation-view member",
+          "reason": "Conversation reads and conversation-side schema declarations govern this member.",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/schema/convo.ts",
+              "lines": [
+                52,
+                65
+              ],
+              "symbol": "subagentThread",
+              "kind": "schema",
+              "observation": "lineage object requiredness"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        },
+        "accessProbe": {
+          "status": "not applicable",
+          "disposition": "not selected",
+          "reason": "The access probe does not select this conversation result member.",
+          "sourceRefs": []
+        }
+      },
+      "selectedMembers": [
+        {
+          "path": "subagentThread.parentAgentId",
+          "arrayBoundary": "subagentThread",
+          "storageDomain": "Mongo conversation lineage",
+          "serverDomain": "conversation turn/admission consumer",
+          "providerDomain": "lineage schema",
+          "declaredType": "declared local type; see sourceRefs",
+          "declarationContext": "declared local member",
+          "requiredness": "required",
+          "default": "none",
+          "nullEvidence": "not established",
+          "openBoundary": "lineage identifiers are local strings; admission and runtime lineage population remain separate",
+          "sourceRefs": [
+            {
+              "path": "packages/data-schemas/src/schema/convo.ts",
+              "lines": [
+                52,
+                65
+              ],
+              "symbol": "subagentThread",
+              "kind": "schema",
+              "observation": "lineage object requiredness"
+            },
+            {
+              "path": "packages/data-schemas/src/types/convo.ts",
+              "lines": [
+                249,
+                304
+              ],
+              "symbol": "IConversation",
+              "kind": "type-only",
+              "observation": "conversation-side field declarations"
+            },
+            {
+              "path": "api/server/routes/messages.js",
+              "lines": [
+                232,
+                360
+              ],
+              "symbol": "message route handlers",
+              "kind": "consumer",
+              "observation": "message, attachment, and path-marker consumers"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "committedQueryOutputsMatchMatrix": {
+    "messageSchema": 44,
+    "convoSchema": 73
+  },
+  "memberStatistics": {
+    "total": 274,
+    "placeholderDeclaredType": 257
+  },
+  "actualCrossExclusionViolations": [],
+  "partiallyRetainedContainers": [
+    {
+      "entry": "attachments.web_search.knowledgeGraph",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.highlights"
+    },
+    {
+      "entry": "attachments.web_search.knowledgeGraph",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.sitelinks"
+    },
+    {
+      "entry": "attachments.web_search.knowledgeGraph",
+      "survivingContainer": "attachments[].web_search.topStories[]",
+      "nestedExclusion": "attachments.web_search.topStories.highlights"
+    },
+    {
+      "entry": "attachments.web_search.peopleAlsoAsk",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.highlights"
+    },
+    {
+      "entry": "attachments.web_search.peopleAlsoAsk",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.sitelinks"
+    },
+    {
+      "entry": "attachments.web_search.peopleAlsoAsk",
+      "survivingContainer": "attachments[].web_search.topStories[]",
+      "nestedExclusion": "attachments.web_search.topStories.highlights"
+    },
+    {
+      "entry": "attachments.web_search.relatedSearches",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.highlights"
+    },
+    {
+      "entry": "attachments.web_search.relatedSearches",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.sitelinks"
+    },
+    {
+      "entry": "attachments.web_search.relatedSearches",
+      "survivingContainer": "attachments[].web_search.topStories[]",
+      "nestedExclusion": "attachments.web_search.topStories.highlights"
+    },
+    {
+      "entry": "attachments.web_search.shopping",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.highlights"
+    },
+    {
+      "entry": "attachments.web_search.shopping",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.sitelinks"
+    },
+    {
+      "entry": "attachments.web_search.shopping",
+      "survivingContainer": "attachments[].web_search.topStories[]",
+      "nestedExclusion": "attachments.web_search.topStories.highlights"
+    },
+    {
+      "entry": "attachments.web_search.places",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.highlights"
+    },
+    {
+      "entry": "attachments.web_search.places",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.sitelinks"
+    },
+    {
+      "entry": "attachments.web_search.places",
+      "survivingContainer": "attachments[].web_search.topStories[]",
+      "nestedExclusion": "attachments.web_search.topStories.highlights"
+    },
+    {
+      "entry": "attachments.web_search.news",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.highlights"
+    },
+    {
+      "entry": "attachments.web_search.news",
+      "survivingContainer": "attachments[].web_search.organic[]",
+      "nestedExclusion": "attachments.web_search.organic.sitelinks"
+    },
+    {
+      "entry": "attachments.web_search.news",
+      "survivingContainer": "attachments[].web_search.topStories[]",
+      "nestedExclusion": "attachments.web_search.topStories.highlights"
+    }
+  ],
+  "reviewerMethodCorrection": "Initial ancestor-prefix scan identified 18 container/exclusion pairs. Those containers legitimately survive with filtered children; this final scan separates them from directly excluded paths. No claim of 18 erroneous survivors is made.",
+  "historicalManifestEntriesVerified": 119,
+  "historicalFiles": [
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/artifact-inventory.txt",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/assertions.tsv",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/behavior-matrix.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/callsite-candidates.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/dependency-map.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/design-inputs.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/dist-fingerprints.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/environment.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/inventory-command.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/mongo-guard.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/opening-baseline.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/results-summary.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/run-baseline.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/junit.xml",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/junit.xml",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/source-fingerprints.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/symbol-references.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/test-baseline.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/verify-packet.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/contract-design.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass01-report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-findings.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-harness.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/validation-attempts.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/verify-packet.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/intake.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/nested-fields.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/intake.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/nested-fields.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/replay-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/replay.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/intake.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/nested-fields.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/replay-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/replay.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/review.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/review.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/decision.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/decision.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/contract-mapping.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/decision.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/read-contract.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validation.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/README.md",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01-mismatches.json.gz",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01-summary.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01.cjs",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02-mismatches.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02-summary.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02.cjs",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/conversation-pairings.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/probe.cjs",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/skipped-source-locators.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-exploratory.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final-locators.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final.py"
+  ],
+  "sourceStatus": "",
+  "planningStatus": "",
+  "packetAfter": {
+    "SHA256SUMS": "75b5e048152d12a488e08939a9a1405f9891722abd4642b6a8a81b61e826dc7e",
+    "execution.log": "9127cbc8a2dd04178098223fd0c04498dba034b089faaa7831437af14652e101",
+    "intake.md": "95371a2b21b5665daf7b007fd9a3357666bca49289a92fb85731ed4bd93f6a3b",
+    "nested-fields.json": "e11928ba8755a0f797b5046a61d48dd5e3bccadc9b567609a2c614a271d25cd3",
+    "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+    "replay.py": "8ffdb79c3862b8e82756851c4e3d145cd4aa1e3b4fb2453161e43b4bc5137426",
+    "report.md": "a36e6098a9d70b523ac2dbd77229cffc7e04f605b70c3a9b0022c64c4d9a7ce9"
+  }
+}

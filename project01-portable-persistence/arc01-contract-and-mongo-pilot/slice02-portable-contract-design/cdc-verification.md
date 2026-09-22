@@ -1,6 +1,6 @@
 # CDC verification — Slice02 CC evidence
 
-Current disposition: see [Correction iteration01 review](#correction-iteration01-review--2026-09-21). The initial review below is preserved as historical evidence.
+Current disposition: see [Correction iteration02 review](#correction-iteration02-review--2026-09-21). Earlier reviews below remain historical evidence.
 
 ## Initial review — verdict and scope
 
@@ -99,3 +99,45 @@ Retain corrected complete outputs and assert expected record identities, exact f
 ### Return and design ownership
 
 [Iteration02](cc-prompt-iteration02.md) is the second CC correction, pending Operator relay and CC acknowledgement. It repairs the existing evidence assignment in a new seven-file `cc-evidence03` packet and preserves all older packets/prompts. R1–R3 remain partially resolved until the above checks pass. All 27 project/arc/slice acceptance rows remain open. Concrete DTO/codec/patch policy, injection scope, D07 source-build readiness and production sizing remain CDC-owned; none is delegated implicitly by this correction.
+
+## Correction iteration02 review — 2026-09-21
+
+**Verdict: R1 and R3 corrections reproduced; R2 returned for a declaration-grounded repair.** Reviewed CC commit `0f81e318bdd78619b5092c188c5149ae5178de35`, assigned by [cc-prompt-iteration02.md](cc-prompt-iteration02.md), currently introduced in planning history at `a0c16f4031ca050e226b501db72387d1177fa45e`. Its prompt bytes equal those at the previously recorded `fa5515be9`; historical review identities remain preserved. The Operator relayed CC's return to the existing CDC context. No acceptance row or slice closes.
+
+### Reproduced checks and disposition
+
+[Results](artifacts/cdc-review03/result.json), [raw commands/output](artifacts/cdc-review03/execution.log), [review driver](artifacts/cdc-review03/review.py), and [syntax-only declaration extractor](artifacts/cdc-review03/declarations.cjs) record this pass. CDC verified the seven packet files against the reviewed commit, its allowed commit scope and both trailers, and all **119 Project01 manifest entries at that commit**. Source stayed clean at `3e3c5410d3863118fdba694fb0cd51baeb7102f9`; original packet hashes were unchanged throughout. No database, private corpus, build, package install or application suite ran.
+
+- **R1 resolved for the assigned evidence correction:** actual sealed CLI verification and self-test passed. All fifteen negative controls rejected; failing preflight runner calls totaled zero and the valid sentinel ran once. The submitted replay equals the pinned baseline; submitted-to-baseline, fresh-to-submitted and fresh-to-baseline comparisons pass. Separate CDC CLI tests with resealed `success:false` and wrong `node` results both reject. Final packet mutation rejects and sealed self-test leaves the original packet untouched. These establish the repaired paths, not arbitrary-input formal correctness or integrated Mongo conformance.
+- **R3 corrected data coverage reproduced:** independent complete projections match the pinned matrix exactly: 44/73 unique fields, 10/13 provider-only names, 4/3 interface-only names and four implicit keys per record. The committed corrected queries/logs use the right record names and per-record ancillary fields. Reading receipts remain CC-attested; source-reference support is reviewed separately under R2. The old empty/null query outputs remain historical failures.
+- **R2 only partially repaired:** message versus conversation applicability is mostly corrected, and the actual sibling lists no longer name directly excluded leaves. Containers such as organic/topStories legitimately survive with nested removals; the review explicitly separates those partial containers from excluded leaves. Nevertheless, the map's types, paths, presence claims and two view dispositions remain unreliable.
+
+### R2a — wrong applicability and incomplete composed-exclusion predicate
+
+`metadata.publicMessages` says `public exclusion`; source `CLIENT_MESSAGE_SELECT` excludes **metadata.thoughtSignatures**, not the whole metadata object. `subagentThread.accessProbe` says `not selected`, contradicting `getConvoOwnership`'s `user tenantId subagentThread` projection at `methods/conversation.ts:2060–2078`. The report claims full-lineage selection while the actual inventory says the opposite; the latter is the artifact to repair.
+
+`replay.py:239–253` compares each permitted sibling only with its owning exclusion. CDC replaced a completionWakeup sibling with `content[].tool_call.backgroundTask.resultClaim`; the validator **accepted** it, although another exclusion removes resultClaim. The existing self-test covers only a sibling equal to its own exclusion. Validate against the whole exclusion set. Ancestor containers need explicit nested-removal obligations, not blanket rejection: retaining organic[] while removing each element's highlights/sitelinks is correct.
+
+### R2b — unsupported fields, invented path segments and erased type information
+
+The inventory contains **274 members; 257** use `declaredType: "declared local type; see sourceRefs"`. Domains often name a resource instead of a value type; repeated broad source refs do not support each row. Examples below were checked directly and against a syntax-only extraction of eleven pinned declarations. That extraction is evidence of literal source syntax, not a portable DTO generator or full type resolver.
+
+| Submitted claim | Source-backed correction |
+|---|---|
+| `userSubmittedMessageFieldPaths[].source` and `.operation` are declared members | `filters.ts:184–191` declares a strict object with only `path` and `field`; both are required within each element. The validator itself incorrectly requires `.source`. |
+| `examples[].input/output.role` and `.files` are declared fields | `schemas.ts:867–874` declares input/output objects containing required content strings. Storage remains Mixed; this does not prove historical values lack other fields. |
+| `content[].error.text` and `content[].summary.boundary.contentIndex` | Error and summary are discriminated branches of a content element, not nested `error`/`summary` wrapper objects. The element has `.text`/`.error` in the error branch and `.boundary.contentIndex` in the summary branch (`types/content.ts:195–220,244–315`). |
+| Message `metadata.codeEnvRef`, runFile and related fields cite `TFile` | `TFile.metadata` describes embedded file metadata, not the open message metadata record. Names may exist in historical records, but this citation does not establish their declaration or producer at the message root. |
+| settledAt is optional with a placeholder type | `Agents.ToolCall.backgroundTask.settledAt` is `Date`, required when the optional backgroundTask object exists (`types/agents.ts:103–117`). The Date distinction explicitly requested in earlier prompts is lost in the member row. |
+| `subagentThread.parentAgentId` is required | `subagentThreadLineageSchema` declares it optional (`schemas.ts:1102–1113`). |
+| `files[].file_id` is required as a root file member | `TFile.file_id` is required in TFile; `TMessage.files` is `Partial<TFile>[]`. Those declaration and application contexts must remain separate; Partial is shallow. |
+| `attachments[].variant2.expiresAt` is an optional data path | `variant2` is an analytical branch label, not a property. The numeric expiry is required within that attachment union branch (`schemas.ts:1054–1061`). Other fabricated variant path segments have the same problem. |
+| Processed fields are placed at `attachments[].web_search.content/highlights` | ProcessedSource is intersected into organic/topStories elements, not SearchResultData itself (`types/web.ts:25–58`). Preserve the actual array and member positions. |
+
+The current validator's minimum member count and hand-authored required-path sets force some incorrect rows, including `.source`, the summary wrapper and message metadata.codeEnvRef. A row count is not a declaration-completeness oracle. Correct those predicates together with the data; do not add invented rows to satisfy them.
+
+### Focused return and next design work
+
+[Iteration03](cc-prompt-iteration03.md) is the **third CC correction**, pending Operator relay/acknowledgement. R1/R3 mechanisms and reproduced observations are retained; R2 must be rebuilt from literal declarations and checked member-by-member, with branch labels separate from data paths and explicit wrapper/presence semantics. Source-based exact-membership controls replace padding the map to a target count. Preserve all previous packets and reports, including these failures.
+
+This is a change in evidence method within the same ten-root assignment, not new application scope. All S01–S07, Slice01 acceptance and the 27 Project01/Arc01/Slice02 criteria remain open. CDC continues to own DTO/codec/patch decisions, injection scope, D07/runtime/build readiness and production sizing. The map cannot yet support those decisions as a complete, validated field contract.

@@ -6,7 +6,7 @@
 | Arc | [Arc01](../arc-plan.md) |
 | Status | Active — design preparation; not implementation-ready |
 | Workflow | Two contributors: CDC + CC; Expedited Mode |
-| Assignment | [cc-prompt-iteration02.md](cc-prompt-iteration02.md), second correction for remaining R1–R3 defects; pending Operator relay/CC acknowledgement |
+| Assignment | [cc-prompt-iteration03.md](cc-prompt-iteration03.md), third correction for R2 declarations/projection map; R1/R3 reproduced; pending Operator relay/CC acknowledgement |
 | Source baseline | Current CC inspection: `3e3c5410d3863118fdba694fb0cd51baeb7102f9` on `billo-guildhall`; first-pass evidence remains at `ba44443fdb232bbe6d4977e2619774b5a72586ac` |
 | Artifact home | `artifacts/` within this slice |
 | Depends on | Slice01 attested evidence; unresolved findings retained below |
@@ -43,7 +43,8 @@ The slice is complete only when all ledger criteria have concrete dispositions, 
 | This slice plan v1.0, current conversation | 2026-09-20 | Slice01 evidence packet | Operator explicitly requested continuation after reading the report | Historical one-contributor investigation through pass05; superseded for execution by the initial CC prompt |
 | [cc-prompt.md](cc-prompt.md) | 2026-09-21 | One-contributor design passes 1–5; no prior CC prompt | Operator selected CDC + CC; replay pass05 and inventory ten nested roots for CDC decisions | Returned by separate CC context at `99d5ecd794`; CDC reproduced replay/counts and returned R1–R3 for correction |
 | [cc-prompt-iteration01.md](cc-prompt-iteration01.md) | 2026-09-21 | [cc-prompt.md](cc-prompt.md), delivery `99d5ecd794` | CDC review R1–R3: verifier/preservation, nested detail and inspection evidence | Returned at `5d94ef8d8`; CDC reproduced partial repairs and returned remaining R1–R3 defects |
-| [cc-prompt-iteration02.md](cc-prompt-iteration02.md) | 2026-09-21 | [cc-prompt-iteration01.md](cc-prompt-iteration01.md), delivery `5d94ef8d8` | Actual verifier accepts resealed incorrect submitted results; nested public/view mapping and query coverage need correction | Active second correction; pending Operator relay and acknowledgement |
+| [cc-prompt-iteration02.md](cc-prompt-iteration02.md) | 2026-09-21 | [cc-prompt-iteration01.md](cc-prompt-iteration01.md), delivery `5d94ef8d8` | Actual verifier accepts resealed incorrect submitted results; nested public/view mapping and query coverage need correction | Returned at `0f81e318b`; R1/R3 reproduced, R2 declaration/view/projection defects returned for repair |
+| [cc-prompt-iteration03.md](cc-prompt-iteration03.md) | 2026-09-21 | [cc-prompt-iteration02.md](cc-prompt-iteration02.md), delivery `0f81e318b` | R2 source-declaration discrepancies and composed-exclusion predicate; retain R1/R3 fixes | Active third correction; pending Operator relay and acknowledgement |
 
 ## Historical initial handoff — 2026-09-21
 
@@ -69,13 +70,22 @@ The active [iteration01 prompt](cc-prompt-iteration01.md) corrects R1 (provenanc
 CDC readiness: the review inspected the committed driver/inventory/report and source witnesses, ran the sealed harness in temporary storage and exercised the same verifier predicates with four counterexamples. The prompt supplies concrete CLI modes, preflight/equality/preservation rules, negative-control oracles and the exact ten-root repair method; the required-reading manifest and seven-file fence remain bounded. Domain constraints remain source CLAUDE's Type Safety and Workspace Boundaries, applied as source-backed type reuse and explicit open-value boundaries. The correction does not choose DTO policy or authorize source changes. CDC owns those decisions after the repaired evidence returns; remaining composition/build/sizing work is unchanged.
 
 
-## Current second correction assignment — 2026-09-21
+## Historical second correction assignment — 2026-09-21
 
 The Operator relayed CC's correction at `5d94ef8d8da18b636279553ed037b906259b2882`. [CDC review](cdc-verification.md#correction-iteration01-review--2026-09-21) reproduced read-only verification, the actual submitted replay equality, 117 classifications/ten roots/twelve exclusion keys/22 fingerprints, and all 110 Project01 manifest entries present at that commit. Actual production-path wrong-head preflight rejected before its runner. These results support continued design, not acceptance of a slice or CDC-authored historical harness.
 
 Remaining R1–R3 findings are concrete: the verifier accepts a resealed submitted `success:false` result; self-test/reporting confuses positive preservation with mutation rejection; the nested map lists excluded siblings as permitted and conflates message/conversation/admission views; declared nested members are incomplete; and the logged queries returned an empty conversation population plus null ancillary populations. The [iteration02 prompt](cc-prompt-iteration02.md) supplies fixes and discriminating controls in a new seven-file `artifacts/cc-evidence03` packet. It preserves all older artifacts and prompts. This is the second CC correction; Operator relay/CC acknowledgement is pending. All seven rows and Slice01 acceptance remain open, with unchanged production boundaries.
 
 CDC author readiness: (1) source-grounded in submitted driver/logs, pinned projection, named read contract, tool/file/attachment/web declarations and ownership method; (2) decision-complete for this evidence repair, specifying submitted/baseline/fresh comparisons, seal-safe controls, returned-view semantics and composed exclusions; (3) engineering-methods prompt-authoring and independent-verification rules applied through production-path/resealed-result controls and truthful query receipts; source Type Safety/Workspace Boundaries still require source-backed domain distinctions; (4) executable using existing Python/Node/compiler with the same seven-file output fence and explicit preflight; (5) falsifiable against the reproduced accepted bad result and empty/null queries, plus source-backed survivor counterexamples; (6) coherent with unchanged 27 acceptance rows and CDC ownership of DTO/codec/patch decisions, injection, D07 and sizing. No source implementation is assigned.
+
+
+## Current third correction assignment — 2026-09-21
+
+The Operator relayed CC iteration02 at `0f81e318bdd78619b5092c188c5149ae5178de35`. [CDC review](cdc-verification.md#correction-iteration02-review--2026-09-21) reproduced R1 submitted/baseline/fresh verification, fifteen rejected controls with 0/1 failing/valid runner calls, sealed preservation, actual submitted replay equality, and R3 exact complete field/ancillary queries. All 119 Project01 manifest entries at that commit passed. R1/R3 are resolved for this bounded evidence correction, not slice acceptance or integrated conformance.
+
+R2 remains materially wrong: metadata is marked wholly public-excluded, lineage is marked absent from the access probe, some fields/paths are invented, requiredness and Partial/union contexts are conflated, and 257 of 274 member rows have placeholder types. The predicate checks only each exclusion's own sibling list against that exclusion, accepting a sibling excluded elsewhere. [Iteration03](cc-prompt-iteration03.md) changes the repair method to literal source-declaration extraction plus explicit use-site/branch interpretation and whole-projection validation. Output is the same seven-file shape under `artifacts/cc-evidence04`. This is the third correction, pending Operator relay/acknowledgement; prior evidence/prompts remain frozen. All seven rows, Slice01 acceptance and production gates remain open.
+
+CDC author readiness: source statements were checked against pinned TypeScript/Zod declarations, the exact projection and ownership method; a syntax-only extractor reproduced eleven declarations and shows the false path-marker/example/summary/lineage claims. The prompt specifies declaration graph/use-site separation, explicit optional-ancestor/shallow-Partial rules, exact closed-member validation, false-path removal and composed exclusions with retained-container obligations. These apply engineering-methods' source-grounded prompt/oracle guidance and source Type Safety/Workspace Boundaries without selecting a DTO codec. The existing Node/compiler and seven-file fence make the method executable; supplied mutants distinguish the rejected evidence03 claims, while replay/query mechanisms remain regression requirements. Scope is still the same ten roots and 117 top-level fields; there is no nested-member target or production assignment. CDC retains DTO/patch decisions, injection, D07 and sizing.
 
 ## Subsequent Operator decisions
 
@@ -109,6 +119,7 @@ The matrix accounts for all 117 declared schema fields and nested public exclusi
 
 | Version | Date | Change |
 |---|---|---|
+| v1.10 | 2026-09-21 | Reproduced iteration02 R1/R3 fixes; issued iteration03 for source-declaration, applicability and composed-projection defects in R2; all scope and acceptance gates retained. |
 | v1.9 | 2026-09-21 | Reviewed CC iteration01; retained reproduced evidence and issued iteration02 for submitted-result verification, semantic-map errors and missing query populations; scope and gates unchanged. |
 | v1.8 | 2026-09-21 | Reviewed initial CC evidence: replay and classifications reproduced; issued first correction for R1–R3 without changing slice scope or acceptance. |
 | v1.7 | 2026-09-21 | Activated Operator-selected CDC + CC; issued the initial bounded replay/nested-field evidence prompt with explicit ownership, output fence, intake and readiness record. |

@@ -54,7 +54,7 @@ Child completion alone does not prove the arc composes. Arc close requires integ
 
 ## Workflow and source boundaries
 
-The Operator switched Project01 to CDC + CC on 2026-09-21, superseding the initial one-contributor investigation. This conversation is CDC. The separate CC context returned evidence01 at `99d5ecd794`; [CDC review](slice02-portable-contract-design/cdc-verification.md) reproduced its replay/counts and reviewed the first correction at `5d94ef8d8`. The [second correction](slice02-portable-contract-design/cc-prompt-iteration02.md) now awaits Operator relay/acknowledgement. CDC reviews new CC work; prior CDC-authored evidence retains its pending separate verification. CRC is not enabled. The [project transition record](../project-plan.md#transition-record--2026-09-21) carries source state, open findings and unchanged gates.
+The Operator switched Project01 to CDC + CC on 2026-09-21, superseding the initial one-contributor investigation. This conversation is CDC. The separate CC context returned evidence01 at `99d5ecd794`; [CDC review](slice02-portable-contract-design/cdc-verification.md) reproduced its replay/counts and reviewed the first correction at `5d94ef8d8`. The second correction returned at `0f81e318b`: R1/R3 reproduced; R2 requires declaration-grounded repair. The [third correction](slice02-portable-contract-design/cc-prompt-iteration03.md) now awaits Operator relay/acknowledgement. CDC reviews new CC work; prior CDC-authored evidence retains its pending separate verification. CRC is not enabled. The [project transition record](../project-plan.md#transition-record--2026-09-21) carries source state, open findings and unchanged gates.
 
 The earlier fork-only remote query found no dev ref. This is now resolved: the Operator requested a `billo-guildhall` implementation worktree, created from verified `upstream/dev` at `fe79265b2f47937051625719f3ba5080189912c1`. Source instructions still require upstream PRs against dev; main remains pristine. See [repository workflow](../../repository-workflow.md) and [Operator decisions](../operator-decisions.md). Earlier evidence remains at its original source commit; refresh source/build validation before implementation.
 
@@ -80,10 +80,13 @@ Slice02 [pass 2](slice02-portable-contract-design/artifacts/design-pass02/decisi
 
 **CC correction review:** Iteration01 retained exact replay and census evidence but left a reproduced submitted-result verifier gap, incorrect public survivors/read-view applicability and omitted query populations. [Iteration02](slice02-portable-contract-design/cc-prompt-iteration02.md) repairs these within the same evidence-only fence. All arc criteria and production gates remain open.
 
+**Iteration02 review:** CDC reproduced the submitted-result and query fixes, including sealed preservation and all fifteen controls. R2 remains open because declared members/types, read-view dispositions and composed-exclusion checks disagree with source. Iteration03 provides exact source examples and a declaration-extraction method within the same ten-root evidence fence. No production assignment or arc acceptance follows.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.13 | 2026-09-21 | Retained Slice02 R1/R3 corrections and issued a third correction focused on R2 declaration/projection evidence; roadmap and gates unchanged. |
 | v1.12 | 2026-09-21 | Bubbled up Slice02 correction review and iteration02; retained reproduced evidence, semantic/verifier/query defects and unchanged roadmap/gates. |
 | v1.11 | 2026-09-21 | Slice02 CC evidence reviewed and returned for bounded R1–R3 correction; replay/counts reproduced, with all acceptance and implementation gates retained. |
 | v1.10 | 2026-09-21 | Operator selected CDC + CC as Slice02 deepened; initial bounded evidence assignment and separate-context review ownership recorded, with the existing roadmap and acceptance unchanged. |
