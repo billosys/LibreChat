@@ -1,0 +1,576 @@
+{
+  "reviewedCommit": "5d94ef8d8da18b636279553ed037b906259b2882",
+  "observedPlanningHead": "5d94ef8d8da18b636279553ed037b906259b2882",
+  "packetBefore": {
+    "SHA256SUMS": "9b53fcbcfec705d26af66051b0a34c9947249055bba88ebc920bab6db2c3cb8e",
+    "execution.log": "a05bca318773c1925e80d524f69e4b8a9d8b6c5b63457f1cd4ed556933434a38",
+    "intake.md": "7e561050c2446b2edeb81e8d7705ae87c98bf3b3028ab46adb16112829d9484f",
+    "nested-fields.json": "b8bb9d4e620f15e846efa5e0d6ca5ba4f747a6efd39a49fd715fe8145cc1af5e",
+    "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+    "replay.py": "9dbd4bff5cdd9307cfd13b274554e0bfc495856d6509c50b6b9aae3c33e0f1a0",
+    "report.md": "86b262a5664d5773f007bbe420ff0af31db2daa9740bc619701a0f2dd78a95aa"
+  },
+  "reviewedPacketMatchesCommit": true,
+  "ccCommitScopeAndTrailersValid": true,
+  "validVerifyExit": 0,
+  "validVerify": {
+    "mode": "verify",
+    "packetBefore": {
+      "SHA256SUMS": "9b53fcbcfec705d26af66051b0a34c9947249055bba88ebc920bab6db2c3cb8e",
+      "execution.log": "a05bca318773c1925e80d524f69e4b8a9d8b6c5b63457f1cd4ed556933434a38",
+      "intake.md": "7e561050c2446b2edeb81e8d7705ae87c98bf3b3028ab46adb16112829d9484f",
+      "nested-fields.json": "b8bb9d4e620f15e846efa5e0d6ca5ba4f747a6efd39a49fd715fe8145cc1af5e",
+      "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+      "replay.py": "9dbd4bff5cdd9307cfd13b274554e0bfc495856d6509c50b6b9aae3c33e0f1a0",
+      "report.md": "86b262a5664d5773f007bbe420ff0af31db2daa9740bc619701a0f2dd78a95aa"
+    },
+    "environmentCommands": [
+      {
+        "argv": [
+          "git",
+          "branch",
+          "--show-current"
+        ],
+        "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+        "startedAt": "2026-09-22T03:39:49.530190+00:00",
+        "finishedAt": "2026-09-22T03:39:49.545470+00:00",
+        "exitCode": 0,
+        "stdout": "billo-guildhall\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+        "startedAt": "2026-09-22T03:39:49.545481+00:00",
+        "finishedAt": "2026-09-22T03:39:49.558184+00:00",
+        "exitCode": 0,
+        "stdout": "3e3c5410d3863118fdba694fb0cd51baeb7102f9\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain",
+          "--untracked-files=all"
+        ],
+        "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+        "startedAt": "2026-09-22T03:39:49.558201+00:00",
+        "finishedAt": "2026-09-22T03:39:49.641456+00:00",
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "/Users/oubiwann/.local/bin/node",
+          "--version"
+        ],
+        "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "startedAt": "2026-09-22T03:39:49.641524+00:00",
+        "finishedAt": "2026-09-22T03:39:49.656064+00:00",
+        "exitCode": 0,
+        "stdout": "v22.22.3\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "/Users/oubiwann/.local/bin/node",
+          "-e",
+          "console.log(require(\"/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js\").version)"
+        ],
+        "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "startedAt": "2026-09-22T03:39:49.656112+00:00",
+        "finishedAt": "2026-09-22T03:39:49.776895+00:00",
+        "exitCode": 0,
+        "stdout": "5.9.3\n",
+        "stderr": ""
+      }
+    ],
+    "structural": {
+      "coverageRows": 117,
+      "uniqueCoverageKeys": 117,
+      "selectedRoots": 10,
+      "nestedExclusions": 12,
+      "classificationCounts": {
+        "other scalar/array field outside this deep inspection": 92,
+        "selected nested root": 10,
+        "default-hidden specialized field": 14,
+        "adapter-private physical relationship": 1
+      },
+      "sourceFingerprints": 22
+    },
+    "preflight": {
+      "environment": {
+        "branch": "billo-guildhall",
+        "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+        "sourceStatus": "",
+        "node": "v22.22.3",
+        "compilerVersion": "5.9.3",
+        "compilerSha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675"
+      },
+      "oldInputs": {
+        "manifestSet": {
+          "artifacts/SHA256SUMS": "9a154519192f951b2036c3c4263634bf6815de61a2919e98bba3a8fafeecafff",
+          "artifacts/design-pass02/SHA256SUMS": "f027b20a65290a3c74f6a212241629c23f99d8be75d2aacd580334f76d7cf79f",
+          "artifacts/design-pass03/SHA256SUMS": "dc2348c81b9bb4aafed25600329d14047e1cadf5f7305f52b6aeed7cf2070a77",
+          "artifacts/design-pass04/SHA256SUMS": "34b5c312e5a522916f857a9f1dba6fd8c6d6868c2aed35d9062182d04e7453c8",
+          "artifacts/design-pass05/SHA256SUMS": "515e47b1d388ef3f8bb5d42ff258da0ea340b37c5e8d7e64bc6c6396b05e4c68"
+        },
+        "inputSet": {
+          "artifacts/design-pass05/read-contract.md": "3aec3158c4e888640124ac446fff02e06fc4e1ff6ea2d1d90ab0dab09365d99e",
+          "artifacts/design-pass05/protocol.md": "e2c45e56558d9434d61fa110344c80748a00dcfb5482cc3aab4635732e339339",
+          "artifacts/design-pass05/experiment.cjs": "f33bdd87b9691fdfb26adebb4e058fdb641f50e0be596f6f9e9d8c80b0037339",
+          "artifacts/design-pass05/field-matrix.cjs": "8cbb81dee30eab0a58dc96ec1db2e65f0c4e4ca5266e1501accf7bb42b8fb6f4",
+          "artifacts/design-pass05/validate.py": "6fb512a7d3564e5c96206cef1f0b7855147f25c75e144e6f90c4ef46d6debb9b",
+          "artifacts/design-pass05/field-matrix.json": "c1e32f81a7a105dc32e2f036ffeb08688c5c362e57e5b038d4ea3cd4e6806ab1",
+          "artifacts/design-pass05/result-01.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+          "artifacts/design-pass04/handle.cjs": "b1efac13c8c2aa1d1a23c2fb8bf3d209673abcb3da798164da49bfab99bcabc4",
+          "artifacts/design-pass04/field-census.json": "845eb74a93285be66a6072f23a3468ab7fbd258000b687f9ebe2fe5db77b806f"
+        },
+        "scope": "explicit pass02-pass05 manifests and pass05/pass04 replay inputs; no global recursive denominator"
+      },
+      "priorPackets": {
+        "priorManifestSha256": "6a7aaa9bbae775461ff81615bf8026c36cc10172b0f77657340a9ba85fd0dc3b",
+        "priorPacketEntries": {
+          "intake.md": "97b44e020a1feac7aa25d8358f926e1f924f9600c39df2ab0673f0a306e2294f",
+          "report.md": "0ffeba09760b3b24de1f693cf5cc0da8f21303caed2089443ba436272f7ebffd",
+          "nested-fields.json": "7ecff780e8020b9ba95d1d55ded6736623087afcca6001073acbba6e02b36d0d",
+          "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+          "execution.log": "15b0704d506b5eff9d10fd1ec567b02699a89c9cd0d40683fb40f54dd5fe2440",
+          "replay.py": "5899fe36a58657f55197c7962ea5d43ea196fd225dfd6f8652c182d138411976"
+        },
+        "cdcReviewResultSha256": "f7117ee576164dd0161d0ea41f46457fbc5ca18fd9b802f165febdaf42d806a9",
+        "cdcReviewControls": 4
+      },
+      "inventorySourcesChecked": 22
+    },
+    "harness": {
+      "argv": [
+        "/Users/oubiwann/.local/bin/node",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+        "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cc-evidence02-verify-dbp9thi4/replay-result.json"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "startedAt": "2026-09-22T03:39:49.785210+00:00",
+      "finishedAt": "2026-09-22T03:39:50.071126+00:00",
+      "exitCode": 0,
+      "stdout": "{\n  \"success\": true,\n  \"readCases\": 16,\n  \"gateCases\": 2,\n  \"preflightCases\": [\n    {\n      \"name\": \"missing-owner\",\n      \"direct\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"deferred\": {\n        \"error\": \"User not authenticated\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"missing-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    },\n    {\n      \"name\": \"malformed-conversation\",\n      \"direct\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"deferred\": {\n        \"returned\": \"<undefined>\"\n      },\n      \"eager\": {\n        \"error\": \"[TenantIsolation] turn-write attempted without tenant context in strict mode\"\n      },\n      \"passed\": true\n    }\n  ],\n  \"negativeControls\": [\n    {\n      \"name\": \"wrong-owner\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"no-projection\",\n      \"detected\": true\n    },\n    {\n      \"name\": \"eager-strict-scope\",\n      \"detected\": true\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    "comparison": {
+      "behaviorFieldsExact": [
+        "readCases",
+        "gateCases",
+        "preflightCases",
+        "negativeControls",
+        "success",
+        "modelAccesses",
+        "error"
+      ],
+      "provenanceFieldsExact": [
+        "sourceHead",
+        "node",
+        "compiler",
+        "sources",
+        "experimentSha256",
+        "priorHandle"
+      ],
+      "allowedDifferences": []
+    },
+    "packetAfter": {
+      "SHA256SUMS": "9b53fcbcfec705d26af66051b0a34c9947249055bba88ebc920bab6db2c3cb8e",
+      "execution.log": "a05bca318773c1925e80d524f69e4b8a9d8b6c5b63457f1cd4ed556933434a38",
+      "intake.md": "7e561050c2446b2edeb81e8d7705ae87c98bf3b3028ab46adb16112829d9484f",
+      "nested-fields.json": "b8bb9d4e620f15e846efa5e0d6ca5ba4f747a6efd39a49fd715fe8145cc1af5e",
+      "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+      "replay.py": "9dbd4bff5cdd9307cfd13b274554e0bfc495856d6509c50b6b9aae3c33e0f1a0",
+      "report.md": "86b262a5664d5773f007bbe420ff0af31db2daa9740bc619701a0f2dd78a95aa"
+    },
+    "packetUnchanged": true
+  },
+  "selfTestExit": 0,
+  "selfTest": {
+    "validControl": {
+      "coverageRows": 117,
+      "uniqueCoverageKeys": 117,
+      "selectedRoots": 10,
+      "nestedExclusions": 12,
+      "classificationCounts": {
+        "other scalar/array field outside this deep inspection": 92,
+        "selected nested root": 10,
+        "default-hidden specialized field": 14,
+        "adapter-private physical relationship": 1
+      },
+      "sourceFingerprints": 22
+    },
+    "controls": [
+      {
+        "control": "wrong-runtime",
+        "rejected": true,
+        "error": "preflight mismatch node: 'v0.invalid' != 'v22.22.3'"
+      },
+      {
+        "control": "wrong-source-head",
+        "rejected": true,
+        "error": "preflight mismatch sourceHead: '0000000000000000000000000000000000000000' != '3e3c5410d3863118fdba694fb0cd51baeb7102f9'"
+      },
+      {
+        "control": "wrong-compiler-digest",
+        "rejected": true,
+        "error": "preflight mismatch compilerSha256: '0000000000000000000000000000000000000000000000000000000000000000' != '3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675'"
+      },
+      {
+        "control": "wrong-source-file-digest",
+        "rejected": true,
+        "error": "inventory source fingerprint mismatch at execution: api/server/controllers/agents/client.js"
+      },
+      {
+        "control": "preflight-runner-sentinel",
+        "rejected": true,
+        "error": "preflight mismatch sourceHead: '0000000000000000000000000000000000000000' != '3e3c5410d3863118fdba694fb0cd51baeb7102f9'"
+      },
+      {
+        "control": "invalid-classification",
+        "rejected": true,
+        "error": "classification mismatch for message.messageId"
+      },
+      {
+        "control": "missing-field",
+        "rejected": true,
+        "error": "coverage membership, denominator, or uniqueness mismatch"
+      },
+      {
+        "control": "duplicate-field",
+        "rejected": true,
+        "error": "coverage membership, denominator, or uniqueness mismatch"
+      },
+      {
+        "control": "absent-provenance-key",
+        "rejected": true,
+        "error": "comparison key presence mismatch in sourceHead; absent and null are distinct"
+      },
+      {
+        "control": "null-provenance-key",
+        "rejected": true,
+        "error": "exact comparison mismatch in sourceHead"
+      },
+      {
+        "control": "absent-behavior-key",
+        "rejected": true,
+        "error": "comparison key presence mismatch in error; absent and null are distinct"
+      },
+      {
+        "control": "null-behavior-key",
+        "rejected": true,
+        "error": "comparison key presence mismatch in error; absent and null are distinct"
+      },
+      {
+        "control": "capture-sealed-destination",
+        "rejected": true,
+        "error": "capture refuses a destination that already has SHA256SUMS"
+      },
+      {
+        "control": "verify-packet-hash-preservation",
+        "rejected": true,
+        "packetUnchanged": true
+      }
+    ],
+    "runnerSentinel": {
+      "calls": 0,
+      "expectedCalls": 0,
+      "passed": true
+    }
+  },
+  "selfTestCopyModified": true,
+  "resealedWrongSubmittedSuccess": {
+    "exitCode": 0,
+    "rejected": false,
+    "mutation": "submitted success true -> false; manifest recalculated"
+  },
+  "productionPathWrongHead": {
+    "rejected": true,
+    "error": "preflight mismatch sourceHead: '0000000000000000000000000000000000000000' != '3e3c5410d3863118fdba694fb0cd51baeb7102f9'",
+    "runnerCalls": 0
+  },
+  "ancillaryQuery": {
+    "actualTopLevel": {
+      "providerOnly": null,
+      "interfaceOnly": null,
+      "implicit": null
+    },
+    "requiredPerRecord": [
+      {
+        "name": "messageSchema",
+        "providerOnly": [
+          "responseMessageId",
+          "overrideParentMessageId",
+          "bg",
+          "title",
+          "generation",
+          "clientTimestamp",
+          "createdAt",
+          "updatedAt",
+          "current",
+          "searchResult"
+        ],
+        "interfaceOnly": [
+          "plugin",
+          "plugins",
+          "createdAt",
+          "updatedAt"
+        ],
+        "implicit": {
+          "createdAt": "timestamp; preserve Date locally and string at HTTP serialization",
+          "updatedAt": "timestamp; preserve Date locally and string at HTTP serialization",
+          "_id": "adapter-private; omit from portable record",
+          "__v": "adapter-private; omit from portable record"
+        }
+      },
+      {
+        "name": "convoSchema",
+        "providerOnly": [
+          "isShared",
+          "userLabel",
+          "parentMessageId",
+          "stream",
+          "artifacts",
+          "context",
+          "createdAt",
+          "updatedAt",
+          "thinkingDisplay",
+          "additionalModelRequestFields",
+          "additional_instructions",
+          "append_current_datetime",
+          "presetOverride"
+        ],
+        "interfaceOnly": [
+          "isShared",
+          "createdAt",
+          "updatedAt"
+        ],
+        "implicit": {
+          "createdAt": "timestamp; preserve Date locally and string at HTTP serialization",
+          "updatedAt": "timestamp; preserve Date locally and string at HTTP serialization",
+          "_id": "adapter-private; omit from portable record",
+          "__v": "adapter-private; omit from portable record"
+        }
+      }
+    ]
+  },
+  "historicalManifestEntriesVerified": 110,
+  "historicalFiles": [
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/artifact-inventory.txt",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/assertions.tsv",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/behavior-matrix.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/callsite-candidates.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/dependency-map.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/design-inputs.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/dist-fingerprints.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/environment.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/inventory-command.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/mongo-guard.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/opening-baseline.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/results-summary.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/run-baseline.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/junit.xml",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/junit.xml",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/jest.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/source-fingerprints.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/symbol-references.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/test-baseline.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/verify-packet.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/contract-design.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass01-report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-attempt.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-findings.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-harness.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-output.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/validation-attempts.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/verify-packet.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/intake.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/nested-fields.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/intake.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/report.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/nested-fields.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/replay-result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/replay.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/execution.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/result.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/review.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/decision.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/decision.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/contract-mapping.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/decision.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/validation.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/attempt-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.cjs",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/output-01.log",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/protocol.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/read-contract.md",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/result-01.json",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validate.py",
+    "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validation.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/README.md",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01-mismatches.json.gz",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01-summary.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01.cjs",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02-mismatches.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02-summary.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02.cjs",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/conversation-pairings.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/probe.cjs",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/skipped-source-locators.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-exploratory.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final-locators.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final.json",
+    "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final.py"
+  ],
+  "packetAfter": {
+    "SHA256SUMS": "9b53fcbcfec705d26af66051b0a34c9947249055bba88ebc920bab6db2c3cb8e",
+    "execution.log": "a05bca318773c1925e80d524f69e4b8a9d8b6c5b63457f1cd4ed556933434a38",
+    "intake.md": "7e561050c2446b2edeb81e8d7705ae87c98bf3b3028ab46adb16112829d9484f",
+    "nested-fields.json": "b8bb9d4e620f15e846efa5e0d6ca5ba4f747a6efd39a49fd715fe8145cc1af5e",
+    "replay-result.json": "e01753920035301d3ac18ad53ea0f577e7129504f618fa357234f9e855cee367",
+    "replay.py": "9dbd4bff5cdd9307cfd13b274554e0bfc495856d6509c50b6b9aae3c33e0f1a0",
+    "report.md": "86b262a5664d5773f007bbe420ff0af31db2daa9740bc619701a0f2dd78a95aa"
+  },
+  "sourceStatus": "",
+  "planningStatus": "",
+  "actualSubmittedMatchesBaseline": true,
+  "originalAncillaryQuery": {
+    "argv": [
+      "jq",
+      "-c",
+      "{sourceHead,exclusions,providerOnly,interfaceOnly,implicit}",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exitCode": 0,
+    "stdout": "{\"sourceHead\":\"3e3c5410d3863118fdba694fb0cd51baeb7102f9\",\"exclusions\":[\"_id\",\"__v\",\"user\",\"clientId\",\"invocationId\",\"conversationSignature\",\"summary\",\"summaryTokenCount\",\"contextMeta\",\"langfuseSampled\",\"langfuseDestinationIds\",\"langfuseRunId\",\"metadata.thoughtSignatures\",\"content.tool_call.backgroundTask.resultClaim\",\"content.tool_call.backgroundTask.completionWakeup\",\"attachments.web_search.knowledgeGraph\",\"attachments.web_search.peopleAlsoAsk\",\"attachments.web_search.relatedSearches\",\"attachments.web_search.shopping\",\"attachments.web_search.places\",\"attachments.web_search.news\",\"attachments.web_search.organic.sitelinks\",\"attachments.web_search.organic.highlights\",\"attachments.web_search.topStories.highlights\"],\"providerOnly\":null,\"interfaceOnly\":null,\"implicit\":null}\n",
+    "stderr": ""
+  },
+  "emptyConversationQuery": {
+    "argv": [
+      "jq",
+      "-c",
+      "[.records[]|select(.name==\"conversationSchema\")|.fields[]]",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exitCode": 0,
+    "stdout": "[]\n",
+    "stderr": ""
+  },
+  "correctFieldCounts": {
+    "argv": [
+      "jq",
+      "-c",
+      "[.records[]|{name,fields:(.fields|length)}]",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exitCode": 0,
+    "stdout": "[{\"name\":\"messageSchema\",\"fields\":44},{\"name\":\"convoSchema\",\"fields\":73}]\n",
+    "stderr": ""
+  },
+  "correctAncillaryQuery": {
+    "argv": [
+      "jq",
+      "-c",
+      "{sourceHead,exclusions,records:[.records[]|{name,providerOnly,interfaceOnly,implicit}]}",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exitCode": 0,
+    "stdout": "{\"sourceHead\":\"3e3c5410d3863118fdba694fb0cd51baeb7102f9\",\"exclusions\":[\"_id\",\"__v\",\"user\",\"clientId\",\"invocationId\",\"conversationSignature\",\"summary\",\"summaryTokenCount\",\"contextMeta\",\"langfuseSampled\",\"langfuseDestinationIds\",\"langfuseRunId\",\"metadata.thoughtSignatures\",\"content.tool_call.backgroundTask.resultClaim\",\"content.tool_call.backgroundTask.completionWakeup\",\"attachments.web_search.knowledgeGraph\",\"attachments.web_search.peopleAlsoAsk\",\"attachments.web_search.relatedSearches\",\"attachments.web_search.shopping\",\"attachments.web_search.places\",\"attachments.web_search.news\",\"attachments.web_search.organic.sitelinks\",\"attachments.web_search.organic.highlights\",\"attachments.web_search.topStories.highlights\"],\"records\":[{\"name\":\"messageSchema\",\"providerOnly\":[\"responseMessageId\",\"overrideParentMessageId\",\"bg\",\"title\",\"generation\",\"clientTimestamp\",\"createdAt\",\"updatedAt\",\"current\",\"searchResult\"],\"interfaceOnly\":[\"plugin\",\"plugins\",\"createdAt\",\"updatedAt\"],\"implicit\":{\"createdAt\":\"timestamp; preserve Date locally and string at HTTP serialization\",\"updatedAt\":\"timestamp; preserve Date locally and string at HTTP serialization\",\"_id\":\"adapter-private; omit from portable record\",\"__v\":\"adapter-private; omit from portable record\"}},{\"name\":\"convoSchema\",\"providerOnly\":[\"isShared\",\"userLabel\",\"parentMessageId\",\"stream\",\"artifacts\",\"context\",\"createdAt\",\"updatedAt\",\"thinkingDisplay\",\"additionalModelRequestFields\",\"additional_instructions\",\"append_current_datetime\",\"presetOverride\"],\"interfaceOnly\":[\"isShared\",\"createdAt\",\"updatedAt\"],\"implicit\":{\"createdAt\":\"timestamp; preserve Date locally and string at HTTP serialization\",\"updatedAt\":\"timestamp; preserve Date locally and string at HTTP serialization\",\"_id\":\"adapter-private; omit from portable record\",\"__v\":\"adapter-private; omit from portable record\"}}]}\n",
+    "stderr": ""
+  },
+  "ccCommit": {
+    "argv": [
+      "git",
+      "show",
+      "--format=fuller",
+      "--stat",
+      "5d94ef8d8da18b636279553ed037b906259b2882"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exitCode": 0,
+    "stdout": "commit 5d94ef8d8da18b636279553ed037b906259b2882\nAuthor:     Duncan McGreggor <oubiwann@gmail.com>\nAuthorDate: Mon Sep 21 13:09:26 2026 -0500\nCommit:     Duncan McGreggor <oubiwann@gmail.com>\nCommitDate: Mon Sep 21 13:09:26 2026 -0500\n\n    docs(project01): add CC portable contract correction evidence\n    \n    Add the sealed CC correction packet for Slice02, including the richer 117-field\n    inventory, fail-closed capture/verify driver, raw query log, replay result, and\n    manifest. The packet remains proposed-done pending CDC review and Operator\n    acceptance.\n    \n    Co-authored-by: Codex <noreply@openai.com>\n    Co-authored-by: Billo AI <ai-engineering@billo.systems>\n\n .../artifacts/cc-evidence02/SHA256SUMS             |    6 +\n .../artifacts/cc-evidence02/execution.log          | 5383 +++++++++++++++++\n .../artifacts/cc-evidence02/intake.md              |  107 +\n .../artifacts/cc-evidence02/nested-fields.json     | 6031 ++++++++++++++++++++\n .../artifacts/cc-evidence02/replay-result.json     | 1345 +++++\n .../artifacts/cc-evidence02/replay.py              |  492 ++\n .../artifacts/cc-evidence02/report.md              |  125 +\n 7 files changed, 13489 insertions(+)\n",
+    "stderr": ""
+  },
+  "namedReadContract": {
+    "argv": [
+      "cat",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/read-contract.md"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exitCode": 0,
+    "stdout": "# Ordinary-turn read contract and conversion boundary\n\nWorking design from current source `3e3c5410d3863118fdba694fb0cd51baeb7102f9` (the preceding source change adds only Billo guidance). This supersedes the unfrozen read-route choice in the [first contract draft](../contract-design.md). It does not authorize application edits or claim completed DTO codecs.\n\n## Named operations\n\n| Operation | Inputs | Result and exact compatibility obligation |\n|---|---|---|\n| `readConversationForTurn` | Trusted owner context, conversation ID | Default-selected server conversation or null. Preserve fields/key presence used by retention, endpoint options and unset calculation. No new expiration filter or request-cache mutation in the adapter. |\n| `readServerHistory` | Trusted owner context, conversation ID | Complete default-selected message array, existing createdAt-ascending order; no pagination, parent walk or summary truncation in storage. |\n| `probeConversationAccess` | Trusted owner context, conversation ID | Owner, tenant identity and child-thread discriminator, or null. Delegate current owner/tenant/active-expiration filter; it is not a complete conversation and cannot populate the retention cache. |\n| `readPublicMessages` | Trusted owner context, conversation ID; optional message ID | Array with the current public projection. Full reload returns all messages; by-ID stays an array, including an empty array. No generic filters, projection strings or arbitrary sort settings in this port. |\n\nContext is supplied by server composition. Logical IDs remain opaque for reads; do not reuse new-write UUID validation to reject historical reads. The ordinary probe does not introduce an explicit tenant argument where current callers rely on ambient tenant policy. A future explicit service scope must preserve scoped/unscoped/system distinctions, not reinterpret missing tenant as system access.\n\nThe probe's legacy query selects `user tenantId subagentThread`; an implicit Mongo `_id` may also exist. The portable result omits the physical ID. Its child discriminator may be represented by explicit child status for admission only, but do not use that reduced record where lineage/navigation is required.\n\n## Selected and retained caller paths\n\n| Path | Pilot disposition | Preservation requirement |\n|---|---|---|\n| BaseClient ordinary `saveMessageToDatabase` and `loadHistory` | Convert | Preserve live post-await decisions and full server rows before the application parent/summary walk. |\n| Conversation helper retention lookup and ordinary save; seed helper | Convert through injected operations | Preserve unread/known-null/known-undefined cache states, seed's empty-link intent and seed ordering. |\n| `GET /api/messages/:conversationId` | Convert | Start scoped message read alongside admission when `shouldFetchMessages`; response remains admission-gated; wrap early rejection immediately. |\n| `GET /api/messages/:conversationId/:messageId` | Convert | Middleware validates first, then scoped projected read. Preserve current array response and `200 []` for an empty result; do not introduce a single-record/404 change. |\n| `messageValidation.js` dependency wiring | Convert the ownership-probe dependency | The factory is shared by reads and mutations. Preserve all method-specific policy, status/body mappings and job checks; mutation writers remain legacy. |\n| `GET /api/messages/` query/search/pagination route | Retain legacy, all branches together | Single-message query, cursor pagination, Meili search and result hydration stay behind existing methods in this pilot. The known equal-time cursor defect remains separately scoped. |\n| Message POST/PUT/artifact/branch/feedback routes | Retain legacy writes | Their sanitizers and mutation policy are not silently replaced by the read DTO. |\n| Shared-link, subagent and event-actor specialized reads/writes | Retain legacy | Distinct projections, leases and admission semantics remain owned by their existing paths. |\n\nThis satisfies a bounded ordinary saved-and-reloaded turn; it does not make LibreChat Mongo-free. Arc02 still owns the remaining persistence families. The shared middleware dependency is a deliberate wider wiring effect, not authority to change mutation semantics.\n\nAgent history needs special care: `AgentClient.onHistoryLoaded` captures the complete rows fetched by BaseClient before summary narrowing. `prepareRetainedAnswers` reuses those rows and only queries its own `RETAINED_ANSWER_ROW_FIELDS` when no stored rows were supplied and the branch is incomplete. Preserve that reuse. Its warm-event-actor fallback is an explicitly retained legacy path, not evidence that ordinary history may be truncated. See `api/server/controllers/agents/client.js:2271,2308\u20132320` and `packages/api/src/agents/hitl/answers.ts:377\u2013454`.\n\n## Admission and scheduling obligations\n\nThe actual middleware at `packages/api/src/middleware/messageValidation.ts` retains:\n\n- `new` sentinel: 200 with an empty sent array, no ownership/message query.\n- Conflicting supplied conversation IDs: 400 and no message query.\n- Missing/expired or public child-thread conversation: 404. Foreign owner: 403 if such a record is returned by the dependency.\n- Active-job exception only for GET/HEAD without a message ID; correct owner and tenant compatibility are required. Running jobs qualify; requires-action jobs qualify only while the pending action is live.\n- Job lookup failure fails admission closed. Legacy jobs without tenant metadata remain readable by their owner under the existing policy.\n- Public message reads do not themselves authorize response delivery. An early successful result cannot bypass admission; an early read error must not replace a later admission denial or become unhandled.\n\nThe [experiment](experiment.cjs) executes the actual middleware and full-reload callback. All 16 reference/candidate cases match, with explicit expected HTTP statuses. Two promise-controlled cases verify admission wins over early message success/failure. Wrong-owner and omitted-projection mutants are detected. Stores are doubles; projection enforcement, expiry, indexes and actual tenant middleware are not database-tested here. The by-ID active-job exclusion is exercised through the middleware predicate in the reload harness; the by-ID route itself is source-inspected, not executed in this packet.\n\n## Field matrix and DTO rules\n\n[field-matrix.json](field-matrix.json), generated by [field-matrix.cjs](field-matrix.cjs), joins all **44 message and 73 conversation schema fields** with direct interface types, provider Zod declarations, default selection, public projection and endpoint-unset rules. Every row has its source location and original definition. Implicit timestamps and Mongo metadata are accounted separately. This is the source-of-record mapping for the next DTO edit; it is not a claim that declared schemas describe every historical row.\n\nThe message projection has **24 exclusions**, including **12 nested exclusions**. Together with five default-hidden schema fields it leaves **29 explicitly declared top-level message fields** eligible for public reads, plus timestamp fields. `tenantId` is not currently excluded; do not silently remove it as part of compatibility work. `metadata` excludes thought signatures; content excludes background result claims/completion wakeups; attachments exclude selected web-search detail paths. Removing only top-level private keys is insufficient. Preserve array structure and permitted sibling properties when translating nested exclusions.\n\nUse distinct DTOs for public messages, server history, turn conversation state, access probes and observed write outcomes. The public type is not `TMessage` wholesale, and the server type is not `IMessage extends Document`. Do not run persisted rows through the UI Zod schema as a generic decoder: it has defaults and fields used by optimistic/rendered state, and cannot preserve all server fields or original absence.\n\nResolved mismatches:\n\n- `thinkingLevel` exists in the runtime preset and provider conversation schema. Preserve it in turn conversation state/options; the missing direct `IConversation` member is not a reason to drop it.\n- `plugin`/`plugins` exist in the direct message interface but not the active schema or provider message shape. Do not invent new persistence fields for them. Any legacy-record compatibility requires read/migration evidence, not a TypeScript-interface inference.\n- `createdAt`/`updatedAt` are schema-generated timestamps. Keep existing Date behavior at the initial local compatibility boundary and existing HTTP serialization; the future service codec is separately specified. This supersedes treating the first draft's RFC3339 transport preference as a required local representation now.\n- `isShared`, optimistic tree/depth/queue metadata and other provider-only fields are not automatically stored attributes. The matrix lists them explicitly rather than silently merging UI and storage types.\n- `_id`, `__v`, and conversation `messages` physical links stay adapter-private. The conversation helper's excluded-key set contains all three, so they are not needed to compute its unset-key intent. Keep any other required key presence, including nullable and undefined values; nested payloads still need deliberate codecs.\n\nDefault `select:false` is not a universal write-response sanitizer. Observed write outcomes must map explicitly to their server DTO; public HTTP mapping is a separate operation. Preserve current endpoint/provider payloads and provenance; do not flatten content or manufacture defaults.\n\n## Validation-order decision\n\nPass 4's begin-time `resolveTenantScope` is **superseded**. The actual message method first rejects a missing owner and returns undefined for a missing/malformed conversation ID, before any model access. Under strict mode without tenant context, eager handle construction replaced those outcomes with a tenant error. Three source-executed preflight cases reproduce that mismatch, with zero model accesses.\n\nFor the Mongo compatibility handle, capture scope using non-enforcing `currentTenantScope`; compare scope/owner before each dispatch to prevent a handle crossing contexts. Let the existing methods/plugins perform strict enforcement at their existing query/write boundaries. This preserves early-return and error ordering and also preserves `saveConvo`'s own caught-error return behavior. Do not duplicate the UUID/auth validators in a second generic preflight layer.\n\nThis does not allow unscoped strict-mode queries: the binding still invokes the existing scoped methods, and their plugin uses `resolveTenantScope('Query')`, `resolveTenantScope('Save')`, etc. A changed-scope handle remains invalid use with its own explicit failure. Real method/plugin tests must prove this before implementation acceptance; this experiment only proves the early paths and does not establish strict query enforcement through an integrated adapter.\n\n## Source and packaging boundary\n\nPortable types and operation contracts belong under a new isolated data-schemas persistence entrypoint; Mongo binding imports the legacy methods through injected dependencies. Inspect both ESM/CJS outputs and declarations. Current data-schemas exports only root and capabilities, and `tsdown.config.mjs` lists two entries; adding a source barrel alone would not expose a usable subpath.\n\nApplication admission, parent walks, request cache and live client state stay in packages/api. The CJS route/client files remain wiring. Compose the adapter once with the methods created in `api/models/index.js`; converted logic must receive the port rather than importing a singleton internally. Existing legacy method exports remain for classified unconverted paths. Constructor/composition injection and declaration output still need the exact file-level assignment, not an implementer-selected fallback.\n\nImplementation groups now have a fixed behavioral boundary: (1) contract/export and Mongo binding, (2) turn/seed/history orchestration and composition, (3) the two ordinary read routes and shared probe wiring, (4) conformance and source-build verification. This is a sizing input, not a frozen source allowlist or authorization to start Slice03.\n\n## Remaining work, without reopening settled choices\n\nThe read-route choice and validation-order direction are now explicit. Remaining D02/D04 work is the concrete nested DTO/patch types and lossless compatibility policy for Mixed/historical values; the top-level census alone cannot settle those. Finish the injection/file fence and code/package declaration checks. D07 still requires Node 24.16.0 and rebuilt source validation: the available inspected executables were Node 22.22.3 and Homebrew Node 26.9.0, neither the pin. No dependency install or application build was performed. The one-contributor workflow and all existing acceptance gates remain in force.\n",
+    "stderr": ""
+  },
+  "publicProjection": {
+    "argv": [
+      "sed",
+      "-n",
+      "456,481p",
+      "packages/data-schemas/src/methods/message.ts"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+    "exitCode": 0,
+    "stdout": "export const CLIENT_MESSAGE_SELECT: string = [\n  '-_id',\n  '-__v',\n  '-user',\n  '-clientId',\n  '-invocationId',\n  '-conversationSignature',\n  '-summary',\n  '-summaryTokenCount',\n  '-contextMeta',\n  '-langfuseSampled',\n  '-langfuseDestinationIds',\n  '-langfuseRunId',\n  '-metadata.thoughtSignatures',\n  '-content.tool_call.backgroundTask.resultClaim',\n  '-content.tool_call.backgroundTask.completionWakeup',\n  '-attachments.web_search.knowledgeGraph',\n  '-attachments.web_search.peopleAlsoAsk',\n  '-attachments.web_search.relatedSearches',\n  '-attachments.web_search.shopping',\n  '-attachments.web_search.places',\n  '-attachments.web_search.news',\n  '-attachments.web_search.organic.sitelinks',\n  '-attachments.web_search.organic.highlights',\n  '-attachments.web_search.topStories.highlights',\n].join(' ');\n",
+    "stderr": ""
+  }
+}
