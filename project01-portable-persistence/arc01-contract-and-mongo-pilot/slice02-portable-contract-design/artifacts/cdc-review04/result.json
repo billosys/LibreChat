@@ -1,0 +1,2001 @@
+{
+  "classificationCounts": {
+    "other scalar/array field outside this deep inspection": 110,
+    "selected nested root": 7
+  },
+  "classificationDifferences": [
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": null,
+      "expectedClassification": "default-hidden specialized field",
+      "field": "_meiliIndex",
+      "interfaceType": "boolean",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "hidden by schema",
+      "record": "message",
+      "source": {
+        "file": "packages/data-schemas/src/schema/message.ts",
+        "line": 132
+      },
+      "storageDefinition": "{\n      type: Boolean,\n      required: false,\n      select: false,\n      default: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": null,
+      "expectedClassification": "default-hidden specialized field",
+      "field": "subagentTranscript",
+      "interfaceType": "{\n    taskId: string;\n    mode: 'append' | 'replace';\n    messagesJson: string;\n  }",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "hidden by schema",
+      "record": "message",
+      "source": {
+        "file": "packages/data-schemas/src/schema/message.ts",
+        "line": 152
+      },
+      "storageDefinition": "{\n      type: {\n        taskId: { type: String, required: true },\n        mode: { type: String, enum: ['append', 'replace'], required: true },\n        messagesJson: { type: String, required: true },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": null,
+      "expectedClassification": "default-hidden specialized field",
+      "field": "subagentActivityProjection",
+      "interfaceType": "{\n    taskId: string;\n    version: 1;\n    activityJson: string;\n    truncated: boolean;\n  }",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "hidden by schema",
+      "record": "message",
+      "source": {
+        "file": "packages/data-schemas/src/schema/message.ts",
+        "line": 162
+      },
+      "storageDefinition": "{\n      type: {\n        taskId: { type: String, required: true },\n        version: { type: Number, enum: [1], required: true },\n        activityJson: { type: String, required: true },\n        truncated: { type: Boolean, required: true },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": null,
+      "expectedClassification": "default-hidden specialized field",
+      "field": "subagentTriggerProjection",
+      "interfaceType": "SubagentTriggerProjection",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "hidden by schema",
+      "record": "message",
+      "source": {
+        "file": "packages/data-schemas/src/schema/message.ts",
+        "line": 174
+      },
+      "storageDefinition": "{\n      type: {\n        version: { type: Number, enum: [1], required: true },\n        eventType: { type: String, required: true },\n        sourceType: { type: String, required: true },\n        occurredAt: { type: Date, required: true },\n        expectedActionToolName: { type: String },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": null,
+      "expectedClassification": "default-hidden specialized field",
+      "field": "subagentTask",
+      "interfaceType": "{\n    attemptKey: string;\n    /** Parent response that initiated this exact child task. */\n    parentRunId?: string;\n    requestFingerprint?: string;\n    status: 'running' | 'completed' | 'error' | 'cancelled';\n    resultClaim?: {\n      kind: 'manual' | 'wakeup';\n      claimId: string;\n      claimedAt: Date;\n      /** Response generation that owns a manual delivery claim. */\n      generationId?: string;\n    };\n    controlReceipts?: ISubagentTaskControlReceipt[];\n  }",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "hidden by schema",
+      "record": "message",
+      "source": {
+        "file": "packages/data-schemas/src/schema/message.ts",
+        "line": 187
+      },
+      "storageDefinition": "{\n      type: {\n        attemptKey: { type: String, required: true },\n        parentRunId: { type: String },\n        requestFingerprint: { type: String },\n        status: {\n          type: String,\n          enum: ['running', 'completed', 'error', 'cancelled'],\n          required: true,\n        },\n        resultClaim: {\n          type: {\n            kind: { type: String, enum: ['manual', 'wakeup'], required: true },\n            claimId: { type: String, required: true },\n            claimedAt: { type: Date, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        controlReceipts: {\n          type: [\n            {\n              invocationId: { type: String, required: true },\n              fingerprint: { type: String, required: true },\n              controlId: { type: String },\n              action: {\n                type: String,\n                enum: ['steer', 'queue', 'interrupt', 'cancel', 'cancel_message'],\n                required: true,\n              },\n              status: {\n                type: String,\n                enum: ['reserved', 'accepted', 'applied', 'rejected', 'failed'],\n                required: true,\n              },\n              createdAt: { type: Date, required: true },\n              updatedAt: { type: Date, required: true },\n              boundary: { type: String, enum: ['preempt', 'tool', 'turn'] },\n              reason: { type: String },\n              message: { type: String },\n              messageTruncated: { type: Boolean },\n              _id: false,\n            },\n          ],\n          default: undefined,\n        },\n      },\n      _id: false,\n      select: false,\n      default: undefined,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "included",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "adapter-private physical relationship",
+      "field": "messages",
+      "interfaceType": "Types.ObjectId[]",
+      "portableServerRead": "omit physical relationship array",
+      "provider": {
+        "definition": "z.array(z.string()).optional()",
+        "line": 1139,
+        "name": "messages"
+      },
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 38
+      },
+      "storageDefinition": "[{ type: Schema.Types.ObjectId, ref: 'Message' }]"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "included",
+      "endpointUnsetRule": "undefined option may unset existing key",
+      "expectedClassification": "selected nested root",
+      "field": "examples",
+      "interfaceType": "unknown[]",
+      "portableServerRead": "preserve field and presence",
+      "provider": {
+        "definition": "z.array(tExampleSchema).optional()",
+        "line": 1167,
+        "name": "examples"
+      },
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/defaults.ts",
+        "line": 239
+      },
+      "storageDefinition": "{ type: [{ type: Schema.Types.Mixed }], default: undefined }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "included",
+      "endpointUnsetRule": "undefined option may unset existing key",
+      "expectedClassification": "selected nested root",
+      "field": "codeWorkspaces",
+      "interfaceType": "CodeWorkspaceSelection[]",
+      "portableServerRead": "preserve field and presence",
+      "provider": {
+        "definition": "z\n    .array(\n      z\n        .object({\n          environmentId: z.string().regex(CODE_WORKSPACE_ID_PATTERN),\n          workspaceId: z.string().regex(CODE_WORKSPACE_ID_PATTERN),\n        })\n        .strict(),\n    )\n    .optional()",
+        "line": 1127,
+        "name": "codeWorkspaces"
+      },
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/defaults.ts",
+        "line": 327
+      },
+      "storageDefinition": "{\n    type: [\n      {\n        environmentId: { type: String, required: true },\n        workspaceId: { type: String, required: true },\n        _id: false,\n      },\n    ],\n    default: undefined,\n  }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "undefined option may unset existing key",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "initial_agent_id",
+      "interfaceType": "string | null",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 47
+      },
+      "storageDefinition": "{\n      type: String,\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "included",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "selected nested root",
+      "field": "subagentThread",
+      "interfaceType": "TSubagentThreadLineage",
+      "portableServerRead": "preserve field and presence",
+      "provider": {
+        "definition": "subagentThreadLineageSchema.optional()",
+        "line": 1203,
+        "name": "subagentThread"
+      },
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 52
+      },
+      "storageDefinition": "{\n      type: {\n        rootConversationId: { type: String, required: true },\n        parentConversationId: { type: String, required: true },\n        parentMessageId: { type: String, required: true },\n        parentToolCallId: { type: String, required: true },\n        parentAgentId: { type: String },\n        subagentType: { type: String, required: true },\n        subagentKind: { type: String, enum: ['agent', 'graph'], required: true },\n        depth: { type: Number, min: 1, required: true },\n      },\n      _id: false,\n      default: undefined,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "undefined option may unset existing key",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "subagentThreadLease",
+      "interfaceType": "ISubagentThreadLease",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 67
+      },
+      "storageDefinition": "{\n      type: {\n        token: { type: String, required: true },\n        taskId: { type: String, required: true },\n        expiresAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventBinding",
+      "interfaceType": "IAgentEventBinding",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 79
+      },
+      "storageDefinition": "{\n      type: {\n        bindingId: { type: String, required: true },\n        sourceKeyId: { type: String, required: true },\n        actorId: { type: String, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventActor",
+      "interfaceType": "IAgentEventActorState",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 91
+      },
+      "storageDefinition": "{\n      type: {\n        generation: { type: Number, min: 1, required: true },\n        checkpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          required: true,\n        },\n        contextFingerprint: {\n          type: {\n            algorithm: { type: String, enum: ['sha256'], required: true },\n            version: { type: Number, min: 1, required: true },\n            digest: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        skillManifest: {\n          type: [\n            {\n              id: { type: String, required: true },\n              name: { type: String, required: true },\n              version: { type: Number, min: 1, required: true },\n              contentDigest: { type: String, default: undefined },\n              _id: false,\n            },\n          ],\n          default: undefined,\n          validate: {\n            validator: (skills: unknown[]) => skills.length <= MAX_AGENT_EVENT_ACTOR_SKILLS,\n            message: `Event actor Skill manifest exceeds ${MAX_AGENT_EVENT_ACTOR_SKILLS}`,\n          },\n        },\n        discoveredToolNames: {\n          type: [{ type: String, maxlength: MAX_AGENT_EVENT_ACTOR_TOOL_NAME_LENGTH }],\n          default: undefined,\n          validate: {\n            validator: (names: unknown[]) => names.length <= MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS,\n            message: `Event actor discovered-tool state exceeds ${MAX_AGENT_EVENT_ACTOR_DISCOVERED_TOOLS}`,\n          },\n        },\n        summary: {\n          type: {\n            text: {\n              type: String,\n              required: true,\n              maxlength: MAX_AGENT_EVENT_ACTOR_SUMMARY_LENGTH,\n            },\n            tokenCount: { type: Number, min: 0, required: true },\n            version: { type: Number, min: 1 },\n          },\n          _id: false,\n          default: undefined,\n        },\n        contextMeta: {\n          type: {\n            calibrationRatio: { type: Number, min: 0.5, max: 5, required: true },\n            encoding: {\n              type: String,\n              maxlength: MAX_AGENT_EVENT_ACTOR_ENCODING_LENGTH,\n              default: undefined,\n            },\n            ...agentFadingContextDefinition,\n          },\n          _id: false,\n          default: undefined,\n        },\n        compactionSemanticIndex: {\n          type: {\n            version: { type: Number, enum: [1], required: true },\n            entries: {\n              type: [\n                {\n                  type: {\n                    type: String,\n                    enum: ['tool_intent', 'tool_outcome', 'activity_phase', 'reasoning_label'],\n                    required: true,\n                  },\n                  sourceMessageId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    required: true,\n                  },\n                  sourceContentIndex: {\n                    type: Number,\n                    min: 0,\n                    max: MAX_COMPACTION_SEMANTIC_INDEX_SOURCE_CONTENT_INDEX,\n                    required: true,\n                  },\n                  revision: { type: Number, min: 0, required: true },\n                  status: { type: String, enum: ['committed', 'pending'], required: true },\n                  text: {\n                    type: String,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_TEXT_LENGTH,\n                  },\n                  redacted: { type: Boolean, default: undefined },\n                  toolCallId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  reasoningStepId: {\n                    type: String,\n                    minlength: 1,\n                    maxlength: MAX_COMPACTION_SEMANTIC_INDEX_IDENTITY_LENGTH,\n                    default: undefined,\n                  },\n                  _id: false,\n                },\n              ],\n              validate: {\n                validator: (entries: unknown[]) =>\n                  entries.length <= MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES,\n                message: `Compaction semantic index exceeds ${MAX_COMPACTION_SEMANTIC_INDEX_ENTRIES} entries`,\n              },\n            },\n            providedEntryCount: { type: Number, min: 0, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n          validate: {\n            validator: isCompactionSemanticIndexProjection,\n            message: 'Compaction semantic index projection is invalid',\n          },\n        },\n        previousCheckpoint: {\n          type: {\n            threadId: { type: String, required: true },\n            checkpointId: { type: String, required: true },\n            checkpointNs: { type: String, required: true },\n          },\n          _id: false,\n          default: undefined,\n        },\n        requiresColdStart: { type: Boolean, default: undefined },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventActorCleanup",
+      "interfaceType": "IAgentEventActorCheckpoint[]",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 240
+      },
+      "storageDefinition": "{\n      type: [\n        {\n          threadId: { type: String, required: true },\n          checkpointId: { type: String, required: true },\n          checkpointNs: { type: String, required: true },\n          _id: false,\n        },\n      ],\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventActorReconciliations",
+      "interfaceType": "IAgentEventActorReconciliation[]",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 252
+      },
+      "storageDefinition": "{\n      type: [\n        {\n          invocationId: { type: String, required: true },\n          actionAdmitted: { type: Boolean, default: undefined },\n          status: {\n            type: String,\n            enum: [\n              'invocation_pending',\n              'persistence_pending',\n              'history_persisted',\n              'commit_conflict',\n              'commit_indeterminate',\n              'persistence_failed',\n              'settled',\n            ],\n            required: true,\n          },\n          checkpoint: {\n            type: {\n              threadId: { type: String, required: true },\n              checkpointId: { type: String, default: undefined },\n              checkpointNs: { type: String, required: true },\n            },\n            _id: false,\n            required: true,\n          },\n          action: {\n            type: {\n              toolName: { type: String, required: true },\n              toolCallId: { type: String, default: undefined },\n            },\n            _id: false,\n            required: true,\n          },\n          error: { type: String, default: undefined },\n          resolution: {\n            type: String,\n            enum: ['checkpoint_verified', 'action_compensated', 'history_repaired'],\n            default: undefined,\n          },\n          observedAt: { type: Date, required: true },\n          _id: false,\n        },\n      ],\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventActorEpoch",
+      "interfaceType": "number",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 302
+      },
+      "storageDefinition": "{\n      type: Number,\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventActorLegacyTurn",
+      "interfaceType": "IAgentEventActorLegacyTurn",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 309
+      },
+      "storageDefinition": "{\n      type: {\n        token: { type: String, required: true },\n        startedAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }"
+    },
+    {
+      "classification": "other scalar/array field outside this deep inspection",
+      "defaultRead": "hidden",
+      "endpointUnsetRule": "excluded from unset enumeration",
+      "expectedClassification": "default-hidden specialized field",
+      "field": "agentEventActorSuspension",
+      "interfaceType": "IAgentEventActorSuspension",
+      "portableServerRead": "not fetched by default",
+      "provider": null,
+      "publicRead": "not in pilot public conversation scope",
+      "record": "conversation",
+      "source": {
+        "file": "packages/data-schemas/src/schema/convo.ts",
+        "line": 321
+      },
+      "storageDefinition": "{\n      type: {\n        suspension: { type: Schema.Types.Mixed, required: true },\n        kind: {\n          type: String,\n          enum: ['human_decision', 'internal_completion'],\n          default: 'human_decision',\n        },\n        appliedAction: {\n          type: {\n            toolName: { type: String, required: true },\n            toolCallId: { type: String, default: undefined },\n          },\n          _id: false,\n          default: undefined,\n        },\n        handlingGenerationCreatedAt: { type: Number, min: 0, default: undefined },\n        actionId: { type: String, required: true },\n        jobCreatedAt: { type: Number, required: true },\n        status: {\n          type: String,\n          enum: ['pending', 'claimed', 'pending_owned', 'claimed_owned', 'closed'],\n          required: true,\n        },\n        resumeAttemptId: { type: String, default: undefined },\n        outcome: {\n          type: String,\n          enum: ['committed', 'stale', 'settled', 'cancelled'],\n          default: undefined,\n        },\n        closedAt: { type: Date, default: undefined },\n        observedAt: { type: Date, required: true },\n      },\n      _id: false,\n      default: undefined,\n      select: false,\n    }"
+    }
+  ],
+  "cliCounterexamples": [
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-5cd6n532"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "missing all retained-container obligations",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-y9zjniq2"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "omit organic highlights removal",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-j0daujl4"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "excluded survivor plus freeform except bypass",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-jprw90bo"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "wrong filename Partial application",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-jn47w5uu"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "wrong file_id Partial wrapper",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-anztanp_"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "invented fingerprint",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-ylat5nz6"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "duplicate strict path member",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-dxr4mn0m"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 0,
+      "name": "wrong contextMeta public view",
+      "stderr": "",
+      "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+    },
+    {
+      "accepted": false,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "-c",
+        "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+        "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+        "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+        "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+        "--verify",
+        "--packet",
+        "/var/folders/dt/kc8ndn6d3kx8c1jnxr05drsh0000gn/T/cdc-review04-t4_cre76"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "exit": 2,
+      "name": "submitted success false",
+      "stderr": "evidence-driver: pass05 behavior/provenance result differs from submitted or baseline\n",
+      "stdout": ""
+    }
+  ],
+  "commitFiles": {
+    "argv": [
+      "git",
+      "diff-tree",
+      "--no-commit-id",
+      "--name-only",
+      "-r",
+      "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS\nproject01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/execution.log\nproject01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/intake.md\nproject01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/nested-fields.json\nproject01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay-result.json\nproject01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py\nproject01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/report.md\n"
+  },
+  "commitMessage": {
+    "argv": [
+      "git",
+      "show",
+      "-s",
+      "--format=%B",
+      "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "[Project01][Slice02] repair CC declaration evidence iteration03\n\nRebuild the portable nested-field evidence from pinned TypeScript declarations, correct composed projection survivors and preserve the pass05 replay/query regressions.\n\nCo-authored-by: Codex <noreply@openai.com>\nCo-authored-by: Billo AI <ai-engineering@billo.systems>\n\n"
+  },
+  "committedPacketMatches": true,
+  "declaredSymbols": [
+    "ToolCall",
+    "RunFileProvenance",
+    "TFile",
+    "CodeToolCall",
+    "FunctionToolCall",
+    "RetrievalToolCall",
+    "FileSearchToolCall",
+    "PartMetadata",
+    "ContentMetadata",
+    "ImageFile",
+    "FileCitation",
+    "FileCitationDetails",
+    "FilePath",
+    "FilePathDetails",
+    "Text",
+    "SummaryContentPart",
+    "SteerContentPart",
+    "TMessageContentParts",
+    "Highlight",
+    "ProcessedSource",
+    "ProcessedOrganic",
+    "ProcessedTopStory",
+    "ResultReference",
+    "SearchResultData",
+    "References",
+    "OrganicResult",
+    "TopStoryResult",
+    "MediaReference",
+    "UsedReferences",
+    "CodeEnvRefBase",
+    "CodeExecutionProfile",
+    "CodeEnvRef",
+    "CodeEnvRefMap",
+    "TFeedbackTag",
+    "feedbackSchema",
+    "TFeedback",
+    "CodeWorkspaceSelection",
+    "agentFadingTierSchema",
+    "tExampleSchema",
+    "tMessageSchema",
+    "TAttachmentMetadata",
+    "TAttachment",
+    "TMessage",
+    "subagentThreadLineageSchema",
+    "userSubmittedMessageFieldPathSchema",
+    "CLIENT_MESSAGE_SELECT"
+  ],
+  "duringVerificationMutation": {
+    "accepted": true
+  },
+  "fileContextPresent": false,
+  "fileSourcesPresent": false,
+  "manifestChecks": [
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/artifact-inventory.txt"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/assertions.tsv"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/behavior-matrix.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/callsite-candidates.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/dependency-map.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/design-inputs.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/dist-fingerprints.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/environment.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/inventory-command.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/mongo-guard.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/opening-baseline.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/results-summary.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/run-baseline.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/attempt.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/jest.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/junit.xml"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/01-data-schemas/output.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/attempt.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/jest.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/junit.xml"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/02-save-orchestration/output.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/attempt.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/jest.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/03-import/output.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/attempt.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/jest.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/runs/04-client-read/output.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/source-fingerprints.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/symbol-references.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/test-baseline.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/validation.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice01-behavior-baseline/artifacts/verify-packet.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/contract-design.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass01-report.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-attempt.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-findings.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-harness.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-output.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-protocol.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/pagination-result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/validation-attempts.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/validation.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/verify-packet.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/intake.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/report.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/nested-fields.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay-result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence01/replay.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/intake.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/report.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/nested-fields.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/replay-result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence02/replay.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/intake.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/report.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/nested-fields.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/replay-result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence03/replay.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/intake.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/nested-fields.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay-result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/report.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review01/review.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/review.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review02/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/review.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/declarations.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/result.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cdc-review03/execution.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/attempt-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/decision.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/experiment.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/output-01.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/protocol.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/result-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/validate.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass02/validation.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/attempt-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/decision.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/experiment.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/output-01.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/protocol.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/result-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/validate.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass03/validation.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/attempt-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/contract-mapping.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/decision.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/experiment.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/field-census.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/output-01.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/protocol.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/result-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/validate.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/validation.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/attempt-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/experiment.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/field-matrix.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/output-01.log"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/protocol.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/read-contract.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/result-01.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validate.py"
+    },
+    {
+      "manifest": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass05/validation.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/README.md"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01-mismatches.json.gz"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01-summary.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt01.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02-mismatches.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02-summary.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/attempt02.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/conversation-pairings.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/probe.cjs"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/skipped-source-locators.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-exploratory.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final-locators.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final.json"
+    },
+    {
+      "manifest": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/SHA256SUMS",
+      "matches": true,
+      "path": "project01-portable-persistence/research-inventory/claude-reconciliation-20260920/topology-final.py"
+    }
+  ],
+  "manifestEntryCount": 129,
+  "matrixProjection": {
+    "captureQueryCount": 5,
+    "counts": [
+      {
+        "fields": 44,
+        "implicit": 4,
+        "interfaceOnly": 4,
+        "name": "messageSchema",
+        "providerOnly": 10
+      },
+      {
+        "fields": 73,
+        "implicit": 4,
+        "interfaceOnly": 3,
+        "name": "convoSchema",
+        "providerOnly": 13
+      }
+    ],
+    "eachCaptureMatches": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "freshMatchesCommitted": true
+  },
+  "officialSelfTest": {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+      "-B",
+      "-c",
+      "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+      "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+      "--self-test",
+      "--packet",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "{\n  \"inputPreserved\": true,\n  \"negative\": [\n    {\n      \"name\": \"wrong source head preflight\",\n      \"reason\": \"preflight rejected observation sourceHead=wrong\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"submitted success false resealed\",\n      \"reason\": \"pass05 behavior/provenance result differs from submitted or baseline\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"submitted node provenance resealed\",\n      \"reason\": \"pass05 behavior/provenance result differs from submitted or baseline\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"invented path-marker member\",\n      \"reason\": \"'sourceRefs'\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"invented summary wrapper\",\n      \"reason\": \"'sourceRefs'\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"wrong parentAgentId optionality\",\n      \"reason\": \"member ('conversation.subagentThread', 'subagentThread.parentAgentId', 'zod-object', 'packages/data-provider/src/schemas.ts:subagentThreadLineageSchema') differs in requiredness\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"Date to string mutation\",\n      \"reason\": \"member ('message.content', 'content[].tool_call.backgroundTask.settledAt', 'tool_call', 'packages/data-provider/src/types/agents.ts:ToolCall') differs in declaredType\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"required TMessage.files.file_id\",\n      \"reason\": \"member ('message.files', 'files[].file_id', 'root', 'packages/data-provider/src/types/files.ts:TFile') differs in requiredness\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"resultClaim survives completionWakeup exclusion\",\n      \"reason\": \"projection survivor is excluded or descends from exclusion: content[].tool_call.backgroundTask.resultClaim\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"exact excluded projection path\",\n      \"reason\": \"projection survivor is excluded or descends from exclusion: attachments[].web_search.organic.highlights\",\n      \"rejected\": true\n    },\n    {\n      \"name\": \"fully preserved organic container\",\n      \"reason\": \"container falsely marked fully preserved despite nested exclusions: attachments[].web_search.organic[]\",\n      \"rejected\": true\n    }\n  ],\n  \"negativeCount\": 11,\n  \"positive\": [\n    {\n      \"accepted\": true,\n      \"name\": \"unchanged sealed packet\"\n    },\n    {\n      \"accepted\": true,\n      \"name\": \"organic[] retained with declared nested removals\"\n    }\n  ],\n  \"positiveCount\": 2\n}\n"
+  },
+  "officialVerify": {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+      "-B",
+      "-c",
+      "import subprocess,sys; p=sys.argv.pop(1); c=sys.argv.pop(1); f=sys.argv.pop(1); b=subprocess.check_output(['git','show',c+':'+f],cwd=p); sys.argv[0]=p+'/'+f; exec(compile(b,p+'/'+f,'exec'),{'__file__':p+'/'+f,'__name__':'__main__'})",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+      "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+      "project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04/replay.py",
+      "--verify",
+      "--packet",
+      "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/cc-evidence04"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "{\n  \"manifest\": \"pass\",\n  \"replay\": {\n    \"freshEqualsBaseline\": true,\n    \"freshEqualsSubmitted\": true,\n    \"gateCases\": 2,\n    \"negativeControls\": 3,\n    \"preflightCases\": 3,\n    \"readCases\": 16,\n    \"submittedEqualsBaseline\": true\n  },\n  \"sourceDeclarationValidation\": \"pass\"\n}\n"
+  },
+  "packetPreserved": true,
+  "planningStatusAfter": {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "preflightCounterexample": {
+    "accepted": true,
+    "calls": {
+      "preflight": 0,
+      "runner": 1
+    },
+    "status": 0
+  },
+  "recipeSha256": "2efc45c433c1fc2634fa84c5ba26b85ea5d1f3397c30440d85ff17cb730b8250",
+  "reviewedCommit": "76d15b5d33668e3c50ddd3db7b98a8e6c12a814c",
+  "roots": [
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included; nested projection exclusions apply",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "content",
+      "memberCount": 77,
+      "paths": [
+        "content[].type",
+        "content[].text",
+        "content[].error",
+        "content[].initiatedBy",
+        "content[].type",
+        "content[].think",
+        "content[].reasoning_label",
+        "content[].reasoning_label_step_id",
+        "content[].reasoning_label_attempts",
+        "content[].reasoning_label_submitted_chars",
+        "content[].reasoning_label_revision",
+        "content[].reasoning_label_status",
+        "content[].reasoning_unavailable",
+        "content[].type",
+        "content[].text",
+        "content[].tool_call_ids[]",
+        "content[].phase",
+        "content[].type",
+        "content[].tool_call",
+        "content[].type",
+        "content[].image_file",
+        "content[].type",
+        "content[].activity_label",
+        "content[].activity_label_type",
+        "content[].tool_call_ids[]",
+        "content[].activity_start_index",
+        "content[].activity_end_index",
+        "content[].activity_count",
+        "content[].agent_ids[]",
+        "content[].status",
+        "content[].pending",
+        "content[].tool_call.type",
+        "content[].tool_call.name",
+        "content[].tool_call.mcpServerName",
+        "content[].tool_call.args",
+        "content[].tool_call.id",
+        "content[].tool_call.stepId",
+        "content[].tool_call.output",
+        "content[].tool_call.backgroundTask",
+        "content[].tool_call.backgroundTask.version",
+        "content[].tool_call.backgroundTask.taskId",
+        "content[].tool_call.backgroundTask.toolName",
+        "content[].tool_call.backgroundTask.status",
+        "content[].tool_call.backgroundTask.cancelled",
+        "content[].tool_call.backgroundTask.settledAt",
+        "content[].tool_call.backgroundTask.resultClaim",
+        "content[].tool_call.backgroundTask.resultClaim.kind",
+        "content[].tool_call.backgroundTask.resultClaim.claimId",
+        "content[].tool_call.backgroundTask.resultClaim.claimedAt",
+        "content[].tool_call.backgroundTask.resultClaim.generationId",
+        "content[].tool_call.inputValidationError",
+        "content[].tool_call.auth",
+        "content[].tool_call.expires_at",
+        "content[].tool_call.approval",
+        "content[].tool_call.approval.actionId",
+        "content[].tool_call.approval.allowed_decisions[]",
+        "content[].tool_call.approval.description",
+        "content[].type",
+        "content[].content[]",
+        "content[].tokenCount",
+        "content[].summarizing",
+        "content[].failed",
+        "content[].initiatedBy",
+        "content[].summaryVersion",
+        "content[].model",
+        "content[].provider",
+        "content[].createdAt",
+        "content[].boundary",
+        "content[].boundary.messageId",
+        "content[].boundary.contentIndex",
+        "content[].type",
+        "content[].steer",
+        "content[].steerId",
+        "content[].clientSteerId",
+        "content[].createdAt",
+        "content[].files[]",
+        "content[].quotes[]"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included; nested projection exclusions apply",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "files",
+      "memberCount": 56,
+      "paths": [
+        "files[]._id",
+        "files[].__v",
+        "files[].user",
+        "files[].tenantId",
+        "files[].storageRegion",
+        "files[].storageKey",
+        "files[].conversationId",
+        "files[].message",
+        "files[].file_id",
+        "files[].temp_file_id",
+        "files[].bytes",
+        "files[].embedded",
+        "files[].filename",
+        "files[].filepath",
+        "files[].object",
+        "files[].type",
+        "files[].usage",
+        "files[].context",
+        "files[].source",
+        "files[].filterSource",
+        "files[].width",
+        "files[].height",
+        "files[].expiresAt",
+        "files[].preview",
+        "files[].text",
+        "files[].textFormat",
+        "files[].status",
+        "files[].previewError",
+        "files[].metadata",
+        "files[].metadata.runFile",
+        "files[].metadata.fileIdentifier",
+        "files[].metadata.codeEnvRef",
+        "files[].metadata.codeEnvRefs",
+        "files[].metadata.sourceDispatchedAt",
+        "files[].metadata.embeddedEntities[]",
+        "files[].metadata.destinationChosen",
+        "files[].metadata.routingMimeType",
+        "files[].llmDeliveryPath",
+        "files[].createdAt",
+        "files[].updatedAt",
+        "files[].metadata.runFile.runId",
+        "files[].metadata.runFile.executionId",
+        "files[].metadata.runFile.agentId",
+        "files[].metadata.runFile.parentExecutionId",
+        "files[].metadata.runFile.parentAgentId",
+        "files[].metadata.runFile.recipientAgentIds[]",
+        "files[].metadata.runFile.sourceFileId",
+        "files[].metadata.runFile.publishedAt",
+        "files[].metadata.runFile.inputFileIds[]",
+        "files[].metadata.codeEnvRef.id",
+        "files[].metadata.codeEnvRef.storage_session_id",
+        "files[].metadata.codeEnvRef.file_id",
+        "files[].metadata.codeEnvRef.executionProfile",
+        "files[].metadata.codeEnvRef.executionRouteKey",
+        "files[].metadata.codeEnvRef.provisionedAt",
+        "files[].metadata.codeEnvRef.sandboxFilename"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included; nested projection exclusions apply",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "attachments",
+      "memberCount": 54,
+      "paths": [
+        "attachments[].expiresAt",
+        "attachments[]._id",
+        "attachments[].__v",
+        "attachments[].user",
+        "attachments[].tenantId",
+        "attachments[].storageRegion",
+        "attachments[].storageKey",
+        "attachments[].conversationId",
+        "attachments[].message",
+        "attachments[].file_id",
+        "attachments[].temp_file_id",
+        "attachments[].bytes",
+        "attachments[].embedded",
+        "attachments[].filename",
+        "attachments[].filepath",
+        "attachments[].object",
+        "attachments[].type",
+        "attachments[].usage",
+        "attachments[].context",
+        "attachments[].source",
+        "attachments[].filterSource",
+        "attachments[].width",
+        "attachments[].height",
+        "attachments[].expiresAt",
+        "attachments[].preview",
+        "attachments[].text",
+        "attachments[].textFormat",
+        "attachments[].status",
+        "attachments[].previewError",
+        "attachments[].metadata",
+        "attachments[].metadata.runFile",
+        "attachments[].metadata.fileIdentifier",
+        "attachments[].metadata.codeEnvRef",
+        "attachments[].metadata.codeEnvRefs",
+        "attachments[].metadata.sourceDispatchedAt",
+        "attachments[].metadata.embeddedEntities[]",
+        "attachments[].metadata.destinationChosen",
+        "attachments[].metadata.routingMimeType",
+        "attachments[].llmDeliveryPath",
+        "attachments[].createdAt",
+        "attachments[].updatedAt",
+        "attachments[].conversationId",
+        "attachments[].filename",
+        "attachments[].filepath",
+        "attachments[].type",
+        "attachments[].messageId",
+        "attachments[].toolCallId",
+        "attachments[].agentId",
+        "attachments[].stepId",
+        "attachments[].workspaceChange",
+        "attachments[].[Tools.memory]",
+        "attachments[].[Tools.ui_resources][]",
+        "attachments[].[Tools.web_search]",
+        "attachments[].[Tools.file_search]"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included with nested metadata.thoughtSignatures exclusion",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "metadata",
+      "memberCount": 1,
+      "paths": [
+        "metadata"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included; nested projection exclusions apply",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "feedback",
+      "memberCount": 10,
+      "paths": [
+        "feedback.rating",
+        "feedback.tag",
+        "feedback.text",
+        "feedback.rating",
+        "feedback.tag",
+        "feedback.text",
+        "feedback.tag.key",
+        "feedback.tag.label",
+        "feedback.tag.direction",
+        "feedback.tag.icon"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included; nested projection exclusions apply",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "contextMeta",
+      "memberCount": 12,
+      "paths": [
+        "contextMeta",
+        "contextMeta.calibrationRatio",
+        "contextMeta.encoding",
+        "contextMeta.fading",
+        "contextMeta.fadingTiers",
+        "contextMeta.fading.v",
+        "contextMeta.fading.budgetTokens",
+        "contextMeta.fading.masked",
+        "contextMeta.fadingTiers[].v",
+        "contextMeta.fadingTiers[].budgetTokens",
+        "contextMeta.fadingTiers[].masked",
+        "contextMeta.fadingTiers[].agentId"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not a conversation ownership member",
+          "status": "not applicable"
+        },
+        "publicMessages": {
+          "disposition": "included; nested projection exclusions apply",
+          "status": "established"
+        },
+        "serverHistory": {
+          "disposition": "message-view member",
+          "status": "established"
+        },
+        "turnConversation": {
+          "disposition": "not a conversation result member",
+          "status": "not applicable"
+        }
+      },
+      "field": "userSubmittedMessageFieldPaths",
+      "memberCount": 2,
+      "paths": [
+        "userSubmittedMessageFieldPaths[].path",
+        "userSubmittedMessageFieldPaths[].field"
+      ],
+      "record": "message"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not used for this root",
+          "status": "not selected"
+        },
+        "publicMessages": {
+          "disposition": "conversation root is not a message projection",
+          "status": "not applicable"
+        },
+        "serverHistory": {
+          "disposition": "conversation result is not a message history row",
+          "status": "not applicable"
+        },
+        "turnConversation": {
+          "disposition": "conversation-view member",
+          "status": "established"
+        }
+      },
+      "field": "examples",
+      "memberCount": 4,
+      "paths": [
+        "examples[].input",
+        "examples[].input.content",
+        "examples[].output",
+        "examples[].output.content"
+      ],
+      "record": "conversation"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "not used for this root",
+          "status": "not selected"
+        },
+        "publicMessages": {
+          "disposition": "conversation root is not a message projection",
+          "status": "not applicable"
+        },
+        "serverHistory": {
+          "disposition": "conversation result is not a message history row",
+          "status": "not applicable"
+        },
+        "turnConversation": {
+          "disposition": "conversation-view member",
+          "status": "established"
+        }
+      },
+      "field": "codeWorkspaces",
+      "memberCount": 2,
+      "paths": [
+        "codeWorkspaces[].environmentId",
+        "codeWorkspaces[].workspaceId"
+      ],
+      "record": "conversation"
+    },
+    {
+      "applicability": {
+        "accessProbe": {
+          "disposition": "selected full lineage object",
+          "sourceRefs": [
+            {
+              "kind": "consumer",
+              "lines": [
+                2060,
+                2078
+              ],
+              "observation": "projection selects user tenantId subagentThread",
+              "path": "packages/data-schemas/src/methods/conversation.ts",
+              "symbol": "getConvoOwnership"
+            }
+          ],
+          "status": "established"
+        },
+        "publicMessages": {
+          "disposition": "conversation root is not a message projection",
+          "status": "not applicable"
+        },
+        "serverHistory": {
+          "disposition": "conversation result is not a message history row",
+          "status": "not applicable"
+        },
+        "turnConversation": {
+          "disposition": "conversation-view member",
+          "status": "established"
+        }
+      },
+      "field": "subagentThread",
+      "memberCount": 8,
+      "paths": [
+        "subagentThread.rootConversationId",
+        "subagentThread.parentConversationId",
+        "subagentThread.parentMessageId",
+        "subagentThread.parentToolCallId",
+        "subagentThread.parentAgentId",
+        "subagentThread.subagentType",
+        "subagentThread.subagentKind",
+        "subagentThread.depth"
+      ],
+      "record": "conversation"
+    }
+  ],
+  "source": {
+    "sourceBranch": {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+      "exit": 0,
+      "stderr": "",
+      "stdout": "billo-guildhall\n"
+    },
+    "sourceHead": {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+      "exit": 0,
+      "stderr": "",
+      "stdout": "3e3c5410d3863118fdba694fb0cd51baeb7102f9\n"
+    },
+    "sourceStatus": {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+      "exit": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  },
+  "sourceFingerprintChecks": [
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/code/workspace.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/codeEnvRef.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/feedback.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/filters.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/schemas.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/types/agents.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/types/content.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/types/files.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-provider/src/types/web.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-schemas/src/methods/conversation.ts"
+    },
+    {
+      "matches": true,
+      "path": "packages/data-schemas/src/methods/message.ts"
+    }
+  ],
+  "sourceStatusAfter": {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/billo-guildhall",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "sourceWitnesses": [
+    {
+      "lines": [
+        1016,
+        1075
+      ],
+      "path": "packages/data-provider/src/schemas.ts",
+      "sha256": "46256a7a73a7d3e3b3546bde07074d5905e7ff603f864d3f4b092206d83779b6",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "export type MemoryArtifact = {\n  key: string;\n  value?: string;\n  tokenCount?: number;\n  type: 'update' | 'delete' | 'error';\n  /** Agent partition the write targeted; absent = shared personal pool */\n  agentId?: string;\n};\n\nexport type UIResource = {\n  resourceId: string;\n  uri: string;\n  mimeType?: string;\n  text?: string;\n  [key: string]: unknown;\n};\n\nexport type WorkspaceChange = {\n  profile: 'stateful';\n  operation: 'created' | 'updated';\n  path: string;\n};\n\nexport type TAttachmentMetadata = {\n  type?: Tools;\n  messageId: string;\n  toolCallId: string;\n  /** Saved-agent owner when provider tool-call ids repeat across handoffs. */\n  agentId?: string;\n  /** Host run-step owner when one agent repeats a provider tool-call id. */\n  stepId?: string;\n  workspaceChange?: WorkspaceChange;\n  [Tools.memory]?: MemoryArtifact;\n  [Tools.ui_resources]?: UIResource[];\n  [Tools.web_search]?: SearchResultData;\n  [Tools.file_search]?: SearchResultData;\n};\n\nexport type TAttachment =\n  | (TFile & TAttachmentMetadata)\n  | (Pick<TFile, 'filename' | 'filepath' | 'conversationId'> & {\n      expiresAt: number;\n    } & TAttachmentMetadata)\n  | (Partial<Pick<TFile, 'filename' | 'filepath'>> &\n      Pick<TFile, 'conversationId'> &\n      TAttachmentMetadata);\n\nexport type TMessage = z.input<typeof tMessageSchema> & {\n  children?: TMessage[];\n  content?: TMessageContentParts[];\n  files?: Partial<TFile>[];\n  depth?: number;\n  siblingIndex?: number;\n  attachments?: TAttachment[];\n  clientTimestamp?: string;\n  /** Client-only durable branch anchor while this message is an optimistic response. */\n  clientQueueParentMessageId?: string;\n  feedback?: TFeedback;\n};\n"
+    },
+    {
+      "lines": [
+        187,
+        315
+      ],
+      "path": "packages/data-provider/src/types/content.ts",
+      "sha256": "260bd23ac34db301c7e7171e4c2d0b5eef4fb1336dbfcbab399d01b670800522",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "export type ContentPart = (\n  | CodeToolCall\n  | RetrievalToolCall\n  | FileSearchToolCall\n  | FunctionToolCall\n  | Agents.AgentToolCall\n  | ImageFile\n  | Text\n) &\n  PartMetadata;\n\nexport type TextData = (Text & PartMetadata) | undefined;\n\nexport type SummaryContentPart = {\n  type: ContentTypes.SUMMARY;\n  content?: Array<{ type: ContentTypes.TEXT; text: string }>;\n  tokenCount?: number;\n  summarizing?: boolean;\n  /** A summarize round that ended in error. Partial deltas already streamed\n   *  into this slot are kept, so the renderer needs this to avoid presenting\n   *  truncated text under the \"Conversation summarized\" label. */\n  failed?: boolean;\n  /** Set when the user compacted the context manually rather than the\n   *  automatic detour firing on context pressure. */\n  initiatedBy?: 'user';\n  summaryVersion?: number;\n  model?: string;\n  provider?: string;\n  createdAt?: string;\n  boundary?: {\n    messageId: string;\n    contentIndex: number;\n  };\n};\n\n/**\n * A user steering message injected mid-run at a tool-batch boundary.\n * Persisted inline in the response message's content array (keyed by the\n * type name like `text`/`think` so token counting reads it for free);\n * replayed as a user message on subsequent turns by `formatAgentMessages`.\n */\nexport type SteerContentPart = {\n  type: ContentTypes.STEER;\n  steer: string;\n  steerId?: string;\n  /** Stable optimistic-client id used to settle a POST whose response was lost. */\n  clientSteerId?: string;\n  createdAt?: number;\n  /** Attachments steered with the message; re-encoded per turn on replay\n   *  like any other user-message media (refs only, never encoded data). */\n  files?: Partial<TFile>[];\n  /** Quoted excerpts steered with the message, persisted separately from the\n   *  typed text (mirroring `TMessage.quotes`) so the UI renders them as\n   *  reference blocks; merged into the model-bound user turn on every replay. */\n  quotes?: string[];\n};\n\nexport type TMessageContentParts =\n  | ({\n      type: ContentTypes.ERROR;\n      text?: string | TextData;\n      error?: string;\n      /** Set when this failure is what a manual compaction produced instead of a\n       *  summary. The turn has no other record of having been one, so the rerun\n       *  controls read it the same way they read a summary's marker. */\n      initiatedBy?: 'user';\n    } & ContentMetadata)\n  | ({\n      type: ContentTypes.THINK;\n      think?: string | TextData;\n      /** Generated orientation for this user-visible reasoning step. */\n      reasoning_label?: string;\n      /** Stable SDK run-step identity used to correlate live revisions. */\n      reasoning_label_step_id?: string;\n      /** Durable provider-call count used to enforce the per-run cost cap across resumes. */\n      reasoning_label_attempts?: number;\n      /** Visible reasoning length included in this step's latest provider call. */\n      reasoning_label_submitted_chars?: number;\n      /** Monotonic provider-call revision; gaps are allowed after unsuccessful attempts. */\n      reasoning_label_revision?: number;\n      /** Whether the reasoning step can still produce a newer label. */\n      reasoning_label_status?: 'streaming' | 'complete';\n      /** The reasoning happened but its text is not available to this view\n       *  (e.g. detached subagent projections retain only a marker). */\n      reasoning_unavailable?: boolean;\n    } & ContentMetadata)\n  | (SteerContentPart & ContentMetadata)\n  | ({\n      type: ContentTypes.TEXT;\n      text?: string | TextData;\n      tool_call_ids?: string[];\n      /** Open Responses semantic channel for assistant text. */\n      phase?: 'commentary' | 'final_answer';\n    } & ContentMetadata)\n  | ({\n      type: ContentTypes.TOOL_CALL;\n      tool_call: (\n        | CodeToolCall\n        | RetrievalToolCall\n        | FileSearchToolCall\n        | FunctionToolCall\n        | Agents.AgentToolCall\n      ) &\n        PartMetadata;\n    } & ContentMetadata)\n  | ({ type: ContentTypes.IMAGE_FILE; image_file: ImageFile & PartMetadata } & ContentMetadata)\n  | (SummaryContentPart & ContentMetadata)\n  | ({\n      /** One-line LLM-generated note describing a completed tool batch. UI-only:\n       *  never sent to the model (stripped before payload formatting). */\n      type: ContentTypes.ACTIVITY_LABEL;\n      activity_label?: string;\n      /** Missing means the legacy/per-batch activity label. */\n      activity_label_type?: 'phase';\n      tool_call_ids?: string[];\n      /** Parent phase bounds and telemetry. */\n      activity_start_index?: number;\n      /** Exclusive end of the grouped content; may precede the marker itself. */\n      activity_end_index?: number;\n      activity_count?: number;\n      agent_ids?: string[];\n      /** ok = all tools succeeded, failed = all failed, partial = mixed. */\n      status?: 'ok' | 'partial' | 'failed';\n      pending?: boolean;\n    } & ContentMetadata)\n  | (Agents.AgentUpdate & ContentMetadata)\n  | (Agents.MessageContentImageUrl & ContentMetadata)\n  | (Agents.MessageContentVideoUrl & ContentMetadata)\n  | (Agents.MessageContentInputAudio & ContentMetadata);"
+    },
+    {
+      "lines": [
+        1,
+        43
+      ],
+      "path": "packages/data-provider/src/types/files.ts",
+      "sha256": "269ddb88fdc83c0e88720c97007dd9795c231122a609c967d2e1594c8fc03e16",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "import type { TDefaultLLMDeliveryPathConfig } from '../file-config';\nimport type { CodeEnvRef, CodeEnvRefMap } from '../codeEnvRef';\nimport { EToolResources } from './tools';\n\nexport enum FileSources {\n  local = 'local',\n  firebase = 'firebase',\n  azure = 'azure',\n  azure_blob = 'azure_blob',\n  openai = 'openai',\n  s3 = 's3',\n  cloudfront = 'cloudfront',\n  vectordb = 'vectordb',\n  execute_code = 'execute_code',\n  mistral_ocr = 'mistral_ocr',\n  azure_mistral_ocr = 'azure_mistral_ocr',\n  vertexai_mistral_ocr = 'vertexai_mistral_ocr',\n  text = 'text',\n  document_parser = 'document_parser',\n}\n\nexport const checkOpenAIStorage = (source: string) =>\n  source === FileSources.openai || source === FileSources.azure;\n\nexport enum FileContext {\n  avatar = 'avatar',\n  unknown = 'unknown',\n  agents = 'agents',\n  assistants = 'assistants',\n  execute_code = 'execute_code',\n  image_generation = 'image_generation',\n  assistants_output = 'assistants_output',\n  message_attachment = 'message_attachment',\n  run_artifact = 'run_artifact',\n  skill_file = 'skill_file',\n  filename = 'filename',\n  updatedAt = 'updatedAt',\n  source = 'source',\n  filterSource = 'filterSource',\n  context = 'context',\n  bytes = 'bytes',\n}\n"
+    },
+    {
+      "lines": [
+        137,
+        224
+      ],
+      "path": "packages/data-provider/src/types/files.ts",
+      "sha256": "269ddb88fdc83c0e88720c97007dd9795c231122a609c967d2e1594c8fc03e16",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "/** The immutable origin of a file explicitly published from an agent execution. */\nexport type RunFileProvenance = {\n  runId: string;\n  executionId: string;\n  agentId: string;\n  parentExecutionId?: string;\n  parentAgentId?: string;\n  recipientAgentIds?: string[];\n  sourceFileId: string;\n  publishedAt: string;\n  inputFileIds: string[];\n};\n\nexport type TFile = {\n  _id?: string;\n  __v?: number;\n  user: string;\n  tenantId?: string;\n  storageRegion?: string;\n  storageKey?: string;\n  conversationId?: string;\n  message?: string;\n  file_id: string;\n  temp_file_id?: string;\n  bytes: number;\n  embedded: boolean;\n  filename: string;\n  filepath: string;\n  object: 'file';\n  type: string;\n  usage: number;\n  context?: FileContext;\n  source?: FileSources;\n  filterSource?: FileSources;\n  width?: number;\n  height?: number;\n  expiresAt?: string | Date;\n  preview?: string;\n  text?: string;\n  /**\n   * Format of the `text` field. `'html'` means the backend produced\n   * a sanitized full-document HTML preview the client may inject as\n   * `index.html` inside the office artifact iframe. `'text'` (or\n   * `undefined` for legacy records) is plain text and MUST NOT be\n   * injected as HTML \u2014 render through the markdown/escaping path.\n   * See Codex P1 review on PR #12934.\n   */\n  textFormat?: 'html' | 'text' | null;\n  /**\n   * Lifecycle of the inline preview rendered from `text`. `'pending'`\n   * while background HTML extraction is in flight (deferred-preview\n   * code-execution flow), `'ready'` once `text`/`textFormat` are set,\n   * `'failed'` if extraction errored or hit the 60s ceiling. `undefined`\n   * for legacy records and for files that never expect a preview \u2014\n   * clients MUST treat that as `'ready'`.\n   */\n  status?: 'pending' | 'ready' | 'failed';\n  /**\n   * Short machine-readable failure reason when `status === 'failed'`.\n   * Suitable for tooltip text but not user-facing prose.\n   */\n  previewError?: string;\n  metadata?: {\n    runFile?: RunFileProvenance;\n    fileIdentifier?: string;\n    /**\n     * Structured form of `fileIdentifier`. Persisted alongside the\n     * legacy string during the dual-write transition; readers should\n     * resolve via `resolveCodeEnvRef`.\n     */\n    codeEnvRef?: CodeEnvRef;\n    codeEnvRefs?: CodeEnvRefMap;\n    /** Dispatch-order stamp for the current source artifact generation. */\n    sourceDispatchedAt?: number;\n    /** Vector namespaces this file has been embedded into. */\n    embeddedEntities?: string[];\n    /** The user named this destination, so absent ones were declined. */\n    destinationChosen?: boolean;\n    /** The type the delivery route was resolved against, when conversion changed it. */\n    routingMimeType?: string;\n  };\n  llmDeliveryPath?: 'provider' | 'text' | 'none';\n  createdAt?: string | Date;\n  updatedAt?: string | Date;\n};\n\nexport type TFileUpload = TFile & {\n  temp_file_id: string;"
+    },
+    {
+      "lines": [
+        19,
+        58
+      ],
+      "path": "packages/data-provider/src/types/web.ts",
+      "sha256": "50b57e2e60e16d04b8c09b1a2a94552c322527838cbb0168778fc53be631c47c",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "export interface Highlight {\n  score: number;\n  text: string;\n  references?: UsedReferences;\n}\n\nexport type ProcessedSource = {\n  content?: string;\n  attribution?: string;\n  references?: References;\n  highlights?: Highlight[];\n  processed?: boolean;\n};\n\nexport type ProcessedOrganic = OrganicResult & ProcessedSource;\nexport type ProcessedTopStory = TopStoryResult & ProcessedSource;\nexport type ValidSource = ProcessedOrganic | ProcessedTopStory;\n\nexport type ResultReference = {\n  link: string;\n  type: 'link' | 'image' | 'video' | 'file';\n  title?: string;\n  attribution?: string;\n};\nexport interface SearchResultData {\n  turn?: number;\n  organic?: ProcessedOrganic[];\n  topStories?: ProcessedTopStory[];\n  images?: ImageResult[];\n  videos?: VideoResult[];\n  places?: PlaceResult[];\n  news?: NewsResult[];\n  shopping?: ShoppingResult[];\n  knowledgeGraph?: KnowledgeGraphResult;\n  answerBox?: AnswerBoxResult;\n  peopleAlsoAsk?: PeopleAlsoAskResult[];\n  relatedSearches?: Array<{ query: string }>;\n  references?: ResultReference[];\n  error?: string;\n}"
+    },
+    {
+      "lines": [
+        90,
+        94
+      ],
+      "path": "packages/data-provider/src/types/web.ts",
+      "sha256": "50b57e2e60e16d04b8c09b1a2a94552c322527838cbb0168778fc53be631c47c",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "  images: MediaReference[];\n  videos: MediaReference[];\n};\nexport interface ScrapeResult {\n  url: string;"
+    },
+    {
+      "lines": [
+        41,
+        80
+      ],
+      "path": "packages/data-provider/src/codeEnvRef.ts",
+      "sha256": "b7a4cbea094b3c85c99d1a694811d0dbbaccde2642f17f6db665b421e5f94faa",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": " * the constraint is enforced at compile time, not just by codeapi's\n * runtime validator.\n */\ninterface CodeEnvRefBase {\n  /** Resource identity. Semantics depend on `kind`:\n   *  - `skill`: skill `_id` (sessionKey-meaningful, cross-user shared).\n   *  - `agent`: agent id (sessionKey-meaningful, cross-user shared).\n   *  - `user`: informational only \u2014 sessionKey derivation uses the\n   *    requesting user from auth context. Kept on the type for shape\n   *    uniformity across kinds; do not rely on it for routing. */\n  id: string;\n  storage_session_id: string;\n  file_id: string;\n  /** Code API deployment that owns this storage pointer. Legacy refs omit\n   *  the field and are treated as `default`; new writes always persist it. */\n  executionProfile?: CodeExecutionProfile;\n  /** Deployment-specific namespace. Configured stateful environments share\n   * the same wire profile, so this key prevents their file IDs from being\n   * reused against a different Code API server. */\n  executionRouteKey?: string;\n  /** Epoch ms when the file was uploaded to the code env; drives the liveness\n   *  fast-path (distinct from the usage-bumped `updatedAt`). */\n  provisionedAt?: number;\n  /** Actual destination used when uploading this storage object. */\n  sandboxFilename?: string;\n}\n\nexport type CodeExecutionProfile = 'default' | 'stateful';\n\nexport type CodeEnvRef =\n  | (CodeEnvRefBase & { kind: 'skill'; version: number })\n  | (CodeEnvRefBase & { kind: 'agent' })\n  | (CodeEnvRefBase & { kind: 'user' });\n\n/** Deployment-local pointers for a resource that may be used by both Code API profiles. */\nexport type CodeEnvRefMap = Partial<Record<string, CodeEnvRef>>;\n\nexport interface CodeEnvReferenceSet {\n  /** Compatibility pointer for readers that have not adopted profile-aware refs yet. */\n  codeEnvRef?: CodeEnvRef;"
+    },
+    {
+      "lines": [
+        456,
+        482
+      ],
+      "path": "packages/data-schemas/src/methods/message.ts",
+      "sha256": "fc51a01c8fcf709503c92dbfe172264eb5656cf0248bfc869388ba53dd70ac04",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "export const CLIENT_MESSAGE_SELECT: string = [\n  '-_id',\n  '-__v',\n  '-user',\n  '-clientId',\n  '-invocationId',\n  '-conversationSignature',\n  '-summary',\n  '-summaryTokenCount',\n  '-contextMeta',\n  '-langfuseSampled',\n  '-langfuseDestinationIds',\n  '-langfuseRunId',\n  '-metadata.thoughtSignatures',\n  '-content.tool_call.backgroundTask.resultClaim',\n  '-content.tool_call.backgroundTask.completionWakeup',\n  '-attachments.web_search.knowledgeGraph',\n  '-attachments.web_search.peopleAlsoAsk',\n  '-attachments.web_search.relatedSearches',\n  '-attachments.web_search.shopping',\n  '-attachments.web_search.places',\n  '-attachments.web_search.news',\n  '-attachments.web_search.organic.sitelinks',\n  '-attachments.web_search.organic.highlights',\n  '-attachments.web_search.topStories.highlights',\n].join(' ');\n"
+    },
+    {
+      "lines": [
+        2060,
+        2078
+      ],
+      "path": "packages/data-schemas/src/methods/conversation.ts",
+      "sha256": "46e51f9fa02b9fdfed731bba3593305cc70e07eede998b8fc98854c577ec12d4",
+      "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+      "text": "  async function getConvoOwnership(user: string, conversationId: string, tenantId?: string | null) {\n    try {\n      const Conversation = mongoose.models.Conversation as Model<IConversation>;\n      const tenantFilter =\n        tenantId === undefined ? {} : subagentLeaseTenantFilter(tenantId ?? undefined);\n      return await Conversation.findOne(\n        {\n          user,\n          conversationId,\n          ...tenantFilter,\n          ...activeExpirationFilter<IConversation>(),\n        },\n        'user tenantId subagentThread',\n      ).lean<Pick<IConversation, 'user' | 'tenantId' | 'subagentThread'>>();\n    } catch (error) {\n      logger.error('[getConvoOwnership] Error checking conversation ownership', error);\n      throw new Error('Error checking conversation ownership');\n    }\n  }"
+    }
+  ],
+  "submittedEqualsBaseline": true
+}

@@ -74,10 +74,10 @@ The Operator selected **Two-Contributor Workflow (CDC + CC)** on 2026-09-21 beca
 | Role | Context and authority |
 |---|---|
 | CDC | This existing LibreChat/Guildhall design conversation; architecture, research framing, plans, assignment authorship and review of CC's new work |
-| CC | Separate Codex API session, identifier unavailable, acknowledged and delivered evidence01 at `99d5ecd794`; first correction now awaits Operator relay/acknowledgement |
+| CC | Separate execution context, identifier unavailable; latest reviewed return `76d15b5d3` for iteration03; iteration04 awaits Operator relay/acknowledgement |
 | Operator | Design partner and scope/approval authority; relays assignments and reports |
 
-The first CC evidence assignment returned and was reviewed; its replay/counts reproduced, but verifier and nested-inspection gaps require the bounded Slice02 correction. Production conversion remains unassigned. CDC owns the final DTO policy, composition/file fence, source-build prerequisites and sizing decision. CC returns contradictions or material design questions to CDC; architectural/scope/acceptance changes require CDC and Operator resolution before affected work proceeds.
+CC iteration03 returned and was reviewed; actual replay/R3 queries reproduced, but verifier/classification regressions and remaining declaration-application/projection defects require the fourth bounded Slice02 correction. Production conversion remains unassigned. CDC owns the final DTO policy, composition/file fence, source-build prerequisites and sizing decision. CC returns contradictions or material design questions to CDC; architectural/scope/acceptance changes require CDC and Operator resolution before affected work proceeds.
 
 The prior one-contributor investigation (2026-09-20 through pass05) is preserved as historical work. No acceptance or independent-reproduction claim is upgraded by this transition. Three contributors remain a possible later explicit Operator decision once the implementation programme is well defined.
 
@@ -152,10 +152,13 @@ The Operator clarified that denormalization was only an option, not a recommenda
 
 **Iteration02 review:** Arc01/Slice02 R1 verification and R3 complete-query corrections are reproduced at `0f81e318b`. R2 still contains source-inconsistent nested fields, paths, presence/view mappings and incomplete composed-exclusion validation. The third correction replaces prose expansion with declaration-grounded reconciliation; it preserves the same investigation scope and all open design/runtime/production gates.
 
+**Iteration03 review:** Arc01/Slice02 preserved actual replay/R3 query evidence and all 129 pinned manifest entries. New guard/classification regressions and unresolved declaration applications/projection obligations block acceptance of evidence04. The fourth correction restores earlier verified behavior and includes worked application examples and discriminating controls. No framework changes, source work or acceptance/scope changes are authorized by this review; CDC retains design/runtime/sizing ownership.
+
 ## Version History
 
 | Version | Date | Change |
 |---|---|---|
+| v1.19 | 2026-09-22 | Bubbled up iteration03 review and fourth correction: actual replay/R3 retained, regressed guards/classifications and application/projection gaps remain open. |
 | v1.18 | 2026-09-21 | Bubbled up Slice02 iteration02 review: R1/R3 reproduced, R2 returned with a declaration-grounded method; third correction issued without application scope or acceptance changes. |
 | v1.17 | 2026-09-21 | Recorded Slice02 iteration01 review and second correction with reproduced verifier counterexample and semantic/query findings; all acceptance and production gates unchanged. |
 | v1.16 | 2026-09-21 | Arc01/Slice02 initial CC return reviewed; reproduced bounded observations and issued iteration01 for evidence-tooling, nested-map and intake defects, preserving all gates. |

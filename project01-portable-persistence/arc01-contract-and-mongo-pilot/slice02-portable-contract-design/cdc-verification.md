@@ -1,6 +1,6 @@
 # CDC verification — Slice02 CC evidence
 
-Current disposition: see [Correction iteration02 review](#correction-iteration02-review--2026-09-21). Earlier reviews below remain historical evidence.
+Current disposition: see [Correction iteration03 review](#correction-iteration03-review--2026-09-22). Earlier reviews below remain historical evidence.
 
 ## Initial review — verdict and scope
 
@@ -141,3 +141,72 @@ The current validator's minimum member count and hand-authored required-path set
 [Iteration03](cc-prompt-iteration03.md) is the **third CC correction**, pending Operator relay/acknowledgement. R1/R3 mechanisms and reproduced observations are retained; R2 must be rebuilt from literal declarations and checked member-by-member, with branch labels separate from data paths and explicit wrapper/presence semantics. Source-based exact-membership controls replace padding the map to a target count. Preserve all previous packets and reports, including these failures.
 
 This is a change in evidence method within the same ten-root assignment, not new application scope. All S01–S07, Slice01 acceptance and the 27 Project01/Arc01/Slice02 criteria remain open. CDC continues to own DTO/codec/patch decisions, injection scope, D07/runtime/build readiness and production sizing. The map cannot yet support those decisions as a complete, validated field contract.
+
+## Correction iteration03 review — 2026-09-22
+
+**Verdict: actual replay and R3 queries reproduced; R1 regressed and R2 remains incomplete. Return for a fourth correction.** Reviewed CC commit `76d15b5d33668e3c50ddd3db7b98a8e6c12a814c`, assigned by [iteration03](cc-prompt-iteration03.md) at `d31a81ab341225303f0861a3c85396ca5a9ddacf`. The Operator relayed the separate CC context's report. This is CDC review under the existing two-contributor workflow; no CRC, source implementation or slice closure is implied.
+
+[Review results](artifacts/cdc-review04/result.json), [raw commands/output](artifacts/cdc-review04/execution.log) and the [reproduction script](artifacts/cdc-review04/review.py) retain the evidence. The script retrieves the exact recipe bytes from the reviewed Git commit, verifies the original seven files against those committed bytes, executes the actual CLI, and confines mutations to temporary packet copies. Its injected preflight and runner tests are identified separately from unmodified CLI runs. Reproduce into a fresh output directory; the script refuses to overwrite a sealed review.
+
+### Retained progress and limits
+
+- The actual submitted result equals the pinned pass05 baseline. The unmodified CLI `--verify` succeeds; fresh/submitted/baseline comparisons match for 16 reads, two gates, three preflight cases and three original controls. A separate resealed `success:false` CLI mutant correctly rejects.
+- The sealed self-test succeeds and reports two positives plus eleven rejected controls. Original packet hashes remain unchanged. These are actual outcomes; their semantic strength is qualified below.
+- R3's fresh complete matrix projection and all five committed capture-query outputs agree: 44/73 fields, 10/13 provider-only, 4/3 interface-only and four implicit keys per record. This remains resolved for the query-coverage correction. Reading receipts remain attested.
+- All **129 Project01 manifest entries present at the reviewed commit** pass; all eleven supplied source fingerprints match. Source is clean at `3e3c5410d3863118fdba694fb0cd51baeb7102f9`. The commit has exactly seven allowed files and both trailers.
+- Literal declaration extraction is a substantial improvement: 46 records and 226 generated member rows replace the earlier placeholder types. Path-marker keys, example content fields, Date leaves, parentAgentId optionality, metadata's nested exclusion and the full ownership-probe selection have concrete repairs. However, the generator and validator share interpretation logic; their equality is not an independent completeness or semantic oracle.
+
+No database/private export, application build, dependency install or application suite ran. Node22/storage-double limits remain; D07/Node24, integrated Mongo conformance, historical BSON populations and all acceptance gates remain open. CDC cannot independently accept its own old harness merely by replaying it.
+
+### R1 regression — verification bypasses preflight and loses preservation checks
+
+`cc-evidence04/replay.py:798–814,918–924` invokes validate_packet from both verification modes without calling `preflight`. That function is called only by capture. The optional `observed` argument checks two manually supplied values; the ordinary CLI supplies none. CDC injected a failing environment guard into the **actual main/verify path** and counted calls: guard **0**, runner **1**, accepted. This proves the guard is bypassed; it is not a claim that the real checkout/runtime was changed during review. Equality against baseline may catch some drift later, but does not preserve fail-before-execution behavior or the complete pinned-input checks.
+
+There is also no end-of-verification packet hash comparison. CDC's disposable runner changed report.md and returned the otherwise matching baseline; validate_packet accepted. The original packet was never changed. Evidence03 had both the production environment path and final hash comparison; iteration03 expressly required preserving them.
+
+Coverage also regressed (`build_coverage`, lines 451–479). Its selected set uses `convo` while the normalized record is `conversation`; the hidden-field and conversation.messages rules were dropped. The result has **7 selected / 110 other**, versus the source-matrix classification **10 selected / 14 hidden / 1 physical relationship / 92 other**. All 117 identities remain present, but eighteen classifications are wrong. Comparing against the same new builder accepts the mistakes.
+
+### R2 — declaration extraction still lacks correct application closure
+
+The root map (`build_roots`, lines 482–560) is manually assembled from selected extracted declarations, without a complete resolvable application graph:
+
+- TAttachment's third `Partial<Pick<TFile,'filename'|'filepath'>> & Pick<TFile,'conversationId'> & TAttachmentMetadata` branch has no member applications. Numeric expiresAt is labeled generically `attachment-union`, detached from the selected numeric-expiry fields. The report claims a `partial-filename-filepath-pick` branch that is absent from the submitted map. Source: schemas.ts:1054–1061.
+- Computed keys become literal paths such as `attachments[].[Tools.web_search]`, not `attachments[].web_search`. SearchResultData/ProcessedSource declarations exist in the table, but no explicit graph applies them under the web/file search use sites. The root calls local SearchResultData an open boundary. Reusable local declarations are allowed; unresolved local application edges are not the same as a declared external/open value.
+- Summary `Array<{type; text}>` elements are not traversed; FileContext/FileSources enum declarations and local WorkspaceChange/MemoryArtifact/UIResource definitions are missing. Other captured content/file declarations are not consistently linked at their use sites. CodeEnvRefBase is expanded, but CodeEnvRef union/record applications remain a prose boundary. Source witnesses in result.json show the relevant declarations and exact revisions. These are existing selected-root dependencies, not additional subsystem research.
+- `contextMeta.publicMessages` again says included, although CLIENT_MESSAGE_SELECT excludes the entire root. The generic applicability function treats it like other message members. The actual new metadata and full-lineage corrections are retained.
+- The validator compares selected member fields but omits application-context/wrapper semantics except one file_id prose check, ignores supplied source fingerprints, and silently collapses duplicate member keys. The actual supplied fingerprints are correct; the defect is acceptance of forged submitted fingerprints.
+
+### R2 — projection obligations remain bypassable
+
+`validate_projection`, lines 646–665, loops only over supplied partialContainers; removing the list skips the obligations. It accepts a subset of actual nested exclusions (`expected <= actual`), so organic with only sitelinks removed passes despite omitted highlights. Strings containing ` except ` skip survivor validation completely. Every survivor must instead establish the exact applicable removal set against the full exclusion set; metadata also needs its thoughtSignatures obligation. Source root exclusions must separately inform root applicability.
+
+CDC ran the actual committed CLI on nine disposable, resealed packet variants. Eight incorrect inventories were **accepted**:
+
+1. Remove all retained-container obligations.
+2. Omit organic.highlights from required removals.
+3. Claim excluded resultClaim survives with a freeform `except nothing` suffix.
+4. Change filename's Partial application to required.
+5. Replace file_id's declared use-site wrapper with TFile[].
+6. Supply a false source fingerprint.
+7. Duplicate a strict path-marker member.
+8. Assert contextMeta is fully public.
+
+The ninth control, submitted success:false, rejects correctly. The production-path preflight and mid-verification packet-mutation checks above are separate injected tests, not included in this nine-CLI denominator.
+
+Two of CC's eleven nominal semantic controls reject at missing `sourceRefs` (KeyError), before testing the intended invented path. The file_id control changes local TFile requiredness rather than testing incorrect effective Partial behavior. Self-test catches arbitrary Exception, so a crash can count as a successful semantic rejection. Use well-shaped single-defect mutations, explicit evidence errors and actual runner-call assertions. Keep positive checks separate.
+
+### Disposition, ledger walk and next assignment
+
+| Row | Current disposition |
+|---|---|
+| S01 | Open; reproduced read behavior is retained, composition/caller policy remains CDC-owned. |
+| S02 | Open; concrete declaration repairs are useful, but classifications/application closure are not reliable enough for final DTO decisions. |
+| S03 | Open; presence/Partial/branch/projection distinctions still need correction; patch/codec policy remains separate. |
+| S04 | Open; cursor evidence and independent-verification requirement are unchanged and outside this packet review. |
+| S05 | Open; repository preservation does not discharge original-corpus fidelity obligations. |
+| S06 | Open; no production fence/build/conformance acceptance; R1 verifier guards must be restored. |
+| S07 | Open; scope/manifest/commit checks reproduced; R1/R2 prevent accepting the packet as complete. |
+
+[Iteration04](cc-prompt-iteration04.md) is the fourth correction, awaiting Operator relay and CC acknowledgement. It restores evidence03's verified guards/classification rules, preserves R3, separates syntax from application semantics, supplies worked source-to-application examples, and makes all accepted counterexamples regression requirements. A representative internal validation pass precedes expansion across the unchanged ten roots. No full typechecker, general-purpose schema system or application implementation is assigned.
+
+The recurrence is now recorded as a method/sizing concern: replacing previously verified infrastructure introduced regressions while same-generator equality hid incomplete interpretations. This warrants a bounded corrective method, not an automatic framework edit or a reset of history. The Operator asked to leave framework guidance unchanged; no skill/framework files were edited. Prior exploratory passes and the three completed CC corrections remain in history; the five-correction cap is unchanged. All 27 project/arc/slice rows and Slice01 acceptance remain open. CDC owns remaining DTO/codec/patch policy, injection, D07 and eventual implementation sizing.
