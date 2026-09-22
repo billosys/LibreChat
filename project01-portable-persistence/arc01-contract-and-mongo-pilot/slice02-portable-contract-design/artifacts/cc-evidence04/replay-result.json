@@ -1,0 +1,1345 @@
+{
+  "compiler": {
+    "path": "/Users/oubiwann/lab/billosys/LibreChat/node_modules/typescript/lib/typescript.js",
+    "sha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675",
+    "version": "5.9.3"
+  },
+  "experimentSha256": "f33bdd87b9691fdfb26adebb4e058fdb641f50e0be596f6f9e9d8c80b0037339",
+  "gateCases": [
+    {
+      "messageError": false,
+      "passed": true,
+      "responses": [
+        {
+          "body": {
+            "error": "Conversation not found"
+          },
+          "send": false,
+          "status": 404
+        }
+      ],
+      "shouldFetchMessages": true,
+      "trace": [
+        {
+          "args": [
+            "u1",
+            "c1"
+          ],
+          "method": "ownership"
+        },
+        {
+          "args": [
+            {
+              "conversationId": "c1",
+              "user": "u1"
+            },
+            "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+          ],
+          "method": "messages"
+        },
+        {
+          "args": [
+            "c1"
+          ],
+          "method": "job"
+        }
+      ]
+    },
+    {
+      "messageError": true,
+      "passed": true,
+      "responses": [
+        {
+          "body": {
+            "error": "Conversation not found"
+          },
+          "send": false,
+          "status": 404
+        }
+      ],
+      "shouldFetchMessages": true,
+      "trace": [
+        {
+          "args": [
+            "u1",
+            "c1"
+          ],
+          "method": "ownership"
+        },
+        {
+          "args": [
+            {
+              "conversationId": "c1",
+              "user": "u1"
+            },
+            "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+          ],
+          "method": "messages"
+        },
+        {
+          "args": [
+            "c1"
+          ],
+          "method": "job"
+        }
+      ]
+    }
+  ],
+  "modelAccesses": 0,
+  "negativeControls": [
+    {
+      "actual": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u2"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "detected": true,
+      "name": "wrong-owner"
+    },
+    {
+      "actual": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              null
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "detected": true,
+      "name": "no-projection"
+    },
+    {
+      "detected": true,
+      "name": "eager-strict-scope"
+    }
+  ],
+  "node": "v22.22.3",
+  "preflightCases": [
+    {
+      "deferred": {
+        "error": "User not authenticated"
+      },
+      "direct": {
+        "error": "User not authenticated"
+      },
+      "eager": {
+        "error": "[TenantIsolation] turn-write attempted without tenant context in strict mode"
+      },
+      "name": "missing-owner",
+      "passed": true
+    },
+    {
+      "deferred": {
+        "returned": "<undefined>"
+      },
+      "direct": {
+        "returned": "<undefined>"
+      },
+      "eager": {
+        "error": "[TenantIsolation] turn-write attempted without tenant context in strict mode"
+      },
+      "name": "missing-conversation",
+      "passed": true
+    },
+    {
+      "deferred": {
+        "returned": "<undefined>"
+      },
+      "direct": {
+        "returned": "<undefined>"
+      },
+      "eager": {
+        "error": "[TenantIsolation] turn-write attempted without tenant context in strict mode"
+      },
+      "name": "malformed-conversation",
+      "passed": true
+    }
+  ],
+  "priorHandle": {
+    "path": "/Users/oubiwann/lab/billosys/LibreChat/.worktrees/planning/project01-portable-persistence/arc01-contract-and-mongo-pilot/slice02-portable-contract-design/artifacts/design-pass04/handle.cjs",
+    "sha256": "b1efac13c8c2aa1d1a23c2fb8bf3d209673abcb3da798164da49bfab99bcabc4"
+  },
+  "readCases": [
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 200,
+      "name": "stored",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "missing",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "User not authorized for this conversation"
+            },
+            "send": false,
+            "status": 403
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 403,
+      "name": "foreign-owner",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "User not authorized for this conversation"
+            },
+            "send": false,
+            "status": 403
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "child",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": [],
+            "send": true,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": false,
+        "trace": []
+      },
+      "expectedStatus": 200,
+      "name": "new",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": [],
+            "send": true,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": false,
+        "trace": []
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation ID mismatch"
+            },
+            "send": false,
+            "status": 400
+          }
+        ],
+        "shouldFetchMessages": false,
+        "trace": []
+      },
+      "expectedStatus": 400,
+      "name": "mismatch",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation ID mismatch"
+            },
+            "send": false,
+            "status": 400
+          }
+        ],
+        "shouldFetchMessages": false,
+        "trace": []
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Internal server error"
+            },
+            "send": false,
+            "status": 500
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 500,
+      "name": "message-error",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Internal server error"
+            },
+            "send": false,
+            "status": 500
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Internal server error"
+            },
+            "send": false,
+            "status": 500
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 500,
+      "name": "ownership-error",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Internal server error"
+            },
+            "send": false,
+            "status": 500
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 200,
+      "name": "active-owner",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "active-other-owner",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "active-other-tenant",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 200,
+      "name": "paused-live",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": [
+              {
+                "conversationId": "c1",
+                "messageId": "m1",
+                "text": "synthetic"
+              }
+            ],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "paused-stale",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "by-id-no-active-exception",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": [],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      },
+      "expectedStatus": 200,
+      "name": "empty",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": [],
+            "send": false,
+            "status": 200
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      },
+      "expectedStatus": 404,
+      "name": "job-error",
+      "passed": true,
+      "reference": {
+        "responses": [
+          {
+            "body": {
+              "error": "Conversation not found"
+            },
+            "send": false,
+            "status": 404
+          }
+        ],
+        "shouldFetchMessages": true,
+        "trace": [
+          {
+            "args": [
+              "u1",
+              "c1"
+            ],
+            "method": "ownership"
+          },
+          {
+            "args": [
+              {
+                "conversationId": "c1",
+                "user": "u1"
+              },
+              "-_id -__v -user -clientId -invocationId -conversationSignature -summary -summaryTokenCount -contextMeta -langfuseSampled -langfuseDestinationIds -langfuseRunId -metadata.thoughtSignatures -content.tool_call.backgroundTask.resultClaim -content.tool_call.backgroundTask.completionWakeup -attachments.web_search.knowledgeGraph -attachments.web_search.peopleAlsoAsk -attachments.web_search.relatedSearches -attachments.web_search.shopping -attachments.web_search.places -attachments.web_search.news -attachments.web_search.organic.sitelinks -attachments.web_search.organic.highlights -attachments.web_search.topStories.highlights"
+            ],
+            "method": "messages"
+          },
+          {
+            "args": [
+              "c1"
+            ],
+            "method": "job"
+          }
+        ]
+      }
+    }
+  ],
+  "sourceHead": "3e3c5410d3863118fdba694fb0cd51baeb7102f9",
+  "sources": [
+    {
+      "path": "packages/data-schemas/src/config/tenantContext.ts",
+      "sha256": "c1ef3192b3918dc269139e67dbe3c1c50e898d49703b8d7d91fbd14c9612401d"
+    },
+    {
+      "path": "packages/data-schemas/src/tenant/policy.ts",
+      "sha256": "b86b7465d379818e272743228fff4341aba4bbb849251e837bb35e1f611d6dcc"
+    },
+    {
+      "path": "packages/api/src/middleware/messageValidation.ts",
+      "sha256": "36dccce39c6b072d05668353015b5d2ee7a1328e6d907f6f49b09771acdc4f5b"
+    },
+    {
+      "path": "api/server/routes/messages.js",
+      "sha256": "022edeae357ec52aa10645d4167d03f1f22318604d22c0042447b3d803d6bb3f"
+    },
+    {
+      "path": "packages/data-schemas/src/methods/message.ts",
+      "sha256": "fc51a01c8fcf709503c92dbfe172264eb5656cf0248bfc869388ba53dd70ac04"
+    }
+  ],
+  "success": true
+}
